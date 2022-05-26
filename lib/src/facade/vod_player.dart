@@ -180,6 +180,42 @@ class VodPlayer {
     );
   }
 
+  /// 是否自动播放
+  Future<void> setAutoPlay(bool autoPlay) async {
+    return platform(
+      android: (pool) => _androidPlayer!.setAutoPlay(autoPlay),
+      ios: (pool) => _iosPlayer!.set_isAutoPlay(autoPlay),
+    );
+  }
+
+  /// 是否静音
+  Future<void> setMute(bool mute) async {
+    return platform(
+      android: (pool) => _androidPlayer!.setMute(mute),
+      ios: (pool) => _iosPlayer!.setMute(mute),
+    );
+  }
+
+  /// 获取总长度
+  Future<Duration> getDuration() async {
+    final seconds = await platform(
+      android: (pool) => _androidPlayer!.getDuration(),
+      ios: (pool) => _iosPlayer!.duration(),
+    );
+
+    return Duration(milliseconds: ((seconds ?? 0) * 1000).toInt());
+  }
+
+  /// 获取当前播放位置
+  Future<Duration> getPosition() async {
+    final seconds = await platform(
+      android: (pool) => _androidPlayer!.getCurrentPlaybackTime(),
+      ios: (pool) => _iosPlayer!.currentPlaybackTime(),
+    );
+
+    return Duration(milliseconds: ((seconds ?? 0) * 1000).toInt());
+  }
+
   /// 截图
   Future<Uint8List> takeSnapshot() async {
     final completer = Completer<Uint8List>();
