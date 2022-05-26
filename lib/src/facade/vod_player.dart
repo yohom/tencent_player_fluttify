@@ -1,4 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import, unused_local_variable, dead_code, unnecessary_cast
+import 'dart:async';
+import 'dart:typed_data';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
@@ -10,7 +13,7 @@ import 'enums.dart';
 
 part 'player_delegates.dart';
 
-/// 拉流控制器
+/// 点播控制器
 class VodPlayer {
   VodPlayer._();
 
@@ -147,6 +150,61 @@ class VodPlayer {
       android: (pool) => _androidPlayer!.stopPlay(true),
       ios: (pool) => _iosPlayer!.stopPlay(),
     );
+  }
+
+  /// 快进
+  Future<void> seekTo(Duration duration) async {
+    final second = duration.inSeconds.toDouble();
+    return platform(
+      android: (pool) => _androidPlayer!.seek__double(second),
+      ios: (pool) => _iosPlayer!.seek(second),
+    );
+  }
+
+  /// 设置速度
+  Future<void> setSpeed(double speed) async {
+    return platform(
+      android: (pool) => _androidPlayer!.setRate(speed),
+      ios: (pool) => _iosPlayer!.seek(speed),
+    );
+  }
+
+  /// 设置音量
+  ///
+  /// 范围[0-1]
+  Future<void> setVolume(double volume) async {
+    final target = (volume * 100).toInt();
+    return platform(
+      android: (pool) => _androidPlayer!.setAudioPlayoutVolume(target),
+      ios: (pool) => _iosPlayer!.setAudioPlayoutVolume(target),
+    );
+  }
+
+  /// 截图
+  Future<Uint8List> takeSnapshot() async {
+    final completer = Completer<Uint8List>();
+    await platform(
+      android: (pool) async {
+        final listener =
+            await com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener.anonymous__(
+          onSnapshot: (image) async {
+            final data = await image?.data;
+            if (data == null) {
+              completer.completeError('截图失败');
+            } else {
+              completer.complete(data);
+            }
+          },
+        );
+        return _androidPlayer!.snapshot(listener);
+      },
+      ios: (pool) {
+        return _iosPlayer!
+            .snapshot((image) => image.data.then(completer.complete));
+      },
+    );
+
+    return completer.future;
   }
 
   /// 事件处理
