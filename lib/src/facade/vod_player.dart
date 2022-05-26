@@ -20,7 +20,6 @@ class VodPlayer {
   com_tencent_rtmp_TXVodPlayConfig? _androidConfig;
   TXVodPlayConfig? _iOSConfig;
 
-  final _androidEventDelegate = _AndroidEventDelegate();
   final _iosEventDelegate = _IOSEventDelegate();
 
   /// 创建一个播放器
@@ -168,22 +167,62 @@ class VodPlayer {
   }) async {
     return platform(
       android: (pool) async {
-        await _androidPlayer!.setVodListener(
-          _androidEventDelegate
-            .._onWarningVideoDecodeFail = onWarningVideoDecodeFail
-            .._onWarningAudioDecodeFail = onWarningAudioDecodeFail
-            .._onWarningReconnect = onWarningReconnect
-            .._onWarningRecvDataLag = onWarningRecvDataLag
-            .._onWarningVideoPlayLag = onWarningVideoPlayLag
-            .._onWarningHwAccelerationFail = onWarningHwAccelerationFail
-            .._onWarningVideoDiscontinuity = onWarningVideoDiscontinuity
-            .._onWarningDNSFail = onWarningDNSFail
-            .._onWarningServerConnFail = onWarningServerConnFail
-            .._onWarningShakeFail = onWarningShakeFail
-            .._onEventRcvFirstIFrame = onEventRcvFirstIFrame
-            .._onEventPlayBegin = onEventPlayBegin
-            .._onEventPlayEnd = onEventPlayEnd,
-        );
+        final listener = await com_tencent_rtmp_ITXVodPlayListener.anonymous__(
+            onPlayEvent: (var1, param1, param2) async {
+          // 当前视频帧解码失败
+          if (var1 == 2101 && onWarningVideoDecodeFail != null) {
+            onWarningVideoDecodeFail();
+          }
+          // 当前音频帧解码失败
+          else if (var1 == 2102 && onWarningAudioDecodeFail != null) {
+            onWarningAudioDecodeFail();
+          }
+          // 网络断连，已启动自动重连（重连超过三次就直接抛送 PLAY_ERR_NET_DISCONNECT）
+          else if (var1 == 2103 && onWarningReconnect != null) {
+            onWarningReconnect();
+          }
+          // 网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀
+          else if (var1 == 2104 && onWarningRecvDataLag != null) {
+            onWarningRecvDataLag();
+          }
+          // 当前视频播放出现卡顿
+          else if (var1 == 2105 && onWarningVideoPlayLag != null) {
+            onWarningVideoPlayLag();
+          }
+          // 硬解启动失败，采用软解
+          else if (var1 == 2106 && onWarningHwAccelerationFail != null) {
+            onWarningHwAccelerationFail();
+          }
+          // 当前视频帧不连续，可能丢帧
+          else if (var1 == 2107 && onWarningVideoDiscontinuity != null) {
+            onWarningVideoDiscontinuity();
+          }
+          // RTMP - DNS 解析失败（会触发重试流程） 3001
+          else if (var1 == 3001 && onWarningDNSFail != null) {
+            onWarningDNSFail();
+          }
+          // RTMP 服务器连接失败（会触发重试流程） 3002
+          else if (var1 == 3002 && onWarningServerConnFail != null) {
+            onWarningServerConnFail();
+          }
+          // RTMP 服务器握手失败（会触发重试流程） 3003
+          else if (var1 == 3003 && onWarningShakeFail != null) {
+            onWarningShakeFail();
+          }
+          // 收到首帧数据，越快收到此消息说明链路质量越好
+          else if (var1 == 2003 && onEventRcvFirstIFrame != null) {
+            onEventRcvFirstIFrame();
+          }
+          // 视频播放开始，如果您自己做 loading，会需要它
+          else if (var1 == 2004 && onEventPlayBegin != null) {
+            onEventPlayBegin();
+          }
+          // 视频播放结束
+          else if (var1 == 2006 && onEventPlayEnd != null) {
+            onEventPlayEnd();
+          }
+        });
+        await _androidPlayer!.setVodListener(listener);
       },
       ios: (pool) async {
         await _iosPlayer!.set_vodDelegate(
