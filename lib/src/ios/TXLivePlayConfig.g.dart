@@ -27,7 +27,7 @@ class TXLivePlayConfig extends NSObject  {
       'ObjectFactory::createTXLivePlayConfig',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXLivePlayConfig?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXLivePlayConfig?>(__result__)!;
   }
   
   static Future<List<TXLivePlayConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {

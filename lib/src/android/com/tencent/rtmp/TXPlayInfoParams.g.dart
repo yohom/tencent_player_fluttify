@@ -22,12 +22,12 @@ class com_tencent_rtmp_TXPlayInfoParams extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_TXPlayInfoParams?> create__int__String__String(int appId, String fileId, String pSign) async {
+  static Future<com_tencent_rtmp_TXPlayInfoParams> create__int__String__String(int appId, String fileId, String pSign) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_TXPlayInfoParams__int__String__String',
       {"appId": appId, "fileId": fileId, "pSign": pSign}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayInfoParams?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayInfoParams>(__result__)!;
   }
   
   static Future<List<com_tencent_rtmp_TXPlayInfoParams>> create_batch__int__String__String(List<int> appId, List<String> fileId, List<String> pSign) async {

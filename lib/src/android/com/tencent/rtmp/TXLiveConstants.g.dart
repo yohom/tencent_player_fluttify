@@ -253,12 +253,12 @@ class com_tencent_rtmp_TXLiveConstants extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_TXLiveConstants?> create__() async {
+  static Future<com_tencent_rtmp_TXLiveConstants> create__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_TXLiveConstants__',
     
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLiveConstants?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLiveConstants>(__result__)!;
   }
   
   static Future<List<com_tencent_rtmp_TXLiveConstants>> create_batch__(int length) async {

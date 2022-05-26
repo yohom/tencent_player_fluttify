@@ -27,7 +27,7 @@ class TXVodPlayer extends NSObject  {
       'ObjectFactory::createTXVodPlayer',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodPlayer?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXVodPlayer?>(__result__)!;
   }
   
   static Future<List<TXVodPlayer>> create_batch__(int length, { bool init = true /* ios only */ }) async {

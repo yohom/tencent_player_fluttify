@@ -27,7 +27,7 @@ class TXPlayerGlobalSetting extends NSObject  {
       'ObjectFactory::createTXPlayerGlobalSetting',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXPlayerGlobalSetting?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXPlayerGlobalSetting?>(__result__)!;
   }
   
   static Future<List<TXPlayerGlobalSetting>> create_batch__(int length, { bool init = true /* ios only */ }) async {

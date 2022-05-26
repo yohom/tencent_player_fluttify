@@ -27,7 +27,7 @@ class TXBitrateItem extends NSObject  {
       'ObjectFactory::createTXBitrateItem',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXBitrateItem?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXBitrateItem?>(__result__)!;
   }
   
   static Future<List<TXBitrateItem>> create_batch__(int length, { bool init = true /* ios only */ }) async {

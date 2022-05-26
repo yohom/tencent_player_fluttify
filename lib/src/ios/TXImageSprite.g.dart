@@ -27,7 +27,7 @@ class TXImageSprite extends NSObject  {
       'ObjectFactory::createTXImageSprite',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXImageSprite?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXImageSprite?>(__result__)!;
   }
   
   static Future<List<TXImageSprite>> create_batch__(int length, { bool init = true /* ios only */ }) async {

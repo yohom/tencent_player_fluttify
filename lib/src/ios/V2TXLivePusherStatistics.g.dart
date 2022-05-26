@@ -27,7 +27,7 @@ class V2TXLivePusherStatistics extends NSObject  {
       'ObjectFactory::createV2TXLivePusherStatistics',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLivePusherStatistics?>(__result__);
+    return TencentPlayerFluttifyIOSAs<V2TXLivePusherStatistics?>(__result__)!;
   }
   
   static Future<List<V2TXLivePusherStatistics>> create_batch__(int length, { bool init = true /* ios only */ }) async {

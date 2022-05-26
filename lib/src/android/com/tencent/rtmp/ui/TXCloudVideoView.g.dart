@@ -22,20 +22,20 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_ui_TXCloudVideoView?> create__android_content_Context(android_content_Context context) async {
+  static Future<com_tencent_rtmp_ui_TXCloudVideoView> create__android_content_Context(android_content_Context context) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_ui_TXCloudVideoView__android_content_Context',
       {"context": context}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXCloudVideoView?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXCloudVideoView>(__result__)!;
   }
   
-  static Future<com_tencent_rtmp_ui_TXCloudVideoView?> create__android_view_SurfaceView(android_view_SurfaceView view) async {
+  static Future<com_tencent_rtmp_ui_TXCloudVideoView> create__android_view_SurfaceView(android_view_SurfaceView view) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_ui_TXCloudVideoView__android_view_SurfaceView',
       {"view": view}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXCloudVideoView?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXCloudVideoView>(__result__)!;
   }
   
   static Future<List<com_tencent_rtmp_ui_TXCloudVideoView>> create_batch__android_content_Context(List<android_content_Context> context) async {

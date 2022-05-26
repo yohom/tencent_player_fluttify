@@ -27,7 +27,7 @@ class V2TXLiveVideoEncoderParam extends NSObject  {
       'ObjectFactory::createV2TXLiveVideoEncoderParam',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveVideoEncoderParam?>(__result__);
+    return TencentPlayerFluttifyIOSAs<V2TXLiveVideoEncoderParam?>(__result__)!;
   }
   
   static Future<List<V2TXLiveVideoEncoderParam>> create_batch__(int length, { bool init = true /* ios only */ }) async {

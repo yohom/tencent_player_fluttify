@@ -27,7 +27,7 @@ class V2TXLiveMixStream extends NSObject  {
       'ObjectFactory::createV2TXLiveMixStream',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveMixStream?>(__result__);
+    return TencentPlayerFluttifyIOSAs<V2TXLiveMixStream?>(__result__)!;
   }
   
   static Future<List<V2TXLiveMixStream>> create_batch__(int length, { bool init = true /* ios only */ }) async {

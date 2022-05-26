@@ -27,7 +27,7 @@ class TXVodPreloadManager extends NSObject  {
       'ObjectFactory::createTXVodPreloadManager',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodPreloadManager?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXVodPreloadManager?>(__result__)!;
   }
   
   static Future<List<TXVodPreloadManager>> create_batch__(int length, { bool init = true /* ios only */ }) async {
