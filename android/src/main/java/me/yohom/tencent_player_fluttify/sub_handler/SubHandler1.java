@@ -323,6 +323,8 @@ public class SubHandler1 {
                 Number preloadSizeMB = (Number) ((Map<String, Object>) __args__).get("preloadSizeMB");
                 // ref arg
                 Number preferredResolution = (Number) ((Map<String, Object>) __args__).get("preferredResolution");
+                // ref arg
+                com.tencent.rtmp.downloader.ITXVodPreloadListener listener = (com.tencent.rtmp.downloader.ITXVodPreloadListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.downloader.TXVodPreloadManager __this__ = (com.tencent.rtmp.downloader.TXVodPreloadManager) ((Map<String, Object>) __args__).get("__this__");
@@ -335,65 +337,7 @@ public class SubHandler1 {
                 // invoke native method
                 Integer __result__ = null;
                 try {
-                    __result__ = __this__.startPreload(url, preloadSizeMB.intValue(), preferredResolution.longValue(), new com.tencent.rtmp.downloader.ITXVodPreloadListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.downloader.TXVodPreloadManager::startPreload::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onComplete(int var1, String var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onComplete(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.downloader.ITXVodPreloadListener::onComplete",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onError(int var1, String var2, int var3, String var4) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + var2 + var3 + var4 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.downloader.ITXVodPreloadListener::onError",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                            put("var4", var4);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __result__ = __this__.startPreload(url, preloadSizeMB.intValue(), preferredResolution.longValue(), listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -523,7 +467,8 @@ public class SubHandler1 {
             // method
             put("com.tencent.rtmp.downloader.TXVodDownloadManager::setListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.downloader.ITXVodDownloadListener listener = (com.tencent.rtmp.downloader.ITXVodDownloadListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.downloader.TXVodDownloadManager __this__ = (com.tencent.rtmp.downloader.TXVodDownloadManager) ((Map<String, Object>) __args__).get("__this__");
@@ -536,161 +481,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setListener(new com.tencent.rtmp.downloader.ITXVodDownloadListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.downloader.TXVodDownloadManager::setListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onDownloadStart(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onDownloadStart(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadStart",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onDownloadProgress(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onDownloadProgress(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadProgress",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onDownloadStop(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onDownloadStop(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadStop",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onDownloadFinish(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onDownloadFinish(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadFinish",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onDownloadError(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1, int var2, String var3) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onDownloadError(" + var1 + var2 + var3 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadError",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public int hlsKeyVerify(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1, String var2, byte[] var3) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: hlsKeyVerify(" + var1 + var2 + var3 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::hlsKeyVerify",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-                            return 0;
-                        }
-            
-                });
+                    __this__.setListener(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

@@ -83,38 +83,7 @@ class TXVodPreloadManager extends NSObject  {
   
   
     // handle native call
-    MethodChannel('TXVodPreloadManagerDelegate::Callback', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::TXVodPreloadManagerDelegate::onComplete_url':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onComplete_url([\'taskID\':${args['taskID']}, \'url\':${args['url']}])');
-                }
-          
-                // handle the native call
-                delegate.onComplete_url(args['taskID'], args['url']);
-                break;
-              case 'Callback::TXVodPreloadManagerDelegate::onError_url_error':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onError_url_error([\'taskID\':${args['taskID']}, \'url\':${args['url']}, \'error\':${args['error']}])');
-                }
-          
-                // handle the native call
-                delegate.onError_url_error(args['taskID'], args['url'], TencentPlayerFluttifyIOSAs(args['error']));
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }

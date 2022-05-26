@@ -18,6 +18,40 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener on java_lang_
 
   
 
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener> anonymous__({void Function(com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture? var1)? onRenderVideoFrame}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onRenderVideoFrame::onRenderVideoFrame':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onRenderVideoFrame?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
+  
+
   @override
   final String tag__ = 'tencent_player_fluttify';
 

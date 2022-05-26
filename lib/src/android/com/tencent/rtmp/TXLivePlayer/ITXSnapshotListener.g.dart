@@ -18,6 +18,40 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
 
   
 
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener> anonymous__({void Function(android_graphics_Bitmap? var1)? onSnapshot}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onSnapshot::onSnapshot':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onSnapshot?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
+  
+
   @override
   final String tag__ = 'tencent_player_fluttify';
 

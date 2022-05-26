@@ -1498,7 +1498,8 @@ public class SubHandler0 {
             // method
             put("com.tencent.rtmp.TXLivePlayer::setPlayListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.ITXLivePlayListener listener = (com.tencent.rtmp.ITXLivePlayListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.TXLivePlayer __this__ = (com.tencent.rtmp.TXLivePlayer) ((Map<String, Object>) __args__).get("__this__");
@@ -1511,62 +1512,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPlayListener(new com.tencent.rtmp.ITXLivePlayListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer::setPlayListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onPlayEvent(int var1, android.os.Bundle var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onPlayEvent(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.ITXLivePlayListener::onPlayEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onNetStatus(android.os.Bundle var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onNetStatus(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.ITXLivePlayListener::onNetStatus",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setPlayListener(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2016,7 +1962,8 @@ public class SubHandler0 {
             // method
             put("com.tencent.rtmp.TXLivePlayer::setAudioVolumeEvaluationListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener listener = (com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.TXLivePlayer __this__ = (com.tencent.rtmp.TXLivePlayer) ((Map<String, Object>) __args__).get("__this__");
@@ -2029,37 +1976,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setAudioVolumeEvaluationListener(new com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer::setAudioVolumeEvaluationListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onAudioVolumeEvaluationNotify(int var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onAudioVolumeEvaluationNotify(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener::onAudioVolumeEvaluationNotify",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setAudioVolumeEvaluationListener(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2189,7 +2106,8 @@ public class SubHandler0 {
             // method
             put("com.tencent.rtmp.TXLivePlayer::snapshot", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener listener = (com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.TXLivePlayer __this__ = (com.tencent.rtmp.TXLivePlayer) ((Map<String, Object>) __args__).get("__this__");
@@ -2202,37 +2120,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.snapshot(new com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer::snapshot::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onSnapshot(android.graphics.Bitmap var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onSnapshot(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::onSnapshot",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.snapshot(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2247,7 +2135,8 @@ public class SubHandler0 {
             // method
             put("com.tencent.rtmp.TXLivePlayer::setVideoRawDataListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener listener = (com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.TXLivePlayer __this__ = (com.tencent.rtmp.TXLivePlayer) ((Map<String, Object>) __args__).get("__this__");
@@ -2260,40 +2149,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setVideoRawDataListener(new com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer::setVideoRawDataListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onVideoRawDataAvailable(byte[] var1, int var2, int var3, int var4) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onVideoRawDataAvailable(" + var1 + var2 + var3 + var4 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener::onVideoRawDataAvailable",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                            put("var4", var4);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setVideoRawDataListener(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2309,6 +2165,8 @@ public class SubHandler0 {
             put("com.tencent.rtmp.TXLivePlayer::setVideoRenderListener", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
+                com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener listener = (com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener) ((Map<String, Object>) __args__).get("listener");
+                // ref arg
                 java.lang.Object glContext = (java.lang.Object) ((Map<String, Object>) __args__).get("glContext");
             
                 // ref
@@ -2322,37 +2180,7 @@ public class SubHandler0 {
                 // invoke native method
                 Integer __result__ = null;
                 try {
-                    __result__ = __this__.setVideoRenderListener(new com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer::setVideoRenderListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onRenderVideoFrame(com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onRenderVideoFrame(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener::onRenderVideoFrame",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                }, glContext);
+                    __result__ = __this__.setVideoRenderListener(listener, glContext);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2367,7 +2195,8 @@ public class SubHandler0 {
             // method
             put("com.tencent.rtmp.TXLivePlayer::setAudioRawDataListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener listener = (com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.TXLivePlayer __this__ = (com.tencent.rtmp.TXLivePlayer) ((Map<String, Object>) __args__).get("__this__");
@@ -2380,64 +2209,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setAudioRawDataListener(new com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer::setAudioRawDataListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onPcmDataAvailable(byte[] var1, long var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onPcmDataAvailable(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener::onPcmDataAvailable",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onAudioInfoChanged(int var1, int var2, int var3) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onAudioInfoChanged(" + var1 + var2 + var3 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener::onAudioInfoChanged",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setAudioRawDataListener(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3782,7 +3554,8 @@ public class SubHandler0 {
             // method
             put("com.tencent.rtmp.TXVodPlayer::setPlayListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.ITXLivePlayListener listener = (com.tencent.rtmp.ITXLivePlayListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
@@ -3795,62 +3568,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPlayListener(new com.tencent.rtmp.ITXLivePlayListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXVodPlayer::setPlayListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onPlayEvent(int var1, android.os.Bundle var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onPlayEvent(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.ITXLivePlayListener::onPlayEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onNetStatus(android.os.Bundle var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onNetStatus(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.ITXLivePlayListener::onNetStatus",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setPlayListener(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3865,7 +3583,8 @@ public class SubHandler0 {
             // method
             put("com.tencent.rtmp.TXVodPlayer::setVodListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.ITXVodPlayListener listener = (com.tencent.rtmp.ITXVodPlayListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
@@ -3878,64 +3597,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setVodListener(new com.tencent.rtmp.ITXVodPlayListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXVodPlayer::setVodListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onPlayEvent(com.tencent.rtmp.TXVodPlayer var1, int var2, android.os.Bundle var3) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onPlayEvent(" + var1 + var2 + var3 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.ITXVodPlayListener::onPlayEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onNetStatus(com.tencent.rtmp.TXVodPlayer var1, android.os.Bundle var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onNetStatus(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.ITXVodPlayListener::onNetStatus",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setVodListener(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4267,7 +3929,8 @@ public class SubHandler0 {
             // method
             put("com.tencent.rtmp.TXVodPlayer::snapshot", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener listener = (com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener) ((Map<String, Object>) __args__).get("listener");
             
                 // ref
                 com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
@@ -4280,37 +3943,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.snapshot(new com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXVodPlayer::snapshot::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onSnapshot(android.graphics.Bitmap var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onSnapshot(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::onSnapshot",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.snapshot(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

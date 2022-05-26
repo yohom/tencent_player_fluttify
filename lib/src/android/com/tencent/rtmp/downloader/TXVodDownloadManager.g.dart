@@ -124,65 +124,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.downloader.TXVodDownloadManager::setListener::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadStart':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadStart([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onDownloadStart(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              case 'Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadProgress':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadProgress([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onDownloadProgress(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              case 'Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadStop':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadStop([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onDownloadStop(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              case 'Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadFinish':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadFinish([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onDownloadFinish(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              case 'Callback::com.tencent.rtmp.downloader.ITXVodDownloadListener::onDownloadError':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadError([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-                }
-          
-                // handle the native call
-                listener.onDownloadError(TencentPlayerFluttifyAndroidAs(args['var1']), args['var2'], args['var3']);
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }

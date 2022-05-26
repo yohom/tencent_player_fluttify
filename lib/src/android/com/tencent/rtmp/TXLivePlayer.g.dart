@@ -90,38 +90,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXLivePlayer::setPlayListener::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.ITXLivePlayListener::onPlayEvent':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPlayEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                listener.onPlayEvent(args['var1'], TencentPlayerFluttifyAndroidAs(args['var2']));
-                break;
-              case 'Callback::com.tencent.rtmp.ITXLivePlayListener::onNetStatus':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNetStatus([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onNetStatus(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -393,29 +362,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXLivePlayer::setAudioVolumeEvaluationListener::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener::onAudioVolumeEvaluationNotify':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onAudioVolumeEvaluationNotify([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onAudioVolumeEvaluationNotify(args['var1']);
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -500,29 +447,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXLivePlayer::snapshot::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::onSnapshot':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onSnapshot([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onSnapshot(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -539,21 +464,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXLivePlayer::setVideoRawDataListener::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-          
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -570,29 +481,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXLivePlayer::setVideoRenderListener::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener::onRenderVideoFrame':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onRenderVideoFrame([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onRenderVideoFrame(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -609,29 +498,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXLivePlayer::setAudioRawDataListener::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener::onAudioInfoChanged':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onAudioInfoChanged([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-                }
-          
-                // handle the native call
-                listener.onAudioInfoChanged(args['var1'], args['var2'], args['var3']);
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }

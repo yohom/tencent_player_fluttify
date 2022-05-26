@@ -18,6 +18,40 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener on java_lang_Object 
 
   
 
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener> anonymous__({void Function(Uint8List? var1, int? var2, int? var3, int? var4)? onVideoRawDataAvailable}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onVideoRawDataAvailable::onVideoRawDataAvailable':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onVideoRawDataAvailable?.call(args['var1'], args['var2'], args['var3'], args['var4']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
+  
+
   @override
   final String tag__ = 'tencent_player_fluttify';
 

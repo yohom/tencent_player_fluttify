@@ -18,6 +18,85 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
 
   
 
+  static Future<com_tencent_rtmp_downloader_ITXVodDownloadListener> anonymous__({void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1)? onDownloadStart, void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1)? onDownloadProgress, void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1)? onDownloadStop, void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1)? onDownloadFinish, void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1, int? var2, String? var3)? onDownloadError, int Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1, String? var2, Uint8List? var3)? hlsKeyVerify}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_downloader_ITXVodDownloadListener::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_ITXVodDownloadListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.tencent.rtmp.downloader.ITXVodDownloadListener::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onDownloadStart::onDownloadStart':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onDownloadStart?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                break;
+              case 'Callback::onDownloadProgress::onDownloadProgress':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onDownloadProgress?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                break;
+              case 'Callback::onDownloadStop::onDownloadStop':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onDownloadStop?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                break;
+              case 'Callback::onDownloadFinish::onDownloadFinish':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onDownloadFinish?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                break;
+              case 'Callback::onDownloadError::onDownloadError':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onDownloadError?.call(TencentPlayerFluttifyAndroidAs(args['var1']), args['var2'], args['var3']);
+                break;
+              case 'Callback::hlsKeyVerify::hlsKeyVerify':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                hlsKeyVerify?.call(TencentPlayerFluttifyAndroidAs(args['var1']), args['var2'], args['var3']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
+  
+
   @override
   final String tag__ = 'tencent_player_fluttify';
 

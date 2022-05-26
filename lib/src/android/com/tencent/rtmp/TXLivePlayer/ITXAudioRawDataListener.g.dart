@@ -18,6 +18,49 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
 
   
 
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener> anonymous__({void Function(Uint8List? var1, int? var2)? onPcmDataAvailable, void Function(int? var1, int? var2, int? var3)? onAudioInfoChanged}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onPcmDataAvailable::onPcmDataAvailable':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onPcmDataAvailable?.call(args['var1'], args['var2']);
+                break;
+              case 'Callback::onAudioInfoChanged::onAudioInfoChanged':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onAudioInfoChanged?.call(args['var1'], args['var2'], args['var3']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
+  
+
   @override
   final String tag__ = 'tencent_player_fluttify';
 

@@ -18,6 +18,49 @@ mixin com_tencent_rtmp_downloader_ITXVodPreloadListener on java_lang_Object {
 
   
 
+  static Future<com_tencent_rtmp_downloader_ITXVodPreloadListener> anonymous__({void Function(int? var1, String? var2)? onComplete, void Function(int? var1, String? var2, int? var3, String? var4)? onError}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_downloader_ITXVodPreloadListener::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_ITXVodPreloadListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.tencent.rtmp.downloader.ITXVodPreloadListener::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onComplete::onComplete':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onComplete?.call(args['var1'], args['var2']);
+                break;
+              case 'Callback::onError::onError':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onError?.call(args['var1'], args['var2'], args['var3'], args['var4']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
+  
+
   @override
   final String tag__ = 'tencent_player_fluttify';
 

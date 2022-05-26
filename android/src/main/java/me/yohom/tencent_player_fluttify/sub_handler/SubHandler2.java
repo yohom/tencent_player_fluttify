@@ -3058,6 +3058,635 @@ public class SubHandler2 {
             
                 __methodResult__.success(__resultList__);
             });
+            // anonymous class
+            put("com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXAudioRawDataListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onPcmDataAvailable(byte[] var1, long var2) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onPcmDataAvailable(" + var1 + var2 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onPcmDataAvailable::onPcmDataAvailable",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onAudioInfoChanged(int var1, int var2, int var3) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onAudioInfoChanged(" + var1 + var2 + var3 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onAudioInfoChanged::onAudioInfoChanged",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                        put("var3", var3);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.ITXVodPlayListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.ITXVodPlayListener __result__ = new com.tencent.rtmp.ITXVodPlayListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.ITXVodPlayListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onPlayEvent(com.tencent.rtmp.TXVodPlayer var1, int var2, android.os.Bundle var3) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onPlayEvent(" + var1 + var2 + var3 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onPlayEvent::onPlayEvent",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                        put("var3", var3);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onNetStatus(com.tencent.rtmp.TXVodPlayer var1, android.os.Bundle var2) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onNetStatus(" + var1 + var2 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onNetStatus::onNetStatus",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXLivePlayVideoRenderListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onRenderVideoFrame(com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onRenderVideoFrame(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onRenderVideoFrame::onRenderVideoFrame",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.ITXLivePlayListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.ITXLivePlayListener __result__ = new com.tencent.rtmp.ITXLivePlayListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.ITXLivePlayListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onPlayEvent(int var1, android.os.Bundle var2) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onPlayEvent(" + var1 + var2 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onPlayEvent::onPlayEvent",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onNetStatus(android.os.Bundle var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onNetStatus(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onNetStatus::onNetStatus",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.downloader.ITXVodPreloadListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.downloader.ITXVodPreloadListener __result__ = new com.tencent.rtmp.downloader.ITXVodPreloadListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.downloader.ITXVodPreloadListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onComplete(int var1, String var2) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onComplete(" + var1 + var2 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onComplete::onComplete",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onError(int var1, String var2, int var3, String var4) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + var2 + var3 + var4 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onError::onError",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                        put("var3", var3);
+                                        put("var4", var4);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.downloader.ITXVodDownloadListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.downloader.ITXVodDownloadListener __result__ = new com.tencent.rtmp.downloader.ITXVodDownloadListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.downloader.ITXVodDownloadListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onDownloadStart(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onDownloadStart(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onDownloadStart::onDownloadStart",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onDownloadProgress(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onDownloadProgress(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onDownloadProgress::onDownloadProgress",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onDownloadStop(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onDownloadStop(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onDownloadStop::onDownloadStop",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onDownloadFinish(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onDownloadFinish(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onDownloadFinish::onDownloadFinish",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onDownloadError(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1, int var2, String var3) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onDownloadError(" + var1 + var2 + var3 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onDownloadError::onDownloadError",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                        put("var3", var3);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public int hlsKeyVerify(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1, String var2, byte[] var3) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: hlsKeyVerify(" + var1 + var2 + var3 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::hlsKeyVerify::hlsKeyVerify",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                        put("var3", var3);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+                        return 0;
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.ITXLivePushListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.ITXLivePushListener __result__ = new com.tencent.rtmp.ITXLivePushListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.ITXLivePushListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onPushEvent(int var1, android.os.Bundle var2) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onPushEvent(" + var1 + var2 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onPushEvent::onPushEvent",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+                    @Override
+                    public void onNetStatus(android.os.Bundle var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onNetStatus(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onNetStatus::onNetStatus",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXSnapshotListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onSnapshot(android.graphics.Bitmap var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onSnapshot(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onSnapshot::onSnapshot",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXAudioVolumeEvaluationListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onAudioVolumeEvaluationNotify(int var1) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onAudioVolumeEvaluationNotify(" + var1 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onAudioVolumeEvaluationNotify::onAudioVolumeEvaluationNotify",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
+            // anonymous class
+            put("com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener::createAnonymous__", (__args__, __methodResult__) -> {
+                // invoke native method
+                com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener() {
+                    // method channel
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXVideoRawDataListener::Callback@" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+            
+                    // call dart method
+                    @Override
+                    public void onVideoRawDataAvailable(byte[] var1, int var2, int var3, int var4) {
+                        // print log
+                        if (getEnableLog()) {
+                            Log.d("java-callback", "fluttify-java-callback: onVideoRawDataAvailable(" + var1 + var2 + var3 + var4 + ")");
+                        }
+            
+                        // call dart method
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callbackChannel.invokeMethod(
+                                    "Callback::onVideoRawDataAvailable::onVideoRawDataAvailable",
+                                    new HashMap<String, Object>() {{
+                                        put("var1", var1);
+                                        put("var2", var2);
+                                        put("var3", var3);
+                                        put("var4", var4);
+                                    }}
+                                );
+                            }
+                        });
+            
+                        // method result
+            
+                    }
+            
+            };
+            
+                __methodResult__.success(__result__);
+            });
             put("RefClass::isKindOfcom_tencent_rtmp_TXLog", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");

@@ -179,21 +179,7 @@ class TXLiveBase extends NSObject  {
   
   
     // handle native call
-    MethodChannel('TXLiveAudioSessionDelegate::Callback', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-          
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }

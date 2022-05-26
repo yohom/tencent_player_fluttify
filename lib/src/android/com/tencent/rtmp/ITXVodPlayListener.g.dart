@@ -18,6 +18,49 @@ mixin com_tencent_rtmp_ITXVodPlayListener on java_lang_Object {
 
   
 
+  static Future<com_tencent_rtmp_ITXVodPlayListener> anonymous__({void Function(com_tencent_rtmp_TXVodPlayer? var1, int? var2, android_os_Bundle? var3)? onPlayEvent, void Function(com_tencent_rtmp_TXVodPlayer? var1, android_os_Bundle? var2)? onNetStatus}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_ITXVodPlayListener::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ITXVodPlayListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.tencent.rtmp.ITXVodPlayListener::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onPlayEvent::onPlayEvent':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onPlayEvent?.call(TencentPlayerFluttifyAndroidAs(args['var1']), args['var2'], TencentPlayerFluttifyAndroidAs(args['var3']));
+                break;
+              case 'Callback::onNetStatus::onNetStatus':
+                // print log
+                if (fluttifyLogEnabled) {
+            
+                }
+            
+                // handle the native call
+                onNetStatus?.call(TencentPlayerFluttifyAndroidAs(args['var1']), TencentPlayerFluttifyAndroidAs(args['var2']));
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
+  
+
   @override
   final String tag__ = 'tencent_player_fluttify';
 

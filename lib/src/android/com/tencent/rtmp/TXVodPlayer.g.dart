@@ -358,38 +358,7 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXVodPlayer::setPlayListener::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.ITXLivePlayListener::onPlayEvent':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPlayEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                listener.onPlayEvent(args['var1'], TencentPlayerFluttifyAndroidAs(args['var2']));
-                break;
-              case 'Callback::com.tencent.rtmp.ITXLivePlayListener::onNetStatus':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNetStatus([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onNetStatus(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -406,38 +375,7 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXVodPlayer::setVodListener::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.ITXVodPlayListener::onPlayEvent':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPlayEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-                }
-          
-                // handle the native call
-                listener.onPlayEvent(TencentPlayerFluttifyAndroidAs(args['var1']), args['var2'], TencentPlayerFluttifyAndroidAs(args['var3']));
-                break;
-              case 'Callback::com.tencent.rtmp.ITXVodPlayListener::onNetStatus':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNetStatus([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                listener.onNetStatus(TencentPlayerFluttifyAndroidAs(args['var1']), TencentPlayerFluttifyAndroidAs(args['var2']));
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -641,29 +579,7 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.tencent.rtmp.TXVodPlayer::snapshot::Callback@$refId', kTencentPlayerFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::onSnapshot':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onSnapshot([\'var1\':${args['var1']}])');
-                }
-          
-                // handle the native call
-                listener.onSnapshot(TencentPlayerFluttifyAndroidAs(args['var1']));
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
