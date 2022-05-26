@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXLivePlayListener_SUB extends NSObject with TXLivePlayListener {}
 
 mixin TXLivePlayListener on NSObject {
   
 
-  
+  static TXLivePlayListener subInstance() => _TXLivePlayListener_SUB();
 
   
 

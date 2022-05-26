@@ -11,15 +11,15 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _com_tencent_rtmp_downloader_ITXVodPreloadListener_SUB extends java_lang_Object with com_tencent_rtmp_downloader_ITXVodPreloadListener {}
 
 mixin com_tencent_rtmp_downloader_ITXVodPreloadListener on java_lang_Object {
   
 
-  
+  static com_tencent_rtmp_downloader_ITXVodPreloadListener subInstance() => _com_tencent_rtmp_downloader_ITXVodPreloadListener_SUB();
 
   static Future<com_tencent_rtmp_downloader_ITXVodPreloadListener> anonymous__({void Function(int? var1, String? var2)? onComplete, void Function(int? var1, String? var2, int? var3, String? var4)? onError}) async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_downloader_ITXVodPreloadListener::createAnonymous__');
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.downloader.ITXVodPreloadListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_ITXVodPreloadListener>(__result__)!;
   

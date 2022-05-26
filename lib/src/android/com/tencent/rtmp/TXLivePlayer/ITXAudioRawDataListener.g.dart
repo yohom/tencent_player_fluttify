@@ -11,15 +11,15 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener_SUB extends java_lang_Object with com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener {}
 
 mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object {
   
 
-  
+  static com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener_SUB();
 
   static Future<com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener> anonymous__({void Function(Uint8List? var1, int? var2)? onPcmDataAvailable, void Function(int? var1, int? var2, int? var3)? onAudioInfoChanged}) async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener::createAnonymous__');
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener>(__result__)!;
   

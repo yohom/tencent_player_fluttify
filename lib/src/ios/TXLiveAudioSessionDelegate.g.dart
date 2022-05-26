@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXLiveAudioSessionDelegate_SUB extends NSObject with TXLiveAudioSessionDelegate {}
 
 mixin TXLiveAudioSessionDelegate on NSObject {
   
 
-  
+  static TXLiveAudioSessionDelegate subInstance() => _TXLiveAudioSessionDelegate_SUB();
 
   
 

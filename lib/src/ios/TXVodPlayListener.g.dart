@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXVodPlayListener_SUB extends NSObject with TXVodPlayListener {}
 
 mixin TXVodPlayListener on NSObject {
   
 
-  
+  static TXVodPlayListener subInstance() => _TXVodPlayListener_SUB();
 
   
 

@@ -11,15 +11,15 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener_SUB extends java_lang_Object with com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener {}
 
 mixin com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener on java_lang_Object {
   
 
-  
+  static com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener_SUB();
 
   static Future<com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener> anonymous__({void Function(int? var1)? onAudioVolumeEvaluationNotify}) async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener::createAnonymous__');
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener>(__result__)!;
   

@@ -11,15 +11,15 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener_SUB extends java_lang_Object with com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener {}
 
 mixin com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener on java_lang_Object {
   
 
-  
+  static com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener_SUB();
 
   static Future<com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener> anonymous__({void Function(com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture? var1)? onRenderVideoFrame}) async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener::createAnonymous__');
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener>(__result__)!;
   
