@@ -217,6 +217,23 @@ class VodPlayer {
     return Duration(milliseconds: ((seconds ?? 0) * 1000).toInt());
   }
 
+  /// 设置开始时间
+  Future<void> setStartTime(Duration duration) async {
+    final target = duration.inMilliseconds / 1000;
+    return platform(
+      android: (pool) => _androidPlayer!.setStartTime(target),
+      ios: (pool) => _iosPlayer!.setStartTime(target),
+    );
+  }
+
+  /// 设置是否循环
+  Future<void> setLoop(bool loop) async {
+    return platform(
+      android: (pool) => _androidPlayer!.setLoop(loop),
+      ios: (pool) => _iosPlayer!.set_loop(loop),
+    );
+  }
+
   /// 截图
   Future<Uint8List> takeSnapshot() async {
     final completer = Completer<Uint8List>();
