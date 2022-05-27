@@ -9,7 +9,7 @@ import 'package:tencent_player_fluttify/src/android/android.export.g.dart';
 import 'package:tencent_player_fluttify/src/ios/ios.export.g.dart';
 
 import 'cloud_video_controller.dart';
-import 'enums.dart';
+import 'data_model.dart';
 
 part 'player_delegates.dart';
 
@@ -277,7 +277,7 @@ class VodPlayer {
     VoidCallback? onEventPlayBegin,
     VoidCallback? onEventPlayEnd,
     VoidCallback? onEventConnectSucc,
-    ValueChanged<Duration>? onEventPlayProgress,
+    ValueChanged<PlayProgress>? onEventPlayProgress,
     VoidCallback? onEventPlayLoading,
     VoidCallback? onEventPlayLoadingEnd,
     VoidCallback? onEventPlayPrepared,
@@ -345,9 +345,21 @@ class VodPlayer {
           }
           // 播放进度
           else if (code == 2005 && onEventPlayProgress != null) {
-            final millis = await data?.getInt('EVT_PLAYABLE_DURATION_MS') ?? 0;
-            final duration = Duration(milliseconds: millis);
-            onEventPlayProgress(duration);
+            final playInt = await data?.getInt('EVT_PLAY_PROGRESS_MS') ?? 0;
+            final bufferInt =
+                await data?.getInt('EVT_PLAYABLE_DURATION_MS') ?? 0;
+            final totalInt = await data?.getInt('EVT_PLAY_DURATION_MS') ?? 0;
+            final speedInt = await data?.getInt('EVT_PLAYABLE_RATE') ?? 1;
+            final playProgress = Duration(milliseconds: playInt);
+            final bufferProgress = Duration(milliseconds: bufferInt);
+            final totalDuration = Duration(milliseconds: totalInt);
+
+            onEventPlayProgress(PlayProgress(
+              playProgress: playProgress,
+              bufferProgress: bufferProgress,
+              totalDuration: totalDuration,
+              speedInt: speedInt,
+            ));
           }
           // 缓存中
           else if (code == 2007 && onEventPlayLoading != null) {
