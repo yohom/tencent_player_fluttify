@@ -67,7 +67,6 @@ class VodPlayer {
       ios: (pool) async {
         // 其首个参数 frame 在 1.5.2 版本后已经被废弃
         final rect = await CGRect.create(0, 0, 0, 0);
-        await _iosPlayer!.removeVideoWidget();
         await _iosPlayer!
             .setupVideoWidget_insertIndex(playerView.playerView, 0);
       },
@@ -75,46 +74,16 @@ class VodPlayer {
   }
 
   /// 开始播放
-  Future<void> startPlay(String playUrl, {required PlayType type}) async {
+  Future<void> startPlay(String playUrl) async {
     final httpsUrl = Uri.parse(playUrl).scheme == 'http'
         ? playUrl.replaceFirst('http', 'https')
         : playUrl;
     return platform(
       android: (pool) async {
-        int _type;
-        switch (type) {
-          case PlayType.RTMP:
-            _type = com_tencent_rtmp_TXLivePlayer.PLAY_TYPE_LIVE_RTMP;
-            break;
-          case PlayType.FLV:
-            _type = com_tencent_rtmp_TXLivePlayer.PLAY_TYPE_LIVE_FLV;
-            break;
-          case PlayType.RTMP_ACC:
-            _type = com_tencent_rtmp_TXLivePlayer.PLAY_TYPE_LIVE_RTMP_ACC;
-            break;
-          case PlayType.HLS:
-            _type = com_tencent_rtmp_TXLivePlayer.PLAY_TYPE_VOD_HLS;
-            break;
-        }
         final result = await _androidPlayer!.startPlay__String(httpsUrl);
         debugPrint('result: $result');
       },
       ios: (pool) async {
-        TX_Enum_PlayType _type;
-        switch (type) {
-          case PlayType.RTMP:
-            _type = TX_Enum_PlayType.PLAY_TYPE_LIVE_RTMP;
-            break;
-          case PlayType.FLV:
-            _type = TX_Enum_PlayType.PLAY_TYPE_LIVE_FLV;
-            break;
-          case PlayType.RTMP_ACC:
-            _type = TX_Enum_PlayType.PLAY_TYPE_LIVE_RTMP_ACC;
-            break;
-          case PlayType.HLS:
-            _type = TX_Enum_PlayType.PLAY_TYPE_VOD_HLS;
-            break;
-        }
         final result = await _iosPlayer!.startPlay(httpsUrl);
         debugPrint('result: $result');
       },

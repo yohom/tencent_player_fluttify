@@ -16,9 +16,10 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
   VoidCallback? _onEventPlayBegin;
   VoidCallback? _onEventPlayEnd;
   VoidCallback? _onEventConnectSucc;
-  ValueChanged<Duration>? _onEventPlayProgress;
+  ValueChanged<PlayProgress>? _onEventPlayProgress;
   VoidCallback? _onEventPlayLoading;
   VoidCallback? _onEventPlayLoadingEnd;
+  VoidCallback? _onEventPlayPrepared;
 
   @override
   Future<void> onPlayEvent_event_withParam(
@@ -26,8 +27,7 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
     int EvtID,
     Map param,
   ) async {
-    super.onPlayEvent_event_withParam(player, EvtID, param);
-    debugPrint('onPlayEvent_withParam: $EvtID, $param');
+    debugPrint('事件: $EvtID, 参数: ${param}');
     // 当前视频帧解码失败
     if (EvtID == 2101 && _onWarningVideoDecodeFail != null) {
       _onWarningVideoDecodeFail!();
@@ -86,9 +86,18 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
     }
     // 播放进度
     else if (EvtID == 2005 && _onEventPlayProgress != null) {
-      final millis = await param['EVT_PLAYABLE_DURATION_MS'] ?? 0;
-      final duration = Duration(milliseconds: millis);
-      _onEventPlayProgress!(duration);
+      final playInt = await param['EVT_PLAY_PROGRESS_MS'] ?? 0;
+      final bufferInt = await param['EVT_PLAYABLE_DURATION_MS'] ?? 0;
+      final totalInt = await param['EVT_PLAY_DURATION_MS'] ?? 0;
+      final playProgress = Duration(milliseconds: playInt);
+      final bufferProgress = Duration(milliseconds: bufferInt);
+      final totalDuration = Duration(milliseconds: totalInt);
+
+      _onEventPlayProgress!(PlayProgress(
+        playProgress: playProgress,
+        bufferProgress: bufferProgress,
+        totalDuration: totalDuration,
+      ));
     }
     // 缓存中
     else if (EvtID == 2007 && _onEventPlayLoading != null) {
@@ -97,6 +106,12 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
     // 缓存结束
     else if (EvtID == 2014 && _onEventPlayLoadingEnd != null) {
       _onEventPlayLoadingEnd!();
+    }
+    // 可以准备开始播放
+    else if (EvtID == 2013 && _onEventPlayPrepared != null) {
+      _onEventPlayPrepared!();
+    } else {
+      debugPrint('未处理的事件: $EvtID, $param');
     }
   }
 
