@@ -22,12 +22,12 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_TXLivePlayConfig?> create__() async {
+  static Future<com_tencent_rtmp_TXLivePlayConfig> create__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_TXLivePlayConfig__',
     
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayConfig?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayConfig>(__result__)!;
   }
   
   static Future<List<com_tencent_rtmp_TXLivePlayConfig>> create_batch__(int length) async {

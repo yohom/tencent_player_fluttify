@@ -29,28 +29,28 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource?> create__int__String__int__String__String(int appId, String fileId, int quality, String pSign, String userName) async {
+  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__int__String__int__String__String(int appId, String fileId, int quality, String pSign, String userName) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__int__String__int__String__String',
       {"appId": appId, "fileId": fileId, "quality": quality, "pSign": pSign, "userName": userName}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
   }
   
-  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource?> create__com_tencent_rtmp_TXPlayerAuthBuilder__int(com_tencent_rtmp_TXPlayerAuthBuilder authBuilder, int quality) async {
+  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__com_tencent_rtmp_TXPlayerAuthBuilder__int(com_tencent_rtmp_TXPlayerAuthBuilder authBuilder, int quality) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__com_tencent_rtmp_TXPlayerAuthBuilder__int',
       {"authBuilder": authBuilder, "quality": quality}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
   }
   
-  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource?> create__com_tencent_rtmp_TXPlayerAuthBuilder__String(com_tencent_rtmp_TXPlayerAuthBuilder authBuilder, String templateName) async {
+  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__com_tencent_rtmp_TXPlayerAuthBuilder__String(com_tencent_rtmp_TXPlayerAuthBuilder authBuilder, String templateName) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__com_tencent_rtmp_TXPlayerAuthBuilder__String',
       {"authBuilder": authBuilder, "templateName": templateName}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
   }
   
   static Future<List<com_tencent_rtmp_downloader_TXVodDownloadDataSource>> create_batch__int__String__int__String__String(List<int> appId, List<String> fileId, List<int> quality, List<String> pSign, List<String> userName) async {

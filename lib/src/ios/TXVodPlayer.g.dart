@@ -27,7 +27,7 @@ class TXVodPlayer extends NSObject  {
       'ObjectFactory::createTXVodPlayer',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodPlayer?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXVodPlayer?>(__result__)!;
   }
   
   static Future<List<TXVodPlayer>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -579,7 +579,7 @@ class TXVodPlayer extends NSObject  {
               case 'Callback::void|UIImage*#__arg_0__::void|UIImage*#__arg_0__':
                 // print log
                 if (fluttifyLogEnabled) {
-          
+                  debugPrint('fluttify-dart-callback: snapshotCompletionBlock([\'__arg_0__\':${args['__arg_0__']}])');
                 }
           
                 // handle the native call

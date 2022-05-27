@@ -27,7 +27,7 @@ class TXRecordResult extends NSObject  {
       'ObjectFactory::createTXRecordResult',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXRecordResult?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXRecordResult?>(__result__)!;
   }
   
   static Future<List<TXRecordResult>> create_batch__(int length, { bool init = true /* ios only */ }) async {

@@ -15,7 +15,8 @@ class CloudVideo extends StatefulWidget {
   const CloudVideo({
     Key? key,
     this.onCloudVideoCreated,
-    this.gestureRecognizers,
+    // 播放器不需要任何手势操作, 如有需要, 在上层自己覆盖GestureRecognizer即可
+    this.gestureRecognizers = const {},
   }) : super(key: key);
 
   /// widget创建完成回调

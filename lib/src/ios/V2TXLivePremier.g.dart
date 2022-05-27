@@ -27,7 +27,7 @@ class V2TXLivePremier extends NSObject  {
       'ObjectFactory::createV2TXLivePremier',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLivePremier?>(__result__);
+    return TencentPlayerFluttifyIOSAs<V2TXLivePremier?>(__result__)!;
   }
   
   static Future<List<V2TXLivePremier>> create_batch__(int length, { bool init = true /* ios only */ }) async {

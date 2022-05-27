@@ -11,15 +11,15 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _com_tencent_rtmp_downloader_ITXVodDownloadListener_SUB extends java_lang_Object with com_tencent_rtmp_downloader_ITXVodDownloadListener {}
 
 mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
   
 
-  
+  static com_tencent_rtmp_downloader_ITXVodDownloadListener subInstance() => _com_tencent_rtmp_downloader_ITXVodDownloadListener_SUB();
 
   static Future<com_tencent_rtmp_downloader_ITXVodDownloadListener> anonymous__({void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1)? onDownloadStart, void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1)? onDownloadProgress, void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1)? onDownloadStop, void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1)? onDownloadFinish, void Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1, int? var2, String? var3)? onDownloadError, int Function(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1, String? var2, Uint8List? var3)? hlsKeyVerify}) async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_downloader_ITXVodDownloadListener::createAnonymous__');
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.downloader.ITXVodDownloadListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_ITXVodDownloadListener>(__result__)!;
   
@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadStart::onDownloadStart':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadStart?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
@@ -41,7 +41,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadProgress::onDownloadProgress':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadProgress?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
@@ -50,7 +50,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadStop::onDownloadStop':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadStop?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
@@ -59,7 +59,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadFinish::onDownloadFinish':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadFinish?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
@@ -68,7 +68,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadError::onDownloadError':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadError?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
                 }
             
                 // handle the native call
@@ -77,7 +77,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::hlsKeyVerify::hlsKeyVerify':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: hlsKeyVerify?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
                 }
             
                 // handle the native call

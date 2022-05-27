@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXLiveBaseDelegate_SUB extends NSObject with TXLiveBaseDelegate {}
 
 mixin TXLiveBaseDelegate on NSObject {
   
 
-  
+  static TXLiveBaseDelegate subInstance() => _TXLiveBaseDelegate_SUB();
 
   
 

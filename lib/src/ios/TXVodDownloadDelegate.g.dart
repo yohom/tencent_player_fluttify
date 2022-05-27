@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXVodDownloadDelegate_SUB extends NSObject with TXVodDownloadDelegate {}
 
 mixin TXVodDownloadDelegate on NSObject {
   
 
-  
+  static TXVodDownloadDelegate subInstance() => _TXVodDownloadDelegate_SUB();
 
   
 

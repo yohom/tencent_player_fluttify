@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _V2TXLivePremierObserver_SUB extends NSObject with V2TXLivePremierObserver {}
 
 mixin V2TXLivePremierObserver on NSObject {
   
 
-  
+  static V2TXLivePremierObserver subInstance() => _V2TXLivePremierObserver_SUB();
 
   
 

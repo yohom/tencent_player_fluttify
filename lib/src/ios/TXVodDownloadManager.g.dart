@@ -27,7 +27,7 @@ class TXVodDownloadManager extends NSObject  {
       'ObjectFactory::createTXVodDownloadManager',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodDownloadManager?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXVodDownloadManager?>(__result__)!;
   }
   
   static Future<List<TXVodDownloadManager>> create_batch__(int length, { bool init = true /* ios only */ }) async {

@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXVideoCustomProcessDelegate_SUB extends NSObject with TXVideoCustomProcessDelegate {}
 
 mixin TXVideoCustomProcessDelegate on NSObject {
   
 
-  
+  static TXVideoCustomProcessDelegate subInstance() => _TXVideoCustomProcessDelegate_SUB();
 
   
 

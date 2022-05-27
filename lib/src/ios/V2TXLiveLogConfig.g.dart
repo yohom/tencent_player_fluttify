@@ -27,7 +27,7 @@ class V2TXLiveLogConfig extends NSObject  {
       'ObjectFactory::createV2TXLiveLogConfig',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveLogConfig?>(__result__);
+    return TencentPlayerFluttifyIOSAs<V2TXLiveLogConfig?>(__result__)!;
   }
   
   static Future<List<V2TXLiveLogConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {

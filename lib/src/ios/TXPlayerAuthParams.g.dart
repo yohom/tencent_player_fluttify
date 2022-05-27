@@ -27,7 +27,7 @@ class TXPlayerAuthParams extends NSObject  {
       'ObjectFactory::createTXPlayerAuthParams',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXPlayerAuthParams?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXPlayerAuthParams?>(__result__)!;
   }
   
   static Future<List<TXPlayerAuthParams>> create_batch__(int length, { bool init = true /* ios only */ }) async {

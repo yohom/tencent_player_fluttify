@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXVodPreloadManagerDelegate_SUB extends NSObject with TXVodPreloadManagerDelegate {}
 
 mixin TXVodPreloadManagerDelegate on NSObject {
   
 
-  
+  static TXVodPreloadManagerDelegate subInstance() => _TXVodPreloadManagerDelegate_SUB();
 
   
 

@@ -27,7 +27,7 @@ class V2TXLiveAudioFrame extends NSObject  {
       'ObjectFactory::createV2TXLiveAudioFrame',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveAudioFrame?>(__result__);
+    return TencentPlayerFluttifyIOSAs<V2TXLiveAudioFrame?>(__result__)!;
   }
   
   static Future<List<V2TXLiveAudioFrame>> create_batch__(int length, { bool init = true /* ios only */ }) async {

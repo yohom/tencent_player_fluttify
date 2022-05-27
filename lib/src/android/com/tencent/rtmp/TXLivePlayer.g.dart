@@ -29,12 +29,12 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_TXLivePlayer?> create__android_content_Context(android_content_Context context) async {
+  static Future<com_tencent_rtmp_TXLivePlayer> create__android_content_Context(android_content_Context context) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_TXLivePlayer__android_content_Context',
       {"context": context}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer>(__result__)!;
   }
   
   static Future<List<com_tencent_rtmp_TXLivePlayer>> create_batch__android_content_Context(List<android_content_Context> context) async {

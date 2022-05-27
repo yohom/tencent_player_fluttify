@@ -22,12 +22,12 @@ class com_tencent_rtmp_TXLog extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_TXLog?> create__() async {
+  static Future<com_tencent_rtmp_TXLog> create__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_TXLog__',
     
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLog?>(__result__);
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLog>(__result__)!;
   }
   
   static Future<List<com_tencent_rtmp_TXLog>> create_batch__(int length) async {

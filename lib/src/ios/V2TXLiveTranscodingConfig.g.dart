@@ -27,7 +27,7 @@ class V2TXLiveTranscodingConfig extends NSObject  {
       'ObjectFactory::createV2TXLiveTranscodingConfig',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveTranscodingConfig?>(__result__);
+    return TencentPlayerFluttifyIOSAs<V2TXLiveTranscodingConfig?>(__result__)!;
   }
   
   static Future<List<V2TXLiveTranscodingConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {

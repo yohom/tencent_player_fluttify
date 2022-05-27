@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _V2TXLivePlayerObserver_SUB extends NSObject with V2TXLivePlayerObserver {}
 
 mixin V2TXLivePlayerObserver on NSObject {
   
 
-  
+  static V2TXLivePlayerObserver subInstance() => _V2TXLivePlayerObserver_SUB();
 
   
 

@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXAudioCustomProcessDelegate_SUB extends NSObject with TXAudioCustomProcessDelegate {}
 
 mixin TXAudioCustomProcessDelegate on NSObject {
   
 
-  
+  static TXAudioCustomProcessDelegate subInstance() => _TXAudioCustomProcessDelegate_SUB();
 
   
 

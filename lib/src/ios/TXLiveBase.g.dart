@@ -27,7 +27,7 @@ class TXLiveBase extends NSObject  {
       'ObjectFactory::createTXLiveBase',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXLiveBase?>(__result__);
+    return TencentPlayerFluttifyIOSAs<TXLiveBase?>(__result__)!;
   }
   
   static Future<List<TXLiveBase>> create_batch__(int length, { bool init = true /* ios only */ }) async {

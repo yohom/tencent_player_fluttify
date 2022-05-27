@@ -27,7 +27,7 @@ class V2TXLiveVideoFrame extends NSObject  {
       'ObjectFactory::createV2TXLiveVideoFrame',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveVideoFrame?>(__result__);
+    return TencentPlayerFluttifyIOSAs<V2TXLiveVideoFrame?>(__result__)!;
   }
   
   static Future<List<V2TXLiveVideoFrame>> create_batch__(int length, { bool init = true /* ios only */ }) async {

@@ -11,15 +11,15 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener_SUB extends java_lang_Object with com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener {}
 
 mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
   
 
-  
+  static com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener_SUB();
 
   static Future<com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener> anonymous__({void Function(android_graphics_Bitmap? var1)? onSnapshot}) async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener::createAnonymous__');
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener>(__result__)!;
   
@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
               case 'Callback::onSnapshot::onSnapshot':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onSnapshot?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call

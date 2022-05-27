@@ -11,15 +11,15 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _com_tencent_rtmp_ITXLivePushListener_SUB extends java_lang_Object with com_tencent_rtmp_ITXLivePushListener {}
 
 mixin com_tencent_rtmp_ITXLivePushListener on java_lang_Object {
   
 
-  
+  static com_tencent_rtmp_ITXLivePushListener subInstance() => _com_tencent_rtmp_ITXLivePushListener_SUB();
 
   static Future<com_tencent_rtmp_ITXLivePushListener> anonymous__({void Function(int? var1, android_os_Bundle? var2)? onPushEvent, void Function(android_os_Bundle? var1)? onNetStatus}) async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_ITXLivePushListener::createAnonymous__');
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ITXLivePushListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ITXLivePushListener>(__result__)!;
   
@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_ITXLivePushListener on java_lang_Object {
               case 'Callback::onPushEvent::onPushEvent':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onPushEvent?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
@@ -41,7 +41,7 @@ mixin com_tencent_rtmp_ITXLivePushListener on java_lang_Object {
               case 'Callback::onNetStatus::onNetStatus':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onNetStatus?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call

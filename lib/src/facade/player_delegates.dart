@@ -15,6 +15,10 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
   VoidCallback? _onEventRcvFirstIFrame;
   VoidCallback? _onEventPlayBegin;
   VoidCallback? _onEventPlayEnd;
+  VoidCallback? _onEventConnectSucc;
+  ValueChanged<Duration>? _onEventPlayProgress;
+  VoidCallback? _onEventPlayLoading;
+  VoidCallback? _onEventPlayLoadingEnd;
 
   @override
   Future<void> onPlayEvent_event_withParam(
@@ -75,6 +79,24 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
     // 视频播放结束
     else if (EvtID == 2006 && _onEventPlayEnd != null) {
       _onEventPlayEnd!();
+    }
+    // 链接成功
+    else if (EvtID == 2001 && _onEventConnectSucc != null) {
+      _onEventConnectSucc!();
+    }
+    // 播放进度
+    else if (EvtID == 2005 && _onEventPlayProgress != null) {
+      final millis = await param['EVT_PLAYABLE_DURATION_MS'] ?? 0;
+      final duration = Duration(milliseconds: millis);
+      _onEventPlayProgress!(duration);
+    }
+    // 缓存中
+    else if (EvtID == 2007 && _onEventPlayLoading != null) {
+      _onEventPlayLoading!();
+    }
+    // 缓存结束
+    else if (EvtID == 2014 && _onEventPlayLoadingEnd != null) {
+      _onEventPlayLoadingEnd!();
     }
   }
 

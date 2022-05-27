@@ -11,12 +11,12 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _TXAudioRawDataDelegate_SUB extends NSObject with TXAudioRawDataDelegate {}
 
 mixin TXAudioRawDataDelegate on NSObject {
   
 
-  
+  static TXAudioRawDataDelegate subInstance() => _TXAudioRawDataDelegate_SUB();
 
   
 

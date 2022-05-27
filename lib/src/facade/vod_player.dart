@@ -1,4 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import, unused_local_variable, dead_code, unnecessary_cast
+import 'dart:async';
+import 'dart:typed_data';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
@@ -6,11 +9,11 @@ import 'package:tencent_player_fluttify/src/android/android.export.g.dart';
 import 'package:tencent_player_fluttify/src/ios/ios.export.g.dart';
 
 import 'cloud_video_controller.dart';
-import 'enums.dart';
+import 'data_model.dart';
 
 part 'player_delegates.dart';
 
-/// 拉流控制器
+/// 点播控制器
 class VodPlayer {
   VodPlayer._();
 
@@ -64,6 +67,7 @@ class VodPlayer {
       ios: (pool) async {
         // 其首个参数 frame 在 1.5.2 版本后已经被废弃
         final rect = await CGRect.create(0, 0, 0, 0);
+        await _iosPlayer!.removeVideoWidget();
         await _iosPlayer!
             .setupVideoWidget_insertIndex(playerView.playerView, 0);
       },
@@ -149,6 +153,114 @@ class VodPlayer {
     );
   }
 
+  /// 快进
+  Future<void> seekTo(Duration duration) async {
+    final second = duration.inSeconds.toDouble();
+    return platform(
+      android: (pool) => _androidPlayer!.seek__double(second),
+      ios: (pool) => _iosPlayer!.seek(second),
+    );
+  }
+
+  /// 设置速度
+  Future<void> setSpeed(double speed) async {
+    return platform(
+      android: (pool) => _androidPlayer!.setRate(speed),
+      ios: (pool) => _iosPlayer!.seek(speed),
+    );
+  }
+
+  /// 设置音量
+  ///
+  /// 范围[0-1]
+  Future<void> setVolume(double volume) async {
+    final target = (volume * 100).toInt();
+    return platform(
+      android: (pool) => _androidPlayer!.setAudioPlayoutVolume(target),
+      ios: (pool) => _iosPlayer!.setAudioPlayoutVolume(target),
+    );
+  }
+
+  /// 是否自动播放
+  Future<void> setAutoPlay(bool autoPlay) async {
+    return platform(
+      android: (pool) => _androidPlayer!.setAutoPlay(autoPlay),
+      ios: (pool) => _iosPlayer!.set_isAutoPlay(autoPlay),
+    );
+  }
+
+  /// 是否静音
+  Future<void> setMute(bool mute) async {
+    return platform(
+      android: (pool) => _androidPlayer!.setMute(mute),
+      ios: (pool) => _iosPlayer!.setMute(mute),
+    );
+  }
+
+  /// 获取总长度
+  Future<Duration> getDuration() async {
+    final seconds = await platform(
+      android: (pool) => _androidPlayer!.getDuration(),
+      ios: (pool) => _iosPlayer!.duration(),
+    );
+
+    return Duration(milliseconds: ((seconds ?? 0) * 1000).toInt());
+  }
+
+  /// 获取当前播放位置
+  Future<Duration> getPosition() async {
+    final seconds = await platform(
+      android: (pool) => _androidPlayer!.getCurrentPlaybackTime(),
+      ios: (pool) => _iosPlayer!.currentPlaybackTime(),
+    );
+
+    return Duration(milliseconds: ((seconds ?? 0) * 1000).toInt());
+  }
+
+  /// 设置开始时间
+  Future<void> setStartTime(Duration duration) async {
+    final target = duration.inMilliseconds / 1000;
+    return platform(
+      android: (pool) => _androidPlayer!.setStartTime(target),
+      ios: (pool) => _iosPlayer!.setStartTime(target),
+    );
+  }
+
+  /// 设置是否循环
+  Future<void> setLoop(bool loop) async {
+    return platform(
+      android: (pool) => _androidPlayer!.setLoop(loop),
+      ios: (pool) => _iosPlayer!.set_loop(loop),
+    );
+  }
+
+  /// 截图
+  Future<Uint8List> takeSnapshot() async {
+    final completer = Completer<Uint8List>();
+    await platform(
+      android: (pool) async {
+        final listener =
+            await com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener.anonymous__(
+          onSnapshot: (image) async {
+            final data = await image?.data;
+            if (data == null) {
+              completer.completeError('截图失败');
+            } else {
+              completer.complete(data);
+            }
+          },
+        );
+        return _androidPlayer!.snapshot(listener);
+      },
+      ios: (pool) {
+        return _iosPlayer!
+            .snapshot((image) => image.data.then(completer.complete));
+      },
+    );
+
+    return completer.future;
+  }
+
   /// 事件处理
   Future<void> setOnEventListener({
     VoidCallback? onWarningVideoDecodeFail,
@@ -164,63 +276,106 @@ class VodPlayer {
     VoidCallback? onEventRcvFirstIFrame,
     VoidCallback? onEventPlayBegin,
     VoidCallback? onEventPlayEnd,
+    VoidCallback? onEventConnectSucc,
+    ValueChanged<PlayProgress>? onEventPlayProgress,
+    VoidCallback? onEventPlayLoading,
+    VoidCallback? onEventPlayLoadingEnd,
+    VoidCallback? onEventPlayPrepared,
   }) async {
     return platform(
       android: (pool) async {
         final listener = await com_tencent_rtmp_ITXVodPlayListener.anonymous__(
-            onPlayEvent: (var1, param1, param2) async {
+            onPlayEvent: (player, code, data) async {
+          debugPrint('事件: $code, 参数: ${data}');
           // 当前视频帧解码失败
-          if (var1 == 2101 && onWarningVideoDecodeFail != null) {
+          if (code == 2101 && onWarningVideoDecodeFail != null) {
             onWarningVideoDecodeFail();
           }
           // 当前音频帧解码失败
-          else if (var1 == 2102 && onWarningAudioDecodeFail != null) {
+          else if (code == 2102 && onWarningAudioDecodeFail != null) {
             onWarningAudioDecodeFail();
           }
           // 网络断连，已启动自动重连（重连超过三次就直接抛送 PLAY_ERR_NET_DISCONNECT）
-          else if (var1 == 2103 && onWarningReconnect != null) {
+          else if (code == 2103 && onWarningReconnect != null) {
             onWarningReconnect();
           }
           // 网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀
-          else if (var1 == 2104 && onWarningRecvDataLag != null) {
+          else if (code == 2104 && onWarningRecvDataLag != null) {
             onWarningRecvDataLag();
           }
           // 当前视频播放出现卡顿
-          else if (var1 == 2105 && onWarningVideoPlayLag != null) {
+          else if (code == 2105 && onWarningVideoPlayLag != null) {
             onWarningVideoPlayLag();
           }
           // 硬解启动失败，采用软解
-          else if (var1 == 2106 && onWarningHwAccelerationFail != null) {
+          else if (code == 2106 && onWarningHwAccelerationFail != null) {
             onWarningHwAccelerationFail();
           }
           // 当前视频帧不连续，可能丢帧
-          else if (var1 == 2107 && onWarningVideoDiscontinuity != null) {
+          else if (code == 2107 && onWarningVideoDiscontinuity != null) {
             onWarningVideoDiscontinuity();
           }
           // RTMP - DNS 解析失败（会触发重试流程） 3001
-          else if (var1 == 3001 && onWarningDNSFail != null) {
+          else if (code == 3001 && onWarningDNSFail != null) {
             onWarningDNSFail();
           }
           // RTMP 服务器连接失败（会触发重试流程） 3002
-          else if (var1 == 3002 && onWarningServerConnFail != null) {
+          else if (code == 3002 && onWarningServerConnFail != null) {
             onWarningServerConnFail();
           }
           // RTMP 服务器握手失败（会触发重试流程） 3003
-          else if (var1 == 3003 && onWarningShakeFail != null) {
+          else if (code == 3003 && onWarningShakeFail != null) {
             onWarningShakeFail();
           }
           // 收到首帧数据，越快收到此消息说明链路质量越好
-          else if (var1 == 2003 && onEventRcvFirstIFrame != null) {
+          else if (code == 2003 && onEventRcvFirstIFrame != null) {
             onEventRcvFirstIFrame();
           }
           // 视频播放开始，如果您自己做 loading，会需要它
-          else if (var1 == 2004 && onEventPlayBegin != null) {
+          else if (code == 2004 && onEventPlayBegin != null) {
             onEventPlayBegin();
           }
           // 视频播放结束
-          else if (var1 == 2006 && onEventPlayEnd != null) {
+          else if (code == 2006 && onEventPlayEnd != null) {
             onEventPlayEnd();
           }
+          // 链接成功
+          else if (code == 2001 && onEventConnectSucc != null) {
+            onEventConnectSucc();
+          }
+          // 播放进度
+          else if (code == 2005 && onEventPlayProgress != null) {
+            final playInt = await data?.getInt('EVT_PLAY_PROGRESS_MS') ?? 0;
+            final bufferInt =
+                await data?.getInt('EVT_PLAYABLE_DURATION_MS') ?? 0;
+            final totalInt = await data?.getInt('EVT_PLAY_DURATION_MS') ?? 0;
+            final playProgress = Duration(milliseconds: playInt);
+            final bufferProgress = Duration(milliseconds: bufferInt);
+            final totalDuration = Duration(milliseconds: totalInt);
+
+            onEventPlayProgress(PlayProgress(
+              playProgress: playProgress,
+              bufferProgress: bufferProgress,
+              totalDuration: totalDuration,
+            ));
+          }
+          // 缓存中
+          else if (code == 2007 && onEventPlayLoading != null) {
+            onEventPlayLoading();
+          }
+          // 缓存结束
+          else if (code == 2014 && onEventPlayLoadingEnd != null) {
+            onEventPlayLoadingEnd();
+          }
+          // 可以准备开始播放
+          else if (code == 2013 && onEventPlayPrepared != null) {
+            onEventPlayPrepared();
+          } else {
+            debugPrint('未处理的事件: $code, $data');
+          }
+
+          // 释放参数
+          await data?.release__();
         });
         await _androidPlayer!.setVodListener(listener);
       },

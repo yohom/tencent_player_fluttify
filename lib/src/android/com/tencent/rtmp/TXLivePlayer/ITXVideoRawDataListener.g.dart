@@ -11,15 +11,15 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-
+class _com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener_SUB extends java_lang_Object with com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener {}
 
 mixin com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener on java_lang_Object {
   
 
-  
+  static com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener_SUB();
 
   static Future<com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener> anonymous__({void Function(Uint8List? var1, int? var2, int? var3, int? var4)? onVideoRawDataAvailable}) async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener::createAnonymous__');
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener>(__result__)!;
   
@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener on java_lang_Object 
               case 'Callback::onVideoRawDataAvailable::onVideoRawDataAvailable':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onVideoRawDataAvailable?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
                 }
             
                 // handle the native call
