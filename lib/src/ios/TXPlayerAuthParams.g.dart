@@ -22,12 +22,12 @@ class TXPlayerAuthParams extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXPlayerAuthParams?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXPlayerAuthParams> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXPlayerAuthParams',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXPlayerAuthParams?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXPlayerAuthParams>(__result__)!;
   }
   
   static Future<List<TXPlayerAuthParams>> create_batch__(int length, { bool init = true /* ios only */ }) async {

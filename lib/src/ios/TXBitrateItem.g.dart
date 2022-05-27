@@ -22,12 +22,12 @@ class TXBitrateItem extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXBitrateItem?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXBitrateItem> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXBitrateItem',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXBitrateItem?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXBitrateItem>(__result__)!;
   }
   
   static Future<List<TXBitrateItem>> create_batch__(int length, { bool init = true /* ios only */ }) async {

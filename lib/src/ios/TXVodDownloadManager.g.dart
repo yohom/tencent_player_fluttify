@@ -22,12 +22,12 @@ class TXVodDownloadManager extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXVodDownloadManager?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXVodDownloadManager> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXVodDownloadManager',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodDownloadManager?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXVodDownloadManager>(__result__)!;
   }
   
   static Future<List<TXVodDownloadManager>> create_batch__(int length, { bool init = true /* ios only */ }) async {

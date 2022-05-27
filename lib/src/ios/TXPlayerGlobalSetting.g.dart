@@ -22,12 +22,12 @@ class TXPlayerGlobalSetting extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXPlayerGlobalSetting?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXPlayerGlobalSetting> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXPlayerGlobalSetting',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXPlayerGlobalSetting?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXPlayerGlobalSetting>(__result__)!;
   }
   
   static Future<List<TXPlayerGlobalSetting>> create_batch__(int length, { bool init = true /* ios only */ }) async {

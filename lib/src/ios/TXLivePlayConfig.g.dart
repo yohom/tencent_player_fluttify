@@ -22,12 +22,12 @@ class TXLivePlayConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXLivePlayConfig?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXLivePlayConfig> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXLivePlayConfig',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXLivePlayConfig?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXLivePlayConfig>(__result__)!;
   }
   
   static Future<List<TXLivePlayConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {

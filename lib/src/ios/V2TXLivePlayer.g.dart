@@ -22,12 +22,12 @@ class V2TXLivePlayer extends NSObject  {
   //endregion
 
   //region creators
-  static Future<V2TXLivePlayer?> create__({ bool init = true /* ios only */ }) async {
+  static Future<V2TXLivePlayer> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createV2TXLivePlayer',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLivePlayer?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<V2TXLivePlayer>(__result__)!;
   }
   
   static Future<List<V2TXLivePlayer>> create_batch__(int length, { bool init = true /* ios only */ }) async {
