@@ -85,13 +85,11 @@ class PlayProgress {
   final Duration playProgress;
   final Duration bufferProgress;
   final Duration totalDuration;
-  final int speedInt;
 
   PlayProgress({
     required this.playProgress,
     required this.bufferProgress,
     required this.totalDuration,
-    required this.speedInt,
   });
 
   @override

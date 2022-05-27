@@ -349,7 +349,6 @@ class VodPlayer {
             final bufferInt =
                 await data?.getInt('EVT_PLAYABLE_DURATION_MS') ?? 0;
             final totalInt = await data?.getInt('EVT_PLAY_DURATION_MS') ?? 0;
-            final speedInt = await data?.getInt('EVT_PLAYABLE_RATE') ?? 1;
             final playProgress = Duration(milliseconds: playInt);
             final bufferProgress = Duration(milliseconds: bufferInt);
             final totalDuration = Duration(milliseconds: totalInt);
@@ -358,7 +357,6 @@ class VodPlayer {
               playProgress: playProgress,
               bufferProgress: bufferProgress,
               totalDuration: totalDuration,
-              speedInt: speedInt,
             ));
           }
           // 缓存中
