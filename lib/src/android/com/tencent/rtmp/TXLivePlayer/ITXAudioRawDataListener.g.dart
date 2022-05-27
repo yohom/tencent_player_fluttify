@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
               case 'Callback::onPcmDataAvailable::onPcmDataAvailable':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onPcmDataAvailable?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
@@ -41,7 +41,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
               case 'Callback::onAudioInfoChanged::onAudioInfoChanged':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onAudioInfoChanged?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
                 }
             
                 // handle the native call

@@ -579,7 +579,7 @@ class TXVodPlayer extends NSObject  {
               case 'Callback::void|UIImage*#__arg_0__::void|UIImage*#__arg_0__':
                 // print log
                 if (fluttifyLogEnabled) {
-          
+                  debugPrint('fluttify-dart-callback: snapshotCompletionBlock([\'__arg_0__\':${args['__arg_0__']}])');
                 }
           
                 // handle the native call

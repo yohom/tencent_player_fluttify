@@ -83,7 +83,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onResume', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onResume', {"__this__": this});
   
   
     // handle native call
@@ -100,7 +100,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onPause', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onPause', {"__this__": this});
   
   
     // handle native call
@@ -117,7 +117,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setOpenGLContext', {"glContext": glContext, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setOpenGLContext', {"glContext": glContext, "__this__": this});
   
   
     // handle native call
@@ -134,7 +134,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getOpenGLContext', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getOpenGLContext', {"__this__": this});
   
   
     // handle native call
@@ -151,7 +151,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeVideoView', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeVideoView', {"__this__": this});
   
   
     // handle native call
@@ -168,7 +168,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeFocusIndicatorView', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeFocusIndicatorView', {"__this__": this});
   
   
     // handle native call
@@ -185,7 +185,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onDestroy', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onDestroy', {"__this__": this});
   
   
     // handle native call
@@ -202,7 +202,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getSurfaceView', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getSurfaceView', {"__this__": this});
   
   
     // handle native call
@@ -219,7 +219,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderMode', {"mode": mode, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderMode', {"mode": mode, "__this__": this});
   
   
     // handle native call
@@ -236,7 +236,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderRotation', {"rotation": rotation, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderRotation', {"rotation": rotation, "__this__": this});
   
   
     // handle native call
@@ -253,7 +253,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLastFrame', {"clear": clear, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLastFrame', {"clear": clear, "__this__": this});
   
   
     // handle native call
@@ -270,7 +270,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouchFocus', {"x": x, "y": y, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouchFocus', {"x": x, "y": y, "__this__": this});
   
   
     // handle native call
@@ -287,7 +287,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setMirror', {"mirror": mirror, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setMirror', {"mirror": mirror, "__this__": this});
   
   
     // handle native call
@@ -304,7 +304,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::disableLog', {"enable": enable, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::disableLog', {"enable": enable, "__this__": this});
   
   
     // handle native call
@@ -321,7 +321,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showLog', {"enable": enable, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showLog', {"enable": enable, "__this__": this});
   
   
     // handle native call
@@ -338,7 +338,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLog', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLog', {"__this__": this});
   
   
     // handle native call
@@ -355,7 +355,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogText', {"status": status, "event": event, "eventId": eventId, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogText', {"status": status, "event": event, "eventId": eventId, "__this__": this});
   
   
     // handle native call
@@ -372,7 +372,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::updateVideoViewSize', {"captureWidth": captureWidth, "captureHeight": captureHeight, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::updateVideoViewSize', {"captureWidth": captureWidth, "captureHeight": captureHeight, "__this__": this});
   
   
     // handle native call
@@ -389,7 +389,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::appendEventInfo', {"message": message, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::appendEventInfo', {"message": message, "__this__": this});
   
   
     // handle native call
@@ -406,7 +406,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showVideoDebugLog', {"showType": showType, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showVideoDebugLog', {"showType": showType, "__this__": this});
   
   
     // handle native call
@@ -423,7 +423,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMargin', {"leftMarginInDp": leftMarginInDp, "rightMarginInDp": rightMarginInDp, "topMarginInDp": topMarginInDp, "bottomMarginInDp": bottomMarginInDp, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMargin', {"leftMarginInDp": leftMarginInDp, "rightMarginInDp": rightMarginInDp, "topMarginInDp": topMarginInDp, "bottomMarginInDp": bottomMarginInDp, "__this__": this});
   
   
     // handle native call
@@ -440,7 +440,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMarginRatio', {"leftMarginInDp": leftMarginInDp, "rightMarginInDp": rightMarginInDp, "topMarginInDp": topMarginInDp, "bottomMarginInDp": bottomMarginInDp, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMarginRatio', {"leftMarginInDp": leftMarginInDp, "rightMarginInDp": rightMarginInDp, "topMarginInDp": topMarginInDp, "bottomMarginInDp": bottomMarginInDp, "__this__": this});
   
   
     // handle native call
@@ -457,7 +457,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getUserId', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getUserId', {"__this__": this});
   
   
     // handle native call
@@ -474,7 +474,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setUserId', {"userId": userId, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setUserId', {"userId": userId, "__this__": this});
   
   
     // handle native call
@@ -508,7 +508,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::stop', {"isNeedClearLastImg": isNeedClearLastImg, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::stop', {"isNeedClearLastImg": isNeedClearLastImg, "__this__": this});
   
   
     // handle native call
@@ -525,7 +525,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouch', {"v": v, "event": event, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouch', {"v": v, "event": event, "__this__": this});
   
   
     // handle native call

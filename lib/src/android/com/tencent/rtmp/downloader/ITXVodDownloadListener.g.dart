@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadStart::onDownloadStart':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadStart?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
@@ -41,7 +41,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadProgress::onDownloadProgress':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadProgress?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
@@ -50,7 +50,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadStop::onDownloadStop':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadStop?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
@@ -59,7 +59,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadFinish::onDownloadFinish':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadFinish?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
@@ -68,7 +68,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::onDownloadError::onDownloadError':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onDownloadError?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
                 }
             
                 // handle the native call
@@ -77,7 +77,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
               case 'Callback::hlsKeyVerify::hlsKeyVerify':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: hlsKeyVerify?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
                 }
             
                 // handle the native call

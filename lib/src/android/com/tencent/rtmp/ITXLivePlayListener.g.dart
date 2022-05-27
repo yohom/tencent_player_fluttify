@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_ITXLivePlayListener on java_lang_Object {
               case 'Callback::onPlayEvent::onPlayEvent':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onPlayEvent?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
@@ -41,7 +41,7 @@ mixin com_tencent_rtmp_ITXLivePlayListener on java_lang_Object {
               case 'Callback::onNetStatus::onNetStatus':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onNetStatus?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call

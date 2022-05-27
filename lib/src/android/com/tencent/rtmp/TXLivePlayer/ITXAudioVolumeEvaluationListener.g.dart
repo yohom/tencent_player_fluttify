@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener on java_lan
               case 'Callback::onAudioVolumeEvaluationNotify::onAudioVolumeEvaluationNotify':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onAudioVolumeEvaluationNotify?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call

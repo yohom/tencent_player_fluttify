@@ -433,7 +433,7 @@ class TXLivePlayer extends NSObject  {
               case 'Callback::void|TXImage*#__arg_0__::void|TXImage*#__arg_0__':
                 // print log
                 if (fluttifyLogEnabled) {
-          
+                  debugPrint('fluttify-dart-callback: snapshotCompletionBlock([\'__arg_0__\':${args['__arg_0__']}])');
                 }
           
                 // handle the native call
@@ -540,7 +540,7 @@ class TXLivePlayer extends NSObject  {
               case 'Callback::void|int#__arg_0__::void|int#__arg_0__':
                 // print log
                 if (fluttifyLogEnabled) {
-          
+                  debugPrint('fluttify-dart-callback: volumeEvaluationListener([\'__arg_0__\':${args['__arg_0__']}])');
                 }
           
                 // handle the native call

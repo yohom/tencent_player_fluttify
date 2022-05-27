@@ -32,7 +32,7 @@ mixin com_tencent_rtmp_downloader_ITXVodPreloadListener on java_lang_Object {
               case 'Callback::onComplete::onComplete':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onComplete?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
@@ -41,7 +41,7 @@ mixin com_tencent_rtmp_downloader_ITXVodPreloadListener on java_lang_Object {
               case 'Callback::onError::onError':
                 // print log
                 if (fluttifyLogEnabled) {
-            
+                  debugPrint('fluttify-dart-callback: onError?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
                 }
             
                 // handle the native call
