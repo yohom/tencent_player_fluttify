@@ -67,6 +67,7 @@ class VodPlayer {
       ios: (pool) async {
         // 其首个参数 frame 在 1.5.2 版本后已经被废弃
         final rect = await CGRect.create(0, 0, 0, 0);
+        await _iosPlayer!.removeVideoWidget();
         await _iosPlayer!
             .setupVideoWidget_insertIndex(playerView.playerView, 0);
       },
