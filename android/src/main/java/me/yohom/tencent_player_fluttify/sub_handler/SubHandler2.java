@@ -3063,7 +3063,7 @@ public class SubHandler2 {
                 // invoke native method
                 com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener() {
                     // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXAudioRawDataListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
                     android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                     // call dart method
@@ -3191,7 +3191,7 @@ public class SubHandler2 {
                 // invoke native method
                 com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener() {
                     // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXLivePlayVideoRenderListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
                     android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                     // call dart method
@@ -3578,7 +3578,7 @@ public class SubHandler2 {
                 // invoke native method
                 com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener() {
                     // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXSnapshotListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
                     android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                     // call dart method
@@ -3615,7 +3615,7 @@ public class SubHandler2 {
                 // invoke native method
                 com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener() {
                     // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXAudioVolumeEvaluationListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
                     android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                     // call dart method
@@ -3652,7 +3652,7 @@ public class SubHandler2 {
                 // invoke native method
                 com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener __result__ = new com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener() {
                     // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer$ITXVideoRawDataListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
+                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener::Callback@" + getClass().getName() + ":" + System.identityHashCode(this), new StandardMethodCodec(new FluttifyMessageCodec()));
                     android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                     // call dart method
