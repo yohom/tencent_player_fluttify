@@ -27,44 +27,31 @@ mixin V2TXLivePlayerObserver on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onError_code_message_extraInfo(V2TXLivePlayer player, V2TXLiveCode code, String msg, Map extraInfo) async {}
+  Future<void> onError_code_message_extraInfo(V2TXLivePlayer? player, V2TXLiveCode? code, String? msg, Map? extraInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onWarning_code_message_extraInfo(V2TXLivePlayer player, V2TXLiveCode code, String msg, Map extraInfo) async {}
+  Future<void> onWarning_code_message_extraInfo(V2TXLivePlayer? player, V2TXLiveCode? code, String? msg, Map? extraInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onVideoResolutionChanged_width_height(V2TXLivePlayer player, int width, int height) async {}
+  Future<void> onVideoResolutionChanged_width_height(V2TXLivePlayer? player, int? width, int? height) async {}
   
-  /* @mustCallSuper */
-  Future<void> onConnected_extraInfo(V2TXLivePlayer player, Map extraInfo) async {}
+  Future<void> onConnected_extraInfo(V2TXLivePlayer? player, Map? extraInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onVideoPlaying_firstPlay_extraInfo(V2TXLivePlayer player, bool firstPlay, Map extraInfo) async {}
+  Future<void> onVideoPlaying_firstPlay_extraInfo(V2TXLivePlayer? player, bool? firstPlay, Map? extraInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onAudioPlaying_firstPlay_extraInfo(V2TXLivePlayer player, bool firstPlay, Map extraInfo) async {}
+  Future<void> onAudioPlaying_firstPlay_extraInfo(V2TXLivePlayer? player, bool? firstPlay, Map? extraInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onVideoLoading_extraInfo(V2TXLivePlayer player, Map extraInfo) async {}
+  Future<void> onVideoLoading_extraInfo(V2TXLivePlayer? player, Map? extraInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onAudioLoading_extraInfo(V2TXLivePlayer player, Map extraInfo) async {}
+  Future<void> onAudioLoading_extraInfo(V2TXLivePlayer? player, Map? extraInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onPlayoutVolumeUpdate_volume(V2TXLivePlayer player, int volume) async {}
+  Future<void> onPlayoutVolumeUpdate_volume(V2TXLivePlayer? player, int? volume) async {}
   
-  /* @mustCallSuper */
-  Future<void> onStatisticsUpdate_statistics(V2TXLivePlayer player, V2TXLivePlayerStatistics statistics) async {}
+  Future<void> onStatisticsUpdate_statistics(V2TXLivePlayer? player, V2TXLivePlayerStatistics? statistics) async {}
   
-  /* @mustCallSuper */
-  Future<void> onSnapshotComplete_image(V2TXLivePlayer player, UIImage image) async {}
+  Future<void> onSnapshotComplete_image(V2TXLivePlayer? player, UIImage? image) async {}
   
-  /* @mustCallSuper */
-  Future<void> onRenderVideoFrame_frame(V2TXLivePlayer player, V2TXLiveVideoFrame videoFrame) async {}
+  Future<void> onRenderVideoFrame_frame(V2TXLivePlayer? player, V2TXLiveVideoFrame? videoFrame) async {}
   
-  /* @mustCallSuper */
-  Future<void> onReceiveSeiMessage_payloadType_data(V2TXLivePlayer player, int payloadType, NSData data) async {}
+  Future<void> onReceiveSeiMessage_payloadType_data(V2TXLivePlayer? player, int? payloadType, NSData? data) async {}
   
 }
 

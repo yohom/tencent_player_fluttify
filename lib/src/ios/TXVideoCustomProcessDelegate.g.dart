@@ -27,17 +27,13 @@ mixin TXVideoCustomProcessDelegate on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<int?> onPreProcessTexture_width_height(int texture, double width, double height) async {}
+  Future<int?> onPreProcessTexture_width_height(int? texture, double? width, double? height) async {}
   
-  /* @mustCallSuper */
   Future<void> onTextureDestoryed() async {}
   
-  /* @mustCallSuper */
-  Future<void> onDetectFacePoints(List<dynamic> points) async {}
+  Future<void> onDetectFacePoints(List<dynamic>? points) async {}
   
-  /* @mustCallSuper */
-  Future<bool?> onPlayerPixelBuffer(NSValue/* void* */ pixelBuffer) async {}
+  Future<bool?> onPlayerPixelBuffer(NSValue/* void* */? pixelBuffer) async {}
   
 }
 

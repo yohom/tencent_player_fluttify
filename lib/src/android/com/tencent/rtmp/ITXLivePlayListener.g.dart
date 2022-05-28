@@ -36,7 +36,7 @@ mixin com_tencent_rtmp_ITXLivePlayListener on java_lang_Object {
                 }
             
                 // handle the native call
-                onPlayEvent?.call(args['var1'], TencentPlayerFluttifyAndroidAs(args['var2']));
+                onPlayEvent?.call(args['var1'], TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var2']));
                 break;
               case 'Callback::onNetStatus::onNetStatus':
                 // print log
@@ -45,7 +45,7 @@ mixin com_tencent_rtmp_ITXLivePlayListener on java_lang_Object {
                 }
             
                 // handle the native call
-                onNetStatus?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                onNetStatus?.call(TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var1']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -68,11 +68,9 @@ mixin com_tencent_rtmp_ITXLivePlayListener on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onPlayEvent(int var1, android_os_Bundle var2) async {}
+  Future<void> onPlayEvent(int? var1, android_os_Bundle? var2) async {}
   
-  /* @mustCallSuper */
-  Future<void> onNetStatus(android_os_Bundle var1) async {}
+  Future<void> onNetStatus(android_os_Bundle? var1) async {}
   
 }
 

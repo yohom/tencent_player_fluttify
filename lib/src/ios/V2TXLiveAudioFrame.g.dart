@@ -22,12 +22,12 @@ class V2TXLiveAudioFrame extends NSObject  {
   //endregion
 
   //region creators
-  static Future<V2TXLiveAudioFrame?> create__({ bool init = true /* ios only */ }) async {
+  static Future<V2TXLiveAudioFrame> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createV2TXLiveAudioFrame',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveAudioFrame?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<V2TXLiveAudioFrame>(__result__)!;
   }
   
   static Future<List<V2TXLiveAudioFrame>> create_batch__(int length, { bool init = true /* ios only */ }) async {

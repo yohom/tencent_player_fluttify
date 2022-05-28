@@ -1,3 +1,6 @@
+import 'package:tencent_player_fluttify/src/android/android.export.g.dart';
+import 'package:tencent_player_fluttify/src/ios/ios.export.g.dart';
+
 /// 画质
 enum Quality {
   /// 标清 360*640
@@ -96,4 +99,161 @@ class PlayProgress {
   String toString() {
     return 'PlayProgress{playProgress: $playProgress, bufferProgress: $bufferProgress, totalDuration: $totalDuration}';
   }
+}
+
+class VodPlayConfig {
+  final bool? enableRenderProcess;
+  final int? preferredResolution;
+  final int? connectRetryCount;
+  final int? connectRetryInterval;
+  final Duration? timeout;
+  final String? cacheFolderPath;
+  final PlayerType? playerType;
+  final Map<String, String>? headers;
+  final bool? enableAccurateSeek;
+  final bool? autoRotate;
+  final bool? smoothSwitchBitrate;
+  final String? cacheMp4ExtName;
+  final Duration? progressInterval;
+  final int? maxBufferSize;
+  final int? maxPreloadSize;
+  final Duration? firstStartPlayBufferTime;
+  final Duration? nextStartPlayBufferTime;
+  final String? overlayKey;
+  final String? overlayIv;
+  final Map<String, String>? extInfo;
+
+  VodPlayConfig({
+    this.enableRenderProcess,
+    this.preferredResolution,
+    this.connectRetryCount,
+    this.connectRetryInterval,
+    this.timeout,
+    this.cacheFolderPath,
+    this.playerType,
+    this.headers,
+    this.enableAccurateSeek,
+    this.autoRotate,
+    this.smoothSwitchBitrate,
+    this.cacheMp4ExtName,
+    this.progressInterval,
+    this.maxBufferSize,
+    this.maxPreloadSize,
+    this.firstStartPlayBufferTime,
+    this.nextStartPlayBufferTime,
+    this.overlayKey,
+    this.overlayIv,
+    this.extInfo,
+  });
+
+  Future<com_tencent_rtmp_TXVodPlayConfig> toAndroidModel() async {
+    final result = await com_tencent_rtmp_TXVodPlayConfig.create__();
+
+    if (enableRenderProcess != null) {
+      await result.setEnableAccurateSeek(enableRenderProcess!);
+    } else if (preferredResolution != null) {
+      await result.setPreferredResolution(preferredResolution!);
+    } else if (connectRetryCount != null) {
+      await result.setConnectRetryCount(connectRetryCount!);
+    } else if (connectRetryInterval != null) {
+      await result.setConnectRetryInterval(connectRetryInterval!);
+    } else if (timeout != null) {
+      await result.setTimeout(timeout!.inMilliseconds);
+    } else if (cacheFolderPath != null) {
+      await result.setCacheFolderPath(cacheFolderPath!);
+    } else if (playerType != null) {
+      await result.setPlayerType(playerType!.index);
+    } else if (headers != null) {
+      await result.setHeaders(headers!);
+    } else if (enableAccurateSeek != null) {
+      await result.setEnableAccurateSeek(enableAccurateSeek!);
+    } else if (autoRotate != null) {
+      await result.setAutoRotate(autoRotate!);
+    } else if (smoothSwitchBitrate != null) {
+      await result.setSmoothSwitchBitrate(smoothSwitchBitrate!);
+    } else if (cacheMp4ExtName != null) {
+      await result.setCacheMp4ExtName(cacheMp4ExtName!);
+    } else if (progressInterval != null) {
+      await result.setProgressInterval(progressInterval!.inMilliseconds);
+    } else if (maxBufferSize != null) {
+      await result.setMaxBufferSize(maxBufferSize!);
+    } else if (maxPreloadSize != null) {
+      await result.setMaxPreloadSize(maxPreloadSize!);
+    } else if (firstStartPlayBufferTime != null) {
+      await result.setFirstStartPlayBufferTime(
+          firstStartPlayBufferTime!.inMilliseconds);
+    } else if (nextStartPlayBufferTime != null) {
+      await result
+          .setNextStartPlayBufferTime(nextStartPlayBufferTime!.inMilliseconds);
+    } else if (overlayKey != null) {
+      await result.setOverlayKey(overlayKey!);
+    } else if (overlayIv != null) {
+      await result.setOverlayIv(overlayIv!);
+    } else if (extInfo != null) {
+      await result.setExtInfo(extInfo!);
+    }
+
+    return result;
+  }
+
+  Future<TXVodPlayConfig> toIOSModel() async {
+    final result = await TXVodPlayConfig.create__();
+
+    if (enableRenderProcess != null) {
+      await result.set_enableRenderProcess(enableRenderProcess!);
+    } else if (preferredResolution != null) {
+      await result.set_preferredResolution(preferredResolution!);
+    } else if (connectRetryCount != null) {
+      await result.set_connectRetryCount(connectRetryCount!);
+    } else if (connectRetryInterval != null) {
+      await result.set_connectRetryInterval(connectRetryInterval!);
+    } else if (timeout != null) {
+      await result.set_timeout(timeout!.inMilliseconds / 1000);
+    } else if (cacheFolderPath != null) {
+      await result.set_cacheFolderPath(cacheFolderPath!);
+    } else if (playerType != null) {
+      await result.set_playerType(TX_Enum_PlayerType.values[playerType!.index]);
+    } else if (headers != null) {
+      await result.set_headers(headers!);
+    } else if (enableAccurateSeek != null) {
+      await result.set_enableAccurateSeek(enableAccurateSeek!);
+    } else if (autoRotate != null) {
+      await result.set_autoRotate(autoRotate!);
+    } else if (smoothSwitchBitrate != null) {
+      await result.set_smoothSwitchBitrate(smoothSwitchBitrate!);
+    } else if (cacheMp4ExtName != null) {
+      await result.set_cacheFolderPath(cacheMp4ExtName!);
+    } else if (progressInterval != null) {
+      await result
+          .set_progressInterval(progressInterval!.inMilliseconds / 1000);
+    } else if (maxBufferSize != null) {
+      await result.set_maxBufferSize(maxBufferSize!);
+    } else if (maxPreloadSize != null) {
+      await result.set_maxPreloadSize(maxPreloadSize!);
+    } else if (firstStartPlayBufferTime != null) {
+      await result.set_firstStartPlayBufferTime(
+          firstStartPlayBufferTime!.inMilliseconds);
+    } else if (nextStartPlayBufferTime != null) {
+      await result
+          .set_nextStartPlayBufferTime(nextStartPlayBufferTime!.inMilliseconds);
+    } else if (overlayKey != null) {
+      await result.set_overlayKey(overlayKey!);
+    } else if (overlayIv != null) {
+      await result.set_overlayIv(overlayIv!);
+    } else if (extInfo != null) {
+      await result.set_extInfoMap(extInfo!);
+    }
+
+    return result;
+  }
+
+  @override
+  String toString() {
+    return 'VodPlayConfig{enableRenderProcess: $enableRenderProcess, preferredResolution: $preferredResolution, connectRetryCount: $connectRetryCount, connectRetryInterval: $connectRetryInterval, timeout: $timeout, cacheFolderPath: $cacheFolderPath, playerType: $playerType, headers: $headers, enableAccurateSeek: $enableAccurateSeek, autoRotate: $autoRotate, smoothSwitchBitrate: $smoothSwitchBitrate, cacheMp4ExtName: $cacheMp4ExtName, progressInterval: $progressInterval, maxBufferSize: $maxBufferSize, maxPreloadSize: $maxPreloadSize, firstStartPlayBufferTime: $firstStartPlayBufferTime, nextStartPlayBufferTime: $nextStartPlayBufferTime, overlayKey: $overlayKey, overlayIv: $overlayIv, extInfo: $extInfo}';
+  }
+}
+
+enum PlayerType {
+  PLAYER_AVPLAYER /* 0 */,
+  PLAYER_THUMB_PLAYER /* 1 */
 }

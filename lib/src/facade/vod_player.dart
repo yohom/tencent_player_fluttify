@@ -67,7 +67,6 @@ class VodPlayer {
       ios: (pool) async {
         // 其首个参数 frame 在 1.5.2 版本后已经被废弃
         final rect = await CGRect.create(0, 0, 0, 0);
-        await _iosPlayer!.removeVideoWidget();
         await _iosPlayer!
             .setupVideoWidget_insertIndex(playerView.playerView, 0);
       },
@@ -75,48 +74,30 @@ class VodPlayer {
   }
 
   /// 开始播放
-  Future<void> startPlay(String playUrl, {required PlayType type}) async {
+  Future<void> startPlay(String playUrl) async {
     final httpsUrl = Uri.parse(playUrl).scheme == 'http'
         ? playUrl.replaceFirst('http', 'https')
         : playUrl;
     return platform(
       android: (pool) async {
-        int _type;
-        switch (type) {
-          case PlayType.RTMP:
-            _type = com_tencent_rtmp_TXLivePlayer.PLAY_TYPE_LIVE_RTMP;
-            break;
-          case PlayType.FLV:
-            _type = com_tencent_rtmp_TXLivePlayer.PLAY_TYPE_LIVE_FLV;
-            break;
-          case PlayType.RTMP_ACC:
-            _type = com_tencent_rtmp_TXLivePlayer.PLAY_TYPE_LIVE_RTMP_ACC;
-            break;
-          case PlayType.HLS:
-            _type = com_tencent_rtmp_TXLivePlayer.PLAY_TYPE_VOD_HLS;
-            break;
-        }
         final result = await _androidPlayer!.startPlay__String(httpsUrl);
         debugPrint('result: $result');
       },
       ios: (pool) async {
-        TX_Enum_PlayType _type;
-        switch (type) {
-          case PlayType.RTMP:
-            _type = TX_Enum_PlayType.PLAY_TYPE_LIVE_RTMP;
-            break;
-          case PlayType.FLV:
-            _type = TX_Enum_PlayType.PLAY_TYPE_LIVE_FLV;
-            break;
-          case PlayType.RTMP_ACC:
-            _type = TX_Enum_PlayType.PLAY_TYPE_LIVE_RTMP_ACC;
-            break;
-          case PlayType.HLS:
-            _type = TX_Enum_PlayType.PLAY_TYPE_VOD_HLS;
-            break;
-        }
         final result = await _iosPlayer!.startPlay(httpsUrl);
         debugPrint('result: $result');
+      },
+    );
+  }
+
+  /// 配置播放器
+  Future<void> setConfig(VodPlayConfig config) async {
+    return platform(
+      android: (pool) async {
+        await _androidPlayer!.setConfig(await config.toAndroidModel());
+      },
+      ios: (pool) async {
+        await _iosPlayer!.set_config(await config.toIOSModel());
       },
     );
   }
@@ -166,7 +147,7 @@ class VodPlayer {
   Future<void> setSpeed(double speed) async {
     return platform(
       android: (pool) => _androidPlayer!.setRate(speed),
-      ios: (pool) => _iosPlayer!.seek(speed),
+      ios: (pool) => _iosPlayer!.setRate(speed),
     );
   }
 
@@ -254,7 +235,7 @@ class VodPlayer {
       },
       ios: (pool) {
         return _iosPlayer!
-            .snapshot((image) => image.data.then(completer.complete));
+            .snapshot((image) => image?.data.then(completer.complete));
       },
     );
 
@@ -394,7 +375,12 @@ class VodPlayer {
             .._onWarningShakeFail = onWarningShakeFail
             .._onEventRcvFirstIFrame = onEventRcvFirstIFrame
             .._onEventPlayBegin = onEventPlayBegin
-            .._onEventPlayEnd = onEventPlayEnd,
+            .._onEventPlayEnd = onEventPlayEnd
+            .._onEventConnectSucc = onEventConnectSucc
+            .._onEventPlayProgress = onEventPlayProgress
+            .._onEventPlayLoading = onEventPlayLoading
+            .._onEventPlayLoadingEnd = onEventPlayLoadingEnd
+            .._onEventPlayPrepared = onEventPlayPrepared,
         );
       },
     );
@@ -441,6 +427,7 @@ class VodPlayer {
         await _androidPlayer!.release__();
       },
       ios: (pool) async {
+        await _iosPlayer!.stopPlay();
         await _iosPlayer!.removeVideoWidget();
         await _iosPlayer!.release__();
       },

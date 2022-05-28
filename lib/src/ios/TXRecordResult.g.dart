@@ -22,12 +22,12 @@ class TXRecordResult extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXRecordResult?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXRecordResult> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXRecordResult',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXRecordResult?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXRecordResult>(__result__)!;
   }
   
   static Future<List<TXRecordResult>> create_batch__(int length, { bool init = true /* ios only */ }) async {

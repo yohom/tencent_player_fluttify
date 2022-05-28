@@ -27,14 +27,11 @@ mixin TXLiveBaseDelegate on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onLog_LogLevel_WhichModule(String log, int level, String module) async {}
+  Future<void> onLog_LogLevel_WhichModule(String? log, int? level, String? module) async {}
   
-  /* @mustCallSuper */
-  Future<void> onUpdateNetworkTime_message(int errCode, String errMsg) async {}
+  Future<void> onUpdateNetworkTime_message(int? errCode, String? errMsg) async {}
   
-  /* @mustCallSuper */
-  Future<void> onLicenceLoaded_Reason(int result, String reason) async {}
+  Future<void> onLicenceLoaded_Reason(int? result, String? reason) async {}
   
 }
 

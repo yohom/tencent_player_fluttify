@@ -36,7 +36,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 }
             
                 // handle the native call
-                onDownloadStart?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                onDownloadStart?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']));
                 break;
               case 'Callback::onDownloadProgress::onDownloadProgress':
                 // print log
@@ -45,7 +45,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 }
             
                 // handle the native call
-                onDownloadProgress?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                onDownloadProgress?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']));
                 break;
               case 'Callback::onDownloadStop::onDownloadStop':
                 // print log
@@ -54,7 +54,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 }
             
                 // handle the native call
-                onDownloadStop?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                onDownloadStop?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']));
                 break;
               case 'Callback::onDownloadFinish::onDownloadFinish':
                 // print log
@@ -63,7 +63,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 }
             
                 // handle the native call
-                onDownloadFinish?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                onDownloadFinish?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']));
                 break;
               case 'Callback::onDownloadError::onDownloadError':
                 // print log
@@ -72,7 +72,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 }
             
                 // handle the native call
-                onDownloadError?.call(TencentPlayerFluttifyAndroidAs(args['var1']), args['var2'], args['var3']);
+                onDownloadError?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']), args['var2'], args['var3']);
                 break;
               case 'Callback::hlsKeyVerify::hlsKeyVerify':
                 // print log
@@ -81,7 +81,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 }
             
                 // handle the native call
-                hlsKeyVerify?.call(TencentPlayerFluttifyAndroidAs(args['var1']), args['var2'], args['var3']);
+                hlsKeyVerify?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']), args['var2'], args['var3']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -104,20 +104,15 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onDownloadStart(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo var1) async {}
+  Future<void> onDownloadStart(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDownloadProgress(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo var1) async {}
+  Future<void> onDownloadProgress(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDownloadStop(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo var1) async {}
+  Future<void> onDownloadStop(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDownloadFinish(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo var1) async {}
+  Future<void> onDownloadFinish(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDownloadError(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo var1, int var2, String var3) async {}
+  Future<void> onDownloadError(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1, int? var2, String? var3) async {}
   
 }
 

@@ -22,12 +22,12 @@ class TXVodPlayConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXVodPlayConfig?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXVodPlayConfig> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXVodPlayConfig',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodPlayConfig?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXVodPlayConfig>(__result__)!;
   }
   
   static Future<List<TXVodPlayConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {

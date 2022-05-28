@@ -27,11 +27,9 @@ mixin TXAudioCustomProcessDelegate on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm(NSData data, int timeStamp, int sampleRate, int channels, bool withBgm) async {}
+  Future<void> onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm(NSData? data, int? timeStamp, int? sampleRate, int? channels, bool? withBgm) async {}
   
-  /* @mustCallSuper */
-  Future<void> onRecordPcmData_timeStamp_sampleRate_channels(NSData data, int timeStamp, int sampleRate, int channels) async {}
+  Future<void> onRecordPcmData_timeStamp_sampleRate_channels(NSData? data, int? timeStamp, int? sampleRate, int? channels) async {}
   
 }
 

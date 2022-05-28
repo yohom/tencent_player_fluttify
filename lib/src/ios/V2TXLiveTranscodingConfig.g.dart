@@ -22,12 +22,12 @@ class V2TXLiveTranscodingConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<V2TXLiveTranscodingConfig?> create__({ bool init = true /* ios only */ }) async {
+  static Future<V2TXLiveTranscodingConfig> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createV2TXLiveTranscodingConfig',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveTranscodingConfig?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<V2TXLiveTranscodingConfig>(__result__)!;
   }
   
   static Future<List<V2TXLiveTranscodingConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {

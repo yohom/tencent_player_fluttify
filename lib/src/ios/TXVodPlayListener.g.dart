@@ -27,11 +27,9 @@ mixin TXVodPlayListener on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onPlayEvent_event_withParam(TXVodPlayer player, int EvtID, Map param) async {}
+  Future<void> onPlayEvent_event_withParam(TXVodPlayer? player, int? EvtID, Map? param) async {}
   
-  /* @mustCallSuper */
-  Future<void> onNetStatus_withParam(TXVodPlayer player, Map param) async {}
+  Future<void> onNetStatus_withParam(TXVodPlayer? player, Map? param) async {}
   
 }
 

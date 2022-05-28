@@ -27,14 +27,11 @@ mixin TXLiveRecordListener on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onRecordProgress(int milliSecond) async {}
+  Future<void> onRecordProgress(int? milliSecond) async {}
   
-  /* @mustCallSuper */
-  Future<void> onRecordComplete(TXRecordResult result) async {}
+  Future<void> onRecordComplete(TXRecordResult? result) async {}
   
-  /* @mustCallSuper */
-  Future<void> onRecordEvent(Map evt) async {}
+  Future<void> onRecordEvent(Map? evt) async {}
   
 }
 

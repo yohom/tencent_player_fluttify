@@ -22,12 +22,12 @@ class V2TXLiveMixStream extends NSObject  {
   //endregion
 
   //region creators
-  static Future<V2TXLiveMixStream?> create__({ bool init = true /* ios only */ }) async {
+  static Future<V2TXLiveMixStream> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createV2TXLiveMixStream',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveMixStream?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<V2TXLiveMixStream>(__result__)!;
   }
   
   static Future<List<V2TXLiveMixStream>> create_batch__(int length, { bool init = true /* ios only */ }) async {

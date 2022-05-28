@@ -68,11 +68,9 @@ mixin com_tencent_rtmp_downloader_ITXVodPreloadListener on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onComplete(int var1, String var2) async {}
+  Future<void> onComplete(int? var1, String? var2) async {}
   
-  /* @mustCallSuper */
-  Future<void> onError(int var1, String var2, int var3, String var4) async {}
+  Future<void> onError(int? var1, String? var2, int? var3, String? var4) async {}
   
 }
 

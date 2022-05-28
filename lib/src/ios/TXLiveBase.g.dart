@@ -22,12 +22,12 @@ class TXLiveBase extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXLiveBase?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXLiveBase> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXLiveBase',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXLiveBase?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXLiveBase>(__result__)!;
   }
   
   static Future<List<TXLiveBase>> create_batch__(int length, { bool init = true /* ios only */ }) async {

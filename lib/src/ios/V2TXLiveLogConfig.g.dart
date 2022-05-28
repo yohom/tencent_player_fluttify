@@ -22,12 +22,12 @@ class V2TXLiveLogConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<V2TXLiveLogConfig?> create__({ bool init = true /* ios only */ }) async {
+  static Future<V2TXLiveLogConfig> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createV2TXLiveLogConfig',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<V2TXLiveLogConfig?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<V2TXLiveLogConfig>(__result__)!;
   }
   
   static Future<List<V2TXLiveLogConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {

@@ -22,12 +22,12 @@ class TXVodDownloadMediaInfo extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXVodDownloadMediaInfo?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXVodDownloadMediaInfo> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXVodDownloadMediaInfo',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(__result__)!;
   }
   
   static Future<List<TXVodDownloadMediaInfo>> create_batch__(int length, { bool init = true /* ios only */ }) async {

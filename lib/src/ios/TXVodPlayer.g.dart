@@ -22,12 +22,12 @@ class TXVodPlayer extends NSObject  {
   //endregion
 
   //region creators
-  static Future<TXVodPlayer?> create__({ bool init = true /* ios only */ }) async {
+  static Future<TXVodPlayer> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createTXVodPlayer',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodPlayer?>(__result__)!;
+    return TencentPlayerFluttifyIOSAs<TXVodPlayer>(__result__)!;
   }
   
   static Future<List<TXVodPlayer>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -126,7 +126,7 @@ class TXVodPlayer extends NSObject  {
               }
           
               // handle the native call
-              vodDelegate.onPlayEvent_event_withParam(TencentPlayerFluttifyIOSAs(args['player']), args['EvtID'], args['param']);
+              vodDelegate.onPlayEvent_event_withParam(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['EvtID'], args['param']);
               break;
             case 'Callback::TXVodPlayListener::onNetStatus_withParam':
               // print log
@@ -135,7 +135,7 @@ class TXVodPlayer extends NSObject  {
               }
           
               // handle the native call
-              vodDelegate.onNetStatus_withParam(TencentPlayerFluttifyIOSAs(args['player']), args['param']);
+              vodDelegate.onNetStatus_withParam(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['param']);
               break;
             default:
               throw MissingPluginException('方法${methodCall.method}未实现');
@@ -190,7 +190,7 @@ class TXVodPlayer extends NSObject  {
               }
           
               // handle the native call
-              videoProcessDelegate.onPlayerPixelBuffer(TencentPlayerFluttifyIOSAs(args['pixelBuffer']));
+              videoProcessDelegate.onPlayerPixelBuffer(TencentPlayerFluttifyIOSAs<NSValue/* void* */>(args['pixelBuffer']));
               break;
             default:
               throw MissingPluginException('方法${methodCall.method}未实现');
@@ -560,7 +560,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> snapshot(void Function(UIImage __arg_0__) snapshotCompletionBlock) async {
+  Future<void> snapshot(void Function(UIImage? __arg_0__) snapshotCompletionBlock) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::snapshot([])');
@@ -583,7 +583,7 @@ class TXVodPlayer extends NSObject  {
                 }
           
                 // handle the native call
-                snapshotCompletionBlock(TencentPlayerFluttifyIOSAs(args['__arg_0__']));
+                snapshotCompletionBlock(TencentPlayerFluttifyIOSAs<UIImage>(args['__arg_0__']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
