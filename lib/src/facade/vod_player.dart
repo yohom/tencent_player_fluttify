@@ -90,6 +90,18 @@ class VodPlayer {
     );
   }
 
+  /// 配置播放器
+  Future<void> setConfig(VodPlayConfig config) async {
+    return platform(
+      android: (pool) async {
+        await _androidPlayer!.setConfig(await config.toAndroidModel());
+      },
+      ios: (pool) async {
+        await _iosPlayer!.set_config(await config.toIOSModel());
+      },
+    );
+  }
+
   /// 恢复播放
   Future<void> resumePlay() async {
     return platform(
