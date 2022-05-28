@@ -68,8 +68,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
 
   
 
-  /* @mustCallSuper */
-  Future<void> onAudioInfoChanged(int var1, int var2, int var3) async {}
+  Future<void> onAudioInfoChanged(int? var1, int? var2, int? var3) async {}
   
 }
 

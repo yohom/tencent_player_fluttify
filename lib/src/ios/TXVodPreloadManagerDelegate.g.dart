@@ -27,11 +27,9 @@ mixin TXVodPreloadManagerDelegate on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onComplete_url(int taskID, String url) async {}
+  Future<void> onComplete_url(int? taskID, String? url) async {}
   
-  /* @mustCallSuper */
-  Future<void> onError_url_error(int taskID, String url, NSError error) async {}
+  Future<void> onError_url_error(int? taskID, String? url, NSError? error) async {}
   
 }
 

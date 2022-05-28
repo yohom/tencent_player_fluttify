@@ -223,7 +223,7 @@ class VodPlayer {
       },
       ios: (pool) {
         return _iosPlayer!
-            .snapshot((image) => image.data.then(completer.complete));
+            .snapshot((image) => image?.data.then(completer.complete));
       },
     );
 
@@ -363,7 +363,12 @@ class VodPlayer {
             .._onWarningShakeFail = onWarningShakeFail
             .._onEventRcvFirstIFrame = onEventRcvFirstIFrame
             .._onEventPlayBegin = onEventPlayBegin
-            .._onEventPlayEnd = onEventPlayEnd,
+            .._onEventPlayEnd = onEventPlayEnd
+            .._onEventConnectSucc = onEventConnectSucc
+            .._onEventPlayProgress = onEventPlayProgress
+            .._onEventPlayLoading = onEventPlayLoading
+            .._onEventPlayLoadingEnd = onEventPlayLoadingEnd
+            .._onEventPlayPrepared = onEventPlayPrepared,
         );
       },
     );

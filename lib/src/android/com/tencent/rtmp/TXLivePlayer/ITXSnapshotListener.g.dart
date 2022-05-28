@@ -36,7 +36,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
                 }
             
                 // handle the native call
-                onSnapshot?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                onSnapshot?.call(TencentPlayerFluttifyAndroidAs<android_graphics_Bitmap>(args['var1']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -59,8 +59,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onSnapshot(android_graphics_Bitmap var1) async {}
+  Future<void> onSnapshot(android_graphics_Bitmap? var1) async {}
   
 }
 

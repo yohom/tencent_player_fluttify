@@ -27,11 +27,9 @@ mixin V2TXLivePremierObserver on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onLog_log(V2TXLiveLogLevel level, String log) async {}
+  Future<void> onLog_log(V2TXLiveLogLevel? level, String? log) async {}
   
-  /* @mustCallSuper */
-  Future<void> onLicenceLoaded_Reason(int result, String reason) async {}
+  Future<void> onLicenceLoaded_Reason(int? result, String? reason) async {}
   
 }
 

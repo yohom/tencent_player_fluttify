@@ -36,7 +36,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener on java_lang_
                 }
             
                 // handle the native call
-                onRenderVideoFrame?.call(TencentPlayerFluttifyAndroidAs(args['var1']));
+                onRenderVideoFrame?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture>(args['var1']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -59,8 +59,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener on java_lang_
 
   
 
-  /* @mustCallSuper */
-  Future<void> onRenderVideoFrame(com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture var1) async {}
+  Future<void> onRenderVideoFrame(com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture? var1) async {}
   
 }
 

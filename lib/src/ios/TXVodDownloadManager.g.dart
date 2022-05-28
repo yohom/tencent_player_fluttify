@@ -69,7 +69,7 @@ class TXVodDownloadManager extends NSObject  {
               }
           
               // handle the native call
-              delegate.onDownloadStart(TencentPlayerFluttifyIOSAs(args['mediaInfo']));
+              delegate.onDownloadStart(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
               break;
             case 'Callback::TXVodDownloadDelegate::onDownloadProgress':
               // print log
@@ -78,7 +78,7 @@ class TXVodDownloadManager extends NSObject  {
               }
           
               // handle the native call
-              delegate.onDownloadProgress(TencentPlayerFluttifyIOSAs(args['mediaInfo']));
+              delegate.onDownloadProgress(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
               break;
             case 'Callback::TXVodDownloadDelegate::onDownloadStop':
               // print log
@@ -87,7 +87,7 @@ class TXVodDownloadManager extends NSObject  {
               }
           
               // handle the native call
-              delegate.onDownloadStop(TencentPlayerFluttifyIOSAs(args['mediaInfo']));
+              delegate.onDownloadStop(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
               break;
             case 'Callback::TXVodDownloadDelegate::onDownloadFinish':
               // print log
@@ -96,7 +96,7 @@ class TXVodDownloadManager extends NSObject  {
               }
           
               // handle the native call
-              delegate.onDownloadFinish(TencentPlayerFluttifyIOSAs(args['mediaInfo']));
+              delegate.onDownloadFinish(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
               break;
             case 'Callback::TXVodDownloadDelegate::onDownloadError_errorCode_errorMsg':
               // print log
@@ -105,7 +105,7 @@ class TXVodDownloadManager extends NSObject  {
               }
           
               // handle the native call
-              delegate.onDownloadError_errorCode_errorMsg(TencentPlayerFluttifyIOSAs(args['mediaInfo']), (args['code'] as int).toTXDownloadError(), args['msg']);
+              delegate.onDownloadError_errorCode_errorMsg(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), (args['code'] as int).toTXDownloadError(), args['msg']);
               break;
             case 'Callback::TXVodDownloadDelegate::hlsKeyVerify_url_data':
               // print log
@@ -114,7 +114,7 @@ class TXVodDownloadManager extends NSObject  {
               }
           
               // handle the native call
-              delegate.hlsKeyVerify_url_data(TencentPlayerFluttifyIOSAs(args['mediaInfo']), args['url'], TencentPlayerFluttifyIOSAs(args['data']));
+              delegate.hlsKeyVerify_url_data(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), args['url'], TencentPlayerFluttifyIOSAs<NSData>(args['data']));
               break;
             default:
               throw MissingPluginException('方法${methodCall.method}未实现');

@@ -143,7 +143,7 @@ class TXLivePlayer extends NSObject  {
               }
           
               // handle the native call
-              videoProcessDelegate.onPlayerPixelBuffer(TencentPlayerFluttifyIOSAs(args['pixelBuffer']));
+              videoProcessDelegate.onPlayerPixelBuffer(TencentPlayerFluttifyIOSAs<NSValue/* void* */>(args['pixelBuffer']));
               break;
             default:
               throw MissingPluginException('方法${methodCall.method}未实现');
@@ -180,7 +180,7 @@ class TXLivePlayer extends NSObject  {
               }
           
               // handle the native call
-              audioRawDataDelegate.onPcmDataAvailable_pts(TencentPlayerFluttifyIOSAs(args['data']), args['timestamp']);
+              audioRawDataDelegate.onPcmDataAvailable_pts(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timestamp']);
               break;
             default:
               throw MissingPluginException('方法${methodCall.method}未实现');
@@ -229,7 +229,7 @@ class TXLivePlayer extends NSObject  {
               }
           
               // handle the native call
-              recordDelegate.onRecordComplete(TencentPlayerFluttifyIOSAs(args['result']));
+              recordDelegate.onRecordComplete(TencentPlayerFluttifyIOSAs<TXRecordResult>(args['result']));
               break;
             case 'Callback::TXLiveRecordListener::onRecordEvent':
               // print log
@@ -414,7 +414,7 @@ class TXLivePlayer extends NSObject  {
   }
   
   
-  Future<void> snapshot(void Function(UIImage __arg_0__) snapshotCompletionBlock) async {
+  Future<void> snapshot(void Function(UIImage? __arg_0__) snapshotCompletionBlock) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXLivePlayer@$refId::snapshot([])');
@@ -437,7 +437,7 @@ class TXLivePlayer extends NSObject  {
                 }
           
                 // handle the native call
-                snapshotCompletionBlock(TencentPlayerFluttifyIOSAs(args['__arg_0__']));
+                snapshotCompletionBlock(TencentPlayerFluttifyIOSAs<UIImage>(args['__arg_0__']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -521,7 +521,7 @@ class TXLivePlayer extends NSObject  {
   }
   
   
-  Future<void> setAudioVolumeEvaluationListener(void Function(int __arg_0__) volumeEvaluationListener) async {
+  Future<void> setAudioVolumeEvaluationListener(void Function(int? __arg_0__) volumeEvaluationListener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXLivePlayer@$refId::setAudioVolumeEvaluationListener([])');

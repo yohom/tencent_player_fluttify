@@ -27,11 +27,9 @@ mixin TXAudioRawDataDelegate on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onAudioInfoChanged_channels(int sampleRate, int channels) async {}
+  Future<void> onAudioInfoChanged_channels(int? sampleRate, int? channels) async {}
   
-  /* @mustCallSuper */
-  Future<void> onPcmDataAvailable_pts(NSData data, int timestamp) async {}
+  Future<void> onPcmDataAvailable_pts(NSData? data, int? timestamp) async {}
   
 }
 

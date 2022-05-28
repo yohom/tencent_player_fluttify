@@ -59,8 +59,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener on java_lan
 
   
 
-  /* @mustCallSuper */
-  Future<void> onAudioVolumeEvaluationNotify(int var1) async {}
+  Future<void> onAudioVolumeEvaluationNotify(int? var1) async {}
   
 }
 

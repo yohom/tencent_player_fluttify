@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:tencent_player_fluttify/tencent_player_fluttify.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,16 +15,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-
-  @override
-  void initState() {
-    super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {}
+  VodPlayer? _player;
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +24,20 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
+        body: CloudVideo(onCloudVideoCreated: _handleCloudVideoCreated),
       ),
+    );
+  }
+
+  Future<void> _handleCloudVideoCreated(CloudVideoController controller) async {
+    _player = await VodPlayer.create();
+    await _player!.setPlayerView(controller);
+    await _player!.startPlay(
+        "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni4934e7b/c4d93960-5643-11eb-a16f-5b3e54966275.m3u8");
+    await _player!.setOnEventListener(
+      onEventPlayProgress: (progress) {
+        print("onEventPlayProgress: $progress");
+      }
     );
   }
 }

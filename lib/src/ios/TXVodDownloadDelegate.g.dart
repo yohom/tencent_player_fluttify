@@ -27,23 +27,17 @@ mixin TXVodDownloadDelegate on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onDownloadStart(TXVodDownloadMediaInfo mediaInfo) async {}
+  Future<void> onDownloadStart(TXVodDownloadMediaInfo? mediaInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDownloadProgress(TXVodDownloadMediaInfo mediaInfo) async {}
+  Future<void> onDownloadProgress(TXVodDownloadMediaInfo? mediaInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDownloadStop(TXVodDownloadMediaInfo mediaInfo) async {}
+  Future<void> onDownloadStop(TXVodDownloadMediaInfo? mediaInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDownloadFinish(TXVodDownloadMediaInfo mediaInfo) async {}
+  Future<void> onDownloadFinish(TXVodDownloadMediaInfo? mediaInfo) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDownloadError_errorCode_errorMsg(TXVodDownloadMediaInfo mediaInfo, TXDownloadError code, String msg) async {}
+  Future<void> onDownloadError_errorCode_errorMsg(TXVodDownloadMediaInfo? mediaInfo, TXDownloadError? code, String? msg) async {}
   
-  /* @mustCallSuper */
-  Future<int?> hlsKeyVerify_url_data(TXVodDownloadMediaInfo mediaInfo, String url, NSData data) async {}
+  Future<int?> hlsKeyVerify_url_data(TXVodDownloadMediaInfo? mediaInfo, String? url, NSData? data) async {}
   
 }
 

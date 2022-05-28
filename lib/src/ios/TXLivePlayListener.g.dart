@@ -27,11 +27,9 @@ mixin TXLivePlayListener on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> onPlayEvent_withParam(int EvtID, Map param) async {}
+  Future<void> onPlayEvent_withParam(int? EvtID, Map? param) async {}
   
-  /* @mustCallSuper */
-  Future<void> onNetStatus(Map param) async {}
+  Future<void> onNetStatus(Map? param) async {}
   
 }
 

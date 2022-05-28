@@ -23,9 +23,9 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
 
   @override
   Future<void> onPlayEvent_event_withParam(
-    TXVodPlayer player,
-    int EvtID,
-    Map param,
+    TXVodPlayer? player,
+    int? EvtID,
+    Map? param,
   ) async {
     debugPrint('事件: $EvtID, 参数: ${param}');
     // 当前视频帧解码失败
@@ -86,12 +86,12 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
     }
     // 播放进度
     else if (EvtID == 2005 && _onEventPlayProgress != null) {
-      final playInt = await param['EVT_PLAY_PROGRESS_MS'] ?? 0;
-      final bufferInt = await param['EVT_PLAYABLE_DURATION_MS'] ?? 0;
-      final totalInt = await param['EVT_PLAY_DURATION_MS'] ?? 0;
-      final playProgress = Duration(milliseconds: playInt);
-      final bufferProgress = Duration(milliseconds: bufferInt);
-      final totalDuration = Duration(milliseconds: totalInt);
+      final num playInt = await param?['EVT_PLAY_PROGRESS'] ?? .0;
+      final num bufferInt = await param?['PLAYABLE_DURATION'] ?? .0;
+      final num totalInt = await param?['EVT_PLAY_DURATION'] ?? .0;
+      final playProgress = Duration(milliseconds: (playInt * 1000).toInt());
+      final bufferProgress = Duration(milliseconds: (bufferInt * 1000).toInt());
+      final totalDuration = Duration(milliseconds: (totalInt * 1000).toInt());
 
       _onEventPlayProgress!(PlayProgress(
         playProgress: playProgress,
@@ -116,5 +116,5 @@ class _IOSEventDelegate extends NSObject with TXVodPlayListener {
   }
 
   @override
-  Future<void> onNetStatus_withParam(TXVodPlayer player, Map param) async {}
+  Future<void> onNetStatus_withParam(TXVodPlayer? player, Map? param) async {}
 }
