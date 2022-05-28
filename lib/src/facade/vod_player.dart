@@ -135,7 +135,7 @@ class VodPlayer {
   Future<void> setSpeed(double speed) async {
     return platform(
       android: (pool) => _androidPlayer!.setRate(speed),
-      ios: (pool) => _iosPlayer!.seek(speed),
+      ios: (pool) => _iosPlayer!.setRate(speed),
     );
   }
 
