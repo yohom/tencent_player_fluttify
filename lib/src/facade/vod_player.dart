@@ -415,6 +415,7 @@ class VodPlayer {
         await _androidPlayer!.release__();
       },
       ios: (pool) async {
+        await _iosPlayer!.stopPlay();
         await _iosPlayer!.removeVideoWidget();
         await _iosPlayer!.release__();
       },
