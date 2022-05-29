@@ -193,10 +193,10 @@ class V2TXLiveTranscodingConfig extends NSObject  {
   }
 }
 
-extension V2TXLiveTranscodingConfig_Batch on List<V2TXLiveTranscodingConfig> {
+extension V2TXLiveTranscodingConfig_Batch on List<V2TXLiveTranscodingConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

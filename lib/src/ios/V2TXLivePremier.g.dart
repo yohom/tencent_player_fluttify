@@ -63,10 +63,10 @@ class V2TXLivePremier extends NSObject  {
   }
 }
 
-extension V2TXLivePremier_Batch on List<V2TXLivePremier> {
+extension V2TXLivePremier_Batch on List<V2TXLivePremier?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

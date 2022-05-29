@@ -348,10 +348,10 @@ class TXVodDownloadManager extends NSObject  {
   }
 }
 
-extension TXVodDownloadManager_Batch on List<TXVodDownloadManager> {
+extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

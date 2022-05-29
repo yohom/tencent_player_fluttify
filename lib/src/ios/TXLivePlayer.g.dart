@@ -754,10 +754,10 @@ class TXLivePlayer extends NSObject  {
   }
 }
 
-extension TXLivePlayer_Batch on List<TXLivePlayer> {
+extension TXLivePlayer_Batch on List<TXLivePlayer?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

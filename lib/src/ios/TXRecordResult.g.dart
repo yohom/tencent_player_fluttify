@@ -105,10 +105,10 @@ class TXRecordResult extends NSObject  {
   }
 }
 
-extension TXRecordResult_Batch on List<TXRecordResult> {
+extension TXRecordResult_Batch on List<TXRecordResult?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

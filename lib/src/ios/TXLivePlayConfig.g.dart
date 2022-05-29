@@ -237,10 +237,10 @@ class TXLivePlayConfig extends NSObject  {
   }
 }
 
-extension TXLivePlayConfig_Batch on List<TXLivePlayConfig> {
+extension TXLivePlayConfig_Batch on List<TXLivePlayConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

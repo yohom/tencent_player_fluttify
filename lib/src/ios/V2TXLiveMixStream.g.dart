@@ -149,10 +149,10 @@ class V2TXLiveMixStream extends NSObject  {
   }
 }
 
-extension V2TXLiveMixStream_Batch on List<V2TXLiveMixStream> {
+extension V2TXLiveMixStream_Batch on List<V2TXLiveMixStream?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

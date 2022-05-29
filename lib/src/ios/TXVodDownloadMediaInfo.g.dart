@@ -220,10 +220,10 @@ class TXVodDownloadMediaInfo extends NSObject  {
   }
 }
 
-extension TXVodDownloadMediaInfo_Batch on List<TXVodDownloadMediaInfo> {
+extension TXVodDownloadMediaInfo_Batch on List<TXVodDownloadMediaInfo?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -116,10 +116,10 @@ class V2TXLiveLogConfig extends NSObject  {
   }
 }
 
-extension V2TXLiveLogConfig_Batch on List<V2TXLiveLogConfig> {
+extension V2TXLiveLogConfig_Batch on List<V2TXLiveLogConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

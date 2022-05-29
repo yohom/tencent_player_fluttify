@@ -132,10 +132,10 @@ class V2TXLiveVideoEncoderParam extends NSObject  {
   }
 }
 
-extension V2TXLiveVideoEncoderParam_Batch on List<V2TXLiveVideoEncoderParam> {
+extension V2TXLiveVideoEncoderParam_Batch on List<V2TXLiveVideoEncoderParam?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

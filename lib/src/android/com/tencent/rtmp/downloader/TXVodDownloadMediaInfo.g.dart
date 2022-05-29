@@ -270,10 +270,10 @@ class com_tencent_rtmp_downloader_TXVodDownloadMediaInfo extends java_lang_Objec
   }
 }
 
-extension com_tencent_rtmp_downloader_TXVodDownloadMediaInfo_Batch on List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo> {
+extension com_tencent_rtmp_downloader_TXVodDownloadMediaInfo_Batch on List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

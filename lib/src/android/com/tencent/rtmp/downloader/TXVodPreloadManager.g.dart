@@ -93,10 +93,10 @@ class com_tencent_rtmp_downloader_TXVodPreloadManager extends java_lang_Object  
   }
 }
 
-extension com_tencent_rtmp_downloader_TXVodPreloadManager_Batch on List<com_tencent_rtmp_downloader_TXVodPreloadManager> {
+extension com_tencent_rtmp_downloader_TXVodPreloadManager_Batch on List<com_tencent_rtmp_downloader_TXVodPreloadManager?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

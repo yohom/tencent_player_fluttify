@@ -105,10 +105,10 @@ class com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture extends java_lang_Object  {
   }
 }
 
-extension com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture_Batch on List<com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture> {
+extension com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture_Batch on List<com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

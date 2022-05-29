@@ -2133,6 +2133,35 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
+            put("com.tencent.rtmp.TXLivePlayer::addVideoRawData", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                byte[] yuvBuffer = (byte[]) ((Map<String, Object>) __args__).get("yuvBuffer");
+            
+                // ref
+                com.tencent.rtmp.TXLivePlayer __this__ = (com.tencent.rtmp.TXLivePlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXLivePlayer@" + __this__ + "::addVideoRawData(" + yuvBuffer + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.addVideoRawData(yuvBuffer);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
             put("com.tencent.rtmp.TXLivePlayer::setVideoRawDataListener", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
@@ -5139,35 +5168,6 @@ public class SubHandler0 {
                 String __result__ = null;
                 try {
                     __result__ = __this__.getPSign();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::setQuality", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number quality = (Number) ((Map<String, Object>) __args__).get("quality");
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::setQuality(" + quality + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setQuality(quality.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

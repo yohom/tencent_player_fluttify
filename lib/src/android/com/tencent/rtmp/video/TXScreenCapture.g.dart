@@ -63,10 +63,10 @@ class com_tencent_rtmp_video_TXScreenCapture extends java_lang_Object  {
   }
 }
 
-extension com_tencent_rtmp_video_TXScreenCapture_Batch on List<com_tencent_rtmp_video_TXScreenCapture> {
+extension com_tencent_rtmp_video_TXScreenCapture_Batch on List<com_tencent_rtmp_video_TXScreenCapture?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

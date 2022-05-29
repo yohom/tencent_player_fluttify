@@ -63,10 +63,10 @@ class TXImageSprite extends NSObject  {
   }
 }
 
-extension TXImageSprite_Batch on List<TXImageSprite> {
+extension TXImageSprite_Batch on List<TXImageSprite?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

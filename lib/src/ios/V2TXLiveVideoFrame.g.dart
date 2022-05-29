@@ -149,10 +149,10 @@ class V2TXLiveVideoFrame extends NSObject  {
   }
 }
 
-extension V2TXLiveVideoFrame_Batch on List<V2TXLiveVideoFrame> {
+extension V2TXLiveVideoFrame_Batch on List<V2TXLiveVideoFrame?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

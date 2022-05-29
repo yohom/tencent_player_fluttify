@@ -362,10 +362,10 @@ class TXLiveBase extends NSObject  {
   }
 }
 
-extension TXLiveBase_Batch on List<TXLiveBase> {
+extension TXLiveBase_Batch on List<TXLiveBase?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

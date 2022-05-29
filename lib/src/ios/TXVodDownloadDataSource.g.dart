@@ -149,10 +149,10 @@ class TXVodDownloadDataSource extends NSObject  {
   }
 }
 
-extension TXVodDownloadDataSource_Batch on List<TXVodDownloadDataSource> {
+extension TXVodDownloadDataSource_Batch on List<TXVodDownloadDataSource?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters
