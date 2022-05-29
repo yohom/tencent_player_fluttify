@@ -94,10 +94,10 @@ class V2TXLiveAudioFrame extends NSObject  {
   }
 }
 
-extension V2TXLiveAudioFrame_Batch on List<V2TXLiveAudioFrame> {
+extension V2TXLiveAudioFrame_Batch on List<V2TXLiveAudioFrame?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

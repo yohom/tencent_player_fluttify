@@ -292,10 +292,10 @@ class TXVodPlayConfig extends NSObject  {
   }
 }
 
-extension TXVodPlayConfig_Batch on List<TXVodPlayConfig> {
+extension TXVodPlayConfig_Batch on List<TXVodPlayConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

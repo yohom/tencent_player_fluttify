@@ -453,6 +453,23 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
+  Future<bool?> addVideoRawData(Uint8List yuvBuffer) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::addVideoRawData([\'yuvBuffer\':$yuvBuffer])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer::addVideoRawData', {"yuvBuffer": yuvBuffer, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setVideoRawDataListener(com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener listener) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -596,10 +613,10 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
 }
 
-extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePlayer> {
+extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePlayer?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters
@@ -829,6 +846,17 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
+  }
+  
+  
+  Future<List<bool?>> addVideoRawData_batch(List<Uint8List> yuvBuffer) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer::addVideoRawData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"yuvBuffer": yuvBuffer[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   

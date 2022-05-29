@@ -130,10 +130,10 @@ class com_tencent_rtmp_ui_TXDashBoard extends android_widget_LinearLayout  {
   }
 }
 
-extension com_tencent_rtmp_ui_TXDashBoard_Batch on List<com_tencent_rtmp_ui_TXDashBoard> {
+extension com_tencent_rtmp_ui_TXDashBoard_Batch on List<com_tencent_rtmp_ui_TXDashBoard?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -63,10 +63,10 @@ class com_tencent_rtmp_ui_TXLogView extends android_widget_LinearLayout  {
   }
 }
 
-extension com_tencent_rtmp_ui_TXLogView_Batch on List<com_tencent_rtmp_ui_TXLogView> {
+extension com_tencent_rtmp_ui_TXLogView_Batch on List<com_tencent_rtmp_ui_TXLogView?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

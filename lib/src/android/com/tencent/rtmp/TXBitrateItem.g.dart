@@ -121,10 +121,10 @@ class com_tencent_rtmp_TXBitrateItem extends java_lang_Object  {
   }
 }
 
-extension com_tencent_rtmp_TXBitrateItem_Batch on List<com_tencent_rtmp_TXBitrateItem> {
+extension com_tencent_rtmp_TXBitrateItem_Batch on List<com_tencent_rtmp_TXBitrateItem?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

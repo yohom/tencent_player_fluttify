@@ -105,10 +105,10 @@ class TXBitrateItem extends NSObject  {
   }
 }
 
-extension TXBitrateItem_Batch on List<TXBitrateItem> {
+extension TXBitrateItem_Batch on List<TXBitrateItem?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -96,10 +96,10 @@ class com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity ex
   }
 }
 
-extension com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity_Batch on List<com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity> {
+extension com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity_Batch on List<com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

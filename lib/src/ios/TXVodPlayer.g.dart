@@ -827,10 +827,10 @@ class TXVodPlayer extends NSObject  {
   }
 }
 
-extension TXVodPlayer_Batch on List<TXVodPlayer> {
+extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

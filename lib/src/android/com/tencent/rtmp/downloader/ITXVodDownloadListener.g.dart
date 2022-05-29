@@ -114,5 +114,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
   
   Future<void> onDownloadError(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1, int? var2, String? var3) async {}
   
+  Future<int?> hlsKeyVerify(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? var1, String? var2, Uint8List? var3) async {}
+  
 }
 

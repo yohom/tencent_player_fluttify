@@ -130,10 +130,10 @@ class TXPlayerGlobalSetting extends NSObject  {
   }
 }
 
-extension TXPlayerGlobalSetting_Batch on List<TXPlayerGlobalSetting> {
+extension TXPlayerGlobalSetting_Batch on List<TXPlayerGlobalSetting?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

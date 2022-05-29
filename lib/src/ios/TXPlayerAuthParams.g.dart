@@ -138,10 +138,10 @@ class TXPlayerAuthParams extends NSObject  {
   }
 }
 
-extension TXPlayerAuthParams_Batch on List<TXPlayerAuthParams> {
+extension TXPlayerAuthParams_Batch on List<TXPlayerAuthParams?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

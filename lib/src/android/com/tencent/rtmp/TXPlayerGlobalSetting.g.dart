@@ -130,10 +130,10 @@ class com_tencent_rtmp_TXPlayerGlobalSetting extends java_lang_Object  {
   }
 }
 
-extension com_tencent_rtmp_TXPlayerGlobalSetting_Batch on List<com_tencent_rtmp_TXPlayerGlobalSetting> {
+extension com_tencent_rtmp_TXPlayerGlobalSetting_Batch on List<com_tencent_rtmp_TXPlayerGlobalSetting?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

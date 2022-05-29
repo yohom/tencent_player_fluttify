@@ -113,10 +113,10 @@ class TXVodPreloadManager extends NSObject  {
   }
 }
 
-extension TXVodPreloadManager_Batch on List<TXVodPreloadManager> {
+extension TXVodPreloadManager_Batch on List<TXVodPreloadManager?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

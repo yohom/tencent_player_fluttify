@@ -542,10 +542,10 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
 }
 
-extension com_tencent_rtmp_ui_TXCloudVideoView_Batch on List<com_tencent_rtmp_ui_TXCloudVideoView> {
+extension com_tencent_rtmp_ui_TXCloudVideoView_Batch on List<com_tencent_rtmp_ui_TXCloudVideoView?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

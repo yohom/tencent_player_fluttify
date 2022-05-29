@@ -113,10 +113,10 @@ class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
   }
 }
 
-extension com_tencent_rtmp_TXImageSprite_Batch on List<com_tencent_rtmp_TXImageSprite> {
+extension com_tencent_rtmp_TXImageSprite_Batch on List<com_tencent_rtmp_TXImageSprite?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -93,10 +93,10 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
   }
 }
 
-extension com_tencent_rtmp_TXLiveBaseListener_Batch on List<com_tencent_rtmp_TXLiveBaseListener> {
+extension com_tencent_rtmp_TXLiveBaseListener_Batch on List<com_tencent_rtmp_TXLiveBaseListener?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

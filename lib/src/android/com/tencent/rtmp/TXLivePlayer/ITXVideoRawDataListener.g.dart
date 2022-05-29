@@ -59,6 +59,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener on java_lang_Object 
 
   
 
+  Future<void> onVideoRawDataAvailable(Uint8List? var1, int? var2, int? var3, int? var4) async {}
   
 }
 

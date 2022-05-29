@@ -365,10 +365,10 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
 }
 
-extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase> {
+extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

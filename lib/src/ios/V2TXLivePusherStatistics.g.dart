@@ -138,10 +138,10 @@ class V2TXLivePusherStatistics extends NSObject  {
   }
 }
 
-extension V2TXLivePusherStatistics_Batch on List<V2TXLivePusherStatistics> {
+extension V2TXLivePusherStatistics_Batch on List<V2TXLivePusherStatistics?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters
