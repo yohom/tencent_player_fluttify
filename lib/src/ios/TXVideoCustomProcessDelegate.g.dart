@@ -29,7 +29,7 @@ mixin TXVideoCustomProcessDelegate on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onPreProcessTexture::onPreProcessTexture':
+              case 'onPreProcessTexture:width:height':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onPreProcessTexture?.call([\'texture\':${args['texture']}, \'width\':${args['width']}, \'height\':${args['height']}])');
@@ -38,7 +38,7 @@ mixin TXVideoCustomProcessDelegate on NSObject {
                 // handle the native call
                 onPreProcessTexture?.call(args['texture'], args['width'], args['height']);
                 break;
-              case 'Callback::onTextureDestoryed::onTextureDestoryed':
+              case 'onTextureDestoryed':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onTextureDestoryed?.call([])');
@@ -47,7 +47,7 @@ mixin TXVideoCustomProcessDelegate on NSObject {
                 // handle the native call
                 onTextureDestoryed?.call();
                 break;
-              case 'Callback::onDetectFacePoints::onDetectFacePoints':
+              case 'onDetectFacePoints':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDetectFacePoints?.call([\'points\':${args['points']}])');
@@ -56,7 +56,7 @@ mixin TXVideoCustomProcessDelegate on NSObject {
                 // handle the native call
                 onDetectFacePoints?.call((args['points'] as List? ?? []).map((it) => TencentPlayerFluttifyIOSAs<NSObject>(it)).where((e) => e != null).cast<NSObject>().toList());
                 break;
-              case 'Callback::onPlayerPixelBuffer::onPlayerPixelBuffer':
+              case 'onPlayerPixelBuffer':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onPlayerPixelBuffer?.call([\'pixelBuffer\':${args['pixelBuffer']}])');

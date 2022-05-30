@@ -3130,7 +3130,7 @@ public class SubHandler2 {
             
                     // call dart method
                     @Override
-                    public void onPcmDataAvailable(byte[] var1, long var2) {
+                    public void onPcmDataAvailable:(byte[] var1, long var2) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onPcmDataAvailable(" + var1 + var2 + ")");
@@ -3141,7 +3141,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onPcmDataAvailable::onPcmDataAvailable",
+                                    "onPcmDataAvailable:",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3155,7 +3155,7 @@ public class SubHandler2 {
                     }
             
                     @Override
-                    public void onAudioInfoChanged(int var1, int var2, int var3) {
+                    public void onAudioInfoChanged::(int var1, int var2, int var3) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onAudioInfoChanged(" + var1 + var2 + var3 + ")");
@@ -3166,7 +3166,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onAudioInfoChanged::onAudioInfoChanged",
+                                    "onAudioInfoChanged::",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3194,7 +3194,7 @@ public class SubHandler2 {
             
                     // call dart method
                     @Override
-                    public void onPlayEvent(com.tencent.rtmp.TXVodPlayer var1, int var2, android.os.Bundle var3) {
+                    public void onPlayEvent::(com.tencent.rtmp.TXVodPlayer var1, int var2, android.os.Bundle var3) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onPlayEvent(" + var1 + var2 + var3 + ")");
@@ -3205,7 +3205,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onPlayEvent::onPlayEvent",
+                                    "onPlayEvent::",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3220,7 +3220,7 @@ public class SubHandler2 {
                     }
             
                     @Override
-                    public void onNetStatus(com.tencent.rtmp.TXVodPlayer var1, android.os.Bundle var2) {
+                    public void onNetStatus:(com.tencent.rtmp.TXVodPlayer var1, android.os.Bundle var2) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onNetStatus(" + var1 + var2 + ")");
@@ -3231,7 +3231,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onNetStatus::onNetStatus",
+                                    "onNetStatus:",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3269,7 +3269,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onRenderVideoFrame::onRenderVideoFrame",
+                                    "onRenderVideoFrame",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3295,7 +3295,7 @@ public class SubHandler2 {
             
                     // call dart method
                     @Override
-                    public void onPlayEvent(int var1, android.os.Bundle var2) {
+                    public void onPlayEvent:(int var1, android.os.Bundle var2) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onPlayEvent(" + var1 + var2 + ")");
@@ -3306,7 +3306,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onPlayEvent::onPlayEvent",
+                                    "onPlayEvent:",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3331,7 +3331,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onNetStatus::onNetStatus",
+                                    "onNetStatus",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3357,7 +3357,7 @@ public class SubHandler2 {
             
                     // call dart method
                     @Override
-                    public void onComplete(int var1, String var2) {
+                    public void onComplete:(int var1, String var2) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onComplete(" + var1 + var2 + ")");
@@ -3368,7 +3368,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onComplete::onComplete",
+                                    "onComplete:",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3382,7 +3382,7 @@ public class SubHandler2 {
                     }
             
                     @Override
-                    public void onError(int var1, String var2, int var3, String var4) {
+                    public void onError:::(int var1, String var2, int var3, String var4) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + var2 + var3 + var4 + ")");
@@ -3393,7 +3393,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onError::onError",
+                                    "onError:::",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3433,7 +3433,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onDownloadStart::onDownloadStart",
+                                    "onDownloadStart",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3457,7 +3457,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onDownloadProgress::onDownloadProgress",
+                                    "onDownloadProgress",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3481,7 +3481,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onDownloadStop::onDownloadStop",
+                                    "onDownloadStop",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3505,7 +3505,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onDownloadFinish::onDownloadFinish",
+                                    "onDownloadFinish",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3518,7 +3518,7 @@ public class SubHandler2 {
                     }
             
                     @Override
-                    public void onDownloadError(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1, int var2, String var3) {
+                    public void onDownloadError::(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1, int var2, String var3) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onDownloadError(" + var1 + var2 + var3 + ")");
@@ -3529,7 +3529,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onDownloadError::onDownloadError",
+                                    "onDownloadError::",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3544,7 +3544,7 @@ public class SubHandler2 {
                     }
             
                     @Override
-                    public int hlsKeyVerify(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1, String var2, byte[] var3) {
+                    public int hlsKeyVerify::(com.tencent.rtmp.downloader.TXVodDownloadMediaInfo var1, String var2, byte[] var3) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: hlsKeyVerify(" + var1 + var2 + var3 + ")");
@@ -3555,7 +3555,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::hlsKeyVerify::hlsKeyVerify",
+                                    "hlsKeyVerify::",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3583,7 +3583,7 @@ public class SubHandler2 {
             
                     // call dart method
                     @Override
-                    public void onPushEvent(int var1, android.os.Bundle var2) {
+                    public void onPushEvent:(int var1, android.os.Bundle var2) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onPushEvent(" + var1 + var2 + ")");
@@ -3594,7 +3594,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onPushEvent::onPushEvent",
+                                    "onPushEvent:",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3619,7 +3619,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onNetStatus::onNetStatus",
+                                    "onNetStatus",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3656,7 +3656,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onSnapshot::onSnapshot",
+                                    "onSnapshot",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3693,7 +3693,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onAudioVolumeEvaluationNotify::onAudioVolumeEvaluationNotify",
+                                    "onAudioVolumeEvaluationNotify",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                     }}
@@ -3719,7 +3719,7 @@ public class SubHandler2 {
             
                     // call dart method
                     @Override
-                    public void onVideoRawDataAvailable(byte[] var1, int var2, int var3, int var4) {
+                    public void onVideoRawDataAvailable:::(byte[] var1, int var2, int var3, int var4) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onVideoRawDataAvailable(" + var1 + var2 + var3 + var4 + ")");
@@ -3730,7 +3730,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "Callback::onVideoRawDataAvailable::onVideoRawDataAvailable",
+                                    "onVideoRawDataAvailable:::",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);

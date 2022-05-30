@@ -29,7 +29,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener on java_lan
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onAudioVolumeEvaluationNotify::onAudioVolumeEvaluationNotify':
+              case 'onAudioVolumeEvaluationNotify':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onAudioVolumeEvaluationNotify?.call([\'var1\':${args['var1']}])');

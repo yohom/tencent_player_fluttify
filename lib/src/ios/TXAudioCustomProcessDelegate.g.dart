@@ -29,7 +29,7 @@ mixin TXAudioCustomProcessDelegate on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onRecordRawPcmData::onRecordRawPcmData':
+              case 'onRecordRawPcmData:timeStamp:sampleRate:channels:withBgm':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onRecordRawPcmData?.call([\'data\':${args['data']}, \'timeStamp\':${args['timeStamp']}, \'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}, \'withBgm\':${args['withBgm']}])');
@@ -38,7 +38,7 @@ mixin TXAudioCustomProcessDelegate on NSObject {
                 // handle the native call
                 onRecordRawPcmData?.call(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timeStamp'], args['sampleRate'], args['channels'], args['withBgm']);
                 break;
-              case 'Callback::onRecordPcmData::onRecordPcmData':
+              case 'onRecordPcmData:timeStamp:sampleRate:channels':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onRecordPcmData?.call([\'data\':${args['data']}, \'timeStamp\':${args['timeStamp']}, \'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}])');

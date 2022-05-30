@@ -29,7 +29,7 @@ mixin TXVodPlayListener on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onPlayEvent::onPlayEvent':
+              case 'onPlayEvent:event:withParam':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onPlayEvent?.call([\'player\':${args['player']}, \'EvtID\':${args['EvtID']}, \'param\':${args['param']}])');
@@ -38,7 +38,7 @@ mixin TXVodPlayListener on NSObject {
                 // handle the native call
                 onPlayEvent?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['EvtID'], args['param']);
                 break;
-              case 'Callback::onNetStatus::onNetStatus':
+              case 'onNetStatus:withParam':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onNetStatus?.call([\'player\':${args['player']}, \'param\':${args['param']}])');

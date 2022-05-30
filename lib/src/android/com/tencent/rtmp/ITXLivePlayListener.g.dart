@@ -29,7 +29,7 @@ mixin com_tencent_rtmp_ITXLivePlayListener on java_lang_Object {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onPlayEvent::onPlayEvent':
+              case 'onPlayEvent:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onPlayEvent?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -38,7 +38,7 @@ mixin com_tencent_rtmp_ITXLivePlayListener on java_lang_Object {
                 // handle the native call
                 onPlayEvent?.call(args['var1'], TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var2']));
                 break;
-              case 'Callback::onNetStatus::onNetStatus':
+              case 'onNetStatus':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onNetStatus?.call([\'var1\':${args['var1']}])');

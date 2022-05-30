@@ -29,7 +29,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener on java_lang_Object 
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onVideoRawDataAvailable::onVideoRawDataAvailable':
+              case 'onVideoRawDataAvailable:::':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onVideoRawDataAvailable?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');

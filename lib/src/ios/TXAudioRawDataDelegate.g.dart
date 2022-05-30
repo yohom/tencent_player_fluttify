@@ -29,7 +29,7 @@ mixin TXAudioRawDataDelegate on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onAudioInfoChanged::onAudioInfoChanged':
+              case 'onAudioInfoChanged:channels':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onAudioInfoChanged?.call([\'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}])');
@@ -38,7 +38,7 @@ mixin TXAudioRawDataDelegate on NSObject {
                 // handle the native call
                 onAudioInfoChanged?.call(args['sampleRate'], args['channels']);
                 break;
-              case 'Callback::onPcmDataAvailable::onPcmDataAvailable':
+              case 'onPcmDataAvailable:pts':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onPcmDataAvailable?.call([\'data\':${args['data']}, \'timestamp\':${args['timestamp']}])');

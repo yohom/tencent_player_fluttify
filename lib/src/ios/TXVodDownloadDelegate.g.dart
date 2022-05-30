@@ -29,7 +29,7 @@ mixin TXVodDownloadDelegate on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onDownloadStart::onDownloadStart':
+              case 'onDownloadStart':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadStart?.call([\'mediaInfo\':${args['mediaInfo']}])');
@@ -38,7 +38,7 @@ mixin TXVodDownloadDelegate on NSObject {
                 // handle the native call
                 onDownloadStart?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
                 break;
-              case 'Callback::onDownloadProgress::onDownloadProgress':
+              case 'onDownloadProgress':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadProgress?.call([\'mediaInfo\':${args['mediaInfo']}])');
@@ -47,7 +47,7 @@ mixin TXVodDownloadDelegate on NSObject {
                 // handle the native call
                 onDownloadProgress?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
                 break;
-              case 'Callback::onDownloadStop::onDownloadStop':
+              case 'onDownloadStop':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadStop?.call([\'mediaInfo\':${args['mediaInfo']}])');
@@ -56,7 +56,7 @@ mixin TXVodDownloadDelegate on NSObject {
                 // handle the native call
                 onDownloadStop?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
                 break;
-              case 'Callback::onDownloadFinish::onDownloadFinish':
+              case 'onDownloadFinish':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadFinish?.call([\'mediaInfo\':${args['mediaInfo']}])');
@@ -65,7 +65,7 @@ mixin TXVodDownloadDelegate on NSObject {
                 // handle the native call
                 onDownloadFinish?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
                 break;
-              case 'Callback::onDownloadError::onDownloadError':
+              case 'onDownloadError:errorCode:errorMsg':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadError?.call([\'mediaInfo\':${args['mediaInfo']}, \'code\':${args['code']}, \'msg\':${args['msg']}])');
@@ -74,7 +74,7 @@ mixin TXVodDownloadDelegate on NSObject {
                 // handle the native call
                 onDownloadError?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), (args['code'] as int).toTXDownloadError(), args['msg']);
                 break;
-              case 'Callback::hlsKeyVerify::hlsKeyVerify':
+              case 'hlsKeyVerify:url:data':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: hlsKeyVerify?.call([\'mediaInfo\':${args['mediaInfo']}, \'url\':${args['url']}, \'data\':${args['data']}])');

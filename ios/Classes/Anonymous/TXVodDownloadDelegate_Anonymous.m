@@ -40,7 +40,7 @@ extern BOOL enableLog;
   TXVodDownloadMediaInfo* argmediaInfo = mediaInfo;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodDownloadDelegate::onDownloadStart" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo}];
+    [channel invokeMethod:@"onDownloadStart" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo}];
   });
   
 }
@@ -61,7 +61,7 @@ extern BOOL enableLog;
   TXVodDownloadMediaInfo* argmediaInfo = mediaInfo;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodDownloadDelegate::onDownloadProgress" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo}];
+    [channel invokeMethod:@"onDownloadProgress" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo}];
   });
   
 }
@@ -82,7 +82,7 @@ extern BOOL enableLog;
   TXVodDownloadMediaInfo* argmediaInfo = mediaInfo;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodDownloadDelegate::onDownloadStop" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo}];
+    [channel invokeMethod:@"onDownloadStop" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo}];
   });
   
 }
@@ -103,7 +103,7 @@ extern BOOL enableLog;
   TXVodDownloadMediaInfo* argmediaInfo = mediaInfo;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodDownloadDelegate::onDownloadFinish" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo}];
+    [channel invokeMethod:@"onDownloadFinish" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo}];
   });
   
 }
@@ -128,7 +128,7 @@ extern BOOL enableLog;
   NSString* argmsg = msg;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodDownloadDelegate::onDownloadError_errorCode_errorMsg" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo, @"code": argcode == nil ? [NSNull null] : argcode, @"msg": argmsg == nil ? [NSNull null] : argmsg}];
+    [channel invokeMethod:@"onDownloadError:errorCode:errorMsg" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo, @"code": argcode == nil ? [NSNull null] : argcode, @"msg": argmsg == nil ? [NSNull null] : argmsg}];
   });
   
 }
@@ -153,7 +153,7 @@ extern BOOL enableLog;
   NSData* argdata = data;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodDownloadDelegate::hlsKeyVerify_url_data"
+    [channel invokeMethod:@"hlsKeyVerify:url:data"
                 arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo, @"url": argurl == nil ? [NSNull null] : argurl, @"data": argdata == nil ? [NSNull null] : argdata}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
   });
