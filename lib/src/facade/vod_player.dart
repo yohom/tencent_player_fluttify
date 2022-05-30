@@ -11,19 +11,12 @@ import 'package:tencent_player_fluttify/src/ios/ios.export.g.dart';
 import 'cloud_video_controller.dart';
 import 'data_model.dart';
 
-part 'player_delegates.dart';
-
 /// 点播控制器
 class VodPlayer {
   VodPlayer._();
 
   com_tencent_rtmp_TXVodPlayer? _androidPlayer;
   TXVodPlayer? _iosPlayer;
-
-  com_tencent_rtmp_TXVodPlayConfig? _androidConfig;
-  TXVodPlayConfig? _iOSConfig;
-
-  final _iosEventDelegate = _IOSEventDelegate();
 
   /// 创建一个播放器
   ///
@@ -361,27 +354,100 @@ class VodPlayer {
         await _androidPlayer!.setVodListener(listener);
       },
       ios: (pool) async {
-        await _iosPlayer!.set_vodDelegate(
-          _iosEventDelegate
-            .._onWarningVideoDecodeFail = onWarningVideoDecodeFail
-            .._onWarningAudioDecodeFail = onWarningAudioDecodeFail
-            .._onWarningReconnect = onWarningReconnect
-            .._onWarningRecvDataLag = onWarningRecvDataLag
-            .._onWarningVideoPlayLag = onWarningVideoPlayLag
-            .._onWarningHwAccelerationFail = onWarningHwAccelerationFail
-            .._onWarningVideoDiscontinuity = onWarningVideoDiscontinuity
-            .._onWarningDNSFail = onWarningDNSFail
-            .._onWarningServerConnFail = onWarningServerConnFail
-            .._onWarningShakeFail = onWarningShakeFail
-            .._onEventRcvFirstIFrame = onEventRcvFirstIFrame
-            .._onEventPlayBegin = onEventPlayBegin
-            .._onEventPlayEnd = onEventPlayEnd
-            .._onEventConnectSucc = onEventConnectSucc
-            .._onEventPlayProgress = onEventPlayProgress
-            .._onEventPlayLoading = onEventPlayLoading
-            .._onEventPlayLoadingEnd = onEventPlayLoadingEnd
-            .._onEventPlayPrepared = onEventPlayPrepared,
-        );
+        final listener = await TXVodPlayListener.anonymous__(
+            onPlayEvent: (player, code, data) async {
+          debugPrint('事件: $code, 参数: ${data}');
+          // 当前视频帧解码失败
+          if (code == 2101 && onWarningVideoDecodeFail != null) {
+            onWarningVideoDecodeFail();
+          }
+          // 当前音频帧解码失败
+          else if (code == 2102 && onWarningAudioDecodeFail != null) {
+            onWarningAudioDecodeFail();
+          }
+          // 网络断连，已启动自动重连（重连超过三次就直接抛送 PLAY_ERR_NET_DISCONNECT）
+          else if (code == 2103 && onWarningReconnect != null) {
+            onWarningReconnect();
+          }
+          // 网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀
+          else if (code == 2104 && onWarningRecvDataLag != null) {
+            onWarningRecvDataLag();
+          }
+          // 当前视频播放出现卡顿
+          else if (code == 2105 && onWarningVideoPlayLag != null) {
+            onWarningVideoPlayLag();
+          }
+          // 硬解启动失败，采用软解
+          else if (code == 2106 && onWarningHwAccelerationFail != null) {
+            onWarningHwAccelerationFail();
+          }
+          // 当前视频帧不连续，可能丢帧
+          else if (code == 2107 && onWarningVideoDiscontinuity != null) {
+            onWarningVideoDiscontinuity();
+          }
+          // RTMP - DNS 解析失败（会触发重试流程） 3001
+          else if (code == 3001 && onWarningDNSFail != null) {
+            onWarningDNSFail();
+          }
+          // RTMP 服务器连接失败（会触发重试流程） 3002
+          else if (code == 3002 && onWarningServerConnFail != null) {
+            onWarningServerConnFail();
+          }
+          // RTMP 服务器握手失败（会触发重试流程） 3003
+          else if (code == 3003 && onWarningShakeFail != null) {
+            onWarningShakeFail();
+          }
+          // 收到首帧数据，越快收到此消息说明链路质量越好
+          else if (code == 2003 && onEventRcvFirstIFrame != null) {
+            onEventRcvFirstIFrame();
+          }
+          // 视频播放开始，如果您自己做 loading，会需要它
+          else if (code == 2004 && onEventPlayBegin != null) {
+            onEventPlayBegin();
+          }
+          // 视频播放结束
+          else if (code == 2006 && onEventPlayEnd != null) {
+            onEventPlayEnd();
+          }
+          // 链接成功
+          else if (code == 2001 && onEventConnectSucc != null) {
+            onEventConnectSucc();
+          }
+          // 播放进度
+          else if (code == 2005 && onEventPlayProgress != null) {
+            final num playInt = await data?['EVT_PLAY_PROGRESS'] ?? .0;
+            final num bufferInt = await data?['PLAYABLE_DURATION'] ?? .0;
+            final num totalInt = await data?['EVT_PLAY_DURATION'] ?? .0;
+            final playProgress =
+                Duration(milliseconds: (playInt * 1000).toInt());
+            final bufferProgress =
+                Duration(milliseconds: (bufferInt * 1000).toInt());
+            final totalDuration =
+                Duration(milliseconds: (totalInt * 1000).toInt());
+
+            onEventPlayProgress(PlayProgress(
+              playProgress: playProgress,
+              bufferProgress: bufferProgress,
+              totalDuration: totalDuration,
+            ));
+          }
+          // 缓存中
+          else if (code == 2007 && onEventPlayLoading != null) {
+            onEventPlayLoading();
+          }
+          // 缓存结束
+          else if (code == 2014 && onEventPlayLoadingEnd != null) {
+            onEventPlayLoadingEnd();
+          }
+          // 可以准备开始播放
+          else if (code == 2013 && onEventPlayPrepared != null) {
+            onEventPlayPrepared();
+          } else {
+            debugPrint('未处理的事件: $code, $data');
+          }
+        });
+
+        await _iosPlayer!.set_vodDelegate(listener);
       },
     );
   }
