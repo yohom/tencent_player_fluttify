@@ -5,20 +5,12 @@
 #import "SubHandler0.h"
 #import "FluttifyMessageCodec.h"
 #import <TXLiteAVSDK_Player/TXLiteAVSDK.h>
-#import "V2TXLivePlayerObserver_Anonymous.h"
 #import "TXVodDownloadDelegate_Anonymous.h"
-#import "TXLiveBaseDelegate_Anonymous.h"
-#import "TXLiveRecordListener_Anonymous.h"
 #import "TXVodPlayListener_Anonymous.h"
 #import "TXVodPreloadManagerDelegate_Anonymous.h"
-#import "V2TXLivePlayer_Anonymous.h"
 #import "TXAudioCustomProcessDelegate_Anonymous.h"
-#import "V2TXLivePremier_Anonymous.h"
-#import "V2TXLivePremierObserver_Anonymous.h"
-#import "TXLivePlayListener_Anonymous.h"
 #import "TXAudioRawDataDelegate_Anonymous.h"
 #import "TXVideoCustomProcessDelegate_Anonymous.h"
-#import "TXLiveAudioSessionDelegate_Anonymous.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
