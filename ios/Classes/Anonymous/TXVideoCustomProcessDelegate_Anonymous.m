@@ -27,7 +27,7 @@ extern BOOL enableLog;
 - (GLuint)onPreProcessTexture : (GLuint)texture width: (CGFloat)width height: (CGFloat)height
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVideoCustomProcessDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVideoCustomProcessDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -63,7 +63,7 @@ extern BOOL enableLog;
 - (void)onTextureDestoryed 
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVideoCustomProcessDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVideoCustomProcessDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -83,7 +83,7 @@ extern BOOL enableLog;
 - (void)onDetectFacePoints : (NSArray*)points
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVideoCustomProcessDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVideoCustomProcessDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -104,7 +104,7 @@ extern BOOL enableLog;
 - (BOOL)onPlayerPixelBuffer : (CVPixelBufferRef)pixelBuffer
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVideoCustomProcessDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVideoCustomProcessDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log

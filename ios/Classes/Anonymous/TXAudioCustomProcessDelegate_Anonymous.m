@@ -27,7 +27,7 @@ extern BOOL enableLog;
 - (void)onRecordRawPcmData : (NSData*)data timeStamp: (unsigned long long)timeStamp sampleRate: (int)sampleRate channels: (int)channels withBgm: (BOOL)withBgm
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXAudioCustomProcessDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXAudioCustomProcessDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -56,7 +56,7 @@ extern BOOL enableLog;
 - (void)onRecordPcmData : (NSData*)data timeStamp: (unsigned long long)timeStamp sampleRate: (int)sampleRate channels: (int)channels
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXAudioCustomProcessDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXAudioCustomProcessDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log

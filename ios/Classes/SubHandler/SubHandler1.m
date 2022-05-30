@@ -1221,7 +1221,8 @@ extern BOOL enableLog;
             }
         
             // args
-        
+            // ref arg
+            id<TXVodDownloadDelegate> delegate = (id<TXVodDownloadDelegate>) (args[@"delegate"] == [NSNull null] ? nil : args[@"delegate"]);
         
             // ref
             TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
@@ -1230,7 +1231,7 @@ extern BOOL enableLog;
                 return;
             }
         
-            ref.delegate = weakSelf;
+            ref.delegate = delegate;
             methodResult(@"success");
         },
         
@@ -1703,7 +1704,8 @@ extern BOOL enableLog;
             }
         
             // args
-        
+            // ref arg
+            id<TXVodPlayListener> vodDelegate = (id<TXVodPlayListener>) (args[@"vodDelegate"] == [NSNull null] ? nil : args[@"vodDelegate"]);
         
             // ref
             TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
@@ -1712,7 +1714,7 @@ extern BOOL enableLog;
                 return;
             }
         
-            ref.vodDelegate = weakSelf;
+            ref.vodDelegate = vodDelegate;
             methodResult(@"success");
         },
         
@@ -1723,7 +1725,8 @@ extern BOOL enableLog;
             }
         
             // args
-        
+            // ref arg
+            id<TXVideoCustomProcessDelegate> videoProcessDelegate = (id<TXVideoCustomProcessDelegate>) (args[@"videoProcessDelegate"] == [NSNull null] ? nil : args[@"videoProcessDelegate"]);
         
             // ref
             TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
@@ -1732,7 +1735,7 @@ extern BOOL enableLog;
                 return;
             }
         
-            ref.videoProcessDelegate = weakSelf;
+            ref.videoProcessDelegate = videoProcessDelegate;
             methodResult(@"success");
         },
         

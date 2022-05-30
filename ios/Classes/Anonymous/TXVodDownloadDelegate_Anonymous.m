@@ -27,7 +27,7 @@ extern BOOL enableLog;
 - (void)onDownloadStart : (TXVodDownloadMediaInfo*)mediaInfo
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -48,7 +48,7 @@ extern BOOL enableLog;
 - (void)onDownloadProgress : (TXVodDownloadMediaInfo*)mediaInfo
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -69,7 +69,7 @@ extern BOOL enableLog;
 - (void)onDownloadStop : (TXVodDownloadMediaInfo*)mediaInfo
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -90,7 +90,7 @@ extern BOOL enableLog;
 - (void)onDownloadFinish : (TXVodDownloadMediaInfo*)mediaInfo
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -111,7 +111,7 @@ extern BOOL enableLog;
 - (void)onDownloadError : (TXVodDownloadMediaInfo*)mediaInfo errorCode: (TXDownloadError)code errorMsg: (NSString*)msg
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -136,7 +136,7 @@ extern BOOL enableLog;
 - (int)hlsKeyVerify : (TXVodDownloadMediaInfo*)mediaInfo url: (NSString*)url data: (NSData*)data
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodDownloadDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log

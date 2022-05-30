@@ -156,128 +156,86 @@ class TXVodPlayConfig extends NSObject  {
   //region setters
   Future<void> set_connectRetryCount(int connectRetryCount) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_connectRetryCount', <String, dynamic>{'__this__': this, "connectRetryCount": connectRetryCount});
-  
-  
   }
   
   Future<void> set_connectRetryInterval(int connectRetryInterval) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_connectRetryInterval', <String, dynamic>{'__this__': this, "connectRetryInterval": connectRetryInterval});
-  
-  
   }
   
   Future<void> set_timeout(double timeout) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_timeout', <String, dynamic>{'__this__': this, "timeout": timeout});
-  
-  
   }
   
   Future<void> set_keepLastFrameWhenStop(bool keepLastFrameWhenStop) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_keepLastFrameWhenStop', <String, dynamic>{'__this__': this, "keepLastFrameWhenStop": keepLastFrameWhenStop});
-  
-  
   }
   
   Future<void> set_firstStartPlayBufferTime(int firstStartPlayBufferTime) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_firstStartPlayBufferTime', <String, dynamic>{'__this__': this, "firstStartPlayBufferTime": firstStartPlayBufferTime});
-  
-  
   }
   
   Future<void> set_nextStartPlayBufferTime(int nextStartPlayBufferTime) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_nextStartPlayBufferTime', <String, dynamic>{'__this__': this, "nextStartPlayBufferTime": nextStartPlayBufferTime});
-  
-  
   }
   
   Future<void> set_cacheFolderPath(String cacheFolderPath) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_cacheFolderPath', <String, dynamic>{'__this__': this, "cacheFolderPath": cacheFolderPath});
-  
-  
   }
   
   Future<void> set_maxCacheItems(int maxCacheItems) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_maxCacheItems', <String, dynamic>{'__this__': this, "maxCacheItems": maxCacheItems});
-  
-  
   }
   
   Future<void> set_playerType(TX_Enum_PlayerType playerType) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_playerType', <String, dynamic>{'__this__': this, "playerType": playerType.toValue()});
-  
-  
   }
   
   Future<void> set_headers(Map headers) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_headers', <String, dynamic>{'__this__': this, "headers": headers});
-  
-  
   }
   
   Future<void> set_enableAccurateSeek(bool enableAccurateSeek) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_enableAccurateSeek', <String, dynamic>{'__this__': this, "enableAccurateSeek": enableAccurateSeek});
-  
-  
   }
   
   Future<void> set_autoRotate(bool autoRotate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_autoRotate', <String, dynamic>{'__this__': this, "autoRotate": autoRotate});
-  
-  
   }
   
   Future<void> set_smoothSwitchBitrate(bool smoothSwitchBitrate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_smoothSwitchBitrate', <String, dynamic>{'__this__': this, "smoothSwitchBitrate": smoothSwitchBitrate});
-  
-  
   }
   
   Future<void> set_progressInterval(double progressInterval) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_progressInterval', <String, dynamic>{'__this__': this, "progressInterval": progressInterval});
-  
-  
   }
   
   Future<void> set_maxBufferSize(int maxBufferSize) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_maxBufferSize', <String, dynamic>{'__this__': this, "maxBufferSize": maxBufferSize});
-  
-  
   }
   
   Future<void> set_maxPreloadSize(int maxPreloadSize) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_maxPreloadSize', <String, dynamic>{'__this__': this, "maxPreloadSize": maxPreloadSize});
-  
-  
   }
   
   Future<void> set_overlayKey(String overlayKey) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_overlayKey', <String, dynamic>{'__this__': this, "overlayKey": overlayKey});
-  
-  
   }
   
   Future<void> set_overlayIv(String overlayIv) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_overlayIv', <String, dynamic>{'__this__': this, "overlayIv": overlayIv});
-  
-  
   }
   
   Future<void> set_enableRenderProcess(bool enableRenderProcess) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_enableRenderProcess', <String, dynamic>{'__this__': this, "enableRenderProcess": enableRenderProcess});
-  
-  
   }
   
   Future<void> set_preferredResolution(int preferredResolution) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_preferredResolution', <String, dynamic>{'__this__': this, "preferredResolution": preferredResolution});
-  
-  
   }
   
   Future<void> set_extInfoMap(Map extInfoMap) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_extInfoMap', <String, dynamic>{'__this__': this, "extInfoMap": extInfoMap});
-  
-  
   }
   
   //endregion

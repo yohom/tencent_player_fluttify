@@ -27,7 +27,7 @@ extern BOOL enableLog;
 - (void)onPlayEvent : (TXVodPlayer*)player event: (int)EvtID withParam: (NSDictionary*)param
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodPlayListener::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodPlayListener::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -52,7 +52,7 @@ extern BOOL enableLog;
 - (void)onNetStatus : (TXVodPlayer*)player withParam: (NSDictionary*)param
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodPlayListener::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodPlayListener::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log

@@ -75,125 +75,31 @@ class TXVodPlayer extends NSObject  {
 
   //region setters
   Future<void> set_vodDelegate(TXVodPlayListener vodDelegate) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_vodDelegate', <String, dynamic>{'__this__': this, });
-  
-    MethodChannel('TXVodPlayListener::Callback', kTencentPlayerFluttifyMethodCodec)
-      .setMethodCallHandler((methodCall) async {
-        try {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::TXVodPlayListener::onPlayEvent_event_withParam':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onPlayEvent_event_withParam([\'player\':${args['player']}, \'EvtID\':${args['EvtID']}, \'param\':${args['param']}])');
-              }
-          
-              // handle the native call
-              vodDelegate.onPlayEvent_event_withParam(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['EvtID'], args['param']);
-              break;
-            case 'Callback::TXVodPlayListener::onNetStatus_withParam':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onNetStatus_withParam([\'player\':${args['player']}, \'param\':${args['param']}])');
-              }
-          
-              // handle the native call
-              vodDelegate.onNetStatus_withParam(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['param']);
-              break;
-            default:
-              throw MissingPluginException('方法${methodCall.method}未实现');
-              break;
-          }
-        } catch (e) {
-          debugPrint(e.toString());
-          rethrow;
-        }
-      });
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_vodDelegate', <String, dynamic>{'__this__': this, "vodDelegate": vodDelegate});
   }
   
   Future<void> set_videoProcessDelegate(TXVideoCustomProcessDelegate videoProcessDelegate) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_videoProcessDelegate', <String, dynamic>{'__this__': this, });
-  
-    MethodChannel('TXVideoCustomProcessDelegate::Callback', kTencentPlayerFluttifyMethodCodec)
-      .setMethodCallHandler((methodCall) async {
-        try {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::TXVideoCustomProcessDelegate::onPreProcessTexture_width_height':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onPreProcessTexture_width_height([\'texture\':${args['texture']}, \'width\':${args['width']}, \'height\':${args['height']}])');
-              }
-          
-              // handle the native call
-              videoProcessDelegate.onPreProcessTexture_width_height(args['texture'], args['width'], args['height']);
-              break;
-            case 'Callback::TXVideoCustomProcessDelegate::onTextureDestoryed':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onTextureDestoryed([])');
-              }
-          
-              // handle the native call
-              videoProcessDelegate.onTextureDestoryed();
-              break;
-            case 'Callback::TXVideoCustomProcessDelegate::onDetectFacePoints':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onDetectFacePoints([\'points\':${args['points']}])');
-              }
-          
-              // handle the native call
-              videoProcessDelegate.onDetectFacePoints((args['points'] as List? ?? []).map((it) => TencentPlayerFluttifyIOSAs<NSObject>(it)).where((e) => e != null).cast<NSObject>().toList());
-              break;
-            case 'Callback::TXVideoCustomProcessDelegate::onPlayerPixelBuffer':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onPlayerPixelBuffer([\'pixelBuffer\':${args['pixelBuffer']}])');
-              }
-          
-              // handle the native call
-              videoProcessDelegate.onPlayerPixelBuffer(TencentPlayerFluttifyIOSAs<NSValue/* void* */>(args['pixelBuffer']));
-              break;
-            default:
-              throw MissingPluginException('方法${methodCall.method}未实现');
-              break;
-          }
-        } catch (e) {
-          debugPrint(e.toString());
-          rethrow;
-        }
-      });
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_videoProcessDelegate', <String, dynamic>{'__this__': this, "videoProcessDelegate": videoProcessDelegate});
   }
   
   Future<void> set_enableHWAcceleration(bool enableHWAcceleration) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_enableHWAcceleration', <String, dynamic>{'__this__': this, "enableHWAcceleration": enableHWAcceleration});
-  
-  
   }
   
   Future<void> set_config(TXVodPlayConfig config) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_config', <String, dynamic>{'__this__': this, "config": config});
-  
-  
   }
   
   Future<void> set_isAutoPlay(bool isAutoPlay) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_isAutoPlay', <String, dynamic>{'__this__': this, "isAutoPlay": isAutoPlay});
-  
-  
   }
   
   Future<void> set_token(String token) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_token', <String, dynamic>{'__this__': this, "token": token});
-  
-  
   }
   
   Future<void> set_loop(bool loop) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_loop', <String, dynamic>{'__this__': this, "loop": loop});
-  
-  
   }
   
   //endregion

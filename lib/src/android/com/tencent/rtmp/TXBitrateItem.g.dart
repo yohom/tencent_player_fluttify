@@ -71,26 +71,18 @@ class com_tencent_rtmp_TXBitrateItem extends java_lang_Object  {
   //region setters
   Future<void> set_index(int index) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_index', <String, dynamic>{'__this__': this, "index": index});
-  
-  
   }
   
   Future<void> set_width(int width) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_width', <String, dynamic>{'__this__': this, "width": width});
-  
-  
   }
   
   Future<void> set_height(int height) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_height', <String, dynamic>{'__this__': this, "height": height});
-  
-  
   }
   
   Future<void> set_bitrate(int bitrate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_bitrate', <String, dynamic>{'__this__': this, "bitrate": bitrate});
-  
-  
   }
   
   //endregion

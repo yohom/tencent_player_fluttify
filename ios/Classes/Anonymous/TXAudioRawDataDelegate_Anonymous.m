@@ -27,7 +27,7 @@ extern BOOL enableLog;
 - (void)onAudioInfoChanged : (int)sampleRate channels: (int)channels
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXAudioRawDataDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXAudioRawDataDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -50,7 +50,7 @@ extern BOOL enableLog;
 - (void)onPcmDataAvailable : (NSData*)data pts: (unsigned long long)timestamp
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXAudioRawDataDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXAudioRawDataDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log

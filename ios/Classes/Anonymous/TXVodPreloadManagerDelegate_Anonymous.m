@@ -27,7 +27,7 @@ extern BOOL enableLog;
 - (void)onComplete : (int)taskID url: (NSString*)url
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodPreloadManagerDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodPreloadManagerDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
@@ -50,7 +50,7 @@ extern BOOL enableLog;
 - (void)onError : (int)taskID url: (NSString*)url error: (NSError*)error
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"TXVodPreloadManagerDelegate::Callback@%@", @(self.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodPreloadManagerDelegate::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log

@@ -55,82 +55,11 @@ class TXVodDownloadManager extends NSObject  {
 
   //region setters
   Future<void> set_delegate(TXVodDownloadDelegate delegate) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_delegate', <String, dynamic>{'__this__': this, });
-  
-    MethodChannel('TXVodDownloadDelegate::Callback', kTencentPlayerFluttifyMethodCodec)
-      .setMethodCallHandler((methodCall) async {
-        try {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::TXVodDownloadDelegate::onDownloadStart':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onDownloadStart([\'mediaInfo\':${args['mediaInfo']}])');
-              }
-          
-              // handle the native call
-              delegate.onDownloadStart(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
-              break;
-            case 'Callback::TXVodDownloadDelegate::onDownloadProgress':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onDownloadProgress([\'mediaInfo\':${args['mediaInfo']}])');
-              }
-          
-              // handle the native call
-              delegate.onDownloadProgress(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
-              break;
-            case 'Callback::TXVodDownloadDelegate::onDownloadStop':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onDownloadStop([\'mediaInfo\':${args['mediaInfo']}])');
-              }
-          
-              // handle the native call
-              delegate.onDownloadStop(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
-              break;
-            case 'Callback::TXVodDownloadDelegate::onDownloadFinish':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onDownloadFinish([\'mediaInfo\':${args['mediaInfo']}])');
-              }
-          
-              // handle the native call
-              delegate.onDownloadFinish(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
-              break;
-            case 'Callback::TXVodDownloadDelegate::onDownloadError_errorCode_errorMsg':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onDownloadError_errorCode_errorMsg([\'mediaInfo\':${args['mediaInfo']}, \'code\':${args['code']}, \'msg\':${args['msg']}])');
-              }
-          
-              // handle the native call
-              delegate.onDownloadError_errorCode_errorMsg(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), (args['code'] as int).toTXDownloadError(), args['msg']);
-              break;
-            case 'Callback::TXVodDownloadDelegate::hlsKeyVerify_url_data':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: hlsKeyVerify_url_data([\'mediaInfo\':${args['mediaInfo']}, \'url\':${args['url']}, \'data\':${args['data']}])');
-              }
-          
-              // handle the native call
-              delegate.hlsKeyVerify_url_data(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), args['url'], TencentPlayerFluttifyIOSAs<NSData>(args['data']));
-              break;
-            default:
-              throw MissingPluginException('方法${methodCall.method}未实现');
-              break;
-          }
-        } catch (e) {
-          debugPrint(e.toString());
-          rethrow;
-        }
-      });
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_delegate', <String, dynamic>{'__this__': this, "delegate": delegate});
   }
   
   Future<void> set_headers(Map headers) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_headers', <String, dynamic>{'__this__': this, "headers": headers});
-  
-  
   }
   
   //endregion

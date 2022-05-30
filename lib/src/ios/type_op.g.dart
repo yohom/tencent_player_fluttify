@@ -29,11 +29,20 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXVodDownloadMediaInfo) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodDownloadMediaInfo', {'__this__': __this__});
     return result;
+  } else if (T == TXVodDownloadDelegate) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodDownloadDelegate', {'__this__': __this__});
+    return result;
   } else if (T == TXVodDownloadManager) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodDownloadManager', {'__this__': __this__});
     return result;
   } else if (T == TXVodPlayConfig) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPlayConfig', {'__this__': __this__});
+    return result;
+  } else if (T == TXVodPlayListener) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPlayListener', {'__this__': __this__});
+    return result;
+  } else if (T == TXVodPreloadManagerDelegate) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPreloadManagerDelegate', {'__this__': __this__});
     return result;
   } else if (T == TXVodPreloadManager) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPreloadManager', {'__this__': __this__});
@@ -44,8 +53,17 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXBitrateItem) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXBitrateItem', {'__this__': __this__});
     return result;
+  } else if (T == TXAudioCustomProcessDelegate) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXAudioCustomProcessDelegate', {'__this__': __this__});
+    return result;
   } else if (T == TXPlayerAuthParams) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerAuthParams', {'__this__': __this__});
+    return result;
+  } else if (T == TXAudioRawDataDelegate) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXAudioRawDataDelegate', {'__this__': __this__});
+    return result;
+  } else if (T == TXVideoCustomProcessDelegate) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVideoCustomProcessDelegate', {'__this__': __this__});
     return result;
   } else if (T == TXRecordResult) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXRecordResult', {'__this__': __this__});
@@ -67,6 +85,15 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
     return result;
   } else if (T == NSError) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSError', {'__this__': __this__});
+    return result;
+  } else if (T == NSCoding) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSCoding', {'__this__': __this__});
+    return result;
+  } else if (T == NSCopying) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSCopying', {'__this__': __this__});
+    return result;
+  } else if (T == NSMutableCopying) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSMutableCopying', {'__this__': __this__});
     return result;
   } else if (T == UIView) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': __this__});
@@ -118,18 +145,30 @@ T? TencentPlayerFluttifyIOSAs<T>(dynamic __this__) {
     return (TXVodDownloadDataSource()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodDownloadMediaInfo) {
     return (TXVodDownloadMediaInfo()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXVodDownloadDelegate) {
+    return (TXVodDownloadDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodDownloadManager) {
     return (TXVodDownloadManager()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPlayConfig) {
     return (TXVodPlayConfig()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXVodPlayListener) {
+    return (TXVodPlayListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXVodPreloadManagerDelegate) {
+    return (TXVodPreloadManagerDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPreloadManager) {
     return (TXVodPreloadManager()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPlayer) {
     return (TXVodPlayer()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXBitrateItem) {
     return (TXBitrateItem()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXAudioCustomProcessDelegate) {
+    return (TXAudioCustomProcessDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerAuthParams) {
     return (TXPlayerAuthParams()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXAudioRawDataDelegate) {
+    return (TXAudioRawDataDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXVideoCustomProcessDelegate) {
+    return (TXVideoCustomProcessDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXRecordResult) {
     return (TXRecordResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerGlobalSetting) {
@@ -144,6 +183,12 @@ T? TencentPlayerFluttifyIOSAs<T>(dynamic __this__) {
     return (UIEdgeInsets()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSError) {
     return (NSError()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSCoding) {
+    return (NSCoding.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSCopying) {
+    return (NSCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSMutableCopying) {
+    return (NSMutableCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIView) {
     return (UIView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIViewController) {

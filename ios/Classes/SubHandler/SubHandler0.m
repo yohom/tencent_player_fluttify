@@ -383,7 +383,7 @@ extern BOOL enableLog;
             }
         
             // invoke native method
-            int result = [ref startPreload: requestURL preloadSize: preloadSizeMB preferredResolution: preferredResolution delegate: delegate != nil ? delegate : weakSelf];
+            int result = [ref startPreload: requestURL preloadSize: preloadSizeMB preferredResolution: preferredResolution delegate: delegate];
         
             // result
             // 返回值: Value

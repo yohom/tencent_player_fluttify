@@ -354,7 +354,7 @@ class VodPlayer {
         await _androidPlayer!.setVodListener(listener);
       },
       ios: (pool) async {
-        final listener = await TXVodPlayListener.anonymous__(
+        final delegate = await TXVodPlayListener.anonymous__(
             onPlayEvent: (player, code, data) async {
           debugPrint('事件: $code, 参数: ${data}');
           // 当前视频帧解码失败
@@ -447,7 +447,7 @@ class VodPlayer {
           }
         });
 
-        await _iosPlayer!.set_vodDelegate(listener);
+        await _iosPlayer!.set_vodDelegate(delegate);
       },
     );
   }
