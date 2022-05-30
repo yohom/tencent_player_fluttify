@@ -91,50 +91,34 @@ class TXVodDownloadDataSource extends NSObject  {
   //region setters
   Future<void> set_auth(TXPlayerAuthParams auth) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_auth', <String, dynamic>{'__this__': this, "auth": auth});
-  
-  
   }
   
   Future<void> set_quality(TXVodQuality quality) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_quality', <String, dynamic>{'__this__': this, "quality": quality.toValue()});
-  
-  
   }
   
   Future<void> set_token(String token) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_token', <String, dynamic>{'__this__': this, "token": token});
-  
-  
   }
   
   Future<void> set_templateName(String templateName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_templateName', <String, dynamic>{'__this__': this, "templateName": templateName});
-  
-  
   }
   
   Future<void> set_fileId(String fileId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_fileId', <String, dynamic>{'__this__': this, "fileId": fileId});
-  
-  
   }
   
   Future<void> set_pSign(String pSign) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_pSign', <String, dynamic>{'__this__': this, "pSign": pSign});
-  
-  
   }
   
   Future<void> set_appId(int appId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_appId', <String, dynamic>{'__this__': this, "appId": appId});
-  
-  
   }
   
   Future<void> set_userName(String userName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_userName', <String, dynamic>{'__this__': this, "userName": userName});
-  
-  
   }
   
   //endregion

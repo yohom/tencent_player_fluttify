@@ -18,6 +18,47 @@ mixin TXVodPlayListener on NSObject {
 
   static TXVodPlayListener subInstance() => _TXVodPlayListener_SUB();
 
+  static Future<TXVodPlayListener> anonymous__({void Function(TXVodPlayer? player, int? EvtID, Map? param)? onPlayEvent, void Function(TXVodPlayer? player, Map? param)? onNetStatus}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayListener::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyIOSAs<TXVodPlayListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('TXVodPlayListener::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onPlayEvent::onPlayEvent':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onPlayEvent?.call([\'player\':${args['player']}, \'EvtID\':${args['EvtID']}, \'param\':${args['param']}])');
+                }
+            
+                // handle the native call
+                onPlayEvent?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['EvtID'], args['param']);
+                break;
+              case 'Callback::onNetStatus::onNetStatus':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onNetStatus?.call([\'player\':${args['player']}, \'param\':${args['param']}])');
+                }
+            
+                // handle the native call
+                onNetStatus?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['param']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

@@ -86,44 +86,30 @@ class TXPlayerAuthParams extends NSObject  {
   //region setters
   Future<void> set_appId(int appId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_appId', <String, dynamic>{'__this__': this, "appId": appId});
-  
-  
   }
   
   Future<void> set_fileId(String fileId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_fileId', <String, dynamic>{'__this__': this, "fileId": fileId});
-  
-  
   }
   
   Future<void> set_timeout(String timeout) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_timeout', <String, dynamic>{'__this__': this, "timeout": timeout});
-  
-  
   }
   
   Future<void> set_exper(int exper) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_exper', <String, dynamic>{'__this__': this, "exper": exper});
-  
-  
   }
   
   Future<void> set_us(String us) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_us', <String, dynamic>{'__this__': this, "us": us});
-  
-  
   }
   
   Future<void> set_sign(String sign) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_sign', <String, dynamic>{'__this__': this, "sign": sign});
-  
-  
   }
   
   Future<void> set_https(bool https) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_https', <String, dynamic>{'__this__': this, "https": https});
-  
-  
   }
   
   //endregion

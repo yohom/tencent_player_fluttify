@@ -71,26 +71,18 @@ class com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture extends java_lang_Object  {
   //region setters
   Future<void> set_textureId(int textureId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_textureId', <String, dynamic>{'__this__': this, "textureId": textureId});
-  
-  
   }
   
   Future<void> set_width(int width) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_width', <String, dynamic>{'__this__': this, "width": width});
-  
-  
   }
   
   Future<void> set_height(int height) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_height', <String, dynamic>{'__this__': this, "height": height});
-  
-  
   }
   
   Future<void> set_eglContext(Object eglContext) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_eglContext', <String, dynamic>{'__this__': this, "eglContext": eglContext});
-  
-  
   }
   
   //endregion

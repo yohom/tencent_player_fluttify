@@ -71,26 +71,18 @@ class TXRecordResult extends NSObject  {
   //region setters
   Future<void> set_retCode(TXRecordResultCode retCode) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_retCode', <String, dynamic>{'__this__': this, "retCode": retCode.toValue()});
-  
-  
   }
   
   Future<void> set_descMsg(String descMsg) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_descMsg', <String, dynamic>{'__this__': this, "descMsg": descMsg});
-  
-  
   }
   
   Future<void> set_videoPath(String videoPath) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_videoPath', <String, dynamic>{'__this__': this, "videoPath": videoPath});
-  
-  
   }
   
   Future<void> set_coverImage(UIImage coverImage) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_coverImage', <String, dynamic>{'__this__': this, "coverImage": coverImage});
-  
-  
   }
   
   //endregion

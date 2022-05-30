@@ -5,6 +5,12 @@
 #import "SubHandler0.h"
 #import "FluttifyMessageCodec.h"
 #import <TXLiteAVSDK_Player/TXLiteAVSDK.h>
+#import "TXVodDownloadDelegate_Anonymous.h"
+#import "TXVodPlayListener_Anonymous.h"
+#import "TXVodPreloadManagerDelegate_Anonymous.h"
+#import "TXAudioCustomProcessDelegate_Anonymous.h"
+#import "TXAudioRawDataDelegate_Anonymous.h"
+#import "TXVideoCustomProcessDelegate_Anonymous.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -334,330 +340,6 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"TXLiveBase::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::sharedInstance(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-        
-        
-            // invoke native method
-            TXLiveBase* result = [TXLiveBase sharedInstance];
-        
-            // result
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setLogLevel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setLogLevel(%@)", args);
-            }
-        
-            // args
-            // enum arg
-            TX_Enum_Type_LogLevel level = (TX_Enum_Type_LogLevel) [args[@"level"] integerValue];
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setLogLevel: level];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setConsoleEnabled": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setConsoleEnabled(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            BOOL enabled = [args[@"enabled"] boolValue];
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setConsoleEnabled: enabled];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setAppVersion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setAppVersion(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* verNum = (NSString*) args[@"verNum"];
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setAppVersion: verNum];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setAudioSessionDelegate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setAudioSessionDelegate(%@)", args);
-            }
-        
-            // args
-            // ref arg
-            id<TXLiveAudioSessionDelegate> delegate = (id<TXLiveAudioSessionDelegate>) (args[@"delegate"] == [NSNull null] ? nil : args[@"delegate"]);
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setAudioSessionDelegate: delegate != nil ? delegate : weakSelf];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::getSDKVersionStr": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::getSDKVersionStr(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-        
-        
-            // invoke native method
-            NSString* result = [TXLiveBase getSDKVersionStr];
-        
-            // result
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::getPituSDKVersion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::getPituSDKVersion(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-        
-        
-            // invoke native method
-            NSString* result = [TXLiveBase getPituSDKVersion];
-        
-            // result
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setAppID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setAppID(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* appID = (NSString*) args[@"appID"];
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setAppID: appID];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setLicenceURL_key": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setLicenceURL_key(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* url = (NSString*) args[@"url"];
-            // jsonable arg
-            NSString* key = (NSString*) args[@"key"];
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setLicenceURL: url key: key];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setUserId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setUserId(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* userId = (NSString*) args[@"userId"];
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setUserId: userId];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::getLicenceInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::getLicenceInfo(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-        
-        
-            // invoke native method
-            NSString* result = [TXLiveBase getLicenceInfo];
-        
-            // result
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setExtDevID_value": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setExtDevID_value(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* extKey = (NSString*) args[@"extKey"];
-            // jsonable arg
-            NSString* extValue = (NSString*) args[@"extValue"];
-        
-            // ref
-        
-        
-            // invoke native method
-            BOOL result = [TXLiveBase setExtDevID: extKey value: extValue];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setExternalDecoderFactory": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setExternalDecoderFactory(%@)", args);
-            }
-        
-            // args
-            // id arg
-            id decoderFactory;
-            // jsonable
-            if ([args[@"decoderFactory"] isKindOfClass:[NSNumber class]]
-                    || [args[@"decoderFactory"] isKindOfClass:[NSString class]]
-                    || [args[@"decoderFactory"] isKindOfClass:[NSArray class]]
-                    || [args[@"decoderFactory"] isKindOfClass:[NSDictionary class]]) {
-                decoderFactory = args[@"decoderFactory"];
-            }
-            // non jsonable
-            else {
-                decoderFactory = args[@"decoderFactory"];
-            }
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setExternalDecoderFactory: decoderFactory];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::updateNetworkTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::updateNetworkTime(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-        
-        
-            // invoke native method
-            NSInteger result = [TXLiveBase updateNetworkTime];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::getNetworkTimestamp": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::getNetworkTimestamp(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-        
-        
-            // invoke native method
-            NSInteger result = [TXLiveBase getNetworkTimestamp];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
         @"TXVodPreloadManager::sharedManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
                 NSLog(@"fluttify-objc: TXVodPreloadManager::sharedManager(%@)", args);
@@ -701,7 +383,7 @@ extern BOOL enableLog;
             }
         
             // invoke native method
-            int result = [ref startPreload: requestURL preloadSize: preloadSizeMB preferredResolution: preferredResolution delegate: delegate != nil ? delegate : weakSelf];
+            int result = [ref startPreload: requestURL preloadSize: preloadSizeMB preferredResolution: preferredResolution delegate: delegate];
         
             // result
             // 返回值: Value
@@ -1558,733 +1240,6 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"TXLivePlayer::setupVideoWidget_containView_insertIndex": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setupVideoWidget_containView_insertIndex(%@)", args);
-            }
-        
-            // args
-            // struct arg
-            NSValue* frameValue = (NSValue*) args[@"frame"];
-            CGRect frame;
-            if (frameValue != nil && (NSNull*) frameValue != [NSNull null]) {
-              [frameValue getValue:&frame];
-            } else {
-              methodResult([FlutterError errorWithCode:@"参数非法"
-                                               message:@"参数非法"
-                                               details:@"frame不能为null"]);
-              return;
-            }
-        
-            // ref arg
-            UIView* view = (UIView*) (args[@"view"] == [NSNull null] ? nil : args[@"view"]);
-            // jsonable arg
-            unsigned int idx = [args[@"idx"] unsignedIntValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref setupVideoWidget : frame containView: view insertIndex: idx];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::removeVideoWidget": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::removeVideoWidget(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref removeVideoWidget ];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::startPlay_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::startPlay_type(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* url = (NSString*) args[@"url"];
-            // enum arg
-            TX_Enum_PlayType playType = (TX_Enum_PlayType) [args[@"playType"] integerValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = [ref startPlay: url type: playType];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::stopPlay": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::stopPlay(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = [ref stopPlay];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::isPlaying": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::isPlaying(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = [ref isPlaying];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::pause": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::pause(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref pause ];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::resume": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::resume(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref resume ];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::setRenderRotation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setRenderRotation(%@)", args);
-            }
-        
-            // args
-            // enum arg
-            TX_Enum_Type_HomeOrientation rotation = (TX_Enum_Type_HomeOrientation) [args[@"rotation"] integerValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref setRenderRotation : rotation];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::setRenderMode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setRenderMode(%@)", args);
-            }
-        
-            // args
-            // enum arg
-            TX_Enum_Type_RenderMode renderMode = (TX_Enum_Type_RenderMode) [args[@"renderMode"] integerValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref setRenderMode : renderMode];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::snapshot": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::snapshot(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref snapshot : ^(UIImage* __arg_0__) {
-                FlutterMethodChannel *channel = [FlutterMethodChannel
-                      methodChannelWithName:[NSString stringWithFormat:@"void|TXImage*#__arg_0__::Callback@%@:%@", NSStringFromClass([ref class]), @(ref.hash)]
-                            binaryMessenger:[[weakSelf registrar] messenger]
-                                      codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-        
-                // print log
-                if (enableLog) {
-                    NSLog(@"");
-                }
-        
-                // 构造可以直接传输的参数
-                // ref callback arg
-                UIImage* arg__arg_0__ = __arg_0__;
-        
-                dispatch_async(dispatch_get_main_queue(), ^{
-                  [channel invokeMethod:@"Callback::void|TXImage*#__arg_0__::void|TXImage*#__arg_0__" arguments:@{@"__arg_0__": arg__arg_0__ == nil ? [NSNull null] : arg__arg_0__}];
-                });
-        
-            }];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::getCurrentRenderPts": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::getCurrentRenderPts(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            uint64_t result = [ref getCurrentRenderPts];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::setMute": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setMute(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            BOOL bEnable = [args[@"bEnable"] boolValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref setMute : bEnable];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::setVolume": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setVolume(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            int volume = [args[@"volume"] intValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref setVolume : volume];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::setAudioRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setAudioRoute(%@)", args);
-            }
-        
-            // args
-            // enum arg
-            TXAudioRouteType audioRoute = (TXAudioRouteType) [args[@"audioRoute"] integerValue];
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLivePlayer setAudioRoute: audioRoute];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::setAudioVolumeEvaluationListener": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setAudioVolumeEvaluationListener(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref setAudioVolumeEvaluationListener : ^(int __arg_0__) {
-                FlutterMethodChannel *channel = [FlutterMethodChannel
-                      methodChannelWithName:[NSString stringWithFormat:@"void|int#__arg_0__::Callback@%@:%@", NSStringFromClass([ref class]), @(ref.hash)]
-                            binaryMessenger:[[weakSelf registrar] messenger]
-                                      codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-        
-                // print log
-                if (enableLog) {
-                    NSLog(@"");
-                }
-        
-                // 构造可以直接传输的参数
-                // primitive callback arg
-                NSNumber* arg__arg_0__ = @(__arg_0__);
-        
-                dispatch_async(dispatch_get_main_queue(), ^{
-                  [channel invokeMethod:@"Callback::void|int#__arg_0__::void|int#__arg_0__" arguments:@{@"__arg_0__": arg__arg_0__ == nil ? [NSNull null] : arg__arg_0__}];
-                });
-        
-            }];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::enableAudioVolumeEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::enableAudioVolumeEvaluation(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSUInteger interval = [args[@"interval"] unsignedIntegerValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref enableAudioVolumeEvaluation : interval];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::prepareLiveSeek_bizId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::prepareLiveSeek_bizId(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* domain = (NSString*) args[@"domain"];
-            // jsonable arg
-            NSInteger bizId = [args[@"bizId"] longValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = [ref prepareLiveSeek: domain bizId: bizId];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::resumeLive": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::resumeLive(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = [ref resumeLive];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::seek": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::seek(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            float time = [args[@"time"] floatValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = [ref seek: time];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::startRecord": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::startRecord(%@)", args);
-            }
-        
-            // args
-            // enum arg
-            TXRecordType recordType = (TXRecordType) [args[@"recordType"] integerValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = [ref startRecord: recordType];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::stopRecord": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::stopRecord(%@)", args);
-            }
-        
-            // args
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = [ref stopRecord];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::setRate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setRate(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            float rate = [args[@"rate"] floatValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref setRate : rate];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::setLogViewMargin": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setLogViewMargin(%@)", args);
-            }
-        
-            // args
-            // struct arg
-            NSValue* marginValue = (NSValue*) args[@"margin"];
-            UIEdgeInsets margin;
-            if (marginValue != nil && (NSNull*) marginValue != [NSNull null]) {
-              [marginValue getValue:&margin];
-            } else {
-              methodResult([FlutterError errorWithCode:@"参数非法"
-                                               message:@"参数非法"
-                                               details:@"margin不能为null"]);
-              return;
-            }
-        
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref setLogViewMargin : margin];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::showVideoDebugLog": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::showVideoDebugLog(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            BOOL isShow = [args[@"isShow"] boolValue];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref showVideoDebugLog : isShow];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::switchStream": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::switchStream(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* playUrl = (NSString*) args[@"playUrl"];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = [ref switchStream: playUrl];
-        
-            // result
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        @"TXLivePlayer::callExperimentalAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::callExperimentalAPI(%@)", args);
-            }
-        
-            // args
-            // jsonable arg
-            NSString* jsonStr = (NSString*) args[@"jsonStr"];
-        
-            // ref
-            TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            [ref callExperimentalAPI : jsonStr];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"V2TXLiveVideoEncoderParam::initWith": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: V2TXLiveVideoEncoderParam::initWith(%@)", args);
-            }
-        
-            // args
-            // enum arg
-            V2TXLiveVideoResolution resolution = (V2TXLiveVideoResolution) [args[@"resolution"] integerValue];
-        
-            // ref
-            V2TXLiveVideoEncoderParam* ref = (V2TXLiveVideoEncoderParam*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            V2TXLiveVideoEncoderParam* result = [ref initWith: resolution];
-        
-            // result
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
         @"TXPlayerGlobalSetting::setCacheFolderPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
                 NSLog(@"fluttify-objc: TXPlayerGlobalSetting::setCacheFolderPath(%@)", args);
@@ -2792,421 +1747,6 @@ extern BOOL enableLog;
                 // result
                 // 返回值: jsonable
                 id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::sharedInstance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::sharedInstance(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                TXLiveBase* result = [TXLiveBase sharedInstance];
-        
-                // result
-                // return a ref
-                NSObject* __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::setLogLevel_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setLogLevel(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // enum arg
-                TX_Enum_Type_LogLevel level = (TX_Enum_Type_LogLevel) [args[@"level"] integerValue];
-        
-                // ref
-        
-        
-                // invoke native method
-                [TXLiveBase setLogLevel: level];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::setConsoleEnabled_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setConsoleEnabled(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL enabled = [args[@"enabled"] boolValue];
-        
-                // ref
-        
-        
-                // invoke native method
-                [TXLiveBase setConsoleEnabled: enabled];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::setAppVersion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setAppVersion(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* verNum = (NSString*) args[@"verNum"];
-        
-                // ref
-        
-        
-                // invoke native method
-                [TXLiveBase setAppVersion: verNum];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::getSDKVersionStr_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::getSDKVersionStr(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [TXLiveBase getSDKVersionStr];
-        
-                // result
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::getPituSDKVersion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::getPituSDKVersion(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [TXLiveBase getPituSDKVersion];
-        
-                // result
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::setAppID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setAppID(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* appID = (NSString*) args[@"appID"];
-        
-                // ref
-        
-        
-                // invoke native method
-                [TXLiveBase setAppID: appID];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::setLicenceURL_key_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setLicenceURL_key(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* url = (NSString*) args[@"url"];
-                // jsonable arg
-                NSString* key = (NSString*) args[@"key"];
-        
-                // ref
-        
-        
-                // invoke native method
-                [TXLiveBase setLicenceURL: url key: key];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::setUserId_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setUserId(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* userId = (NSString*) args[@"userId"];
-        
-                // ref
-        
-        
-                // invoke native method
-                [TXLiveBase setUserId: userId];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::getLicenceInfo_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::getLicenceInfo(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [TXLiveBase getLicenceInfo];
-        
-                // result
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::setExtDevID_value_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setExtDevID_value(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* extKey = (NSString*) args[@"extKey"];
-                // jsonable arg
-                NSString* extValue = (NSString*) args[@"extValue"];
-        
-                // ref
-        
-        
-                // invoke native method
-                BOOL result = [TXLiveBase setExtDevID: extKey value: extValue];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::setExternalDecoderFactory_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setExternalDecoderFactory(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // id arg
-                id decoderFactory;
-                // jsonable
-                if ([args[@"decoderFactory"] isKindOfClass:[NSNumber class]]
-                        || [args[@"decoderFactory"] isKindOfClass:[NSString class]]
-                        || [args[@"decoderFactory"] isKindOfClass:[NSArray class]]
-                        || [args[@"decoderFactory"] isKindOfClass:[NSDictionary class]]) {
-                    decoderFactory = args[@"decoderFactory"];
-                }
-                // non jsonable
-                else {
-                    decoderFactory = args[@"decoderFactory"];
-                }
-        
-                // ref
-        
-        
-                // invoke native method
-                [TXLiveBase setExternalDecoderFactory: decoderFactory];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::updateNetworkTime_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::updateNetworkTime(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSInteger result = [TXLiveBase updateNetworkTime];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLiveBase::getNetworkTimestamp_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::getNetworkTimestamp(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSInteger result = [TXLiveBase getNetworkTimestamp];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
         
                 [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
@@ -4343,871 +2883,6 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"TXLivePlayer::setupVideoWidget_containView_insertIndex_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setupVideoWidget_containView_insertIndex(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // struct arg
-                NSValue* frameValue = (NSValue*) args[@"frame"];
-                CGRect frame;
-                if (frameValue != nil && (NSNull*) frameValue != [NSNull null]) {
-                  [frameValue getValue:&frame];
-                } else {
-                  methodResult([FlutterError errorWithCode:@"参数非法"
-                                                   message:@"参数非法"
-                                                   details:@"frame不能为null"]);
-                  return;
-                }
-        
-                // ref arg
-                UIView* view = (UIView*) (args[@"view"] == [NSNull null] ? nil : args[@"view"]);
-                // jsonable arg
-                unsigned int idx = [args[@"idx"] unsignedIntValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref setupVideoWidget : frame containView: view insertIndex: idx];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::removeVideoWidget_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::removeVideoWidget(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref removeVideoWidget ];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::startPlay_type_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::startPlay_type(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* url = (NSString*) args[@"url"];
-                // enum arg
-                TX_Enum_PlayType playType = (TX_Enum_PlayType) [args[@"playType"] integerValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                int result = [ref startPlay: url type: playType];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::stopPlay_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::stopPlay(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                int result = [ref stopPlay];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::isPlaying_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::isPlaying(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                BOOL result = [ref isPlaying];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::pause_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::pause(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref pause ];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::resume_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::resume(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref resume ];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::setRenderRotation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setRenderRotation(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // enum arg
-                TX_Enum_Type_HomeOrientation rotation = (TX_Enum_Type_HomeOrientation) [args[@"rotation"] integerValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref setRenderRotation : rotation];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::setRenderMode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setRenderMode(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // enum arg
-                TX_Enum_Type_RenderMode renderMode = (TX_Enum_Type_RenderMode) [args[@"renderMode"] integerValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref setRenderMode : renderMode];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::getCurrentRenderPts_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::getCurrentRenderPts(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                uint64_t result = [ref getCurrentRenderPts];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::setMute_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setMute(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL bEnable = [args[@"bEnable"] boolValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref setMute : bEnable];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::setVolume_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setVolume(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                int volume = [args[@"volume"] intValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref setVolume : volume];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::setAudioRoute_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setAudioRoute(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // enum arg
-                TXAudioRouteType audioRoute = (TXAudioRouteType) [args[@"audioRoute"] integerValue];
-        
-                // ref
-        
-        
-                // invoke native method
-                [TXLivePlayer setAudioRoute: audioRoute];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::enableAudioVolumeEvaluation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::enableAudioVolumeEvaluation(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSUInteger interval = [args[@"interval"] unsignedIntegerValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref enableAudioVolumeEvaluation : interval];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::prepareLiveSeek_bizId_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::prepareLiveSeek_bizId(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* domain = (NSString*) args[@"domain"];
-                // jsonable arg
-                NSInteger bizId = [args[@"bizId"] longValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                int result = [ref prepareLiveSeek: domain bizId: bizId];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::resumeLive_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::resumeLive(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                int result = [ref resumeLive];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::seek_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::seek(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                float time = [args[@"time"] floatValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                int result = [ref seek: time];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::startRecord_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::startRecord(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // enum arg
-                TXRecordType recordType = (TXRecordType) [args[@"recordType"] integerValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                int result = [ref startRecord: recordType];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::stopRecord_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::stopRecord(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                int result = [ref stopRecord];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::setRate_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setRate(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                float rate = [args[@"rate"] floatValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref setRate : rate];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::setLogViewMargin_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::setLogViewMargin(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // struct arg
-                NSValue* marginValue = (NSValue*) args[@"margin"];
-                UIEdgeInsets margin;
-                if (marginValue != nil && (NSNull*) marginValue != [NSNull null]) {
-                  [marginValue getValue:&margin];
-                } else {
-                  methodResult([FlutterError errorWithCode:@"参数非法"
-                                                   message:@"参数非法"
-                                                   details:@"margin不能为null"]);
-                  return;
-                }
-        
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref setLogViewMargin : margin];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::showVideoDebugLog_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::showVideoDebugLog(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL isShow = [args[@"isShow"] boolValue];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref showVideoDebugLog : isShow];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::switchStream_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::switchStream(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* playUrl = (NSString*) args[@"playUrl"];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                int result = [ref switchStream: playUrl];
-        
-                // result
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"TXLivePlayer::callExperimentalAPI_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::callExperimentalAPI(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* jsonStr = (NSString*) args[@"jsonStr"];
-        
-                // ref
-                TXLivePlayer* ref = (TXLivePlayer*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                [ref callExperimentalAPI : jsonStr];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"V2TXLiveVideoEncoderParam::initWith_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: V2TXLiveVideoEncoderParam::initWith(%@)", argsBatch);
-            }
-        
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // enum arg
-                V2TXLiveVideoResolution resolution = (V2TXLiveVideoResolution) [args[@"resolution"] integerValue];
-        
-                // ref
-                V2TXLiveVideoEncoderParam* ref = (V2TXLiveVideoEncoderParam*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                // invoke native method
-                V2TXLiveVideoEncoderParam* result = [ref initWith: resolution];
-        
-                // result
-                // return a ref
-                NSObject* __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
         @"TXPlayerGlobalSetting::setCacheFolderPath_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
                 NSLog(@"fluttify-objc: TXPlayerGlobalSetting::setCacheFolderPath(%@)", argsBatch);
@@ -5650,6 +3325,1887 @@ extern BOOL enableLog;
             NSObject* __result__ = @(result);
         
             methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_segments": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_segments");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.segments;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_downloadSegments": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_downloadSegments");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.downloadSegments;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_progress": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_progress");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            float result = ref.progress;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_playPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_playPath");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.playPath;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_speed": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_speed");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.speed;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_downloadState": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_downloadState");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            TXVodDownloadMediaInfoState result = ref.downloadState;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadManager::get_headers": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadManager::get_headers");
+            }
+        
+            // ref object
+            TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSDictionary* result = ref.headers;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_connectRetryCount": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_connectRetryCount");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.connectRetryCount;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_connectRetryInterval": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_connectRetryInterval");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.connectRetryInterval;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_timeout": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_timeout");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSTimeInterval result = ref.timeout;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_keepLastFrameWhenStop": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_keepLastFrameWhenStop");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.keepLastFrameWhenStop;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_firstStartPlayBufferTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_firstStartPlayBufferTime");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.firstStartPlayBufferTime;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_nextStartPlayBufferTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_nextStartPlayBufferTime");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.nextStartPlayBufferTime;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_cacheFolderPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_cacheFolderPath");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.cacheFolderPath;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_maxCacheItems": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_maxCacheItems");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.maxCacheItems;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_playerType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_playerType");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            TX_Enum_PlayerType result = ref.playerType;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_headers": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_headers");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSDictionary* result = ref.headers;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_enableAccurateSeek": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_enableAccurateSeek");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.enableAccurateSeek;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_autoRotate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_autoRotate");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.autoRotate;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_smoothSwitchBitrate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_smoothSwitchBitrate");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.smoothSwitchBitrate;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_progressInterval": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_progressInterval");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSTimeInterval result = ref.progressInterval;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_maxBufferSize": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_maxBufferSize");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.maxBufferSize;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_maxPreloadSize": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_maxPreloadSize");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.maxPreloadSize;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_overlayKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_overlayKey");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.overlayKey;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_overlayIv": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_overlayIv");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.overlayIv;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_enableRenderProcess": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_enableRenderProcess");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.enableRenderProcess;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_preferredResolution": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_preferredResolution");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            long result = ref.preferredResolution;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_extInfoMap": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_extInfoMap");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSDictionary* result = ref.extInfoMap;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayer::get_enableHWAcceleration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayer::get_enableHWAcceleration");
+            }
+        
+            // ref object
+            TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.enableHWAcceleration;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayer::get_config": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayer::get_config");
+            }
+        
+            // ref object
+            TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            TXVodPlayConfig* result = ref.config;
+        
+            // return a ref
+            NSObject* __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayer::get_isAutoPlay": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayer::get_isAutoPlay");
+            }
+        
+            // ref object
+            TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.isAutoPlay;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayer::get_token": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayer::get_token");
+            }
+        
+            // ref object
+            TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.token;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayer::get_loop": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayer::get_loop");
+            }
+        
+            // ref object
+            TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.loop;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXBitrateItem::get_index": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXBitrateItem::get_index");
+            }
+        
+            // ref object
+            TXBitrateItem* ref = (TXBitrateItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSInteger result = ref.index;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXBitrateItem::get_width": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXBitrateItem::get_width");
+            }
+        
+            // ref object
+            TXBitrateItem* ref = (TXBitrateItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSInteger result = ref.width;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXBitrateItem::get_height": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXBitrateItem::get_height");
+            }
+        
+            // ref object
+            TXBitrateItem* ref = (TXBitrateItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSInteger result = ref.height;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXBitrateItem::get_bitrate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXBitrateItem::get_bitrate");
+            }
+        
+            // ref object
+            TXBitrateItem* ref = (TXBitrateItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSInteger result = ref.bitrate;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXPlayerAuthParams::get_appId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXPlayerAuthParams::get_appId");
+            }
+        
+            // ref object
+            TXPlayerAuthParams* ref = (TXPlayerAuthParams*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.appId;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXPlayerAuthParams::get_fileId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXPlayerAuthParams::get_fileId");
+            }
+        
+            // ref object
+            TXPlayerAuthParams* ref = (TXPlayerAuthParams*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.fileId;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXPlayerAuthParams::get_timeout": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXPlayerAuthParams::get_timeout");
+            }
+        
+            // ref object
+            TXPlayerAuthParams* ref = (TXPlayerAuthParams*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.timeout;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXPlayerAuthParams::get_exper": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXPlayerAuthParams::get_exper");
+            }
+        
+            // ref object
+            TXPlayerAuthParams* ref = (TXPlayerAuthParams*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.exper;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXPlayerAuthParams::get_us": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXPlayerAuthParams::get_us");
+            }
+        
+            // ref object
+            TXPlayerAuthParams* ref = (TXPlayerAuthParams*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.us;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXPlayerAuthParams::get_sign": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXPlayerAuthParams::get_sign");
+            }
+        
+            // ref object
+            TXPlayerAuthParams* ref = (TXPlayerAuthParams*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.sign;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXPlayerAuthParams::get_https": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXPlayerAuthParams::get_https");
+            }
+        
+            // ref object
+            TXPlayerAuthParams* ref = (TXPlayerAuthParams*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.https;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXRecordResult::get_retCode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXRecordResult::get_retCode");
+            }
+        
+            // ref object
+            TXRecordResult* ref = (TXRecordResult*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            TXRecordResultCode result = ref.retCode;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXRecordResult::get_descMsg": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXRecordResult::get_descMsg");
+            }
+        
+            // ref object
+            TXRecordResult* ref = (TXRecordResult*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.descMsg;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXRecordResult::get_videoPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXRecordResult::get_videoPath");
+            }
+        
+            // ref object
+            TXRecordResult* ref = (TXRecordResult*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.videoPath;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXRecordResult::get_coverImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXRecordResult::get_coverImage");
+            }
+        
+            // ref object
+            TXRecordResult* ref = (TXRecordResult*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            UIImage* result = ref.coverImage;
+        
+            // return a ref
+            NSObject* __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadDataSource::get_auth_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                TXPlayerAuthParams* result = ref.auth;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadDataSource::get_quality_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                TXVodQuality result = ref.quality;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadDataSource::get_token_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.token;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadDataSource::get_templateName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.templateName;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadDataSource::get_fileId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.fileId;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadDataSource::get_pSign_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.pSign;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadDataSource::get_appId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.appId;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadDataSource::get_userName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.userName;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_dataSource_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                TXVodDownloadDataSource* result = ref.dataSource;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_url_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.url;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_userName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.userName;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_duration_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.duration;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_playableDuration_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.playableDuration;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_size_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.size;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_downloadSize_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.downloadSize;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_segments_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.segments;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_downloadSegments_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.downloadSegments;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_progress_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                float result = ref.progress;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_playPath_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.playPath;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_speed_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.speed;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_downloadState_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                TXVodDownloadMediaInfoState result = ref.downloadState;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadManager::get_headers_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSDictionary* result = ref.headers;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_connectRetryCount_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.connectRetryCount;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_connectRetryInterval_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.connectRetryInterval;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_timeout_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSTimeInterval result = ref.timeout;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_keepLastFrameWhenStop_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                BOOL result = ref.keepLastFrameWhenStop;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_firstStartPlayBufferTime_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.firstStartPlayBufferTime;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_nextStartPlayBufferTime_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.nextStartPlayBufferTime;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_cacheFolderPath_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.cacheFolderPath;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_maxCacheItems_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                int result = ref.maxCacheItems;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_playerType_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                TX_Enum_PlayerType result = ref.playerType;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_headers_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSDictionary* result = ref.headers;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_enableAccurateSeek_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                BOOL result = ref.enableAccurateSeek;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
         },
         
     };

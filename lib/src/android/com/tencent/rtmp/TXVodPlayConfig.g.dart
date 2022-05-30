@@ -61,14 +61,10 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   //region setters
   Future<void> set_mEnableRenderProcess(bool mEnableRenderProcess) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mEnableRenderProcess', <String, dynamic>{'__this__': this, "mEnableRenderProcess": mEnableRenderProcess});
-  
-  
   }
   
   Future<void> set_mPreferredResolution(int mPreferredResolution) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mPreferredResolution', <String, dynamic>{'__this__': this, "mPreferredResolution": mPreferredResolution});
-  
-  
   }
   
   //endregion
