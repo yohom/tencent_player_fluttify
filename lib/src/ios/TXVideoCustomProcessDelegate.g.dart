@@ -18,6 +18,65 @@ mixin TXVideoCustomProcessDelegate on NSObject {
 
   static TXVideoCustomProcessDelegate subInstance() => _TXVideoCustomProcessDelegate_SUB();
 
+  static Future<TXVideoCustomProcessDelegate> anonymous__({int Function(int? texture, double? width, double? height)? onPreProcessTexture, void Function()? onTextureDestoryed, void Function(List<dynamic>? points)? onDetectFacePoints, bool Function(NSValue/* void* */? pixelBuffer)? onPlayerPixelBuffer}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVideoCustomProcessDelegate::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyIOSAs<TXVideoCustomProcessDelegate>(__result__)!;
+  
+    // handle callback
+    MethodChannel('TXVideoCustomProcessDelegate::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onPreProcessTexture::onPreProcessTexture':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onPreProcessTexture?.call([\'texture\':${args['texture']}, \'width\':${args['width']}, \'height\':${args['height']}])');
+                }
+            
+                // handle the native call
+                onPreProcessTexture?.call(args['texture'], args['width'], args['height']);
+                break;
+              case 'Callback::onTextureDestoryed::onTextureDestoryed':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onTextureDestoryed?.call([])');
+                }
+            
+                // handle the native call
+                onTextureDestoryed?.call();
+                break;
+              case 'Callback::onDetectFacePoints::onDetectFacePoints':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDetectFacePoints?.call([\'points\':${args['points']}])');
+                }
+            
+                // handle the native call
+                onDetectFacePoints?.call((args['points'] as List? ?? []).map((it) => TencentPlayerFluttifyIOSAs<NSObject>(it)).where((e) => e != null).cast<NSObject>().toList());
+                break;
+              case 'Callback::onPlayerPixelBuffer::onPlayerPixelBuffer':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onPlayerPixelBuffer?.call([\'pixelBuffer\':${args['pixelBuffer']}])');
+                }
+            
+                // handle the native call
+                onPlayerPixelBuffer?.call(TencentPlayerFluttifyIOSAs<NSValue/* void* */>(args['pixelBuffer']));
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

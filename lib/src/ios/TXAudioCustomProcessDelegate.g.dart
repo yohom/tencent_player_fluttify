@@ -18,6 +18,47 @@ mixin TXAudioCustomProcessDelegate on NSObject {
 
   static TXAudioCustomProcessDelegate subInstance() => _TXAudioCustomProcessDelegate_SUB();
 
+  static Future<TXAudioCustomProcessDelegate> anonymous__({void Function(NSData? data, int? timeStamp, int? sampleRate, int? channels, bool? withBgm)? onRecordRawPcmData, void Function(NSData? data, int? timeStamp, int? sampleRate, int? channels)? onRecordPcmData}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXAudioCustomProcessDelegate::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyIOSAs<TXAudioCustomProcessDelegate>(__result__)!;
+  
+    // handle callback
+    MethodChannel('TXAudioCustomProcessDelegate::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onRecordRawPcmData::onRecordRawPcmData':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onRecordRawPcmData?.call([\'data\':${args['data']}, \'timeStamp\':${args['timeStamp']}, \'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}, \'withBgm\':${args['withBgm']}])');
+                }
+            
+                // handle the native call
+                onRecordRawPcmData?.call(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timeStamp'], args['sampleRate'], args['channels'], args['withBgm']);
+                break;
+              case 'Callback::onRecordPcmData::onRecordPcmData':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onRecordPcmData?.call([\'data\':${args['data']}, \'timeStamp\':${args['timeStamp']}, \'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}])');
+                }
+            
+                // handle the native call
+                onRecordPcmData?.call(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timeStamp'], args['sampleRate'], args['channels']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

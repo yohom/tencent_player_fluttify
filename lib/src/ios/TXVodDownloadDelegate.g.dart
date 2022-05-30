@@ -18,6 +18,83 @@ mixin TXVodDownloadDelegate on NSObject {
 
   static TXVodDownloadDelegate subInstance() => _TXVodDownloadDelegate_SUB();
 
+  static Future<TXVodDownloadDelegate> anonymous__({void Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadStart, void Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadProgress, void Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadStop, void Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadFinish, void Function(TXVodDownloadMediaInfo? mediaInfo, TXDownloadError? code, String? msg)? onDownloadError, int Function(TXVodDownloadMediaInfo? mediaInfo, String? url, NSData? data)? hlsKeyVerify}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDelegate::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyIOSAs<TXVodDownloadDelegate>(__result__)!;
+  
+    // handle callback
+    MethodChannel('TXVodDownloadDelegate::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onDownloadStart::onDownloadStart':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDownloadStart?.call([\'mediaInfo\':${args['mediaInfo']}])');
+                }
+            
+                // handle the native call
+                onDownloadStart?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
+                break;
+              case 'Callback::onDownloadProgress::onDownloadProgress':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDownloadProgress?.call([\'mediaInfo\':${args['mediaInfo']}])');
+                }
+            
+                // handle the native call
+                onDownloadProgress?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
+                break;
+              case 'Callback::onDownloadStop::onDownloadStop':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDownloadStop?.call([\'mediaInfo\':${args['mediaInfo']}])');
+                }
+            
+                // handle the native call
+                onDownloadStop?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
+                break;
+              case 'Callback::onDownloadFinish::onDownloadFinish':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDownloadFinish?.call([\'mediaInfo\':${args['mediaInfo']}])');
+                }
+            
+                // handle the native call
+                onDownloadFinish?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
+                break;
+              case 'Callback::onDownloadError::onDownloadError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDownloadError?.call([\'mediaInfo\':${args['mediaInfo']}, \'code\':${args['code']}, \'msg\':${args['msg']}])');
+                }
+            
+                // handle the native call
+                onDownloadError?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), (args['code'] as int).toTXDownloadError(), args['msg']);
+                break;
+              case 'Callback::hlsKeyVerify::hlsKeyVerify':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: hlsKeyVerify?.call([\'mediaInfo\':${args['mediaInfo']}, \'url\':${args['url']}, \'data\':${args['data']}])');
+                }
+            
+                // handle the native call
+                hlsKeyVerify?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), args['url'], TencentPlayerFluttifyIOSAs<NSData>(args['data']));
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

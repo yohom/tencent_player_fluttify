@@ -32,62 +32,23 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXVodDownloadManager) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodDownloadManager', {'__this__': __this__});
     return result;
-  } else if (T == TXLiveBase) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLiveBase', {'__this__': __this__});
-    return result;
   } else if (T == TXVodPlayConfig) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPlayConfig', {'__this__': __this__});
     return result;
   } else if (T == TXVodPreloadManager) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPreloadManager', {'__this__': __this__});
     return result;
-  } else if (T == TXLivePlayConfig) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLivePlayConfig', {'__this__': __this__});
-    return result;
   } else if (T == TXVodPlayer) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPlayer', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLivePlayer) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLivePlayer', {'__this__': __this__});
     return result;
   } else if (T == TXBitrateItem) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXBitrateItem', {'__this__': __this__});
     return result;
-  } else if (T == V2TXLivePremier) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLivePremier', {'__this__': __this__});
-    return result;
   } else if (T == TXPlayerAuthParams) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerAuthParams', {'__this__': __this__});
     return result;
-  } else if (T == TXLivePlayer) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLivePlayer', {'__this__': __this__});
-    return result;
   } else if (T == TXRecordResult) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXRecordResult', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLiveVideoEncoderParam) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLiveVideoEncoderParam', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLiveVideoFrame) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLiveVideoFrame', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLiveAudioFrame) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLiveAudioFrame', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLivePusherStatistics) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLivePusherStatistics', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLivePlayerStatistics) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLivePlayerStatistics', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLiveMixStream) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLiveMixStream', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLiveTranscodingConfig) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLiveTranscodingConfig', {'__this__': __this__});
-    return result;
-  } else if (T == V2TXLiveLogConfig) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfV2TXLiveLogConfig', {'__this__': __this__});
     return result;
   } else if (T == TXPlayerGlobalSetting) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerGlobalSetting', {'__this__': __this__});
@@ -159,44 +120,18 @@ T? TencentPlayerFluttifyIOSAs<T>(dynamic __this__) {
     return (TXVodDownloadMediaInfo()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodDownloadManager) {
     return (TXVodDownloadManager()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXLiveBase) {
-    return (TXLiveBase()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPlayConfig) {
     return (TXVodPlayConfig()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPreloadManager) {
     return (TXVodPreloadManager()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXLivePlayConfig) {
-    return (TXLivePlayConfig()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPlayer) {
     return (TXVodPlayer()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLivePlayer) {
-    return (V2TXLivePlayer()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXBitrateItem) {
     return (TXBitrateItem()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLivePremier) {
-    return (V2TXLivePremier()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerAuthParams) {
     return (TXPlayerAuthParams()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXLivePlayer) {
-    return (TXLivePlayer()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXRecordResult) {
     return (TXRecordResult()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLiveVideoEncoderParam) {
-    return (V2TXLiveVideoEncoderParam()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLiveVideoFrame) {
-    return (V2TXLiveVideoFrame()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLiveAudioFrame) {
-    return (V2TXLiveAudioFrame()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLivePusherStatistics) {
-    return (V2TXLivePusherStatistics()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLivePlayerStatistics) {
-    return (V2TXLivePlayerStatistics()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLiveMixStream) {
-    return (V2TXLiveMixStream()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLiveTranscodingConfig) {
-    return (V2TXLiveTranscodingConfig()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == V2TXLiveLogConfig) {
-    return (V2TXLiveLogConfig()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerGlobalSetting) {
     return (TXPlayerGlobalSetting()..refId = (__this__ as Ref).refId) as T;
   } else if (T == CGRect) {

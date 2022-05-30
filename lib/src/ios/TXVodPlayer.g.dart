@@ -74,43 +74,6 @@ class TXVodPlayer extends NSObject  {
   //endregion
 
   //region setters
-  Future<void> set_delegate(TXLivePlayListener delegate) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_delegate', <String, dynamic>{'__this__': this, });
-  
-    MethodChannel('TXLivePlayListener::Callback', kTencentPlayerFluttifyMethodCodec)
-      .setMethodCallHandler((methodCall) async {
-        try {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::TXLivePlayListener::onPlayEvent_withParam':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onPlayEvent_withParam([\'EvtID\':${args['EvtID']}, \'param\':${args['param']}])');
-              }
-          
-              // handle the native call
-              delegate.onPlayEvent_withParam(args['EvtID'], args['param']);
-              break;
-            case 'Callback::TXLivePlayListener::onNetStatus':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onNetStatus([\'param\':${args['param']}])');
-              }
-          
-              // handle the native call
-              delegate.onNetStatus(args['param']);
-              break;
-            default:
-              throw MissingPluginException('方法${methodCall.method}未实现');
-              break;
-          }
-        } catch (e) {
-          debugPrint(e.toString());
-          rethrow;
-        }
-      });
-  }
-  
   Future<void> set_vodDelegate(TXVodPlayListener vodDelegate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_vodDelegate', <String, dynamic>{'__this__': this, });
   

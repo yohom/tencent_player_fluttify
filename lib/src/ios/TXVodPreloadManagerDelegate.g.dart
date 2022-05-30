@@ -18,6 +18,47 @@ mixin TXVodPreloadManagerDelegate on NSObject {
 
   static TXVodPreloadManagerDelegate subInstance() => _TXVodPreloadManagerDelegate_SUB();
 
+  static Future<TXVodPreloadManagerDelegate> anonymous__({void Function(int? taskID, String? url)? onComplete, void Function(int? taskID, String? url, NSError? error)? onError}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPreloadManagerDelegate::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyIOSAs<TXVodPreloadManagerDelegate>(__result__)!;
+  
+    // handle callback
+    MethodChannel('TXVodPreloadManagerDelegate::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onComplete::onComplete':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onComplete?.call([\'taskID\':${args['taskID']}, \'url\':${args['url']}])');
+                }
+            
+                // handle the native call
+                onComplete?.call(args['taskID'], args['url']);
+                break;
+              case 'Callback::onError::onError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onError?.call([\'taskID\':${args['taskID']}, \'url\':${args['url']}, \'error\':${args['error']}])');
+                }
+            
+                // handle the native call
+                onError?.call(args['taskID'], args['url'], TencentPlayerFluttifyIOSAs<NSError>(args['error']));
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

@@ -18,6 +18,47 @@ mixin TXAudioRawDataDelegate on NSObject {
 
   static TXAudioRawDataDelegate subInstance() => _TXAudioRawDataDelegate_SUB();
 
+  static Future<TXAudioRawDataDelegate> anonymous__({void Function(int? sampleRate, int? channels)? onAudioInfoChanged, void Function(NSData? data, int? timestamp)? onPcmDataAvailable}) async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXAudioRawDataDelegate::createAnonymous__');
+  
+    final __object__ = TencentPlayerFluttifyIOSAs<TXAudioRawDataDelegate>(__result__)!;
+  
+    // handle callback
+    MethodChannel('TXAudioRawDataDelegate::Callback@${__object__.refId}', kTencentPlayerFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onAudioInfoChanged::onAudioInfoChanged':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onAudioInfoChanged?.call([\'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}])');
+                }
+            
+                // handle the native call
+                onAudioInfoChanged?.call(args['sampleRate'], args['channels']);
+                break;
+              case 'Callback::onPcmDataAvailable::onPcmDataAvailable':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onPcmDataAvailable?.call([\'data\':${args['data']}, \'timestamp\':${args['timestamp']}])');
+                }
+            
+                // handle the native call
+                onPcmDataAvailable?.call(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timestamp']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override
