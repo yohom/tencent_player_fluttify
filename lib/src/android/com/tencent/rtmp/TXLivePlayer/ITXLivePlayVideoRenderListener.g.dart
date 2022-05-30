@@ -29,7 +29,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener on java_lang_
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onRenderVideoFrame::onRenderVideoFrame':
+              case 'onRenderVideoFrame':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onRenderVideoFrame?.call([\'var1\':${args['var1']}])');

@@ -29,7 +29,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onSnapshot::onSnapshot':
+              case 'onSnapshot':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onSnapshot?.call([\'var1\':${args['var1']}])');

@@ -44,7 +44,7 @@ extern BOOL enableLog;
   NSNumber* argheight = @(height);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVideoCustomProcessDelegate::onPreProcessTexture_width_height"
+    [channel invokeMethod:@"onPreProcessTexture:width:height"
                 arguments:@{@"texture": argtexture == nil ? [NSNull null] : argtexture, @"width": argwidth == nil ? [NSNull null] : argwidth, @"height": argheight == nil ? [NSNull null] : argheight}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
   });
@@ -75,7 +75,7 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVideoCustomProcessDelegate::onTextureDestoryed" arguments:@{}];
+    [channel invokeMethod:@"onTextureDestoryed" arguments:@{}];
   });
   
 }
@@ -96,7 +96,7 @@ extern BOOL enableLog;
   NSArray* argpoints = points;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVideoCustomProcessDelegate::onDetectFacePoints" arguments:@{@"points": argpoints == nil ? [NSNull null] : argpoints}];
+    [channel invokeMethod:@"onDetectFacePoints" arguments:@{@"points": argpoints == nil ? [NSNull null] : argpoints}];
   });
   
 }
@@ -118,7 +118,7 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVideoCustomProcessDelegate::onPlayerPixelBuffer"
+    [channel invokeMethod:@"onPlayerPixelBuffer"
                 arguments:@{@"pixelBuffer": argpixelBuffer == nil ? [NSNull null] : argpixelBuffer}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
   });

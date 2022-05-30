@@ -48,7 +48,7 @@ extern BOOL enableLog;
   NSNumber* argwithBgm = @(withBgm);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXAudioCustomProcessDelegate::onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timeStamp": argtimeStamp == nil ? [NSNull null] : argtimeStamp, @"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels, @"withBgm": argwithBgm == nil ? [NSNull null] : argwithBgm}];
+    [channel invokeMethod:@"onRecordRawPcmData:timeStamp:sampleRate:channels:withBgm" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timeStamp": argtimeStamp == nil ? [NSNull null] : argtimeStamp, @"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels, @"withBgm": argwithBgm == nil ? [NSNull null] : argwithBgm}];
   });
   
 }
@@ -75,7 +75,7 @@ extern BOOL enableLog;
   NSNumber* argchannels = @(channels);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXAudioCustomProcessDelegate::onRecordPcmData_timeStamp_sampleRate_channels" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timeStamp": argtimeStamp == nil ? [NSNull null] : argtimeStamp, @"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels}];
+    [channel invokeMethod:@"onRecordPcmData:timeStamp:sampleRate:channels" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timeStamp": argtimeStamp == nil ? [NSNull null] : argtimeStamp, @"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels}];
   });
   
 }

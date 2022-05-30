@@ -42,7 +42,7 @@ extern BOOL enableLog;
   NSString* argurl = url;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodPreloadManagerDelegate::onComplete_url" arguments:@{@"taskID": argtaskID == nil ? [NSNull null] : argtaskID, @"url": argurl == nil ? [NSNull null] : argurl}];
+    [channel invokeMethod:@"onComplete:url" arguments:@{@"taskID": argtaskID == nil ? [NSNull null] : argtaskID, @"url": argurl == nil ? [NSNull null] : argurl}];
   });
   
 }
@@ -67,7 +67,7 @@ extern BOOL enableLog;
   NSError* argerror = error;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodPreloadManagerDelegate::onError_url_error" arguments:@{@"taskID": argtaskID == nil ? [NSNull null] : argtaskID, @"url": argurl == nil ? [NSNull null] : argurl, @"error": argerror == nil ? [NSNull null] : argerror}];
+    [channel invokeMethod:@"onError:url:error" arguments:@{@"taskID": argtaskID == nil ? [NSNull null] : argtaskID, @"url": argurl == nil ? [NSNull null] : argurl, @"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
 }

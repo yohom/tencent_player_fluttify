@@ -29,7 +29,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onPcmDataAvailable::onPcmDataAvailable':
+              case 'onPcmDataAvailable:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onPcmDataAvailable?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -38,7 +38,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
                 // handle the native call
                 onPcmDataAvailable?.call(args['var1'], args['var2']);
                 break;
-              case 'Callback::onAudioInfoChanged::onAudioInfoChanged':
+              case 'onAudioInfoChanged::':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onAudioInfoChanged?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');

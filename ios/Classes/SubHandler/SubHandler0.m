@@ -915,7 +915,7 @@ extern BOOL enableLog;
                 UIImage* arg__arg_0__ = __arg_0__;
         
                 dispatch_async(dispatch_get_main_queue(), ^{
-                  [channel invokeMethod:@"Callback::void|UIImage*#__arg_0__::void|UIImage*#__arg_0__" arguments:@{@"__arg_0__": arg__arg_0__ == nil ? [NSNull null] : arg__arg_0__}];
+                  [channel invokeMethod:@"void|UIImage*#__arg_0__" arguments:@{@"__arg_0__": arg__arg_0__ == nil ? [NSNull null] : arg__arg_0__}];
                 });
         
             }];

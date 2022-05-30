@@ -29,7 +29,7 @@ mixin TXVodPreloadManagerDelegate on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onComplete::onComplete':
+              case 'onComplete:url':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onComplete?.call([\'taskID\':${args['taskID']}, \'url\':${args['url']}])');
@@ -38,7 +38,7 @@ mixin TXVodPreloadManagerDelegate on NSObject {
                 // handle the native call
                 onComplete?.call(args['taskID'], args['url']);
                 break;
-              case 'Callback::onError::onError':
+              case 'onError:url:error':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onError?.call([\'taskID\':${args['taskID']}, \'url\':${args['url']}, \'error\':${args['error']}])');

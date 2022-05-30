@@ -29,7 +29,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onDownloadStart::onDownloadStart':
+              case 'onDownloadStart':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadStart?.call([\'var1\':${args['var1']}])');
@@ -38,7 +38,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 // handle the native call
                 onDownloadStart?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']));
                 break;
-              case 'Callback::onDownloadProgress::onDownloadProgress':
+              case 'onDownloadProgress':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadProgress?.call([\'var1\':${args['var1']}])');
@@ -47,7 +47,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 // handle the native call
                 onDownloadProgress?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']));
                 break;
-              case 'Callback::onDownloadStop::onDownloadStop':
+              case 'onDownloadStop':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadStop?.call([\'var1\':${args['var1']}])');
@@ -56,7 +56,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 // handle the native call
                 onDownloadStop?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']));
                 break;
-              case 'Callback::onDownloadFinish::onDownloadFinish':
+              case 'onDownloadFinish':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadFinish?.call([\'var1\':${args['var1']}])');
@@ -65,7 +65,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 // handle the native call
                 onDownloadFinish?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']));
                 break;
-              case 'Callback::onDownloadError::onDownloadError':
+              case 'onDownloadError::':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDownloadError?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
@@ -74,7 +74,7 @@ mixin com_tencent_rtmp_downloader_ITXVodDownloadListener on java_lang_Object {
                 // handle the native call
                 onDownloadError?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(args['var1']), args['var2'], args['var3']);
                 break;
-              case 'Callback::hlsKeyVerify::hlsKeyVerify':
+              case 'hlsKeyVerify::':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: hlsKeyVerify?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');

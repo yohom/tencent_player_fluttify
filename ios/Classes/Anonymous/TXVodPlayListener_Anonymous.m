@@ -44,7 +44,7 @@ extern BOOL enableLog;
   NSDictionary* argparam = param;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodPlayListener::onPlayEvent_event_withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"EvtID": argEvtID == nil ? [NSNull null] : argEvtID, @"param": argparam == nil ? [NSNull null] : argparam}];
+    [channel invokeMethod:@"onPlayEvent:event:withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"EvtID": argEvtID == nil ? [NSNull null] : argEvtID, @"param": argparam == nil ? [NSNull null] : argparam}];
   });
   
 }
@@ -67,7 +67,7 @@ extern BOOL enableLog;
   NSDictionary* argparam = param;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::TXVodPlayListener::onNetStatus_withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"param": argparam == nil ? [NSNull null] : argparam}];
+    [channel invokeMethod:@"onNetStatus:withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"param": argparam == nil ? [NSNull null] : argparam}];
   });
   
 }
