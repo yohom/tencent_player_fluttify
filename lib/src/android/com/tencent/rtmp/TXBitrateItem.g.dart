@@ -69,19 +69,19 @@ class com_tencent_rtmp_TXBitrateItem extends java_lang_Object  {
   //endregion
 
   //region setters
-  Future<void> set_index(int index) async {
+  Future<void> set_index(int? index) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_index', <String, dynamic>{'__this__': this, "index": index});
   }
   
-  Future<void> set_width(int width) async {
+  Future<void> set_width(int? width) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_width', <String, dynamic>{'__this__': this, "width": width});
   }
   
-  Future<void> set_height(int height) async {
+  Future<void> set_height(int? height) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_height', <String, dynamic>{'__this__': this, "height": height});
   }
   
-  Future<void> set_bitrate(int bitrate) async {
+  Future<void> set_bitrate(int? bitrate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_bitrate', <String, dynamic>{'__this__': this, "bitrate": bitrate});
   }
   
@@ -89,7 +89,7 @@ class com_tencent_rtmp_TXBitrateItem extends java_lang_Object  {
 
   //region methods
   
-  Future<int?> compareTo(com_tencent_rtmp_TXBitrateItem o) async {
+  Future<int?> compareTo(com_tencent_rtmp_TXBitrateItem? o) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXBitrateItem@$refId::compareTo([])');
@@ -143,25 +143,25 @@ extension com_tencent_rtmp_TXBitrateItem_Batch on List<com_tencent_rtmp_TXBitrat
   //endregion
 
   //region setters
-  Future<void> set_index_batch(List<int> index) async {
+  Future<void> set_index_batch(List<int?> index) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_index_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "index": index[__i__]}]);
   
   
   }
   
-  Future<void> set_width_batch(List<int> width) async {
+  Future<void> set_width_batch(List<int?> width) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_width_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "width": width[__i__]}]);
   
   
   }
   
-  Future<void> set_height_batch(List<int> height) async {
+  Future<void> set_height_batch(List<int?> height) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_height_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "height": height[__i__]}]);
   
   
   }
   
-  Future<void> set_bitrate_batch(List<int> bitrate) async {
+  Future<void> set_bitrate_batch(List<int?> bitrate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXBitrateItem::set_bitrate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "bitrate": bitrate[__i__]}]);
   
   
@@ -171,7 +171,7 @@ extension com_tencent_rtmp_TXBitrateItem_Batch on List<com_tencent_rtmp_TXBitrat
 
   //region methods
   
-  Future<List<int?>> compareTo_batch(List<com_tencent_rtmp_TXBitrateItem> o) async {
+  Future<List<int?>> compareTo_batch(List<com_tencent_rtmp_TXBitrateItem?> o) async {
     assert(true);
   
     // invoke native method

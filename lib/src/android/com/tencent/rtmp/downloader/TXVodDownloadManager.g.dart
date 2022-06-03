@@ -79,7 +79,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<void> setDownloadPath(String downloadPath) async {
+  Future<void> setDownloadPath(String? downloadPath) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::setDownloadPath([\'downloadPath\':$downloadPath])');
@@ -96,7 +96,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<void> setHeaders(Map<String,String> headers) async {
+  Future<void> setHeaders(Map<String,String>? headers) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::setHeaders([\'headers\':$headers])');
@@ -113,7 +113,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<void> setListener(com_tencent_rtmp_downloader_ITXVodDownloadListener listener) async {
+  Future<void> setListener(com_tencent_rtmp_downloader_ITXVodDownloadListener? listener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::setListener([])');
@@ -130,7 +130,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   @deprecated
-  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> startDownloadUrl__String(String url) async {
+  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> startDownloadUrl__String(String? url) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::startDownloadUrl([\'url\':$url])');
@@ -147,7 +147,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> startDownloadUrl__String__String(String url, String userName) async {
+  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> startDownloadUrl__String__String(String? url, String? userName) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::startDownloadUrl([\'url\':$url, \'userName\':$userName])');
@@ -164,7 +164,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> startDownload(com_tencent_rtmp_downloader_TXVodDownloadDataSource dataSource) async {
+  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> startDownload(com_tencent_rtmp_downloader_TXVodDownloadDataSource? dataSource) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::startDownload([])');
@@ -181,7 +181,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<void> stopDownload(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo dinfo) async {
+  Future<void> stopDownload(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? dinfo) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::stopDownload([])');
@@ -198,7 +198,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   @deprecated
-  Future<bool?> deleteDownloadFile(String playPath) async {
+  Future<bool?> deleteDownloadFile(String? playPath) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::deleteDownloadFile([\'playPath\':$playPath])');
@@ -215,7 +215,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<bool?> deleteDownloadMediaInfo(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo downloadMediaInfo) async {
+  Future<bool?> deleteDownloadMediaInfo(com_tencent_rtmp_downloader_TXVodDownloadMediaInfo? downloadMediaInfo) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::deleteDownloadMediaInfo([])');
@@ -249,7 +249,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> getDownloadMediaInfo__int__String__int(int appId, String fileId, int qualityId) async {
+  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> getDownloadMediaInfo__int__String__int(int? appId, String? fileId, int? qualityId) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::getDownloadMediaInfo([\'appId\':$appId, \'fileId\':$fileId, \'qualityId\':$qualityId])');
@@ -266,7 +266,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   }
   
   
-  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> getDownloadMediaInfo__String(String url) async {
+  Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> getDownloadMediaInfo__String(String? url) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadManager@$refId::getDownloadMediaInfo([\'url\':$url])');
@@ -317,7 +317,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   
-  Future<List<void>> setDownloadPath_batch(List<String> downloadPath) async {
+  Future<List<void>> setDownloadPath_batch(List<String?> downloadPath) async {
     assert(true);
   
     // invoke native method
@@ -328,7 +328,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   
-  Future<List<void>> setHeaders_batch(List<Map<String,String>> headers) async {
+  Future<List<void>> setHeaders_batch(List<Map<String,String>?> headers) async {
     assert(true);
   
     // invoke native method
@@ -339,7 +339,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   @deprecated
-  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> startDownloadUrl__String_batch(List<String> url) async {
+  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> startDownloadUrl__String_batch(List<String?> url) async {
     assert(true);
   
     // invoke native method
@@ -350,7 +350,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   
-  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> startDownloadUrl__String__String_batch(List<String> url, List<String> userName) async {
+  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> startDownloadUrl__String__String_batch(List<String?> url, List<String?> userName) async {
     assert(url.length == userName.length);
   
     // invoke native method
@@ -361,7 +361,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   
-  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> startDownload_batch(List<com_tencent_rtmp_downloader_TXVodDownloadDataSource> dataSource) async {
+  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> startDownload_batch(List<com_tencent_rtmp_downloader_TXVodDownloadDataSource?> dataSource) async {
     assert(true);
   
     // invoke native method
@@ -372,7 +372,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   
-  Future<List<void>> stopDownload_batch(List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo> dinfo) async {
+  Future<List<void>> stopDownload_batch(List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> dinfo) async {
     assert(true);
   
     // invoke native method
@@ -383,7 +383,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   @deprecated
-  Future<List<bool?>> deleteDownloadFile_batch(List<String> playPath) async {
+  Future<List<bool?>> deleteDownloadFile_batch(List<String?> playPath) async {
     assert(true);
   
     // invoke native method
@@ -394,7 +394,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   
-  Future<List<bool?>> deleteDownloadMediaInfo_batch(List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo> downloadMediaInfo) async {
+  Future<List<bool?>> deleteDownloadMediaInfo_batch(List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> downloadMediaInfo) async {
     assert(true);
   
     // invoke native method
@@ -416,7 +416,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   
-  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> getDownloadMediaInfo__int__String__int_batch(List<int> appId, List<String> fileId, List<int> qualityId) async {
+  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> getDownloadMediaInfo__int__String__int_batch(List<int?> appId, List<String?> fileId, List<int?> qualityId) async {
     assert(appId.length == fileId.length && fileId.length == qualityId.length);
   
     // invoke native method
@@ -427,7 +427,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
   }
   
   
-  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> getDownloadMediaInfo__String_batch(List<String> url) async {
+  Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> getDownloadMediaInfo__String_batch(List<String?> url) async {
     assert(true);
   
     // invoke native method

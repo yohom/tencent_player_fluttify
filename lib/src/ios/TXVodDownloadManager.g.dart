@@ -54,11 +54,11 @@ class TXVodDownloadManager extends NSObject  {
   //endregion
 
   //region setters
-  Future<void> set_delegate(TXVodDownloadDelegate delegate) async {
+  Future<void> set_delegate(TXVodDownloadDelegate? delegate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_delegate', <String, dynamic>{'__this__': this, "delegate": delegate});
   }
   
-  Future<void> set_headers(Map headers) async {
+  Future<void> set_headers(Map? headers) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_headers', <String, dynamic>{'__this__': this, "headers": headers});
   }
   
@@ -83,7 +83,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  Future<void> setDownloadPath(String path) async {
+  Future<void> setDownloadPath(String? path) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager@$refId::setDownloadPath([\'path\':$path])');
@@ -100,7 +100,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  Future<TXVodDownloadMediaInfo?> startDownload(TXVodDownloadDataSource source) async {
+  Future<TXVodDownloadMediaInfo?> startDownload(TXVodDownloadDataSource? source) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager@$refId::startDownload([])');
@@ -117,7 +117,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  Future<TXVodDownloadMediaInfo?> startDownload_url(String username, String url) async {
+  Future<TXVodDownloadMediaInfo?> startDownload_url(String? username, String? url) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager@$refId::startDownload([\'username\':$username, \'url\':$url])');
@@ -134,7 +134,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  Future<void> stopDownload(TXVodDownloadMediaInfo media) async {
+  Future<void> stopDownload(TXVodDownloadMediaInfo? media) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager@$refId::stopDownload([])');
@@ -151,7 +151,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  Future<bool?> deleteDownloadFile(String playPath) async {
+  Future<bool?> deleteDownloadFile(String? playPath) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager@$refId::deleteDownloadFile([\'playPath\':$playPath])');
@@ -168,7 +168,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  Future<void> deleteDownloadMediaInfo(TXVodDownloadMediaInfo downloadMediaInfo) async {
+  Future<void> deleteDownloadMediaInfo(TXVodDownloadMediaInfo? downloadMediaInfo) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager@$refId::deleteDownloadMediaInfo([])');
@@ -202,7 +202,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  Future<TXVodDownloadMediaInfo?> getDownloadMediaInfo(TXVodDownloadMediaInfo media) async {
+  Future<TXVodDownloadMediaInfo?> getDownloadMediaInfo(TXVodDownloadMediaInfo? media) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager@$refId::getDownloadMediaInfo([])');
@@ -219,7 +219,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  Future<String?> getOverlayKeyIv_userName_fileId_qualityId(int appId, String userName, String fileId, int qualityId) async {
+  Future<String?> getOverlayKeyIv_userName_fileId_qualityId(int? appId, String? userName, String? fileId, int? qualityId) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager@$refId::getOverlayKeyIv([\'appId\':$appId, \'userName\':$userName, \'fileId\':$fileId, \'qualityId\':$qualityId])');
@@ -253,7 +253,7 @@ class TXVodDownloadManager extends NSObject  {
   }
   
   
-  static Future<String?> encryptHexStringHls(String originHexStr) async {
+  static Future<String?> encryptHexStringHls(String? originHexStr) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodDownloadManager::encryptHexStringHls([\'originHexStr\':$originHexStr])');
@@ -292,7 +292,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   //endregion
 
   //region setters
-  Future<void> set_headers_batch(List<Map> headers) async {
+  Future<void> set_headers_batch(List<Map?> headers) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_headers_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "headers": headers[__i__]}]);
   
   
@@ -313,7 +313,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  Future<List<void>> setDownloadPath_batch(List<String> path) async {
+  Future<List<void>> setDownloadPath_batch(List<String?> path) async {
     assert(true);
   
     // invoke native method
@@ -324,7 +324,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  Future<List<TXVodDownloadMediaInfo?>> startDownload_batch(List<TXVodDownloadDataSource> source) async {
+  Future<List<TXVodDownloadMediaInfo?>> startDownload_batch(List<TXVodDownloadDataSource?> source) async {
     assert(true);
   
     // invoke native method
@@ -335,7 +335,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  Future<List<TXVodDownloadMediaInfo?>> startDownload_url_batch(List<String> username, List<String> url) async {
+  Future<List<TXVodDownloadMediaInfo?>> startDownload_url_batch(List<String?> username, List<String?> url) async {
     assert(username.length == url.length);
   
     // invoke native method
@@ -346,7 +346,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  Future<List<void>> stopDownload_batch(List<TXVodDownloadMediaInfo> media) async {
+  Future<List<void>> stopDownload_batch(List<TXVodDownloadMediaInfo?> media) async {
     assert(true);
   
     // invoke native method
@@ -357,7 +357,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  Future<List<bool?>> deleteDownloadFile_batch(List<String> playPath) async {
+  Future<List<bool?>> deleteDownloadFile_batch(List<String?> playPath) async {
     assert(true);
   
     // invoke native method
@@ -368,7 +368,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  Future<List<void>> deleteDownloadMediaInfo_batch(List<TXVodDownloadMediaInfo> downloadMediaInfo) async {
+  Future<List<void>> deleteDownloadMediaInfo_batch(List<TXVodDownloadMediaInfo?> downloadMediaInfo) async {
     assert(true);
   
     // invoke native method
@@ -390,7 +390,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  Future<List<TXVodDownloadMediaInfo?>> getDownloadMediaInfo_batch(List<TXVodDownloadMediaInfo> media) async {
+  Future<List<TXVodDownloadMediaInfo?>> getDownloadMediaInfo_batch(List<TXVodDownloadMediaInfo?> media) async {
     assert(true);
   
     // invoke native method
@@ -401,7 +401,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  Future<List<String?>> getOverlayKeyIv_userName_fileId_qualityId_batch(List<int> appId, List<String> userName, List<String> fileId, List<int> qualityId) async {
+  Future<List<String?>> getOverlayKeyIv_userName_fileId_qualityId_batch(List<int?> appId, List<String?> userName, List<String?> fileId, List<int?> qualityId) async {
     assert(appId.length == userName.length && userName.length == fileId.length && fileId.length == qualityId.length);
   
     // invoke native method
@@ -423,7 +423,7 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
   }
   
   
-  static Future<List<String?>> encryptHexStringHls_batch(List<String> originHexStr) async {
+  static Future<List<String?>> encryptHexStringHls_batch(List<String?> originHexStr) async {
     assert(true);
   
     // invoke native method

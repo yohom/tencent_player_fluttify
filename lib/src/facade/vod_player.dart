@@ -213,17 +213,16 @@ class VodPlayer {
     final completer = Completer<Uint8List>();
     await platform(
       android: (pool) async {
-        final listener =
-            await com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener.anonymous__(
-          onSnapshot: (image) async {
-            final data = await image?.data;
-            if (data == null) {
-              completer.completeError('截图失败');
-            } else {
-              completer.complete(data);
-            }
-          },
-        );
+        final listener = await com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener
+            .anonymous__();
+        listener.onSnapshot = (image) async {
+          final data = await image?.data;
+          if (data == null) {
+            completer.completeError('截图失败');
+          } else {
+            completer.complete(data);
+          }
+        };
         return _androidPlayer!.snapshot(listener);
       },
       ios: (pool) {
@@ -258,8 +257,9 @@ class VodPlayer {
   }) async {
     return platform(
       android: (pool) async {
-        final listener = await com_tencent_rtmp_ITXVodPlayListener.anonymous__(
-            onPlayEvent: (player, code, data) async {
+        final listener =
+            await com_tencent_rtmp_ITXVodPlayListener.anonymous__();
+        listener.onPlayEvent = (player, code, data) async {
           debugPrint('事件: $code, 参数: ${data}');
           // 当前视频帧解码失败
           if (code == 2101 && onWarningVideoDecodeFail != null) {
@@ -350,12 +350,12 @@ class VodPlayer {
 
           // 释放参数
           await data?.release__();
-        });
+        };
         await _androidPlayer!.setVodListener(listener);
       },
       ios: (pool) async {
-        final delegate = await TXVodPlayListener.anonymous__(
-            onPlayEvent: (player, EvtID, param) async {
+        final delegate = await TXVodPlayListener.anonymous__();
+        delegate.onPlayEvent_event_withParam = (player, EvtID, param) async {
           debugPrint('事件: $EvtID, 参数: ${param}');
           // 当前视频帧解码失败
           if (EvtID == 2101 && onWarningVideoDecodeFail != null) {
@@ -445,7 +445,7 @@ class VodPlayer {
           } else {
             debugPrint('未处理的事件: $EvtID, $param');
           }
-        });
+        };
 
         await _iosPlayer!.set_vodDelegate(delegate);
       },

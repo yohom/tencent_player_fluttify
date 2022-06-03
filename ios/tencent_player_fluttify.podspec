@@ -22,7 +22,7 @@ A new flutter plugin project.
   s.dependency 'TXLiteAVSDK_Player', '9.5.29040'
 
   s.static_framework = true
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
   # include project framework
   s.vendored_frameworks = 'Vendors/*.framework'
   # include project .a

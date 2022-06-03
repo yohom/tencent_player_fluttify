@@ -72,7 +72,7 @@ class TXVodPreloadManager extends NSObject  {
   }
   
   
-  Future<int?> startPreload_preloadSize_preferredResolution_delegate(String requestURL, int preloadSizeMB, int preferredResolution, TXVodPreloadManagerDelegate delegate) async {
+  Future<int?> startPreload_preloadSize_preferredResolution_delegate(String? requestURL, int? preloadSizeMB, int? preferredResolution, TXVodPreloadManagerDelegate? delegate) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPreloadManager@$refId::startPreload([\'requestURL\':$requestURL, \'preloadSizeMB\':$preloadSizeMB, \'preferredResolution\':$preferredResolution])');
@@ -89,7 +89,7 @@ class TXVodPreloadManager extends NSObject  {
   }
   
   
-  Future<void> stopPreload(int taskID) async {
+  Future<void> stopPreload(int? taskID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPreloadManager@$refId::stopPreload([\'taskID\':$taskID])');
@@ -140,7 +140,7 @@ extension TXVodPreloadManager_Batch on List<TXVodPreloadManager?> {
   }
   
   
-  Future<List<void>> stopPreload_batch(List<int> taskID) async {
+  Future<List<void>> stopPreload_batch(List<int?> taskID) async {
     assert(true);
   
     // invoke native method

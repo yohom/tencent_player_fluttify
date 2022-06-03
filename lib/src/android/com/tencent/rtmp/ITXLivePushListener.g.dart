@@ -18,7 +18,7 @@ mixin com_tencent_rtmp_ITXLivePushListener on java_lang_Object {
 
   static com_tencent_rtmp_ITXLivePushListener subInstance() => _com_tencent_rtmp_ITXLivePushListener_SUB();
 
-  static Future<com_tencent_rtmp_ITXLivePushListener> anonymous__({void Function(int? var1, android_os_Bundle? var2)? onPushEvent, void Function(android_os_Bundle? var1)? onNetStatus}) async {
+  static Future<com_tencent_rtmp_ITXLivePushListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ITXLivePushListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ITXLivePushListener>(__result__)!;
@@ -29,23 +29,23 @@ mixin com_tencent_rtmp_ITXLivePushListener on java_lang_Object {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onPushEvent:':
+              case 'onPushEvent_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPushEvent?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onPushEvent?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onPushEvent?.call(args['var1'], TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var2']));
+                __object__.onPushEvent?.call(args['var1'], TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var2']));
                 break;
               case 'onNetStatus':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNetStatus?.call([\'var1\':${args['var1']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onNetStatus?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
-                onNetStatus?.call(TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var1']));
+                __object__.onNetStatus?.call(TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var1']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -68,9 +68,9 @@ mixin com_tencent_rtmp_ITXLivePushListener on java_lang_Object {
 
   
 
-  Future<void> onPushEvent(int? var1, android_os_Bundle? var2) async {}
+  Future<void> Function(int? var1, android_os_Bundle? var2)? onPushEvent;
   
-  Future<void> onNetStatus(android_os_Bundle? var1) async {}
+  Future<void> Function(android_os_Bundle? var1)? onNetStatus;
   
 }
 

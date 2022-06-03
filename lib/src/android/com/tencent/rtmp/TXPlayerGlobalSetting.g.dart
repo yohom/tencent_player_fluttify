@@ -55,7 +55,7 @@ class com_tencent_rtmp_TXPlayerGlobalSetting extends java_lang_Object  {
 
   //region methods
   
-  static Future<void> setCacheFolderPath(String path) async {
+  static Future<void> setCacheFolderPath(String? path) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerGlobalSetting::setCacheFolderPath([\'path\':$path])');
@@ -72,7 +72,7 @@ class com_tencent_rtmp_TXPlayerGlobalSetting extends java_lang_Object  {
   }
   
   
-  static Future<void> setMaxCacheSize(int sizeMB) async {
+  static Future<void> setMaxCacheSize(int? sizeMB) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerGlobalSetting::setMaxCacheSize([\'sizeMB\':$sizeMB])');
@@ -146,7 +146,7 @@ extension com_tencent_rtmp_TXPlayerGlobalSetting_Batch on List<com_tencent_rtmp_
 
   //region methods
   
-  static Future<List<void>> setCacheFolderPath_batch(List<String> path) async {
+  static Future<List<void>> setCacheFolderPath_batch(List<String?> path) async {
     assert(true);
   
     // invoke native method
@@ -157,7 +157,7 @@ extension com_tencent_rtmp_TXPlayerGlobalSetting_Batch on List<com_tencent_rtmp_
   }
   
   
-  static Future<List<void>> setMaxCacheSize_batch(List<int> sizeMB) async {
+  static Future<List<void>> setMaxCacheSize_batch(List<int?> sizeMB) async {
     assert(true);
   
     // invoke native method

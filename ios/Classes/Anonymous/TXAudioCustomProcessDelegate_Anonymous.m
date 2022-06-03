@@ -5,6 +5,7 @@
 #import "TXAudioCustomProcessDelegate_Anonymous.h"
 #import <Flutter/Flutter.h>
 #import "FluttifyMessageCodec.h"
+#import <objc/runtime.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -48,7 +49,7 @@ extern BOOL enableLog;
   NSNumber* argwithBgm = @(withBgm);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onRecordRawPcmData:timeStamp:sampleRate:channels:withBgm" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timeStamp": argtimeStamp == nil ? [NSNull null] : argtimeStamp, @"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels, @"withBgm": argwithBgm == nil ? [NSNull null] : argwithBgm}];
+    [channel invokeMethod:@"onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timeStamp": argtimeStamp == nil ? [NSNull null] : argtimeStamp, @"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels, @"withBgm": argwithBgm == nil ? [NSNull null] : argwithBgm}];
   });
   
 }
@@ -75,7 +76,7 @@ extern BOOL enableLog;
   NSNumber* argchannels = @(channels);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onRecordPcmData:timeStamp:sampleRate:channels" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timeStamp": argtimeStamp == nil ? [NSNull null] : argtimeStamp, @"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels}];
+    [channel invokeMethod:@"onRecordPcmData_timeStamp_sampleRate_channels" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timeStamp": argtimeStamp == nil ? [NSNull null] : argtimeStamp, @"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels}];
   });
   
 }

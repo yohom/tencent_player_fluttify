@@ -5,6 +5,7 @@
 #import "TXVideoCustomProcessDelegate_Anonymous.h"
 #import <Flutter/Flutter.h>
 #import "FluttifyMessageCodec.h"
+#import <objc/runtime.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -44,7 +45,7 @@ extern BOOL enableLog;
   NSNumber* argheight = @(height);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onPreProcessTexture:width:height"
+    [channel invokeMethod:@"onPreProcessTexture_width_height"
                 arguments:@{@"texture": argtexture == nil ? [NSNull null] : argtexture, @"width": argwidth == nil ? [NSNull null] : argwidth, @"height": argheight == nil ? [NSNull null] : argheight}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
   });

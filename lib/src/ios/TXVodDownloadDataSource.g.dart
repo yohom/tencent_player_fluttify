@@ -89,35 +89,35 @@ class TXVodDownloadDataSource extends NSObject  {
   //endregion
 
   //region setters
-  Future<void> set_auth(TXPlayerAuthParams auth) async {
+  Future<void> set_auth(TXPlayerAuthParams? auth) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_auth', <String, dynamic>{'__this__': this, "auth": auth});
   }
   
-  Future<void> set_quality(TXVodQuality quality) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_quality', <String, dynamic>{'__this__': this, "quality": quality.toValue()});
+  Future<void> set_quality(TXVodQuality? quality) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_quality', <String, dynamic>{'__this__': this, "quality": quality?.toValue()});
   }
   
-  Future<void> set_token(String token) async {
+  Future<void> set_token(String? token) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_token', <String, dynamic>{'__this__': this, "token": token});
   }
   
-  Future<void> set_templateName(String templateName) async {
+  Future<void> set_templateName(String? templateName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_templateName', <String, dynamic>{'__this__': this, "templateName": templateName});
   }
   
-  Future<void> set_fileId(String fileId) async {
+  Future<void> set_fileId(String? fileId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_fileId', <String, dynamic>{'__this__': this, "fileId": fileId});
   }
   
-  Future<void> set_pSign(String pSign) async {
+  Future<void> set_pSign(String? pSign) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_pSign', <String, dynamic>{'__this__': this, "pSign": pSign});
   }
   
-  Future<void> set_appId(int appId) async {
+  Future<void> set_appId(int? appId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_appId', <String, dynamic>{'__this__': this, "appId": appId});
   }
   
-  Future<void> set_userName(String userName) async {
+  Future<void> set_userName(String? userName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_userName', <String, dynamic>{'__this__': this, "userName": userName});
   }
   
@@ -183,49 +183,49 @@ extension TXVodDownloadDataSource_Batch on List<TXVodDownloadDataSource?> {
   //endregion
 
   //region setters
-  Future<void> set_auth_batch(List<TXPlayerAuthParams> auth) async {
+  Future<void> set_auth_batch(List<TXPlayerAuthParams?> auth) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_auth_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "auth": auth[__i__]}]);
   
   
   }
   
-  Future<void> set_quality_batch(List<TXVodQuality> quality) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_quality_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "quality": quality[__i__].toValue()}]);
+  Future<void> set_quality_batch(List<TXVodQuality?> quality) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_quality_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "quality": quality[__i__]?.toValue()}]);
   
   
   }
   
-  Future<void> set_token_batch(List<String> token) async {
+  Future<void> set_token_batch(List<String?> token) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_token_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "token": token[__i__]}]);
   
   
   }
   
-  Future<void> set_templateName_batch(List<String> templateName) async {
+  Future<void> set_templateName_batch(List<String?> templateName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_templateName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "templateName": templateName[__i__]}]);
   
   
   }
   
-  Future<void> set_fileId_batch(List<String> fileId) async {
+  Future<void> set_fileId_batch(List<String?> fileId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_fileId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "fileId": fileId[__i__]}]);
   
   
   }
   
-  Future<void> set_pSign_batch(List<String> pSign) async {
+  Future<void> set_pSign_batch(List<String?> pSign) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_pSign_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "pSign": pSign[__i__]}]);
   
   
   }
   
-  Future<void> set_appId_batch(List<int> appId) async {
+  Future<void> set_appId_batch(List<int?> appId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_appId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "appId": appId[__i__]}]);
   
   
   }
   
-  Future<void> set_userName_batch(List<String> userName) async {
+  Future<void> set_userName_batch(List<String?> userName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_userName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "userName": userName[__i__]}]);
   
   

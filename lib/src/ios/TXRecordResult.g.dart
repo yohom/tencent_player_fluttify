@@ -69,19 +69,19 @@ class TXRecordResult extends NSObject  {
   //endregion
 
   //region setters
-  Future<void> set_retCode(TXRecordResultCode retCode) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_retCode', <String, dynamic>{'__this__': this, "retCode": retCode.toValue()});
+  Future<void> set_retCode(TXRecordResultCode? retCode) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_retCode', <String, dynamic>{'__this__': this, "retCode": retCode?.toValue()});
   }
   
-  Future<void> set_descMsg(String descMsg) async {
+  Future<void> set_descMsg(String? descMsg) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_descMsg', <String, dynamic>{'__this__': this, "descMsg": descMsg});
   }
   
-  Future<void> set_videoPath(String videoPath) async {
+  Future<void> set_videoPath(String? videoPath) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_videoPath', <String, dynamic>{'__this__': this, "videoPath": videoPath});
   }
   
-  Future<void> set_coverImage(UIImage coverImage) async {
+  Future<void> set_coverImage(UIImage? coverImage) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_coverImage', <String, dynamic>{'__this__': this, "coverImage": coverImage});
   }
   
@@ -127,25 +127,25 @@ extension TXRecordResult_Batch on List<TXRecordResult?> {
   //endregion
 
   //region setters
-  Future<void> set_retCode_batch(List<TXRecordResultCode> retCode) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_retCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "retCode": retCode[__i__].toValue()}]);
+  Future<void> set_retCode_batch(List<TXRecordResultCode?> retCode) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_retCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "retCode": retCode[__i__]?.toValue()}]);
   
   
   }
   
-  Future<void> set_descMsg_batch(List<String> descMsg) async {
+  Future<void> set_descMsg_batch(List<String?> descMsg) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_descMsg_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "descMsg": descMsg[__i__]}]);
   
   
   }
   
-  Future<void> set_videoPath_batch(List<String> videoPath) async {
+  Future<void> set_videoPath_batch(List<String?> videoPath) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_videoPath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "videoPath": videoPath[__i__]}]);
   
   
   }
   
-  Future<void> set_coverImage_batch(List<UIImage> coverImage) async {
+  Future<void> set_coverImage_batch(List<UIImage?> coverImage) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXRecordResult::set_coverImage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "coverImage": coverImage[__i__]}]);
   
   

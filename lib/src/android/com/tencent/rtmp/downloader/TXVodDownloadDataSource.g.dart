@@ -29,7 +29,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__int__String__int__String__String(int appId, String fileId, int quality, String pSign, String userName) async {
+  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__int__String__int__String__String(int? appId, String? fileId, int? quality, String? pSign, String? userName) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__int__String__int__String__String',
       {"appId": appId, "fileId": fileId, "quality": quality, "pSign": pSign, "userName": userName}
@@ -37,7 +37,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
   }
   
-  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__com_tencent_rtmp_TXPlayerAuthBuilder__int(com_tencent_rtmp_TXPlayerAuthBuilder authBuilder, int quality) async {
+  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__com_tencent_rtmp_TXPlayerAuthBuilder__int(com_tencent_rtmp_TXPlayerAuthBuilder? authBuilder, int? quality) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__com_tencent_rtmp_TXPlayerAuthBuilder__int',
       {"authBuilder": authBuilder, "quality": quality}
@@ -45,7 +45,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
   }
   
-  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__com_tencent_rtmp_TXPlayerAuthBuilder__String(com_tencent_rtmp_TXPlayerAuthBuilder authBuilder, String templateName) async {
+  static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__com_tencent_rtmp_TXPlayerAuthBuilder__String(com_tencent_rtmp_TXPlayerAuthBuilder? authBuilder, String? templateName) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__com_tencent_rtmp_TXPlayerAuthBuilder__String',
       {"authBuilder": authBuilder, "templateName": templateName}
@@ -53,7 +53,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
   }
   
-  static Future<List<com_tencent_rtmp_downloader_TXVodDownloadDataSource>> create_batch__int__String__int__String__String(List<int> appId, List<String> fileId, List<int> quality, List<String> pSign, List<String> userName) async {
+  static Future<List<com_tencent_rtmp_downloader_TXVodDownloadDataSource>> create_batch__int__String__int__String__String(List<int?> appId, List<String?> fileId, List<int?> quality, List<String?> pSign, List<String?> userName) async {
     assert(appId.length == fileId.length && fileId.length == quality.length && quality.length == pSign.length && pSign.length == userName.length);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_downloader_TXVodDownloadDataSource__int__String__int__String__String',
@@ -66,7 +66,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
         .toList() ?? <com_tencent_rtmp_downloader_TXVodDownloadDataSource>[];
   }
   
-  static Future<List<com_tencent_rtmp_downloader_TXVodDownloadDataSource>> create_batch__com_tencent_rtmp_TXPlayerAuthBuilder__int(List<com_tencent_rtmp_TXPlayerAuthBuilder> authBuilder, List<int> quality) async {
+  static Future<List<com_tencent_rtmp_downloader_TXVodDownloadDataSource>> create_batch__com_tencent_rtmp_TXPlayerAuthBuilder__int(List<com_tencent_rtmp_TXPlayerAuthBuilder?> authBuilder, List<int?> quality) async {
     assert(authBuilder.length == quality.length);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_downloader_TXVodDownloadDataSource__com_tencent_rtmp_TXPlayerAuthBuilder__int',
@@ -79,7 +79,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
         .toList() ?? <com_tencent_rtmp_downloader_TXVodDownloadDataSource>[];
   }
   
-  static Future<List<com_tencent_rtmp_downloader_TXVodDownloadDataSource>> create_batch__com_tencent_rtmp_TXPlayerAuthBuilder__String(List<com_tencent_rtmp_TXPlayerAuthBuilder> authBuilder, List<String> templateName) async {
+  static Future<List<com_tencent_rtmp_downloader_TXVodDownloadDataSource>> create_batch__com_tencent_rtmp_TXPlayerAuthBuilder__String(List<com_tencent_rtmp_TXPlayerAuthBuilder?> authBuilder, List<String?> templateName) async {
     assert(authBuilder.length == templateName.length);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_downloader_TXVodDownloadDataSource__com_tencent_rtmp_TXPlayerAuthBuilder__String',
@@ -138,7 +138,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
   }
   
   
-  Future<void> setQuality(int quality) async {
+  Future<void> setQuality(int? quality) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadDataSource@$refId::setQuality([\'quality\':$quality])');
@@ -155,7 +155,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
   }
   
   
-  Future<void> setToken(String token) async {
+  Future<void> setToken(String? token) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadDataSource@$refId::setToken([\'token\':$token])');
@@ -353,7 +353,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadDataSource_Batch on List<com_
   }
   
   
-  Future<List<void>> setQuality_batch(List<int> quality) async {
+  Future<List<void>> setQuality_batch(List<int?> quality) async {
     assert(true);
   
     // invoke native method
@@ -364,7 +364,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadDataSource_Batch on List<com_
   }
   
   
-  Future<List<void>> setToken_batch(List<String> token) async {
+  Future<List<void>> setToken_batch(List<String?> token) async {
     assert(true);
   
     // invoke native method

@@ -22,7 +22,7 @@ class com_tencent_rtmp_ui_TXDashBoard extends android_widget_LinearLayout  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_ui_TXDashBoard> create__android_content_Context(android_content_Context context) async {
+  static Future<com_tencent_rtmp_ui_TXDashBoard> create__android_content_Context(android_content_Context? context) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_ui_TXDashBoard__android_content_Context',
       {"context": context}
@@ -30,7 +30,7 @@ class com_tencent_rtmp_ui_TXDashBoard extends android_widget_LinearLayout  {
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXDashBoard>(__result__)!;
   }
   
-  static Future<List<com_tencent_rtmp_ui_TXDashBoard>> create_batch__android_content_Context(List<android_content_Context> context) async {
+  static Future<List<com_tencent_rtmp_ui_TXDashBoard>> create_batch__android_content_Context(List<android_content_Context?> context) async {
     assert(true);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_ui_TXDashBoard__android_content_Context',
@@ -55,7 +55,7 @@ class com_tencent_rtmp_ui_TXDashBoard extends android_widget_LinearLayout  {
 
   //region methods
   
-  Future<void> setStatusTextSize(double size) async {
+  Future<void> setStatusTextSize(double? size) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXDashBoard@$refId::setStatusTextSize([\'size\':$size])');
@@ -72,7 +72,7 @@ class com_tencent_rtmp_ui_TXDashBoard extends android_widget_LinearLayout  {
   }
   
   
-  Future<void> setEventTextSize(double size) async {
+  Future<void> setEventTextSize(double? size) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXDashBoard@$refId::setEventTextSize([\'size\':$size])');
@@ -89,7 +89,7 @@ class com_tencent_rtmp_ui_TXDashBoard extends android_widget_LinearLayout  {
   }
   
   
-  Future<void> setLogMsgLenLimit(int mLogMsgLenLimit) async {
+  Future<void> setLogMsgLenLimit(int? mLogMsgLenLimit) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXDashBoard@$refId::setLogMsgLenLimit([\'mLogMsgLenLimit\':$mLogMsgLenLimit])');
@@ -106,7 +106,7 @@ class com_tencent_rtmp_ui_TXDashBoard extends android_widget_LinearLayout  {
   }
   
   
-  Future<void> setShowLevel(int showType) async {
+  Future<void> setShowLevel(int? showType) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXDashBoard@$refId::setShowLevel([\'showType\':$showType])');
@@ -146,7 +146,7 @@ extension com_tencent_rtmp_ui_TXDashBoard_Batch on List<com_tencent_rtmp_ui_TXDa
 
   //region methods
   
-  Future<List<void>> setStatusTextSize_batch(List<double> size) async {
+  Future<List<void>> setStatusTextSize_batch(List<double?> size) async {
     assert(true);
   
     // invoke native method
@@ -157,7 +157,7 @@ extension com_tencent_rtmp_ui_TXDashBoard_Batch on List<com_tencent_rtmp_ui_TXDa
   }
   
   
-  Future<List<void>> setEventTextSize_batch(List<double> size) async {
+  Future<List<void>> setEventTextSize_batch(List<double?> size) async {
     assert(true);
   
     // invoke native method
@@ -168,7 +168,7 @@ extension com_tencent_rtmp_ui_TXDashBoard_Batch on List<com_tencent_rtmp_ui_TXDa
   }
   
   
-  Future<List<void>> setLogMsgLenLimit_batch(List<int> mLogMsgLenLimit) async {
+  Future<List<void>> setLogMsgLenLimit_batch(List<int?> mLogMsgLenLimit) async {
     assert(true);
   
     // invoke native method
@@ -179,7 +179,7 @@ extension com_tencent_rtmp_ui_TXDashBoard_Batch on List<com_tencent_rtmp_ui_TXDa
   }
   
   
-  Future<List<void>> setShowLevel_batch(List<int> showType) async {
+  Future<List<void>> setShowLevel_batch(List<int?> showType) async {
     assert(true);
   
     // invoke native method

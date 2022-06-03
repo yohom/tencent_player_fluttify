@@ -74,31 +74,31 @@ class TXVodPlayer extends NSObject  {
   //endregion
 
   //region setters
-  Future<void> set_vodDelegate(TXVodPlayListener vodDelegate) async {
+  Future<void> set_vodDelegate(TXVodPlayListener? vodDelegate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_vodDelegate', <String, dynamic>{'__this__': this, "vodDelegate": vodDelegate});
   }
   
-  Future<void> set_videoProcessDelegate(TXVideoCustomProcessDelegate videoProcessDelegate) async {
+  Future<void> set_videoProcessDelegate(TXVideoCustomProcessDelegate? videoProcessDelegate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_videoProcessDelegate', <String, dynamic>{'__this__': this, "videoProcessDelegate": videoProcessDelegate});
   }
   
-  Future<void> set_enableHWAcceleration(bool enableHWAcceleration) async {
+  Future<void> set_enableHWAcceleration(bool? enableHWAcceleration) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_enableHWAcceleration', <String, dynamic>{'__this__': this, "enableHWAcceleration": enableHWAcceleration});
   }
   
-  Future<void> set_config(TXVodPlayConfig config) async {
+  Future<void> set_config(TXVodPlayConfig? config) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_config', <String, dynamic>{'__this__': this, "config": config});
   }
   
-  Future<void> set_isAutoPlay(bool isAutoPlay) async {
+  Future<void> set_isAutoPlay(bool? isAutoPlay) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_isAutoPlay', <String, dynamic>{'__this__': this, "isAutoPlay": isAutoPlay});
   }
   
-  Future<void> set_token(String token) async {
+  Future<void> set_token(String? token) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_token', <String, dynamic>{'__this__': this, "token": token});
   }
   
-  Future<void> set_loop(bool loop) async {
+  Future<void> set_loop(bool? loop) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_loop', <String, dynamic>{'__this__': this, "loop": loop});
   }
   
@@ -106,7 +106,7 @@ class TXVodPlayer extends NSObject  {
 
   //region methods
   
-  Future<void> setupVideoWidget_insertIndex(UIView view, int idx) async {
+  Future<void> setupVideoWidget_insertIndex(UIView? view, int? idx) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setupVideoWidget([\'idx\':$idx])');
@@ -140,7 +140,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setStartTime(double startTime) async {
+  Future<void> setStartTime(double? startTime) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setStartTime([\'startTime\':$startTime])');
@@ -157,7 +157,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<int?> startPlay(String url) async {
+  Future<int?> startPlay(String? url) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::startPlay([\'url\':$url])');
@@ -174,7 +174,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<int?> startPlayWithParams(TXPlayerAuthParams params) async {
+  Future<int?> startPlayWithParams(TXPlayerAuthParams? params) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::startPlayWithParams([])');
@@ -259,7 +259,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<int?> seek(double time) async {
+  Future<int?> seek(double? time) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::seek([\'time\':$time])');
@@ -361,14 +361,14 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setRenderRotation(TX_Enum_Type_HomeOrientation rotation) async {
+  Future<void> setRenderRotation(TX_Enum_Type_HomeOrientation? rotation) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setRenderRotation([])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::setRenderRotation', {"rotation": rotation.toValue(), "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::setRenderRotation', {"rotation": rotation?.toValue(), "__this__": this});
   
   
     // handle native call
@@ -378,14 +378,14 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setRenderMode(TX_Enum_Type_RenderMode renderMode) async {
+  Future<void> setRenderMode(TX_Enum_Type_RenderMode? renderMode) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setRenderMode([])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::setRenderMode', {"renderMode": renderMode.toValue(), "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::setRenderMode', {"renderMode": renderMode?.toValue(), "__this__": this});
   
   
     // handle native call
@@ -395,7 +395,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setMute(bool bEnable) async {
+  Future<void> setMute(bool? bEnable) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setMute([\'bEnable\':$bEnable])');
@@ -412,7 +412,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setAudioPlayoutVolume(int volume) async {
+  Future<void> setAudioPlayoutVolume(int? volume) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setAudioPlayoutVolume([\'volume\':$volume])');
@@ -468,7 +468,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setRate(double rate) async {
+  Future<void> setRate(double? rate) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setRate([\'rate\':$rate])');
@@ -519,7 +519,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setBitrateIndex(int index) async {
+  Future<void> setBitrateIndex(int? index) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setBitrateIndex([\'index\':$index])');
@@ -536,7 +536,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setMirror(bool isMirror) async {
+  Future<void> setMirror(bool? isMirror) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setMirror([\'isMirror\':$isMirror])');
@@ -553,7 +553,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> attachTRTC(NSObject trtcCloud) async {
+  Future<void> attachTRTC(NSObject? trtcCloud) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::attachTRTC([])');
@@ -655,7 +655,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  static Future<String?> getEncryptedPlayKey(String key) async {
+  static Future<String?> getEncryptedPlayKey(String? key) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer::getEncryptedPlayKey([\'key\':$key])');
@@ -672,7 +672,7 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<void> setExtentOptionInfo(Map<String,String> extInfo) async {
+  Future<void> setExtentOptionInfo(Map<String,String>? extInfo) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXVodPlayer@$refId::setExtentOptionInfo([\'extInfo\':$extInfo])');
@@ -731,31 +731,31 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   //endregion
 
   //region setters
-  Future<void> set_enableHWAcceleration_batch(List<bool> enableHWAcceleration) async {
+  Future<void> set_enableHWAcceleration_batch(List<bool?> enableHWAcceleration) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_enableHWAcceleration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "enableHWAcceleration": enableHWAcceleration[__i__]}]);
   
   
   }
   
-  Future<void> set_config_batch(List<TXVodPlayConfig> config) async {
+  Future<void> set_config_batch(List<TXVodPlayConfig?> config) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_config_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "config": config[__i__]}]);
   
   
   }
   
-  Future<void> set_isAutoPlay_batch(List<bool> isAutoPlay) async {
+  Future<void> set_isAutoPlay_batch(List<bool?> isAutoPlay) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_isAutoPlay_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "isAutoPlay": isAutoPlay[__i__]}]);
   
   
   }
   
-  Future<void> set_token_batch(List<String> token) async {
+  Future<void> set_token_batch(List<String?> token) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_token_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "token": token[__i__]}]);
   
   
   }
   
-  Future<void> set_loop_batch(List<bool> loop) async {
+  Future<void> set_loop_batch(List<bool?> loop) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_loop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "loop": loop[__i__]}]);
   
   
@@ -765,7 +765,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
 
   //region methods
   
-  Future<List<void>> setupVideoWidget_insertIndex_batch(List<UIView> view, List<int> idx) async {
+  Future<List<void>> setupVideoWidget_insertIndex_batch(List<UIView?> view, List<int?> idx) async {
     assert(view.length == idx.length);
   
     // invoke native method
@@ -787,7 +787,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<void>> setStartTime_batch(List<double> startTime) async {
+  Future<List<void>> setStartTime_batch(List<double?> startTime) async {
     assert(true);
   
     // invoke native method
@@ -798,7 +798,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<int?>> startPlay_batch(List<String> url) async {
+  Future<List<int?>> startPlay_batch(List<String?> url) async {
     assert(true);
   
     // invoke native method
@@ -809,7 +809,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<int?>> startPlayWithParams_batch(List<TXPlayerAuthParams> params) async {
+  Future<List<int?>> startPlayWithParams_batch(List<TXPlayerAuthParams?> params) async {
     assert(true);
   
     // invoke native method
@@ -864,7 +864,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<int?>> seek_batch(List<double> time) async {
+  Future<List<int?>> seek_batch(List<double?> time) async {
     assert(true);
   
     // invoke native method
@@ -930,29 +930,29 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<void>> setRenderRotation_batch(List<TX_Enum_Type_HomeOrientation> rotation) async {
+  Future<List<void>> setRenderRotation_batch(List<TX_Enum_Type_HomeOrientation?> rotation) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::setRenderRotation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"rotation": rotation[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::setRenderRotation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"rotation": rotation[__i__]?.toValue(), "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> setRenderMode_batch(List<TX_Enum_Type_RenderMode> renderMode) async {
+  Future<List<void>> setRenderMode_batch(List<TX_Enum_Type_RenderMode?> renderMode) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::setRenderMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"renderMode": renderMode[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::setRenderMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"renderMode": renderMode[__i__]?.toValue(), "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> setMute_batch(List<bool> bEnable) async {
+  Future<List<void>> setMute_batch(List<bool?> bEnable) async {
     assert(true);
   
     // invoke native method
@@ -963,7 +963,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<void>> setAudioPlayoutVolume_batch(List<int> volume) async {
+  Future<List<void>> setAudioPlayoutVolume_batch(List<int?> volume) async {
     assert(true);
   
     // invoke native method
@@ -974,7 +974,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<void>> setRate_batch(List<double> rate) async {
+  Future<List<void>> setRate_batch(List<double?> rate) async {
     assert(true);
   
     // invoke native method
@@ -1007,7 +1007,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<void>> setBitrateIndex_batch(List<int> index) async {
+  Future<List<void>> setBitrateIndex_batch(List<int?> index) async {
     assert(true);
   
     // invoke native method
@@ -1018,7 +1018,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<void>> setMirror_batch(List<bool> isMirror) async {
+  Future<List<void>> setMirror_batch(List<bool?> isMirror) async {
     assert(true);
   
     // invoke native method
@@ -1029,7 +1029,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<void>> attachTRTC_batch(List<NSObject> trtcCloud) async {
+  Future<List<void>> attachTRTC_batch(List<NSObject?> trtcCloud) async {
     assert(true);
   
     // invoke native method
@@ -1095,7 +1095,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  static Future<List<String?>> getEncryptedPlayKey_batch(List<String> key) async {
+  static Future<List<String?>> getEncryptedPlayKey_batch(List<String?> key) async {
     assert(true);
   
     // invoke native method
@@ -1106,7 +1106,7 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<void>> setExtentOptionInfo_batch(List<Map<String,String>> extInfo) async {
+  Future<List<void>> setExtentOptionInfo_batch(List<Map<String,String>?> extInfo) async {
     assert(true);
   
     // invoke native method

@@ -18,7 +18,7 @@ mixin com_tencent_rtmp_ITXVodPlayListener on java_lang_Object {
 
   static com_tencent_rtmp_ITXVodPlayListener subInstance() => _com_tencent_rtmp_ITXVodPlayListener_SUB();
 
-  static Future<com_tencent_rtmp_ITXVodPlayListener> anonymous__({void Function(com_tencent_rtmp_TXVodPlayer? var1, int? var2, android_os_Bundle? var3)? onPlayEvent, void Function(com_tencent_rtmp_TXVodPlayer? var1, android_os_Bundle? var2)? onNetStatus}) async {
+  static Future<com_tencent_rtmp_ITXVodPlayListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ITXVodPlayListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ITXVodPlayListener>(__result__)!;
@@ -29,23 +29,23 @@ mixin com_tencent_rtmp_ITXVodPlayListener on java_lang_Object {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onPlayEvent::':
+              case 'onPlayEvent__':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPlayEvent?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onPlayEvent?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
                 }
             
                 // handle the native call
-                onPlayEvent?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXVodPlayer>(args['var1']), args['var2'], TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var3']));
+                __object__.onPlayEvent?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXVodPlayer>(args['var1']), args['var2'], TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var3']));
                 break;
-              case 'onNetStatus:':
+              case 'onNetStatus_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNetStatus?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onNetStatus?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onNetStatus?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXVodPlayer>(args['var1']), TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var2']));
+                __object__.onNetStatus?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXVodPlayer>(args['var1']), TencentPlayerFluttifyAndroidAs<android_os_Bundle>(args['var2']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -68,9 +68,9 @@ mixin com_tencent_rtmp_ITXVodPlayListener on java_lang_Object {
 
   
 
-  Future<void> onPlayEvent(com_tencent_rtmp_TXVodPlayer? var1, int? var2, android_os_Bundle? var3) async {}
+  Future<void> Function(com_tencent_rtmp_TXVodPlayer? var1, int? var2, android_os_Bundle? var3)? onPlayEvent;
   
-  Future<void> onNetStatus(com_tencent_rtmp_TXVodPlayer? var1, android_os_Bundle? var2) async {}
+  Future<void> Function(com_tencent_rtmp_TXVodPlayer? var1, android_os_Bundle? var2)? onNetStatus;
   
 }
 

@@ -18,7 +18,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener on java_lang_
 
   static com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener_SUB();
 
-  static Future<com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener> anonymous__({void Function(com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture? var1)? onRenderVideoFrame}) async {
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXLivePlayVideoRenderListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener>(__result__)!;
@@ -32,11 +32,11 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener on java_lang_
               case 'onRenderVideoFrame':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onRenderVideoFrame?.call([\'var1\':${args['var1']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onRenderVideoFrame?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
-                onRenderVideoFrame?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture>(args['var1']));
+                __object__.onRenderVideoFrame?.call(TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture>(args['var1']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -59,7 +59,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener on java_lang_
 
   
 
-  Future<void> onRenderVideoFrame(com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture? var1) async {}
+  Future<void> Function(com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture? var1)? onRenderVideoFrame;
   
 }
 

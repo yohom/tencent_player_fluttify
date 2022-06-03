@@ -18,7 +18,7 @@ mixin TXAudioCustomProcessDelegate on NSObject {
 
   static TXAudioCustomProcessDelegate subInstance() => _TXAudioCustomProcessDelegate_SUB();
 
-  static Future<TXAudioCustomProcessDelegate> anonymous__({void Function(NSData? data, int? timeStamp, int? sampleRate, int? channels, bool? withBgm)? onRecordRawPcmData, void Function(NSData? data, int? timeStamp, int? sampleRate, int? channels)? onRecordPcmData}) async {
+  static Future<TXAudioCustomProcessDelegate> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXAudioCustomProcessDelegate::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyIOSAs<TXAudioCustomProcessDelegate>(__result__)!;
@@ -29,23 +29,23 @@ mixin TXAudioCustomProcessDelegate on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onRecordRawPcmData:timeStamp:sampleRate:channels:withBgm':
+              case 'onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onRecordRawPcmData?.call([\'data\':${args['data']}, \'timeStamp\':${args['timeStamp']}, \'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}, \'withBgm\':${args['withBgm']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm?.call([\'data\':${args['data']}, \'timeStamp\':${args['timeStamp']}, \'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}, \'withBgm\':${args['withBgm']}])');
                 }
             
                 // handle the native call
-                onRecordRawPcmData?.call(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timeStamp'], args['sampleRate'], args['channels'], args['withBgm']);
+                __object__.onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm?.call(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timeStamp'], args['sampleRate'], args['channels'], args['withBgm']);
                 break;
-              case 'onRecordPcmData:timeStamp:sampleRate:channels':
+              case 'onRecordPcmData_timeStamp_sampleRate_channels':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onRecordPcmData?.call([\'data\':${args['data']}, \'timeStamp\':${args['timeStamp']}, \'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onRecordPcmData_timeStamp_sampleRate_channels?.call([\'data\':${args['data']}, \'timeStamp\':${args['timeStamp']}, \'sampleRate\':${args['sampleRate']}, \'channels\':${args['channels']}])');
                 }
             
                 // handle the native call
-                onRecordPcmData?.call(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timeStamp'], args['sampleRate'], args['channels']);
+                __object__.onRecordPcmData_timeStamp_sampleRate_channels?.call(TencentPlayerFluttifyIOSAs<NSData>(args['data']), args['timeStamp'], args['sampleRate'], args['channels']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -68,9 +68,9 @@ mixin TXAudioCustomProcessDelegate on NSObject {
 
   
 
-  Future<void> onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm(NSData? data, int? timeStamp, int? sampleRate, int? channels, bool? withBgm) async {}
+  Future<void> Function(NSData? data, int? timeStamp, int? sampleRate, int? channels, bool? withBgm)? onRecordRawPcmData_timeStamp_sampleRate_channels_withBgm;
   
-  Future<void> onRecordPcmData_timeStamp_sampleRate_channels(NSData? data, int? timeStamp, int? sampleRate, int? channels) async {}
+  Future<void> Function(NSData? data, int? timeStamp, int? sampleRate, int? channels)? onRecordPcmData_timeStamp_sampleRate_channels;
   
 }
 

@@ -35,7 +35,7 @@ class com_tencent_rtmp_downloader_TXVodPreloadManager extends java_lang_Object  
 
   //region methods
   
-  static Future<com_tencent_rtmp_downloader_TXVodPreloadManager?> getInstance(android_content_Context context) async {
+  static Future<com_tencent_rtmp_downloader_TXVodPreloadManager?> getInstance(android_content_Context? context) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodPreloadManager::getInstance([])');
@@ -52,7 +52,7 @@ class com_tencent_rtmp_downloader_TXVodPreloadManager extends java_lang_Object  
   }
   
   
-  Future<int?> startPreload(String url, int preloadSizeMB, int preferredResolution, com_tencent_rtmp_downloader_ITXVodPreloadListener listener) async {
+  Future<int?> startPreload(String? url, int? preloadSizeMB, int? preferredResolution, com_tencent_rtmp_downloader_ITXVodPreloadListener? listener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodPreloadManager@$refId::startPreload([\'url\':$url, \'preloadSizeMB\':$preloadSizeMB, \'preferredResolution\':$preferredResolution])');
@@ -69,7 +69,7 @@ class com_tencent_rtmp_downloader_TXVodPreloadManager extends java_lang_Object  
   }
   
   
-  Future<void> stopPreload(int taskID) async {
+  Future<void> stopPreload(int? taskID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodPreloadManager@$refId::stopPreload([\'taskID\':$taskID])');
@@ -109,7 +109,7 @@ extension com_tencent_rtmp_downloader_TXVodPreloadManager_Batch on List<com_tenc
 
   //region methods
   
-  static Future<List<com_tencent_rtmp_downloader_TXVodPreloadManager?>> getInstance_batch(List<android_content_Context> context) async {
+  static Future<List<com_tencent_rtmp_downloader_TXVodPreloadManager?>> getInstance_batch(List<android_content_Context?> context) async {
     assert(true);
   
     // invoke native method
@@ -120,7 +120,7 @@ extension com_tencent_rtmp_downloader_TXVodPreloadManager_Batch on List<com_tenc
   }
   
   
-  Future<List<void>> stopPreload_batch(List<int> taskID) async {
+  Future<List<void>> stopPreload_batch(List<int?> taskID) async {
     assert(true);
   
     // invoke native method

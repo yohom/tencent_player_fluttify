@@ -5,6 +5,7 @@
 #import "TXAudioRawDataDelegate_Anonymous.h"
 #import <Flutter/Flutter.h>
 #import "FluttifyMessageCodec.h"
+#import <objc/runtime.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -42,7 +43,7 @@ extern BOOL enableLog;
   NSNumber* argchannels = @(channels);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onAudioInfoChanged:channels" arguments:@{@"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels}];
+    [channel invokeMethod:@"onAudioInfoChanged_channels" arguments:@{@"sampleRate": argsampleRate == nil ? [NSNull null] : argsampleRate, @"channels": argchannels == nil ? [NSNull null] : argchannels}];
   });
   
 }
@@ -65,7 +66,7 @@ extern BOOL enableLog;
   NSNumber* argtimestamp = @(timestamp);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onPcmDataAvailable:pts" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timestamp": argtimestamp == nil ? [NSNull null] : argtimestamp}];
+    [channel invokeMethod:@"onPcmDataAvailable_pts" arguments:@{@"data": argdata == nil ? [NSNull null] : argdata, @"timestamp": argtimestamp == nil ? [NSNull null] : argtimestamp}];
   });
   
 }

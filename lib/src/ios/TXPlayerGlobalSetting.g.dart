@@ -55,7 +55,7 @@ class TXPlayerGlobalSetting extends NSObject  {
 
   //region methods
   
-  static Future<void> setCacheFolderPath(String cacheFolder) async {
+  static Future<void> setCacheFolderPath(String? cacheFolder) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXPlayerGlobalSetting::setCacheFolderPath([\'cacheFolder\':$cacheFolder])');
@@ -89,7 +89,7 @@ class TXPlayerGlobalSetting extends NSObject  {
   }
   
   
-  static Future<void> setMaxCacheSize(int maxCacheSizeMB) async {
+  static Future<void> setMaxCacheSize(int? maxCacheSizeMB) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: TXPlayerGlobalSetting::setMaxCacheSize([\'maxCacheSizeMB\':$maxCacheSizeMB])');
@@ -146,7 +146,7 @@ extension TXPlayerGlobalSetting_Batch on List<TXPlayerGlobalSetting?> {
 
   //region methods
   
-  static Future<List<void>> setCacheFolderPath_batch(List<String> cacheFolder) async {
+  static Future<List<void>> setCacheFolderPath_batch(List<String?> cacheFolder) async {
     assert(true);
   
     // invoke native method
@@ -168,7 +168,7 @@ extension TXPlayerGlobalSetting_Batch on List<TXPlayerGlobalSetting?> {
   }
   
   
-  static Future<List<void>> setMaxCacheSize_batch(List<int> maxCacheSizeMB) async {
+  static Future<List<void>> setMaxCacheSize_batch(List<int?> maxCacheSizeMB) async {
     assert(true);
   
     // invoke native method

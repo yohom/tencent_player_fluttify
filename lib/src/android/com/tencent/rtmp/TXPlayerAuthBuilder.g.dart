@@ -174,7 +174,7 @@ class com_tencent_rtmp_TXPlayerAuthBuilder extends java_lang_Object  {
   }
   
   
-  Future<void> setAppId(int appId) async {
+  Future<void> setAppId(int? appId) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerAuthBuilder@$refId::setAppId([\'appId\':$appId])');
@@ -191,7 +191,7 @@ class com_tencent_rtmp_TXPlayerAuthBuilder extends java_lang_Object  {
   }
   
   
-  Future<void> setFileId(String fileId) async {
+  Future<void> setFileId(String? fileId) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerAuthBuilder@$refId::setFileId([\'fileId\':$fileId])');
@@ -208,7 +208,7 @@ class com_tencent_rtmp_TXPlayerAuthBuilder extends java_lang_Object  {
   }
   
   
-  Future<void> setTimeout(String timeout) async {
+  Future<void> setTimeout(String? timeout) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerAuthBuilder@$refId::setTimeout([\'timeout\':$timeout])');
@@ -225,7 +225,7 @@ class com_tencent_rtmp_TXPlayerAuthBuilder extends java_lang_Object  {
   }
   
   
-  Future<void> setUs(String us) async {
+  Future<void> setUs(String? us) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerAuthBuilder@$refId::setUs([\'us\':$us])');
@@ -242,7 +242,7 @@ class com_tencent_rtmp_TXPlayerAuthBuilder extends java_lang_Object  {
   }
   
   
-  Future<void> setExper(int exper) async {
+  Future<void> setExper(int? exper) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerAuthBuilder@$refId::setExper([\'exper\':$exper])');
@@ -259,7 +259,7 @@ class com_tencent_rtmp_TXPlayerAuthBuilder extends java_lang_Object  {
   }
   
   
-  Future<void> setSign(String sign) async {
+  Future<void> setSign(String? sign) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerAuthBuilder@$refId::setSign([\'sign\':$sign])');
@@ -276,7 +276,7 @@ class com_tencent_rtmp_TXPlayerAuthBuilder extends java_lang_Object  {
   }
   
   
-  Future<void> setHttps(bool https) async {
+  Future<void> setHttps(bool? https) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerAuthBuilder@$refId::setHttps([\'https\':$https])');
@@ -393,7 +393,7 @@ extension com_tencent_rtmp_TXPlayerAuthBuilder_Batch on List<com_tencent_rtmp_TX
   }
   
   
-  Future<List<void>> setAppId_batch(List<int> appId) async {
+  Future<List<void>> setAppId_batch(List<int?> appId) async {
     assert(true);
   
     // invoke native method
@@ -404,7 +404,7 @@ extension com_tencent_rtmp_TXPlayerAuthBuilder_Batch on List<com_tencent_rtmp_TX
   }
   
   
-  Future<List<void>> setFileId_batch(List<String> fileId) async {
+  Future<List<void>> setFileId_batch(List<String?> fileId) async {
     assert(true);
   
     // invoke native method
@@ -415,7 +415,7 @@ extension com_tencent_rtmp_TXPlayerAuthBuilder_Batch on List<com_tencent_rtmp_TX
   }
   
   
-  Future<List<void>> setTimeout_batch(List<String> timeout) async {
+  Future<List<void>> setTimeout_batch(List<String?> timeout) async {
     assert(true);
   
     // invoke native method
@@ -426,7 +426,7 @@ extension com_tencent_rtmp_TXPlayerAuthBuilder_Batch on List<com_tencent_rtmp_TX
   }
   
   
-  Future<List<void>> setUs_batch(List<String> us) async {
+  Future<List<void>> setUs_batch(List<String?> us) async {
     assert(true);
   
     // invoke native method
@@ -437,7 +437,7 @@ extension com_tencent_rtmp_TXPlayerAuthBuilder_Batch on List<com_tencent_rtmp_TX
   }
   
   
-  Future<List<void>> setExper_batch(List<int> exper) async {
+  Future<List<void>> setExper_batch(List<int?> exper) async {
     assert(true);
   
     // invoke native method
@@ -448,7 +448,7 @@ extension com_tencent_rtmp_TXPlayerAuthBuilder_Batch on List<com_tencent_rtmp_TX
   }
   
   
-  Future<List<void>> setSign_batch(List<String> sign) async {
+  Future<List<void>> setSign_batch(List<String?> sign) async {
     assert(true);
   
     // invoke native method
@@ -459,7 +459,7 @@ extension com_tencent_rtmp_TXPlayerAuthBuilder_Batch on List<com_tencent_rtmp_TX
   }
   
   
-  Future<List<void>> setHttps_batch(List<bool> https) async {
+  Future<List<void>> setHttps_batch(List<bool?> https) async {
     assert(true);
   
     // invoke native method
