@@ -12,6 +12,10 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class TXVodPreloadManager extends NSObject  {
+  static final Finalizer<TXVodPreloadManager> _finalizer = Finalizer((__this__) {
+    __this__.release__();
+  });
+
   //region constants
   static const String name__ = 'TXVodPreloadManager';
 
@@ -27,7 +31,12 @@ class TXVodPreloadManager extends NSObject  {
       'ObjectFactory::createTXVodPreloadManager',
       {'init': init}
     );
-    return TencentPlayerFluttifyIOSAs<TXVodPreloadManager>(__result__)!;
+  
+    final __object__ = TencentPlayerFluttifyIOSAs<TXVodPreloadManager>(__result__)!;
+  
+    _finalizer.attach(__object__, __object__, detach: __object__);
+  
+    return __object__;
   }
   
   static Future<List<TXVodPreloadManager>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -40,6 +49,10 @@ class TXVodPreloadManager extends NSObject  {
         ?.map((it) => TencentPlayerFluttifyIOSAs<TXVodPreloadManager>(it))
         .where((element) => element !=null)
         .cast<TXVodPreloadManager>()
+        .map((e) {
+          _finalizer.attach(e, e, detach: e);
+          return e;
+        })
         .toList() ?? <TXVodPreloadManager>[];
   }
   
@@ -106,6 +119,12 @@ class TXVodPreloadManager extends NSObject  {
   }
   
   //endregion
+
+  @override
+  Future<void> release__() async {
+    _finalizer.detach(this);
+    super.release__();
+  }
 
   @override
   String toString() {

@@ -1,3 +1,5 @@
+include: package:flutter_lints/flutter.yaml
+
 linter:
   rules:
     camel_case_types: false
@@ -5,3 +7,4 @@ linter:
     omit_local_variable_types: false
     prefer_single_quotes: false
     unnecessary_this: false
+    no_leading_underscores_for_local_identifiers: false

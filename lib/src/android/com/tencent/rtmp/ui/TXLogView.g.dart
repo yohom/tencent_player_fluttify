@@ -12,6 +12,10 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_tencent_rtmp_ui_TXLogView extends android_widget_LinearLayout  {
+  static final Finalizer<com_tencent_rtmp_ui_TXLogView> _finalizer = Finalizer((__this__) {
+    __this__.release__();
+  });
+
   //region constants
   static const String name__ = 'com.tencent.rtmp.ui.TXLogView';
 
@@ -27,7 +31,12 @@ class com_tencent_rtmp_ui_TXLogView extends android_widget_LinearLayout  {
       'ObjectFactory::createcom_tencent_rtmp_ui_TXLogView__android_content_Context',
       {"context": context}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXLogView>(__result__)!;
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXLogView>(__result__)!;
+  
+    _finalizer.attach(__object__, __object__, detach: __object__);
+  
+    return __object__;
   }
   
   static Future<List<com_tencent_rtmp_ui_TXLogView>> create_batch__android_content_Context(List<android_content_Context?> context) async {
@@ -40,6 +49,10 @@ class com_tencent_rtmp_ui_TXLogView extends android_widget_LinearLayout  {
         ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXLogView>(it))
         .where((element) => element !=null)
         .cast<com_tencent_rtmp_ui_TXLogView>()
+        .map((e) {
+          _finalizer.attach(e, e, detach: e);
+          return e;
+        })
         .toList() ?? <com_tencent_rtmp_ui_TXLogView>[];
   }
   
@@ -56,6 +69,12 @@ class com_tencent_rtmp_ui_TXLogView extends android_widget_LinearLayout  {
   //region methods
   
   //endregion
+
+  @override
+  Future<void> release__() async {
+    _finalizer.detach(this);
+    super.release__();
+  }
 
   @override
   String toString() {

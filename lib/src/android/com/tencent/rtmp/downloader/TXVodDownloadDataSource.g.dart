@@ -12,6 +12,10 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Object  {
+  static final Finalizer<com_tencent_rtmp_downloader_TXVodDownloadDataSource> _finalizer = Finalizer((__this__) {
+    __this__.release__();
+  });
+
   //region constants
   static const String name__ = 'com.tencent.rtmp.downloader.TXVodDownloadDataSource';
 
@@ -34,7 +38,12 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__int__String__int__String__String',
       {"appId": appId, "fileId": fileId, "quality": quality, "pSign": pSign, "userName": userName}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
+  
+    _finalizer.attach(__object__, __object__, detach: __object__);
+  
+    return __object__;
   }
   
   static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__com_tencent_rtmp_TXPlayerAuthBuilder__int(com_tencent_rtmp_TXPlayerAuthBuilder? authBuilder, int? quality) async {
@@ -42,7 +51,12 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__com_tencent_rtmp_TXPlayerAuthBuilder__int',
       {"authBuilder": authBuilder, "quality": quality}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
+  
+    _finalizer.attach(__object__, __object__, detach: __object__);
+  
+    return __object__;
   }
   
   static Future<com_tencent_rtmp_downloader_TXVodDownloadDataSource> create__com_tencent_rtmp_TXPlayerAuthBuilder__String(com_tencent_rtmp_TXPlayerAuthBuilder? authBuilder, String? templateName) async {
@@ -50,7 +64,12 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadDataSource__com_tencent_rtmp_TXPlayerAuthBuilder__String',
       {"authBuilder": authBuilder, "templateName": templateName}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(__result__)!;
+  
+    _finalizer.attach(__object__, __object__, detach: __object__);
+  
+    return __object__;
   }
   
   static Future<List<com_tencent_rtmp_downloader_TXVodDownloadDataSource>> create_batch__int__String__int__String__String(List<int?> appId, List<String?> fileId, List<int?> quality, List<String?> pSign, List<String?> userName) async {
@@ -63,6 +82,10 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
         ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(it))
         .where((element) => element !=null)
         .cast<com_tencent_rtmp_downloader_TXVodDownloadDataSource>()
+        .map((e) {
+          _finalizer.attach(e, e, detach: e);
+          return e;
+        })
         .toList() ?? <com_tencent_rtmp_downloader_TXVodDownloadDataSource>[];
   }
   
@@ -76,6 +99,10 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
         ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(it))
         .where((element) => element !=null)
         .cast<com_tencent_rtmp_downloader_TXVodDownloadDataSource>()
+        .map((e) {
+          _finalizer.attach(e, e, detach: e);
+          return e;
+        })
         .toList() ?? <com_tencent_rtmp_downloader_TXVodDownloadDataSource>[];
   }
   
@@ -89,6 +116,10 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
         ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadDataSource>(it))
         .where((element) => element !=null)
         .cast<com_tencent_rtmp_downloader_TXVodDownloadDataSource>()
+        .map((e) {
+          _finalizer.attach(e, e, detach: e);
+          return e;
+        })
         .toList() ?? <com_tencent_rtmp_downloader_TXVodDownloadDataSource>[];
   }
   
@@ -308,6 +339,12 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
   }
   
   //endregion
+
+  @override
+  Future<void> release__() async {
+    _finalizer.detach(this);
+    super.release__();
+  }
 
   @override
   String toString() {

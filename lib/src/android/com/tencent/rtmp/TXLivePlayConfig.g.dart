@@ -12,6 +12,10 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
+  static final Finalizer<com_tencent_rtmp_TXLivePlayConfig> _finalizer = Finalizer((__this__) {
+    __this__.release__();
+  });
+
   //region constants
   static const String name__ = 'com.tencent.rtmp.TXLivePlayConfig';
 
@@ -27,7 +31,12 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
       'ObjectFactory::createcom_tencent_rtmp_TXLivePlayConfig__',
     
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayConfig>(__result__)!;
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayConfig>(__result__)!;
+  
+    _finalizer.attach(__object__, __object__, detach: __object__);
+  
+    return __object__;
   }
   
   static Future<List<com_tencent_rtmp_TXLivePlayConfig>> create_batch__(int length) async {
@@ -40,6 +49,10 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
         ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayConfig>(it))
         .where((element) => element !=null)
         .cast<com_tencent_rtmp_TXLivePlayConfig>()
+        .map((e) {
+          _finalizer.attach(e, e, detach: e);
+          return e;
+        })
         .toList() ?? <com_tencent_rtmp_TXLivePlayConfig>[];
   }
   
@@ -327,6 +340,12 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   //endregion
+
+  @override
+  Future<void> release__() async {
+    _finalizer.detach(this);
+    super.release__();
+  }
 
   @override
   String toString() {

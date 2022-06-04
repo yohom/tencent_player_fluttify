@@ -12,6 +12,10 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
+  static final Finalizer<com_tencent_rtmp_TXImageSprite> _finalizer = Finalizer((__this__) {
+    __this__.release__();
+  });
+
   //region constants
   static const String name__ = 'com.tencent.rtmp.TXImageSprite';
 
@@ -27,7 +31,12 @@ class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
       'ObjectFactory::createcom_tencent_rtmp_TXImageSprite__android_content_Context',
       {"context": context}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXImageSprite>(__result__)!;
+  
+    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXImageSprite>(__result__)!;
+  
+    _finalizer.attach(__object__, __object__, detach: __object__);
+  
+    return __object__;
   }
   
   static Future<List<com_tencent_rtmp_TXImageSprite>> create_batch__android_content_Context(List<android_content_Context?> context) async {
@@ -40,6 +49,10 @@ class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
         ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXImageSprite>(it))
         .where((element) => element !=null)
         .cast<com_tencent_rtmp_TXImageSprite>()
+        .map((e) {
+          _finalizer.attach(e, e, detach: e);
+          return e;
+        })
         .toList() ?? <com_tencent_rtmp_TXImageSprite>[];
   }
   
@@ -106,6 +119,12 @@ class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
   }
   
   //endregion
+
+  @override
+  Future<void> release__() async {
+    _finalizer.detach(this);
+    super.release__();
+  }
 
   @override
   String toString() {
