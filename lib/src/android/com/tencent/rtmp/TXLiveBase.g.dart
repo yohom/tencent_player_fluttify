@@ -12,10 +12,6 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
-  static final Finalizer<com_tencent_rtmp_TXLiveBase> _finalizer = Finalizer((__this__) {
-    __this__.release__();
-  });
-
   //region constants
   static const String name__ = 'com.tencent.rtmp.TXLiveBase';
 
@@ -362,12 +358,6 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   //endregion
-
-  @override
-  Future<void> release__() async {
-    _finalizer.detach(this);
-    super.release__();
-  }
 
   @override
   String toString() {

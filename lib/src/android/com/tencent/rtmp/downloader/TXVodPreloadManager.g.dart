@@ -12,10 +12,6 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_tencent_rtmp_downloader_TXVodPreloadManager extends java_lang_Object  {
-  static final Finalizer<com_tencent_rtmp_downloader_TXVodPreloadManager> _finalizer = Finalizer((__this__) {
-    __this__.release__();
-  });
-
   //region constants
   static const String name__ = 'com.tencent.rtmp.downloader.TXVodPreloadManager';
 
@@ -90,12 +86,6 @@ class com_tencent_rtmp_downloader_TXVodPreloadManager extends java_lang_Object  
   }
   
   //endregion
-
-  @override
-  Future<void> release__() async {
-    _finalizer.detach(this);
-    super.release__();
-  }
 
   @override
   String toString() {

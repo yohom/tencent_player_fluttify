@@ -12,10 +12,6 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class TXPlayerGlobalSetting extends NSObject  {
-  static final Finalizer<TXPlayerGlobalSetting> _finalizer = Finalizer((__this__) {
-    __this__.release__();
-  });
-
   //region constants
   static const String name__ = 'TXPlayerGlobalSetting';
 
@@ -31,12 +27,7 @@ class TXPlayerGlobalSetting extends NSObject  {
       'ObjectFactory::createTXPlayerGlobalSetting',
       {'init': init}
     );
-  
-    final __object__ = TencentPlayerFluttifyIOSAs<TXPlayerGlobalSetting>(__result__)!;
-  
-    _finalizer.attach(__object__, __object__, detach: __object__);
-  
-    return __object__;
+    return TencentPlayerFluttifyIOSAs<TXPlayerGlobalSetting>(__result__)!;
   }
   
   static Future<List<TXPlayerGlobalSetting>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -49,10 +40,6 @@ class TXPlayerGlobalSetting extends NSObject  {
         ?.map((it) => TencentPlayerFluttifyIOSAs<TXPlayerGlobalSetting>(it))
         .where((element) => element !=null)
         .cast<TXPlayerGlobalSetting>()
-        .map((e) {
-          _finalizer.attach(e, e, detach: e);
-          return e;
-        })
         .toList() ?? <TXPlayerGlobalSetting>[];
   }
   
@@ -136,12 +123,6 @@ class TXPlayerGlobalSetting extends NSObject  {
   }
   
   //endregion
-
-  @override
-  Future<void> release__() async {
-    _finalizer.detach(this);
-    super.release__();
-  }
 
   @override
   String toString() {

@@ -12,10 +12,6 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_tencent_rtmp_downloader_TXVodDownloadMediaInfo extends java_lang_Object  {
-  static final Finalizer<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo> _finalizer = Finalizer((__this__) {
-    __this__.release__();
-  });
-
   //region constants
   static const String name__ = 'com.tencent.rtmp.downloader.TXVodDownloadMediaInfo';
 
@@ -35,12 +31,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadMediaInfo extends java_lang_Objec
       'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadMediaInfo__',
     
     );
-  
-    final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(__result__)!;
-  
-    _finalizer.attach(__object__, __object__, detach: __object__);
-  
-    return __object__;
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(__result__)!;
   }
   
   static Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>> create_batch__(int length) async {
@@ -53,10 +44,6 @@ class com_tencent_rtmp_downloader_TXVodDownloadMediaInfo extends java_lang_Objec
         ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>(it))
         .where((element) => element !=null)
         .cast<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>()
-        .map((e) {
-          _finalizer.attach(e, e, detach: e);
-          return e;
-        })
         .toList() ?? <com_tencent_rtmp_downloader_TXVodDownloadMediaInfo>[];
   }
   
@@ -276,12 +263,6 @@ class com_tencent_rtmp_downloader_TXVodDownloadMediaInfo extends java_lang_Objec
   }
   
   //endregion
-
-  @override
-  Future<void> release__() async {
-    _finalizer.detach(this);
-    super.release__();
-  }
 
   @override
   String toString() {

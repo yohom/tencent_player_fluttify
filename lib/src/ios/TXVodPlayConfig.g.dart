@@ -12,10 +12,6 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class TXVodPlayConfig extends NSObject  {
-  static final Finalizer<TXVodPlayConfig> _finalizer = Finalizer((__this__) {
-    __this__.release__();
-  });
-
   //region constants
   static const String name__ = 'TXVodPlayConfig';
 
@@ -31,12 +27,7 @@ class TXVodPlayConfig extends NSObject  {
       'ObjectFactory::createTXVodPlayConfig',
       {'init': init}
     );
-  
-    final __object__ = TencentPlayerFluttifyIOSAs<TXVodPlayConfig>(__result__)!;
-  
-    _finalizer.attach(__object__, __object__, detach: __object__);
-  
-    return __object__;
+    return TencentPlayerFluttifyIOSAs<TXVodPlayConfig>(__result__)!;
   }
   
   static Future<List<TXVodPlayConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -49,10 +40,6 @@ class TXVodPlayConfig extends NSObject  {
         ?.map((it) => TencentPlayerFluttifyIOSAs<TXVodPlayConfig>(it))
         .where((element) => element !=null)
         .cast<TXVodPlayConfig>()
-        .map((e) {
-          _finalizer.attach(e, e, detach: e);
-          return e;
-        })
         .toList() ?? <TXVodPlayConfig>[];
   }
   
@@ -256,12 +243,6 @@ class TXVodPlayConfig extends NSObject  {
   //region methods
   
   //endregion
-
-  @override
-  Future<void> release__() async {
-    _finalizer.detach(this);
-    super.release__();
-  }
 
   @override
   String toString() {

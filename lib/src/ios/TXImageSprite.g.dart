@@ -12,10 +12,6 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class TXImageSprite extends NSObject  {
-  static final Finalizer<TXImageSprite> _finalizer = Finalizer((__this__) {
-    __this__.release__();
-  });
-
   //region constants
   static const String name__ = 'TXImageSprite';
 
@@ -31,12 +27,7 @@ class TXImageSprite extends NSObject  {
       'ObjectFactory::createTXImageSprite',
       {'init': init}
     );
-  
-    final __object__ = TencentPlayerFluttifyIOSAs<TXImageSprite>(__result__)!;
-  
-    _finalizer.attach(__object__, __object__, detach: __object__);
-  
-    return __object__;
+    return TencentPlayerFluttifyIOSAs<TXImageSprite>(__result__)!;
   }
   
   static Future<List<TXImageSprite>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -49,10 +40,6 @@ class TXImageSprite extends NSObject  {
         ?.map((it) => TencentPlayerFluttifyIOSAs<TXImageSprite>(it))
         .where((element) => element !=null)
         .cast<TXImageSprite>()
-        .map((e) {
-          _finalizer.attach(e, e, detach: e);
-          return e;
-        })
         .toList() ?? <TXImageSprite>[];
   }
   
@@ -69,12 +56,6 @@ class TXImageSprite extends NSObject  {
   //region methods
   
   //endregion
-
-  @override
-  Future<void> release__() async {
-    _finalizer.detach(this);
-    super.release__();
-  }
 
   @override
   String toString() {

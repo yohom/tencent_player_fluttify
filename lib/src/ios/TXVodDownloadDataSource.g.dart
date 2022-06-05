@@ -12,10 +12,6 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class TXVodDownloadDataSource extends NSObject  {
-  static final Finalizer<TXVodDownloadDataSource> _finalizer = Finalizer((__this__) {
-    __this__.release__();
-  });
-
   //region constants
   static const String name__ = 'TXVodDownloadDataSource';
 
@@ -31,12 +27,7 @@ class TXVodDownloadDataSource extends NSObject  {
       'ObjectFactory::createTXVodDownloadDataSource',
       {'init': init}
     );
-  
-    final __object__ = TencentPlayerFluttifyIOSAs<TXVodDownloadDataSource>(__result__)!;
-  
-    _finalizer.attach(__object__, __object__, detach: __object__);
-  
-    return __object__;
+    return TencentPlayerFluttifyIOSAs<TXVodDownloadDataSource>(__result__)!;
   }
   
   static Future<List<TXVodDownloadDataSource>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -49,10 +40,6 @@ class TXVodDownloadDataSource extends NSObject  {
         ?.map((it) => TencentPlayerFluttifyIOSAs<TXVodDownloadDataSource>(it))
         .where((element) => element !=null)
         .cast<TXVodDownloadDataSource>()
-        .map((e) {
-          _finalizer.attach(e, e, detach: e);
-          return e;
-        })
         .toList() ?? <TXVodDownloadDataSource>[];
   }
   
@@ -139,12 +126,6 @@ class TXVodDownloadDataSource extends NSObject  {
   //region methods
   
   //endregion
-
-  @override
-  Future<void> release__() async {
-    _finalizer.detach(this);
-    super.release__();
-  }
 
   @override
   String toString() {

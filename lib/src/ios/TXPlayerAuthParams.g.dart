@@ -12,10 +12,6 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class TXPlayerAuthParams extends NSObject  {
-  static final Finalizer<TXPlayerAuthParams> _finalizer = Finalizer((__this__) {
-    __this__.release__();
-  });
-
   //region constants
   static const String name__ = 'TXPlayerAuthParams';
 
@@ -31,12 +27,7 @@ class TXPlayerAuthParams extends NSObject  {
       'ObjectFactory::createTXPlayerAuthParams',
       {'init': init}
     );
-  
-    final __object__ = TencentPlayerFluttifyIOSAs<TXPlayerAuthParams>(__result__)!;
-  
-    _finalizer.attach(__object__, __object__, detach: __object__);
-  
-    return __object__;
+    return TencentPlayerFluttifyIOSAs<TXPlayerAuthParams>(__result__)!;
   }
   
   static Future<List<TXPlayerAuthParams>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -49,10 +40,6 @@ class TXPlayerAuthParams extends NSObject  {
         ?.map((it) => TencentPlayerFluttifyIOSAs<TXPlayerAuthParams>(it))
         .where((element) => element !=null)
         .cast<TXPlayerAuthParams>()
-        .map((e) {
-          _finalizer.attach(e, e, detach: e);
-          return e;
-        })
         .toList() ?? <TXPlayerAuthParams>[];
   }
   
@@ -130,12 +117,6 @@ class TXPlayerAuthParams extends NSObject  {
   //region methods
   
   //endregion
-
-  @override
-  Future<void> release__() async {
-    _finalizer.detach(this);
-    super.release__();
-  }
 
   @override
   String toString() {
