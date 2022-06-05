@@ -55,9 +55,7 @@ class _CloudVideoState extends State<CloudVideo> {
         },
       );
     } else {
-      return Center(
-        child: Text('未实现的平台'),
-      );
+      return const Center(child: Text('未实现的平台'));
     }
   }
 }

@@ -37,6 +37,7 @@ class VodPlayer {
         instance._androidPlayer = await com_tencent_rtmp_TXVodPlayer
             .create__android_content_Context(context);
 
+        pool.add(context);
         return instance;
       },
       ios: (pool) async {
@@ -58,8 +59,6 @@ class VodPlayer {
                 playerView.playerView);
       },
       ios: (pool) async {
-        // 其首个参数 frame 在 1.5.2 版本后已经被废弃
-        final rect = await CGRect.create(0, 0, 0, 0);
         await _iosPlayer!
             .setupVideoWidget_insertIndex(playerView.playerView, 0);
       },
