@@ -348,7 +348,7 @@ class VodPlayer {
           }
 
           // 释放参数
-          await data?.release__();
+          pool.add(data);
         };
         await _androidPlayer!.setVodListener(listener);
       },
