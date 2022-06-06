@@ -12,7 +12,6 @@ import 'package:tencent_player_fluttify/src/ios/ios.export.g.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
 Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
@@ -71,57 +70,6 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXPlayerGlobalSetting) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerGlobalSetting', {'__this__': __this__});
     return result;
-  } else if (T == CGRect) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfCGRect', {'__this__': __this__});
-    return result;
-  } else if (T == CGPoint) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfCGPoint', {'__this__': __this__});
-    return result;
-  } else if (T == CGSize) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfCGSize', {'__this__': __this__});
-    return result;
-  } else if (T == UIEdgeInsets) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfUIEdgeInsets', {'__this__': __this__});
-    return result;
-  } else if (T == NSError) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSError', {'__this__': __this__});
-    return result;
-  } else if (T == NSCoding) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSCoding', {'__this__': __this__});
-    return result;
-  } else if (T == NSCopying) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSCopying', {'__this__': __this__});
-    return result;
-  } else if (T == NSMutableCopying) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSMutableCopying', {'__this__': __this__});
-    return result;
-  } else if (T == UIView) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': __this__});
-    return result;
-  } else if (T == UIViewController) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfUIViewController', {'__this__': __this__});
-    return result;
-  } else if (T == UIControl) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfUIControl', {'__this__': __this__});
-    return result;
-  } else if (T == UIImage) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfUIImage', {'__this__': __this__});
-    return result;
-  } else if (T == UIImageView) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfUIImageView', {'__this__': __this__});
-    return result;
-  } else if (T == UIColor) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfUIColor', {'__this__': __this__});
-    return result;
-  } else if (T == NSData) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSData', {'__this__': __this__});
-    return result;
-  } else if (T == NSDate) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSDate', {'__this__': __this__});
-    return result;
-  } else if (T == NSOperation) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': __this__});
-    return result;
   }
   else {
     return false;
@@ -173,43 +121,14 @@ T? TencentPlayerFluttifyIOSAs<T>(dynamic __this__) {
     return (TXRecordResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerGlobalSetting) {
     return (TXPlayerGlobalSetting()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == CGRect) {
-    return (CGRect()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == CGPoint) {
-    return (CGPoint()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == CGSize) {
-    return (CGSize()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == UIEdgeInsets) {
-    return (UIEdgeInsets()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == NSError) {
-    return (NSError()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == NSCoding) {
-    return (NSCoding.subInstance()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == NSCopying) {
-    return (NSCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == NSMutableCopying) {
-    return (NSMutableCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == UIView) {
-    return (UIView()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == UIViewController) {
-    return (UIViewController()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == UIControl) {
-    return (UIControl()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == UIImage) {
-    return (UIImage()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == UIImageView) {
-    return (UIImageView()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == UIColor) {
-    return (UIColor()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == NSData) {
-    return (NSData()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == NSDate) {
-    return (NSDate()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == NSOperation) {
-    return (NSOperation()..refId = (__this__ as Ref).refId) as T;
   }
-  
-  else {
-    return __this__;
+
+  final FoundationFluttifyObject = FoundationFluttifyIOSAs<T>(__this__);
+  if (FoundationFluttifyObject != null) {
+    return FoundationFluttifyObject;
   }
+
+  // 匹配不到目标类型, 直接返回原对象
+  debugPrint('匹配不到目标类型, 直接返回原对象');
+  return __this__;
 }
