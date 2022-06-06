@@ -18,7 +18,7 @@ mixin TXVodDownloadDelegate on NSObject {
 
   static TXVodDownloadDelegate subInstance() => _TXVodDownloadDelegate_SUB();
 
-  static Future<TXVodDownloadDelegate> anonymous__({void Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadStart, void Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadProgress, void Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadStop, void Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadFinish, void Function(TXVodDownloadMediaInfo? mediaInfo, TXDownloadError? code, String? msg)? onDownloadError, int Function(TXVodDownloadMediaInfo? mediaInfo, String? url, NSData? data)? hlsKeyVerify}) async {
+  static Future<TXVodDownloadDelegate> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDelegate::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyIOSAs<TXVodDownloadDelegate>(__result__)!;
@@ -32,56 +32,56 @@ mixin TXVodDownloadDelegate on NSObject {
               case 'onDownloadStart':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadStart?.call([\'mediaInfo\':${args['mediaInfo']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onDownloadStart?.call([\'mediaInfo\':${args['mediaInfo']}])');
                 }
             
                 // handle the native call
-                onDownloadStart?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
+                __object__.onDownloadStart?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
                 break;
               case 'onDownloadProgress':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadProgress?.call([\'mediaInfo\':${args['mediaInfo']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onDownloadProgress?.call([\'mediaInfo\':${args['mediaInfo']}])');
                 }
             
                 // handle the native call
-                onDownloadProgress?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
+                __object__.onDownloadProgress?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
                 break;
               case 'onDownloadStop':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadStop?.call([\'mediaInfo\':${args['mediaInfo']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onDownloadStop?.call([\'mediaInfo\':${args['mediaInfo']}])');
                 }
             
                 // handle the native call
-                onDownloadStop?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
+                __object__.onDownloadStop?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
                 break;
               case 'onDownloadFinish':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadFinish?.call([\'mediaInfo\':${args['mediaInfo']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onDownloadFinish?.call([\'mediaInfo\':${args['mediaInfo']}])');
                 }
             
                 // handle the native call
-                onDownloadFinish?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
+                __object__.onDownloadFinish?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']));
                 break;
-              case 'onDownloadError:errorCode:errorMsg':
+              case 'onDownloadError_errorCode_errorMsg':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDownloadError?.call([\'mediaInfo\':${args['mediaInfo']}, \'code\':${args['code']}, \'msg\':${args['msg']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onDownloadError_errorCode_errorMsg?.call([\'mediaInfo\':${args['mediaInfo']}, \'code\':${args['code']}, \'msg\':${args['msg']}])');
                 }
             
                 // handle the native call
-                onDownloadError?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), (args['code'] as int).toTXDownloadError(), args['msg']);
+                __object__.onDownloadError_errorCode_errorMsg?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), (args['code'] as int).toTXDownloadError(), args['msg']);
                 break;
-              case 'hlsKeyVerify:url:data':
+              case 'hlsKeyVerify_url_data':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: hlsKeyVerify?.call([\'mediaInfo\':${args['mediaInfo']}, \'url\':${args['url']}, \'data\':${args['data']}])');
+                  debugPrint('fluttify-dart-callback: __object__.hlsKeyVerify_url_data?.call([\'mediaInfo\':${args['mediaInfo']}, \'url\':${args['url']}, \'data\':${args['data']}])');
                 }
             
                 // handle the native call
-                hlsKeyVerify?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), args['url'], TencentPlayerFluttifyIOSAs<NSData>(args['data']));
+                __object__.hlsKeyVerify_url_data?.call(TencentPlayerFluttifyIOSAs<TXVodDownloadMediaInfo>(args['mediaInfo']), args['url'], TencentPlayerFluttifyIOSAs<NSData>(args['data']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -104,17 +104,17 @@ mixin TXVodDownloadDelegate on NSObject {
 
   
 
-  Future<void> onDownloadStart(TXVodDownloadMediaInfo? mediaInfo) async {}
+  Future<void> Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadStart;
   
-  Future<void> onDownloadProgress(TXVodDownloadMediaInfo? mediaInfo) async {}
+  Future<void> Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadProgress;
   
-  Future<void> onDownloadStop(TXVodDownloadMediaInfo? mediaInfo) async {}
+  Future<void> Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadStop;
   
-  Future<void> onDownloadFinish(TXVodDownloadMediaInfo? mediaInfo) async {}
+  Future<void> Function(TXVodDownloadMediaInfo? mediaInfo)? onDownloadFinish;
   
-  Future<void> onDownloadError_errorCode_errorMsg(TXVodDownloadMediaInfo? mediaInfo, TXDownloadError? code, String? msg) async {}
+  Future<void> Function(TXVodDownloadMediaInfo? mediaInfo, TXDownloadError? code, String? msg)? onDownloadError_errorCode_errorMsg;
   
-  Future<int?> hlsKeyVerify_url_data(TXVodDownloadMediaInfo? mediaInfo, String? url, NSData? data) async {}
+  Future<int?> Function(TXVodDownloadMediaInfo? mediaInfo, String? url, NSData? data)? hlsKeyVerify_url_data;
   
 }
 

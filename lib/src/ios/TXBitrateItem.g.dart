@@ -69,19 +69,19 @@ class TXBitrateItem extends NSObject  {
   //endregion
 
   //region setters
-  Future<void> set_index(int index) async {
+  Future<void> set_index(int? index) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXBitrateItem::set_index', <String, dynamic>{'__this__': this, "index": index});
   }
   
-  Future<void> set_width(int width) async {
+  Future<void> set_width(int? width) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXBitrateItem::set_width', <String, dynamic>{'__this__': this, "width": width});
   }
   
-  Future<void> set_height(int height) async {
+  Future<void> set_height(int? height) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXBitrateItem::set_height', <String, dynamic>{'__this__': this, "height": height});
   }
   
-  Future<void> set_bitrate(int bitrate) async {
+  Future<void> set_bitrate(int? bitrate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXBitrateItem::set_bitrate', <String, dynamic>{'__this__': this, "bitrate": bitrate});
   }
   
@@ -127,25 +127,25 @@ extension TXBitrateItem_Batch on List<TXBitrateItem?> {
   //endregion
 
   //region setters
-  Future<void> set_index_batch(List<int> index) async {
+  Future<void> set_index_batch(List<int?> index) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXBitrateItem::set_index_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "index": index[__i__]}]);
   
   
   }
   
-  Future<void> set_width_batch(List<int> width) async {
+  Future<void> set_width_batch(List<int?> width) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXBitrateItem::set_width_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "width": width[__i__]}]);
   
   
   }
   
-  Future<void> set_height_batch(List<int> height) async {
+  Future<void> set_height_batch(List<int?> height) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXBitrateItem::set_height_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "height": height[__i__]}]);
   
   
   }
   
-  Future<void> set_bitrate_batch(List<int> bitrate) async {
+  Future<void> set_bitrate_batch(List<int?> bitrate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXBitrateItem::set_bitrate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "bitrate": bitrate[__i__]}]);
   
   

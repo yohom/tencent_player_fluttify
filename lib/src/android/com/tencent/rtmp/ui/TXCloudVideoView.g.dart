@@ -22,7 +22,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_ui_TXCloudVideoView> create__android_content_Context(android_content_Context context) async {
+  static Future<com_tencent_rtmp_ui_TXCloudVideoView> create__android_content_Context(android_content_Context? context) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_ui_TXCloudVideoView__android_content_Context',
       {"context": context}
@@ -30,7 +30,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXCloudVideoView>(__result__)!;
   }
   
-  static Future<com_tencent_rtmp_ui_TXCloudVideoView> create__android_view_SurfaceView(android_view_SurfaceView view) async {
+  static Future<com_tencent_rtmp_ui_TXCloudVideoView> create__android_view_SurfaceView(android_view_SurfaceView? view) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_ui_TXCloudVideoView__android_view_SurfaceView',
       {"view": view}
@@ -38,7 +38,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXCloudVideoView>(__result__)!;
   }
   
-  static Future<List<com_tencent_rtmp_ui_TXCloudVideoView>> create_batch__android_content_Context(List<android_content_Context> context) async {
+  static Future<List<com_tencent_rtmp_ui_TXCloudVideoView>> create_batch__android_content_Context(List<android_content_Context?> context) async {
     assert(true);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_ui_TXCloudVideoView__android_content_Context',
@@ -51,7 +51,7 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
         .toList() ?? <com_tencent_rtmp_ui_TXCloudVideoView>[];
   }
   
-  static Future<List<com_tencent_rtmp_ui_TXCloudVideoView>> create_batch__android_view_SurfaceView(List<android_view_SurfaceView> view) async {
+  static Future<List<com_tencent_rtmp_ui_TXCloudVideoView>> create_batch__android_view_SurfaceView(List<android_view_SurfaceView?> view) async {
     assert(true);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_ui_TXCloudVideoView__android_view_SurfaceView',
@@ -76,14 +76,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
 
   //region methods
   
-  Future<void> onResume({bool viewChannel = true}) async {
+  Future<void> onResume() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::onResume([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onResume', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onResume', {"__this__": this});
   
   
     // handle native call
@@ -93,14 +93,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> onPause({bool viewChannel = true}) async {
+  Future<void> onPause() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::onPause([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onPause', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onPause', {"__this__": this});
   
   
     // handle native call
@@ -110,14 +110,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> setOpenGLContext(Object glContext, {bool viewChannel = true}) async {
+  Future<void> setOpenGLContext(Object? glContext) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::setOpenGLContext([\'glContext\':$glContext])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setOpenGLContext', {"glContext": glContext, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setOpenGLContext', {"glContext": glContext, "__this__": this});
   
   
     // handle native call
@@ -127,14 +127,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<Object?> getOpenGLContext({bool viewChannel = true}) async {
+  Future<Object?> getOpenGLContext() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::getOpenGLContext([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getOpenGLContext', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getOpenGLContext', {"__this__": this});
   
   
     // handle native call
@@ -144,14 +144,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> removeVideoView({bool viewChannel = true}) async {
+  Future<void> removeVideoView() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::removeVideoView([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeVideoView', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeVideoView', {"__this__": this});
   
   
     // handle native call
@@ -161,14 +161,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> removeFocusIndicatorView({bool viewChannel = true}) async {
+  Future<void> removeFocusIndicatorView() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::removeFocusIndicatorView([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeFocusIndicatorView', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeFocusIndicatorView', {"__this__": this});
   
   
     // handle native call
@@ -178,14 +178,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> onDestroy({bool viewChannel = true}) async {
+  Future<void> onDestroy() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::onDestroy([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onDestroy', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onDestroy', {"__this__": this});
   
   
     // handle native call
@@ -195,14 +195,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<android_view_SurfaceView?> getSurfaceView({bool viewChannel = true}) async {
+  Future<android_view_SurfaceView?> getSurfaceView() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::getSurfaceView([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getSurfaceView', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getSurfaceView', {"__this__": this});
   
   
     // handle native call
@@ -212,14 +212,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> setRenderMode(int mode, {bool viewChannel = true}) async {
+  Future<void> setRenderMode(int? mode) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::setRenderMode([\'mode\':$mode])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderMode', {"mode": mode, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderMode', {"mode": mode, "__this__": this});
   
   
     // handle native call
@@ -229,14 +229,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> setRenderRotation(int rotation, {bool viewChannel = true}) async {
+  Future<void> setRenderRotation(int? rotation) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::setRenderRotation([\'rotation\':$rotation])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderRotation', {"rotation": rotation, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderRotation', {"rotation": rotation, "__this__": this});
   
   
     // handle native call
@@ -246,14 +246,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> clearLastFrame(bool clear, {bool viewChannel = true}) async {
+  Future<void> clearLastFrame(bool? clear) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::clearLastFrame([\'clear\':$clear])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLastFrame', {"clear": clear, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLastFrame', {"clear": clear, "__this__": this});
   
   
     // handle native call
@@ -263,14 +263,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> onTouchFocus(int x, int y, {bool viewChannel = true}) async {
+  Future<void> onTouchFocus(int? x, int? y) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::onTouchFocus([\'x\':$x, \'y\':$y])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouchFocus', {"x": x, "y": y, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouchFocus', {"x": x, "y": y, "__this__": this});
   
   
     // handle native call
@@ -280,14 +280,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> setMirror(bool mirror, {bool viewChannel = true}) async {
+  Future<void> setMirror(bool? mirror) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::setMirror([\'mirror\':$mirror])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setMirror', {"mirror": mirror, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setMirror', {"mirror": mirror, "__this__": this});
   
   
     // handle native call
@@ -297,14 +297,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> disableLog(bool enable, {bool viewChannel = true}) async {
+  Future<void> disableLog(bool? enable) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::disableLog([\'enable\':$enable])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::disableLog', {"enable": enable, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::disableLog', {"enable": enable, "__this__": this});
   
   
     // handle native call
@@ -314,14 +314,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> showLog(bool enable, {bool viewChannel = true}) async {
+  Future<void> showLog(bool? enable) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::showLog([\'enable\':$enable])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showLog', {"enable": enable, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showLog', {"enable": enable, "__this__": this});
   
   
     // handle native call
@@ -331,14 +331,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> clearLog({bool viewChannel = true}) async {
+  Future<void> clearLog() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::clearLog([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLog', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLog', {"__this__": this});
   
   
     // handle native call
@@ -348,14 +348,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> setLogText(android_os_Bundle status, android_os_Bundle event, int eventId, {bool viewChannel = true}) async {
+  Future<void> setLogText(android_os_Bundle? status, android_os_Bundle? event, int? eventId) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::setLogText([\'eventId\':$eventId])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogText', {"status": status, "event": event, "eventId": eventId, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogText', {"status": status, "event": event, "eventId": eventId, "__this__": this});
   
   
     // handle native call
@@ -365,14 +365,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> updateVideoViewSize(int captureWidth, int captureHeight, {bool viewChannel = true}) async {
+  Future<void> updateVideoViewSize(int? captureWidth, int? captureHeight) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::updateVideoViewSize([\'captureWidth\':$captureWidth, \'captureHeight\':$captureHeight])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::updateVideoViewSize', {"captureWidth": captureWidth, "captureHeight": captureHeight, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::updateVideoViewSize', {"captureWidth": captureWidth, "captureHeight": captureHeight, "__this__": this});
   
   
     // handle native call
@@ -382,14 +382,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> appendEventInfo(String message, {bool viewChannel = true}) async {
+  Future<void> appendEventInfo(String? message) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::appendEventInfo([\'message\':$message])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::appendEventInfo', {"message": message, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::appendEventInfo', {"message": message, "__this__": this});
   
   
     // handle native call
@@ -399,14 +399,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> showVideoDebugLog(int showType, {bool viewChannel = true}) async {
+  Future<void> showVideoDebugLog(int? showType) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::showVideoDebugLog([\'showType\':$showType])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showVideoDebugLog', {"showType": showType, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showVideoDebugLog', {"showType": showType, "__this__": this});
   
   
     // handle native call
@@ -416,14 +416,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> setLogMargin(double leftMarginInDp, double rightMarginInDp, double topMarginInDp, double bottomMarginInDp, {bool viewChannel = true}) async {
+  Future<void> setLogMargin(double? leftMarginInDp, double? rightMarginInDp, double? topMarginInDp, double? bottomMarginInDp) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::setLogMargin([\'leftMarginInDp\':$leftMarginInDp, \'rightMarginInDp\':$rightMarginInDp, \'topMarginInDp\':$topMarginInDp, \'bottomMarginInDp\':$bottomMarginInDp])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMargin', {"leftMarginInDp": leftMarginInDp, "rightMarginInDp": rightMarginInDp, "topMarginInDp": topMarginInDp, "bottomMarginInDp": bottomMarginInDp, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMargin', {"leftMarginInDp": leftMarginInDp, "rightMarginInDp": rightMarginInDp, "topMarginInDp": topMarginInDp, "bottomMarginInDp": bottomMarginInDp, "__this__": this});
   
   
     // handle native call
@@ -433,14 +433,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> setLogMarginRatio(double leftMarginInDp, double rightMarginInDp, double topMarginInDp, double bottomMarginInDp, {bool viewChannel = true}) async {
+  Future<void> setLogMarginRatio(double? leftMarginInDp, double? rightMarginInDp, double? topMarginInDp, double? bottomMarginInDp) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::setLogMarginRatio([\'leftMarginInDp\':$leftMarginInDp, \'rightMarginInDp\':$rightMarginInDp, \'topMarginInDp\':$topMarginInDp, \'bottomMarginInDp\':$bottomMarginInDp])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMarginRatio', {"leftMarginInDp": leftMarginInDp, "rightMarginInDp": rightMarginInDp, "topMarginInDp": topMarginInDp, "bottomMarginInDp": bottomMarginInDp, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMarginRatio', {"leftMarginInDp": leftMarginInDp, "rightMarginInDp": rightMarginInDp, "topMarginInDp": topMarginInDp, "bottomMarginInDp": bottomMarginInDp, "__this__": this});
   
   
     // handle native call
@@ -450,14 +450,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<String?> getUserId({bool viewChannel = true}) async {
+  Future<String?> getUserId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::getUserId([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getUserId', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getUserId', {"__this__": this});
   
   
     // handle native call
@@ -467,14 +467,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> setUserId(String userId, {bool viewChannel = true}) async {
+  Future<void> setUserId(String? userId) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::setUserId([\'userId\':$userId])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setUserId', {"userId": userId, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setUserId', {"userId": userId, "__this__": this});
   
   
     // handle native call
@@ -484,14 +484,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  static Future<int?> px2dip(android_content_Context context, double pxValue, {bool viewChannel = true}) async {
+  static Future<int?> px2dip(android_content_Context? context, double? pxValue) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView::px2dip([\'pxValue\':$pxValue])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::px2dip', {"context": context, "pxValue": pxValue});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::px2dip', {"context": context, "pxValue": pxValue});
   
   
     // handle native call
@@ -501,14 +501,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<void> stop(bool isNeedClearLastImg, {bool viewChannel = true}) async {
+  Future<void> stop(bool? isNeedClearLastImg) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::stop([\'isNeedClearLastImg\':$isNeedClearLastImg])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::stop', {"isNeedClearLastImg": isNeedClearLastImg, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::stop', {"isNeedClearLastImg": isNeedClearLastImg, "__this__": this});
   
   
     // handle native call
@@ -518,14 +518,14 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout wi
   }
   
   
-  Future<bool?> onTouch(android_view_View v, android_view_MotionEvent event, {bool viewChannel = true}) async {
+  Future<bool?> onTouch(android_view_View? v, android_view_MotionEvent? event) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::onTouch([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouch', {"v": v, "event": event, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouch', {"v": v, "event": event, "__this__": this});
   
   
     // handle native call
@@ -558,297 +558,297 @@ extension com_tencent_rtmp_ui_TXCloudVideoView_Batch on List<com_tencent_rtmp_ui
 
   //region methods
   
-  Future<List<void>> onResume_batch({bool viewChannel = true}) async {
+  Future<List<void>> onResume_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onResume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onResume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> onPause_batch({bool viewChannel = true}) async {
+  Future<List<void>> onPause_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> setOpenGLContext_batch(List<Object> glContext, {bool viewChannel = true}) async {
+  Future<List<void>> setOpenGLContext_batch(List<Object?> glContext) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setOpenGLContext_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"glContext": glContext[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setOpenGLContext_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"glContext": glContext[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<Object?>> getOpenGLContext_batch({bool viewChannel = true}) async {
+  Future<List<Object?>> getOpenGLContext_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getOpenGLContext_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getOpenGLContext_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<Object?>().toList();
   }
   
   
-  Future<List<void>> removeVideoView_batch({bool viewChannel = true}) async {
+  Future<List<void>> removeVideoView_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeVideoView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeVideoView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> removeFocusIndicatorView_batch({bool viewChannel = true}) async {
+  Future<List<void>> removeFocusIndicatorView_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeFocusIndicatorView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::removeFocusIndicatorView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> onDestroy_batch({bool viewChannel = true}) async {
+  Future<List<void>> onDestroy_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onDestroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onDestroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<android_view_SurfaceView?>> getSurfaceView_batch({bool viewChannel = true}) async {
+  Future<List<android_view_SurfaceView?>> getSurfaceView_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getSurfaceView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getSurfaceView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => TencentPlayerFluttifyAndroidAs<android_view_SurfaceView>(__result__)).cast<android_view_SurfaceView?>().toList();
   }
   
   
-  Future<List<void>> setRenderMode_batch(List<int> mode, {bool viewChannel = true}) async {
+  Future<List<void>> setRenderMode_batch(List<int?> mode) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"mode": mode[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"mode": mode[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> setRenderRotation_batch(List<int> rotation, {bool viewChannel = true}) async {
+  Future<List<void>> setRenderRotation_batch(List<int?> rotation) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderRotation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"rotation": rotation[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setRenderRotation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"rotation": rotation[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> clearLastFrame_batch(List<bool> clear, {bool viewChannel = true}) async {
+  Future<List<void>> clearLastFrame_batch(List<bool?> clear) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLastFrame_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"clear": clear[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLastFrame_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"clear": clear[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> onTouchFocus_batch(List<int> x, List<int> y, {bool viewChannel = true}) async {
+  Future<List<void>> onTouchFocus_batch(List<int?> x, List<int?> y) async {
     assert(x.length == y.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouchFocus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"x": x[__i__], "y": y[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouchFocus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"x": x[__i__], "y": y[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> setMirror_batch(List<bool> mirror, {bool viewChannel = true}) async {
+  Future<List<void>> setMirror_batch(List<bool?> mirror) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setMirror_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"mirror": mirror[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setMirror_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"mirror": mirror[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> disableLog_batch(List<bool> enable, {bool viewChannel = true}) async {
+  Future<List<void>> disableLog_batch(List<bool?> enable) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::disableLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"enable": enable[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::disableLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"enable": enable[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> showLog_batch(List<bool> enable, {bool viewChannel = true}) async {
+  Future<List<void>> showLog_batch(List<bool?> enable) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"enable": enable[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"enable": enable[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> clearLog_batch({bool viewChannel = true}) async {
+  Future<List<void>> clearLog_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::clearLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> setLogText_batch(List<android_os_Bundle> status, List<android_os_Bundle> event, List<int> eventId, {bool viewChannel = true}) async {
+  Future<List<void>> setLogText_batch(List<android_os_Bundle?> status, List<android_os_Bundle?> event, List<int?> eventId) async {
     assert(status.length == event.length && event.length == eventId.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogText_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"status": status[__i__], "event": event[__i__], "eventId": eventId[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogText_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"status": status[__i__], "event": event[__i__], "eventId": eventId[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> updateVideoViewSize_batch(List<int> captureWidth, List<int> captureHeight, {bool viewChannel = true}) async {
+  Future<List<void>> updateVideoViewSize_batch(List<int?> captureWidth, List<int?> captureHeight) async {
     assert(captureWidth.length == captureHeight.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::updateVideoViewSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"captureWidth": captureWidth[__i__], "captureHeight": captureHeight[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::updateVideoViewSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"captureWidth": captureWidth[__i__], "captureHeight": captureHeight[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> appendEventInfo_batch(List<String> message, {bool viewChannel = true}) async {
+  Future<List<void>> appendEventInfo_batch(List<String?> message) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::appendEventInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"message": message[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::appendEventInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"message": message[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> showVideoDebugLog_batch(List<int> showType, {bool viewChannel = true}) async {
+  Future<List<void>> showVideoDebugLog_batch(List<int?> showType) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showVideoDebugLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"showType": showType[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showVideoDebugLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"showType": showType[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> setLogMargin_batch(List<double> leftMarginInDp, List<double> rightMarginInDp, List<double> topMarginInDp, List<double> bottomMarginInDp, {bool viewChannel = true}) async {
+  Future<List<void>> setLogMargin_batch(List<double?> leftMarginInDp, List<double?> rightMarginInDp, List<double?> topMarginInDp, List<double?> bottomMarginInDp) async {
     assert(leftMarginInDp.length == rightMarginInDp.length && rightMarginInDp.length == topMarginInDp.length && topMarginInDp.length == bottomMarginInDp.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMargin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"leftMarginInDp": leftMarginInDp[__i__], "rightMarginInDp": rightMarginInDp[__i__], "topMarginInDp": topMarginInDp[__i__], "bottomMarginInDp": bottomMarginInDp[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMargin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"leftMarginInDp": leftMarginInDp[__i__], "rightMarginInDp": rightMarginInDp[__i__], "topMarginInDp": topMarginInDp[__i__], "bottomMarginInDp": bottomMarginInDp[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<void>> setLogMarginRatio_batch(List<double> leftMarginInDp, List<double> rightMarginInDp, List<double> topMarginInDp, List<double> bottomMarginInDp, {bool viewChannel = true}) async {
+  Future<List<void>> setLogMarginRatio_batch(List<double?> leftMarginInDp, List<double?> rightMarginInDp, List<double?> topMarginInDp, List<double?> bottomMarginInDp) async {
     assert(leftMarginInDp.length == rightMarginInDp.length && rightMarginInDp.length == topMarginInDp.length && topMarginInDp.length == bottomMarginInDp.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMarginRatio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"leftMarginInDp": leftMarginInDp[__i__], "rightMarginInDp": rightMarginInDp[__i__], "topMarginInDp": topMarginInDp[__i__], "bottomMarginInDp": bottomMarginInDp[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setLogMarginRatio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"leftMarginInDp": leftMarginInDp[__i__], "rightMarginInDp": rightMarginInDp[__i__], "topMarginInDp": topMarginInDp[__i__], "bottomMarginInDp": bottomMarginInDp[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<String?>> getUserId_batch({bool viewChannel = true}) async {
+  Future<List<String?>> getUserId_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getUserId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::getUserId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>> setUserId_batch(List<String> userId, {bool viewChannel = true}) async {
+  Future<List<void>> setUserId_batch(List<String?> userId) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setUserId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"userId": userId[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::setUserId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"userId": userId[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  static Future<List<int?>> px2dip_batch(List<android_content_Context> context, List<double> pxValue, {bool viewChannel = true}) async {
+  static Future<List<int?>> px2dip_batch(List<android_content_Context?> context, List<double?> pxValue) async {
     assert(context.length == pxValue.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::px2dip_batch', [for (int __i__ = 0; __i__ < context.length; __i__++) {"context": context[__i__], "pxValue": pxValue[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::px2dip_batch', [for (int __i__ = 0; __i__ < context.length; __i__++) {"context": context[__i__], "pxValue": pxValue[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>> stop_batch(List<bool> isNeedClearLastImg, {bool viewChannel = true}) async {
+  Future<List<void>> stop_batch(List<bool?> isNeedClearLastImg) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::stop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"isNeedClearLastImg": isNeedClearLastImg[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::stop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"isNeedClearLastImg": isNeedClearLastImg[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
-  Future<List<bool?>> onTouch_batch(List<android_view_View> v, List<android_view_MotionEvent> event, {bool viewChannel = true}) async {
+  Future<List<bool?>> onTouch_batch(List<android_view_View?> v, List<android_view_MotionEvent?> event) async {
     assert(v.length == event.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/tencent_player_fluttify/com_tencent_rtmp_ui_TXCloudVideoView/$refId' : 'me.yohom/tencent_player_fluttify', kTencentPlayerFluttifyMethodCodec).invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"v": v[__i__], "event": event[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::onTouch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"v": v[__i__], "event": event[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();

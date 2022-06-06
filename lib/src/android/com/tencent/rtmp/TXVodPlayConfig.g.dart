@@ -59,11 +59,11 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   //endregion
 
   //region setters
-  Future<void> set_mEnableRenderProcess(bool mEnableRenderProcess) async {
+  Future<void> set_mEnableRenderProcess(bool? mEnableRenderProcess) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mEnableRenderProcess', <String, dynamic>{'__this__': this, "mEnableRenderProcess": mEnableRenderProcess});
   }
   
-  Future<void> set_mPreferredResolution(int mPreferredResolution) async {
+  Future<void> set_mPreferredResolution(int? mPreferredResolution) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mPreferredResolution', <String, dynamic>{'__this__': this, "mPreferredResolution": mPreferredResolution});
   }
   
@@ -71,7 +71,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setConnectRetryCount(int count) async {
+  Future<void> setConnectRetryCount(int? count) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setConnectRetryCount([\'count\':$count])');
@@ -88,7 +88,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setConnectRetryInterval(int interval) async {
+  Future<void> setConnectRetryInterval(int? interval) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setConnectRetryInterval([\'interval\':$interval])');
@@ -105,7 +105,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setTimeout(int timeout) async {
+  Future<void> setTimeout(int? timeout) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setTimeout([\'timeout\':$timeout])');
@@ -122,7 +122,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setCacheFolderPath(String folderPath) async {
+  Future<void> setCacheFolderPath(String? folderPath) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setCacheFolderPath([\'folderPath\':$folderPath])');
@@ -139,7 +139,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setMaxCacheItems(int maxCacheItems) async {
+  Future<void> setMaxCacheItems(int? maxCacheItems) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setMaxCacheItems([\'maxCacheItems\':$maxCacheItems])');
@@ -156,7 +156,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setPlayerType(int playerType) async {
+  Future<void> setPlayerType(int? playerType) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setPlayerType([\'playerType\':$playerType])');
@@ -173,7 +173,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setHeaders(Map<String,String> headers) async {
+  Future<void> setHeaders(Map<String,String>? headers) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setHeaders([\'headers\':$headers])');
@@ -190,7 +190,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setEnableAccurateSeek(bool accurateSeek) async {
+  Future<void> setEnableAccurateSeek(bool? accurateSeek) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setEnableAccurateSeek([\'accurateSeek\':$accurateSeek])');
@@ -207,7 +207,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setAutoRotate(bool autoRotate) async {
+  Future<void> setAutoRotate(bool? autoRotate) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setAutoRotate([\'autoRotate\':$autoRotate])');
@@ -224,7 +224,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setSmoothSwitchBitrate(bool smoothSwitchBitrate) async {
+  Future<void> setSmoothSwitchBitrate(bool? smoothSwitchBitrate) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setSmoothSwitchBitrate([\'smoothSwitchBitrate\':$smoothSwitchBitrate])');
@@ -241,7 +241,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setCacheMp4ExtName(String cacheMp4ExtName) async {
+  Future<void> setCacheMp4ExtName(String? cacheMp4ExtName) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setCacheMp4ExtName([\'cacheMp4ExtName\':$cacheMp4ExtName])');
@@ -258,7 +258,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setProgressInterval(int intervalMs) async {
+  Future<void> setProgressInterval(int? intervalMs) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setProgressInterval([\'intervalMs\':$intervalMs])');
@@ -275,7 +275,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setMaxBufferSize(int maxBufferSize) async {
+  Future<void> setMaxBufferSize(int? maxBufferSize) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setMaxBufferSize([\'maxBufferSize\':$maxBufferSize])');
@@ -292,7 +292,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setMaxPreloadSize(int maxPreloadSize) async {
+  Future<void> setMaxPreloadSize(int? maxPreloadSize) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setMaxPreloadSize([\'maxPreloadSize\':$maxPreloadSize])');
@@ -309,7 +309,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setFirstStartPlayBufferTime(int milliseconds) async {
+  Future<void> setFirstStartPlayBufferTime(int? milliseconds) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setFirstStartPlayBufferTime([\'milliseconds\':$milliseconds])');
@@ -326,7 +326,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setNextStartPlayBufferTime(int milliseconds) async {
+  Future<void> setNextStartPlayBufferTime(int? milliseconds) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setNextStartPlayBufferTime([\'milliseconds\':$milliseconds])');
@@ -343,7 +343,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setOverlayKey(String overlayKey) async {
+  Future<void> setOverlayKey(String? overlayKey) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setOverlayKey([\'overlayKey\':$overlayKey])');
@@ -360,7 +360,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setOverlayIv(String overlayIv) async {
+  Future<void> setOverlayIv(String? overlayIv) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setOverlayIv([\'overlayIv\':$overlayIv])');
@@ -377,7 +377,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setExtInfo(Map<String,Object> map) async {
+  Future<void> setExtInfo(Map<String,Object>? map) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setExtInfo([\'map\':$map])');
@@ -411,7 +411,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setPreferredResolution(int preferredResolution) async {
+  Future<void> setPreferredResolution(int? preferredResolution) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setPreferredResolution([\'preferredResolution\':$preferredResolution])');
@@ -455,13 +455,13 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   //endregion
 
   //region setters
-  Future<void> set_mEnableRenderProcess_batch(List<bool> mEnableRenderProcess) async {
+  Future<void> set_mEnableRenderProcess_batch(List<bool?> mEnableRenderProcess) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mEnableRenderProcess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "mEnableRenderProcess": mEnableRenderProcess[__i__]}]);
   
   
   }
   
-  Future<void> set_mPreferredResolution_batch(List<int> mPreferredResolution) async {
+  Future<void> set_mPreferredResolution_batch(List<int?> mPreferredResolution) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mPreferredResolution_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "mPreferredResolution": mPreferredResolution[__i__]}]);
   
   
@@ -471,7 +471,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
 
   //region methods
   
-  Future<List<void>> setConnectRetryCount_batch(List<int> count) async {
+  Future<List<void>> setConnectRetryCount_batch(List<int?> count) async {
     assert(true);
   
     // invoke native method
@@ -482,7 +482,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setConnectRetryInterval_batch(List<int> interval) async {
+  Future<List<void>> setConnectRetryInterval_batch(List<int?> interval) async {
     assert(true);
   
     // invoke native method
@@ -493,7 +493,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setTimeout_batch(List<int> timeout) async {
+  Future<List<void>> setTimeout_batch(List<int?> timeout) async {
     assert(true);
   
     // invoke native method
@@ -504,7 +504,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   @deprecated
-  Future<List<void>> setCacheFolderPath_batch(List<String> folderPath) async {
+  Future<List<void>> setCacheFolderPath_batch(List<String?> folderPath) async {
     assert(true);
   
     // invoke native method
@@ -515,7 +515,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   @deprecated
-  Future<List<void>> setMaxCacheItems_batch(List<int> maxCacheItems) async {
+  Future<List<void>> setMaxCacheItems_batch(List<int?> maxCacheItems) async {
     assert(true);
   
     // invoke native method
@@ -526,7 +526,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setPlayerType_batch(List<int> playerType) async {
+  Future<List<void>> setPlayerType_batch(List<int?> playerType) async {
     assert(true);
   
     // invoke native method
@@ -537,7 +537,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setHeaders_batch(List<Map<String,String>> headers) async {
+  Future<List<void>> setHeaders_batch(List<Map<String,String>?> headers) async {
     assert(true);
   
     // invoke native method
@@ -548,7 +548,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setEnableAccurateSeek_batch(List<bool> accurateSeek) async {
+  Future<List<void>> setEnableAccurateSeek_batch(List<bool?> accurateSeek) async {
     assert(true);
   
     // invoke native method
@@ -559,7 +559,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setAutoRotate_batch(List<bool> autoRotate) async {
+  Future<List<void>> setAutoRotate_batch(List<bool?> autoRotate) async {
     assert(true);
   
     // invoke native method
@@ -570,7 +570,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setSmoothSwitchBitrate_batch(List<bool> smoothSwitchBitrate) async {
+  Future<List<void>> setSmoothSwitchBitrate_batch(List<bool?> smoothSwitchBitrate) async {
     assert(true);
   
     // invoke native method
@@ -581,7 +581,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setCacheMp4ExtName_batch(List<String> cacheMp4ExtName) async {
+  Future<List<void>> setCacheMp4ExtName_batch(List<String?> cacheMp4ExtName) async {
     assert(true);
   
     // invoke native method
@@ -592,7 +592,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setProgressInterval_batch(List<int> intervalMs) async {
+  Future<List<void>> setProgressInterval_batch(List<int?> intervalMs) async {
     assert(true);
   
     // invoke native method
@@ -603,7 +603,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setMaxBufferSize_batch(List<int> maxBufferSize) async {
+  Future<List<void>> setMaxBufferSize_batch(List<int?> maxBufferSize) async {
     assert(true);
   
     // invoke native method
@@ -614,7 +614,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setMaxPreloadSize_batch(List<int> maxPreloadSize) async {
+  Future<List<void>> setMaxPreloadSize_batch(List<int?> maxPreloadSize) async {
     assert(true);
   
     // invoke native method
@@ -625,7 +625,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setFirstStartPlayBufferTime_batch(List<int> milliseconds) async {
+  Future<List<void>> setFirstStartPlayBufferTime_batch(List<int?> milliseconds) async {
     assert(true);
   
     // invoke native method
@@ -636,7 +636,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setNextStartPlayBufferTime_batch(List<int> milliseconds) async {
+  Future<List<void>> setNextStartPlayBufferTime_batch(List<int?> milliseconds) async {
     assert(true);
   
     // invoke native method
@@ -647,7 +647,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setOverlayKey_batch(List<String> overlayKey) async {
+  Future<List<void>> setOverlayKey_batch(List<String?> overlayKey) async {
     assert(true);
   
     // invoke native method
@@ -658,7 +658,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setOverlayIv_batch(List<String> overlayIv) async {
+  Future<List<void>> setOverlayIv_batch(List<String?> overlayIv) async {
     assert(true);
   
     // invoke native method
@@ -669,7 +669,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setExtInfo_batch(List<Map<String,Object>> map) async {
+  Future<List<void>> setExtInfo_batch(List<Map<String,Object>?> map) async {
     assert(true);
   
     // invoke native method
@@ -691,7 +691,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setPreferredResolution_batch(List<int> preferredResolution) async {
+  Future<List<void>> setPreferredResolution_batch(List<int?> preferredResolution) async {
     assert(true);
   
     // invoke native method

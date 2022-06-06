@@ -36,7 +36,6 @@ class VodPlayer {
         final context = await android_app_Application.get();
         instance._androidPlayer = await com_tencent_rtmp_TXVodPlayer
             .create__android_content_Context(context);
-
         return instance;
       },
       ios: (pool) async {
@@ -58,8 +57,6 @@ class VodPlayer {
                 playerView.playerView);
       },
       ios: (pool) async {
-        // 其首个参数 frame 在 1.5.2 版本后已经被废弃
-        final rect = await CGRect.create(0, 0, 0, 0);
         await _iosPlayer!
             .setupVideoWidget_insertIndex(playerView.playerView, 0);
       },
@@ -213,17 +210,16 @@ class VodPlayer {
     final completer = Completer<Uint8List>();
     await platform(
       android: (pool) async {
-        final listener =
-            await com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener.anonymous__(
-          onSnapshot: (image) async {
-            final data = await image?.data;
-            if (data == null) {
-              completer.completeError('截图失败');
-            } else {
-              completer.complete(data);
-            }
-          },
-        );
+        final listener = await com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener
+            .anonymous__();
+        listener.onSnapshot = (image) async {
+          final data = await image?.data;
+          if (data == null) {
+            completer.completeError('截图失败');
+          } else {
+            completer.complete(data);
+          }
+        };
         return _androidPlayer!.snapshot(listener);
       },
       ios: (pool) {
@@ -258,9 +254,10 @@ class VodPlayer {
   }) async {
     return platform(
       android: (pool) async {
-        final listener = await com_tencent_rtmp_ITXVodPlayListener.anonymous__(
-            onPlayEvent: (player, code, data) async {
-          debugPrint('事件: $code, 参数: ${data}');
+        final listener =
+            await com_tencent_rtmp_ITXVodPlayListener.anonymous__();
+        listener.onPlayEvent = (player, code, data) async {
+          debugPrint('事件: $code, 参数: $data');
           // 当前视频帧解码失败
           if (code == 2101 && onWarningVideoDecodeFail != null) {
             onWarningVideoDecodeFail();
@@ -349,14 +346,14 @@ class VodPlayer {
           }
 
           // 释放参数
-          await data?.release__();
-        });
+          pool.add(data);
+        };
         await _androidPlayer!.setVodListener(listener);
       },
       ios: (pool) async {
-        final delegate = await TXVodPlayListener.anonymous__(
-            onPlayEvent: (player, EvtID, param) async {
-          debugPrint('事件: $EvtID, 参数: ${param}');
+        final delegate = await TXVodPlayListener.anonymous__();
+        delegate.onPlayEvent_event_withParam = (player, EvtID, param) async {
+          debugPrint('事件: $EvtID, 参数: $param');
           // 当前视频帧解码失败
           if (EvtID == 2101 && onWarningVideoDecodeFail != null) {
             onWarningVideoDecodeFail();
@@ -445,7 +442,7 @@ class VodPlayer {
           } else {
             debugPrint('未处理的事件: $EvtID, $param');
           }
-        });
+        };
 
         await _iosPlayer!.set_vodDelegate(delegate);
       },

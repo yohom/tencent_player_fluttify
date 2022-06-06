@@ -114,56 +114,56 @@ class TXVodDownloadMediaInfo extends NSObject  {
   //endregion
 
   //region setters
-  Future<void> set_dataSource(TXVodDownloadDataSource dataSource) async {
+  Future<void> set_dataSource(TXVodDownloadDataSource? dataSource) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_dataSource', <String, dynamic>{'__this__': this, "dataSource": dataSource});
   }
   
-  Future<void> set_url(String url) async {
+  Future<void> set_url(String? url) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_url', <String, dynamic>{'__this__': this, "url": url});
   }
   
-  Future<void> set_userName(String userName) async {
+  Future<void> set_userName(String? userName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_userName', <String, dynamic>{'__this__': this, "userName": userName});
   }
   
-  Future<void> set_duration(int duration) async {
+  Future<void> set_duration(int? duration) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
   }
   
-  Future<void> set_playableDuration(int playableDuration) async {
+  Future<void> set_playableDuration(int? playableDuration) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_playableDuration', <String, dynamic>{'__this__': this, "playableDuration": playableDuration});
   }
   
-  Future<void> set_size(int size) async {
+  Future<void> set_size(int? size) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_size', <String, dynamic>{'__this__': this, "size": size});
   }
   
-  Future<void> set_downloadSize(int downloadSize) async {
+  Future<void> set_downloadSize(int? downloadSize) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_downloadSize', <String, dynamic>{'__this__': this, "downloadSize": downloadSize});
   }
   
-  Future<void> set_segments(int segments) async {
+  Future<void> set_segments(int? segments) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_segments', <String, dynamic>{'__this__': this, "segments": segments});
   }
   
-  Future<void> set_downloadSegments(int downloadSegments) async {
+  Future<void> set_downloadSegments(int? downloadSegments) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_downloadSegments', <String, dynamic>{'__this__': this, "downloadSegments": downloadSegments});
   }
   
-  Future<void> set_progress(double progress) async {
+  Future<void> set_progress(double? progress) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_progress', <String, dynamic>{'__this__': this, "progress": progress});
   }
   
-  Future<void> set_playPath(String playPath) async {
+  Future<void> set_playPath(String? playPath) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_playPath', <String, dynamic>{'__this__': this, "playPath": playPath});
   }
   
-  Future<void> set_speed(int speed) async {
+  Future<void> set_speed(int? speed) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_speed', <String, dynamic>{'__this__': this, "speed": speed});
   }
   
-  Future<void> set_downloadState(TXVodDownloadMediaInfoState downloadState) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_downloadState', <String, dynamic>{'__this__': this, "downloadState": downloadState.toValue()});
+  Future<void> set_downloadState(TXVodDownloadMediaInfoState? downloadState) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_downloadState', <String, dynamic>{'__this__': this, "downloadState": downloadState?.toValue()});
   }
   
   //endregion
@@ -269,80 +269,80 @@ extension TXVodDownloadMediaInfo_Batch on List<TXVodDownloadMediaInfo?> {
   //endregion
 
   //region setters
-  Future<void> set_dataSource_batch(List<TXVodDownloadDataSource> dataSource) async {
+  Future<void> set_dataSource_batch(List<TXVodDownloadDataSource?> dataSource) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_dataSource_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "dataSource": dataSource[__i__]}]);
   
   
   }
   
-  Future<void> set_url_batch(List<String> url) async {
+  Future<void> set_url_batch(List<String?> url) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_url_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "url": url[__i__]}]);
   
   
   }
   
-  Future<void> set_userName_batch(List<String> userName) async {
+  Future<void> set_userName_batch(List<String?> userName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_userName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "userName": userName[__i__]}]);
   
   
   }
   
-  Future<void> set_duration_batch(List<int> duration) async {
+  Future<void> set_duration_batch(List<int?> duration) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_duration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "duration": duration[__i__]}]);
   
   
   }
   
-  Future<void> set_playableDuration_batch(List<int> playableDuration) async {
+  Future<void> set_playableDuration_batch(List<int?> playableDuration) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_playableDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "playableDuration": playableDuration[__i__]}]);
   
   
   }
   
-  Future<void> set_size_batch(List<int> size) async {
+  Future<void> set_size_batch(List<int?> size) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_size_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "size": size[__i__]}]);
   
   
   }
   
-  Future<void> set_downloadSize_batch(List<int> downloadSize) async {
+  Future<void> set_downloadSize_batch(List<int?> downloadSize) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_downloadSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "downloadSize": downloadSize[__i__]}]);
   
   
   }
   
-  Future<void> set_segments_batch(List<int> segments) async {
+  Future<void> set_segments_batch(List<int?> segments) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_segments_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "segments": segments[__i__]}]);
   
   
   }
   
-  Future<void> set_downloadSegments_batch(List<int> downloadSegments) async {
+  Future<void> set_downloadSegments_batch(List<int?> downloadSegments) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_downloadSegments_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "downloadSegments": downloadSegments[__i__]}]);
   
   
   }
   
-  Future<void> set_progress_batch(List<double> progress) async {
+  Future<void> set_progress_batch(List<double?> progress) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_progress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "progress": progress[__i__]}]);
   
   
   }
   
-  Future<void> set_playPath_batch(List<String> playPath) async {
+  Future<void> set_playPath_batch(List<String?> playPath) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_playPath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "playPath": playPath[__i__]}]);
   
   
   }
   
-  Future<void> set_speed_batch(List<int> speed) async {
+  Future<void> set_speed_batch(List<int?> speed) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_speed_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "speed": speed[__i__]}]);
   
   
   }
   
-  Future<void> set_downloadState_batch(List<TXVodDownloadMediaInfoState> downloadState) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_downloadState_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "downloadState": downloadState[__i__].toValue()}]);
+  Future<void> set_downloadState_batch(List<TXVodDownloadMediaInfoState?> downloadState) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadMediaInfo::set_downloadState_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "downloadState": downloadState[__i__]?.toValue()}]);
   
   
   }

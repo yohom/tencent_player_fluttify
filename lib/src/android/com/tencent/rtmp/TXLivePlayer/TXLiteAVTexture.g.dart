@@ -69,19 +69,19 @@ class com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture extends java_lang_Object  {
   //endregion
 
   //region setters
-  Future<void> set_textureId(int textureId) async {
+  Future<void> set_textureId(int? textureId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_textureId', <String, dynamic>{'__this__': this, "textureId": textureId});
   }
   
-  Future<void> set_width(int width) async {
+  Future<void> set_width(int? width) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_width', <String, dynamic>{'__this__': this, "width": width});
   }
   
-  Future<void> set_height(int height) async {
+  Future<void> set_height(int? height) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_height', <String, dynamic>{'__this__': this, "height": height});
   }
   
-  Future<void> set_eglContext(Object eglContext) async {
+  Future<void> set_eglContext(Object? eglContext) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_eglContext', <String, dynamic>{'__this__': this, "eglContext": eglContext});
   }
   
@@ -127,25 +127,25 @@ extension com_tencent_rtmp_TXLivePlayer_TXLiteAVTexture_Batch on List<com_tencen
   //endregion
 
   //region setters
-  Future<void> set_textureId_batch(List<int> textureId) async {
+  Future<void> set_textureId_batch(List<int?> textureId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_textureId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "textureId": textureId[__i__]}]);
   
   
   }
   
-  Future<void> set_width_batch(List<int> width) async {
+  Future<void> set_width_batch(List<int?> width) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_width_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "width": width[__i__]}]);
   
   
   }
   
-  Future<void> set_height_batch(List<int> height) async {
+  Future<void> set_height_batch(List<int?> height) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_height_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "height": height[__i__]}]);
   
   
   }
   
-  Future<void> set_eglContext_batch(List<Object> eglContext) async {
+  Future<void> set_eglContext_batch(List<Object?> eglContext) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_eglContext_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "eglContext": eglContext[__i__]}]);
   
   

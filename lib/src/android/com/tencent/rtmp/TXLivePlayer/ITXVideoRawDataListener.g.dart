@@ -18,7 +18,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener on java_lang_Object 
 
   static com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener_SUB();
 
-  static Future<com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener> anonymous__({void Function(Uint8List? var1, int? var2, int? var3, int? var4)? onVideoRawDataAvailable}) async {
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXVideoRawDataListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener>(__result__)!;
@@ -29,14 +29,14 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener on java_lang_Object 
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onVideoRawDataAvailable:::':
+              case 'onVideoRawDataAvailable___':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onVideoRawDataAvailable?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onVideoRawDataAvailable?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
                 }
             
                 // handle the native call
-                onVideoRawDataAvailable?.call(args['var1'], args['var2'], args['var3'], args['var4']);
+                __object__.onVideoRawDataAvailable?.call(args['var1'], args['var2'], args['var3'], args['var4']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -59,7 +59,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener on java_lang_Object 
 
   
 
-  Future<void> onVideoRawDataAvailable(Uint8List? var1, int? var2, int? var3, int? var4) async {}
+  Future<void> Function(Uint8List? var1, int? var2, int? var3, int? var4)? onVideoRawDataAvailable;
   
 }
 

@@ -5,6 +5,7 @@
 #import "TXVodPlayListener_Anonymous.h"
 #import <Flutter/Flutter.h>
 #import "FluttifyMessageCodec.h"
+#import <objc/runtime.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -44,7 +45,7 @@ extern BOOL enableLog;
   NSDictionary* argparam = param;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onPlayEvent:event:withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"EvtID": argEvtID == nil ? [NSNull null] : argEvtID, @"param": argparam == nil ? [NSNull null] : argparam}];
+    [channel invokeMethod:@"onPlayEvent_event_withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"EvtID": argEvtID == nil ? [NSNull null] : argEvtID, @"param": argparam == nil ? [NSNull null] : argparam}];
   });
   
 }
@@ -67,7 +68,7 @@ extern BOOL enableLog;
   NSDictionary* argparam = param;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onNetStatus:withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"param": argparam == nil ? [NSNull null] : argparam}];
+    [channel invokeMethod:@"onNetStatus_withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"param": argparam == nil ? [NSNull null] : argparam}];
   });
   
 }

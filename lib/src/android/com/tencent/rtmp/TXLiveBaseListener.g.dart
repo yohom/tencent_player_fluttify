@@ -35,7 +35,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
   //region methods
   
-  Future<void> onLog(int level, String module, String log) async {
+  Future<void> onLog(int? level, String? module, String? log) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBaseListener@$refId::onLog([\'level\':$level, \'module\':$module, \'log\':$log])');
@@ -52,7 +52,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
   }
   
   
-  Future<void> onUpdateNetworkTime(int errCode, String errMsg) async {
+  Future<void> onUpdateNetworkTime(int? errCode, String? errMsg) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBaseListener@$refId::onUpdateNetworkTime([\'errCode\':$errCode, \'errMsg\':$errMsg])');
@@ -69,7 +69,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
   }
   
   
-  Future<void> onLicenceLoaded(int result, String reason) async {
+  Future<void> onLicenceLoaded(int? result, String? reason) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBaseListener@$refId::onLicenceLoaded([\'result\':$result, \'reason\':$reason])');
@@ -109,7 +109,7 @@ extension com_tencent_rtmp_TXLiveBaseListener_Batch on List<com_tencent_rtmp_TXL
 
   //region methods
   
-  Future<List<void>> onLog_batch(List<int> level, List<String> module, List<String> log) async {
+  Future<List<void>> onLog_batch(List<int?> level, List<String?> module, List<String?> log) async {
     assert(level.length == module.length && module.length == log.length);
   
     // invoke native method
@@ -120,7 +120,7 @@ extension com_tencent_rtmp_TXLiveBaseListener_Batch on List<com_tencent_rtmp_TXL
   }
   
   
-  Future<List<void>> onUpdateNetworkTime_batch(List<int> errCode, List<String> errMsg) async {
+  Future<List<void>> onUpdateNetworkTime_batch(List<int?> errCode, List<String?> errMsg) async {
     assert(errCode.length == errMsg.length);
   
     // invoke native method
@@ -131,7 +131,7 @@ extension com_tencent_rtmp_TXLiveBaseListener_Batch on List<com_tencent_rtmp_TXL
   }
   
   
-  Future<List<void>> onLicenceLoaded_batch(List<int> result, List<String> reason) async {
+  Future<List<void>> onLicenceLoaded_batch(List<int?> result, List<String?> reason) async {
     assert(result.length == reason.length);
   
     // invoke native method

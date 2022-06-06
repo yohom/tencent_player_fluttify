@@ -18,7 +18,7 @@ mixin TXVideoCustomProcessDelegate on NSObject {
 
   static TXVideoCustomProcessDelegate subInstance() => _TXVideoCustomProcessDelegate_SUB();
 
-  static Future<TXVideoCustomProcessDelegate> anonymous__({int Function(int? texture, double? width, double? height)? onPreProcessTexture, void Function()? onTextureDestoryed, void Function(List<dynamic>? points)? onDetectFacePoints, bool Function(NSValue/* void* */? pixelBuffer)? onPlayerPixelBuffer}) async {
+  static Future<TXVideoCustomProcessDelegate> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVideoCustomProcessDelegate::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyIOSAs<TXVideoCustomProcessDelegate>(__result__)!;
@@ -29,41 +29,41 @@ mixin TXVideoCustomProcessDelegate on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onPreProcessTexture:width:height':
+              case 'onPreProcessTexture_width_height':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPreProcessTexture?.call([\'texture\':${args['texture']}, \'width\':${args['width']}, \'height\':${args['height']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onPreProcessTexture_width_height?.call([\'texture\':${args['texture']}, \'width\':${args['width']}, \'height\':${args['height']}])');
                 }
             
                 // handle the native call
-                onPreProcessTexture?.call(args['texture'], args['width'], args['height']);
+                __object__.onPreProcessTexture_width_height?.call(args['texture'], args['width'], args['height']);
                 break;
               case 'onTextureDestoryed':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onTextureDestoryed?.call([])');
+                  debugPrint('fluttify-dart-callback: __object__.onTextureDestoryed?.call([])');
                 }
             
                 // handle the native call
-                onTextureDestoryed?.call();
+                __object__.onTextureDestoryed?.call();
                 break;
               case 'onDetectFacePoints':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDetectFacePoints?.call([\'points\':${args['points']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onDetectFacePoints?.call([\'points\':${args['points']}])');
                 }
             
                 // handle the native call
-                onDetectFacePoints?.call((args['points'] as List? ?? []).map((it) => TencentPlayerFluttifyIOSAs<NSObject>(it)).where((e) => e != null).cast<NSObject>().toList());
+                __object__.onDetectFacePoints?.call((args['points'] as List? ?? []).map((it) => TencentPlayerFluttifyIOSAs<NSObject>(it)).where((e) => e != null).cast<NSObject>().toList());
                 break;
               case 'onPlayerPixelBuffer':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPlayerPixelBuffer?.call([\'pixelBuffer\':${args['pixelBuffer']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onPlayerPixelBuffer?.call([\'pixelBuffer\':${args['pixelBuffer']}])');
                 }
             
                 // handle the native call
-                onPlayerPixelBuffer?.call(TencentPlayerFluttifyIOSAs<NSValue/* void* */>(args['pixelBuffer']));
+                __object__.onPlayerPixelBuffer?.call(TencentPlayerFluttifyIOSAs<NSValue/* void* */>(args['pixelBuffer']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -86,13 +86,13 @@ mixin TXVideoCustomProcessDelegate on NSObject {
 
   
 
-  Future<int?> onPreProcessTexture_width_height(int? texture, double? width, double? height) async {}
+  Future<int?> Function(int? texture, double? width, double? height)? onPreProcessTexture_width_height;
   
-  Future<void> onTextureDestoryed() async {}
+  Future<void> Function()? onTextureDestoryed;
   
-  Future<void> onDetectFacePoints(List<dynamic>? points) async {}
+  Future<void> Function(List<dynamic>? points)? onDetectFacePoints;
   
-  Future<bool?> onPlayerPixelBuffer(NSValue/* void* */? pixelBuffer) async {}
+  Future<bool?> Function(NSValue/* void* */? pixelBuffer)? onPlayerPixelBuffer;
   
 }
 

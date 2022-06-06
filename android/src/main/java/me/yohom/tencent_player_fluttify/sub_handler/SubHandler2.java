@@ -3141,7 +3141,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onPcmDataAvailable:",
+                                    "onPcmDataAvailable_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3166,7 +3166,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onAudioInfoChanged::",
+                                    "onAudioInfoChanged__",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3205,7 +3205,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onPlayEvent::",
+                                    "onPlayEvent__",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3231,7 +3231,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onNetStatus:",
+                                    "onNetStatus_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3306,7 +3306,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onPlayEvent:",
+                                    "onPlayEvent_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3368,7 +3368,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onComplete:",
+                                    "onComplete_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3393,7 +3393,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onError:::",
+                                    "onError___",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3529,7 +3529,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onDownloadError::",
+                                    "onDownloadError__",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3555,7 +3555,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "hlsKeyVerify::",
+                                    "hlsKeyVerify__",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3594,7 +3594,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onPushEvent:",
+                                    "onPushEvent_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -3730,7 +3730,7 @@ public class SubHandler2 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onVideoRawDataAvailable:::",
+                                    "onVideoRawDataAvailable___",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);

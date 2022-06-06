@@ -18,7 +18,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
 
   static com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener_SUB();
 
-  static Future<com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener> anonymous__({void Function(android_graphics_Bitmap? var1)? onSnapshot}) async {
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXSnapshotListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener>(__result__)!;
@@ -32,11 +32,11 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
               case 'onSnapshot':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onSnapshot?.call([\'var1\':${args['var1']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onSnapshot?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
-                onSnapshot?.call(TencentPlayerFluttifyAndroidAs<android_graphics_Bitmap>(args['var1']));
+                __object__.onSnapshot?.call(TencentPlayerFluttifyAndroidAs<android_graphics_Bitmap>(args['var1']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -59,7 +59,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener on java_lang_Object {
 
   
 
-  Future<void> onSnapshot(android_graphics_Bitmap? var1) async {}
+  Future<void> Function(android_graphics_Bitmap? var1)? onSnapshot;
   
 }
 

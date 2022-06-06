@@ -18,7 +18,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener on java_lan
 
   static com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener_SUB();
 
-  static Future<com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener> anonymous__({void Function(int? var1)? onAudioVolumeEvaluationNotify}) async {
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXAudioVolumeEvaluationListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener>(__result__)!;
@@ -32,11 +32,11 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener on java_lan
               case 'onAudioVolumeEvaluationNotify':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onAudioVolumeEvaluationNotify?.call([\'var1\':${args['var1']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onAudioVolumeEvaluationNotify?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
-                onAudioVolumeEvaluationNotify?.call(args['var1']);
+                __object__.onAudioVolumeEvaluationNotify?.call(args['var1']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -59,7 +59,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener on java_lan
 
   
 
-  Future<void> onAudioVolumeEvaluationNotify(int? var1) async {}
+  Future<void> Function(int? var1)? onAudioVolumeEvaluationNotify;
   
 }
 

@@ -18,7 +18,7 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
 
   static com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener subInstance() => _com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener_SUB();
 
-  static Future<com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener> anonymous__({void Function(Uint8List? var1, int? var2)? onPcmDataAvailable, void Function(int? var1, int? var2, int? var3)? onAudioInfoChanged}) async {
+  static Future<com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer.ITXAudioRawDataListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener>(__result__)!;
@@ -29,23 +29,23 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onPcmDataAvailable:':
+              case 'onPcmDataAvailable_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPcmDataAvailable?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onPcmDataAvailable?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onPcmDataAvailable?.call(args['var1'], args['var2']);
+                __object__.onPcmDataAvailable?.call(args['var1'], args['var2']);
                 break;
-              case 'onAudioInfoChanged::':
+              case 'onAudioInfoChanged__':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onAudioInfoChanged?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onAudioInfoChanged?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
                 }
             
                 // handle the native call
-                onAudioInfoChanged?.call(args['var1'], args['var2'], args['var3']);
+                __object__.onAudioInfoChanged?.call(args['var1'], args['var2'], args['var3']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -68,9 +68,9 @@ mixin com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener on java_lang_Object 
 
   
 
-  Future<void> onPcmDataAvailable(Uint8List? var1, int? var2) async {}
+  Future<void> Function(Uint8List? var1, int? var2)? onPcmDataAvailable;
   
-  Future<void> onAudioInfoChanged(int? var1, int? var2, int? var3) async {}
+  Future<void> Function(int? var1, int? var2, int? var3)? onAudioInfoChanged;
   
 }
 

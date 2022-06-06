@@ -52,7 +52,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  Future<void> setLicence(android_content_Context context, String url, String key) async {
+  Future<void> setLicence(android_content_Context? context, String? url, String? key) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase@$refId::setLicence([\'url\':$url, \'key\':$key])');
@@ -69,7 +69,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  Future<String?> getLicenceInfo(android_content_Context context) async {
+  Future<String?> getLicenceInfo(android_content_Context? context) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase@$refId::getLicenceInfo([])');
@@ -86,7 +86,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> setListener(com_tencent_rtmp_TXLiveBaseListener liveBaseListener) async {
+  static Future<void> setListener(com_tencent_rtmp_TXLiveBaseListener? liveBaseListener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setListener([])');
@@ -103,7 +103,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<int?> setGlobalEnv(String envConfig) async {
+  static Future<int?> setGlobalEnv(String? envConfig) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setGlobalEnv([\'envConfig\':$envConfig])');
@@ -120,7 +120,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> setLogLevel(int logLevel) async {
+  static Future<void> setLogLevel(int? logLevel) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setLogLevel([\'logLevel\':$logLevel])');
@@ -137,7 +137,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> setConsoleEnabled(bool enabled) async {
+  static Future<void> setConsoleEnabled(bool? enabled) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setConsoleEnabled([\'enabled\':$enabled])');
@@ -154,7 +154,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> setAppVersion(String verNum) async {
+  static Future<void> setAppVersion(String? verNum) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setAppVersion([\'verNum\':$verNum])');
@@ -171,7 +171,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> setLibraryPath(String path) async {
+  static Future<void> setLibraryPath(String? path) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setLibraryPath([\'path\':$path])');
@@ -188,7 +188,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<bool?> isLibraryPathValid(String path) async {
+  static Future<bool?> isLibraryPathValid(String? path) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::isLibraryPathValid([\'path\':$path])');
@@ -222,7 +222,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> setPituLicencePath(String path) async {
+  static Future<void> setPituLicencePath(String? path) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setPituLicencePath([\'path\':$path])');
@@ -256,7 +256,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> setAppID(String appID) async {
+  static Future<void> setAppID(String? appID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setAppID([\'appID\':$appID])');
@@ -273,7 +273,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> setUserId(String userId) async {
+  static Future<void> setUserId(String? userId) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setUserId([\'userId\':$userId])');
@@ -324,7 +324,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> onUpdateNetworkTime(int errCode, String errMsg) async {
+  static Future<void> onUpdateNetworkTime(int? errCode, String? errMsg) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime([\'errCode\':$errCode, \'errMsg\':$errMsg])');
@@ -341,7 +341,7 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<bool?> setExtID(String extKey, String extValue) async {
+  static Future<bool?> setExtID(String? extKey, String? extValue) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setExtID([\'extKey\':$extKey, \'extValue\':$extValue])');
@@ -392,7 +392,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  Future<List<void>> setLicence_batch(List<android_content_Context> context, List<String> url, List<String> key) async {
+  Future<List<void>> setLicence_batch(List<android_content_Context?> context, List<String?> url, List<String?> key) async {
     assert(context.length == url.length && url.length == key.length);
   
     // invoke native method
@@ -403,7 +403,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  Future<List<String?>> getLicenceInfo_batch(List<android_content_Context> context) async {
+  Future<List<String?>> getLicenceInfo_batch(List<android_content_Context?> context) async {
     assert(true);
   
     // invoke native method
@@ -414,7 +414,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> setListener_batch(List<com_tencent_rtmp_TXLiveBaseListener> liveBaseListener) async {
+  static Future<List<void>> setListener_batch(List<com_tencent_rtmp_TXLiveBaseListener?> liveBaseListener) async {
     assert(true);
   
     // invoke native method
@@ -425,7 +425,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<int?>> setGlobalEnv_batch(List<String> envConfig) async {
+  static Future<List<int?>> setGlobalEnv_batch(List<String?> envConfig) async {
     assert(true);
   
     // invoke native method
@@ -436,7 +436,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> setLogLevel_batch(List<int> logLevel) async {
+  static Future<List<void>> setLogLevel_batch(List<int?> logLevel) async {
     assert(true);
   
     // invoke native method
@@ -447,7 +447,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> setConsoleEnabled_batch(List<bool> enabled) async {
+  static Future<List<void>> setConsoleEnabled_batch(List<bool?> enabled) async {
     assert(true);
   
     // invoke native method
@@ -458,7 +458,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> setAppVersion_batch(List<String> verNum) async {
+  static Future<List<void>> setAppVersion_batch(List<String?> verNum) async {
     assert(true);
   
     // invoke native method
@@ -469,7 +469,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> setLibraryPath_batch(List<String> path) async {
+  static Future<List<void>> setLibraryPath_batch(List<String?> path) async {
     assert(true);
   
     // invoke native method
@@ -480,7 +480,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<bool?>> isLibraryPathValid_batch(List<String> path) async {
+  static Future<List<bool?>> isLibraryPathValid_batch(List<String?> path) async {
     assert(true);
   
     // invoke native method
@@ -502,7 +502,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> setPituLicencePath_batch(List<String> path) async {
+  static Future<List<void>> setPituLicencePath_batch(List<String?> path) async {
     assert(true);
   
     // invoke native method
@@ -524,7 +524,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> setAppID_batch(List<String> appID) async {
+  static Future<List<void>> setAppID_batch(List<String?> appID) async {
     assert(true);
   
     // invoke native method
@@ -535,7 +535,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> setUserId_batch(List<String> userId) async {
+  static Future<List<void>> setUserId_batch(List<String?> userId) async {
     assert(true);
   
     // invoke native method
@@ -568,7 +568,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> onUpdateNetworkTime_batch(List<int> errCode, List<String> errMsg) async {
+  static Future<List<void>> onUpdateNetworkTime_batch(List<int?> errCode, List<String?> errMsg) async {
     assert(errCode.length == errMsg.length);
   
     // invoke native method
@@ -579,7 +579,7 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<bool?>> setExtID_batch(List<String> extKey, List<String> extValue) async {
+  static Future<List<bool?>> setExtID_batch(List<String?> extKey, List<String?> extValue) async {
     assert(extKey.length == extValue.length);
   
     // invoke native method

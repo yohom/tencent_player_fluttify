@@ -29,7 +29,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_TXLivePlayer> create__android_content_Context(android_content_Context context) async {
+  static Future<com_tencent_rtmp_TXLivePlayer> create__android_content_Context(android_content_Context? context) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_TXLivePlayer__android_content_Context',
       {"context": context}
@@ -37,7 +37,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXLivePlayer>(__result__)!;
   }
   
-  static Future<List<com_tencent_rtmp_TXLivePlayer>> create_batch__android_content_Context(List<android_content_Context> context) async {
+  static Future<List<com_tencent_rtmp_TXLivePlayer>> create_batch__android_content_Context(List<android_content_Context?> context) async {
     assert(true);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_TXLivePlayer__android_content_Context',
@@ -62,7 +62,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setConfig(com_tencent_rtmp_TXLivePlayConfig config) async {
+  Future<void> setConfig(com_tencent_rtmp_TXLivePlayConfig? config) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setConfig([])');
@@ -79,7 +79,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setPlayListener(com_tencent_rtmp_ITXLivePlayListener listener) async {
+  Future<void> setPlayListener(com_tencent_rtmp_ITXLivePlayListener? listener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setPlayListener([])');
@@ -96,7 +96,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setPlayerView(com_tencent_rtmp_ui_TXCloudVideoView glRootView) async {
+  Future<void> setPlayerView(com_tencent_rtmp_ui_TXCloudVideoView? glRootView) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setPlayerView([])');
@@ -113,7 +113,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<int?> startPlay(String playUrl, int playType) async {
+  Future<int?> startPlay(String? playUrl, int? playType) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::startPlay([\'playUrl\':$playUrl, \'playType\':$playType])');
@@ -130,7 +130,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<int?> stopPlay(bool isNeedClearLastImg) async {
+  Future<int?> stopPlay(bool? isNeedClearLastImg) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::stopPlay([\'isNeedClearLastImg\':$isNeedClearLastImg])');
@@ -198,7 +198,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setSurfaceSize(int width, int height) async {
+  Future<void> setSurfaceSize(int? width, int? height) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setSurfaceSize([\'width\':$width, \'height\':$height])');
@@ -232,7 +232,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setRenderMode(int mode) async {
+  Future<void> setRenderMode(int? mode) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setRenderMode([\'mode\':$mode])');
@@ -249,7 +249,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setRenderRotation(int rotation) async {
+  Future<void> setRenderRotation(int? rotation) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setRenderRotation([\'rotation\':$rotation])');
@@ -266,7 +266,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<bool?> enableHardwareDecode(bool enable) async {
+  Future<bool?> enableHardwareDecode(bool? enable) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::enableHardwareDecode([\'enable\':$enable])');
@@ -283,7 +283,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setMute(bool mute) async {
+  Future<void> setMute(bool? mute) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setMute([\'mute\':$mute])');
@@ -300,7 +300,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setVolume(int volume) async {
+  Future<void> setVolume(int? volume) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setVolume([\'volume\':$volume])');
@@ -317,7 +317,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setAudioRoute(int audioRoute) async {
+  Future<void> setAudioRoute(int? audioRoute) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setAudioRoute([\'audioRoute\':$audioRoute])');
@@ -334,7 +334,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<int?> switchStream(String playUrl) async {
+  Future<int?> switchStream(String? playUrl) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::switchStream([\'playUrl\':$playUrl])');
@@ -351,7 +351,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setAudioVolumeEvaluationListener(com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener listener) async {
+  Future<void> setAudioVolumeEvaluationListener(com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener? listener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setAudioVolumeEvaluationListener([])');
@@ -368,7 +368,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> enableAudioVolumeEvaluation(int intervalMs) async {
+  Future<void> enableAudioVolumeEvaluation(int? intervalMs) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::enableAudioVolumeEvaluation([\'intervalMs\':$intervalMs])');
@@ -385,7 +385,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> callExperimentalAPI(String jsonStr) async {
+  Future<void> callExperimentalAPI(String? jsonStr) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::callExperimentalAPI([\'jsonStr\':$jsonStr])');
@@ -402,7 +402,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<int?> startRecord(int recordType) async {
+  Future<int?> startRecord(int? recordType) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::startRecord([\'recordType\':$recordType])');
@@ -436,7 +436,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> snapshot(com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener listener) async {
+  Future<void> snapshot(com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener? listener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::snapshot([])');
@@ -453,7 +453,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<bool?> addVideoRawData(Uint8List yuvBuffer) async {
+  Future<bool?> addVideoRawData(Uint8List? yuvBuffer) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::addVideoRawData([\'yuvBuffer\':$yuvBuffer])');
@@ -470,7 +470,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setVideoRawDataListener(com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener listener) async {
+  Future<void> setVideoRawDataListener(com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener? listener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setVideoRawDataListener([])');
@@ -487,7 +487,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<int?> setVideoRenderListener(com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener listener, Object glContext) async {
+  Future<int?> setVideoRenderListener(com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener? listener, Object? glContext) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setVideoRenderListener([\'glContext\':$glContext])');
@@ -504,7 +504,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> setAudioRawDataListener(com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener listener) async {
+  Future<void> setAudioRawDataListener(com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener? listener) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setAudioRawDataListener([])');
@@ -521,7 +521,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<int?> prepareLiveSeek(String domain, int bizid) async {
+  Future<int?> prepareLiveSeek(String? domain, int? bizid) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::prepareLiveSeek([\'domain\':$domain, \'bizid\':$bizid])');
@@ -538,7 +538,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   
-  Future<void> seek(int time) async {
+  Future<void> seek(int? time) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::seek([\'time\':$time])');
@@ -572,7 +572,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setAutoPlay(bool autoPlay) async {
+  Future<void> setAutoPlay(bool? autoPlay) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setAutoPlay([\'autoPlay\':$autoPlay])');
@@ -589,7 +589,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setRate(double rate) async {
+  Future<void> setRate(double? rate) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::setRate([\'rate\':$rate])');
@@ -629,7 +629,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
 
   //region methods
   
-  Future<List<void>> setConfig_batch(List<com_tencent_rtmp_TXLivePlayConfig> config) async {
+  Future<List<void>> setConfig_batch(List<com_tencent_rtmp_TXLivePlayConfig?> config) async {
     assert(true);
   
     // invoke native method
@@ -640,7 +640,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> setPlayerView_batch(List<com_tencent_rtmp_ui_TXCloudVideoView> glRootView) async {
+  Future<List<void>> setPlayerView_batch(List<com_tencent_rtmp_ui_TXCloudVideoView?> glRootView) async {
     assert(true);
   
     // invoke native method
@@ -651,7 +651,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<int?>> startPlay_batch(List<String> playUrl, List<int> playType) async {
+  Future<List<int?>> startPlay_batch(List<String?> playUrl, List<int?> playType) async {
     assert(playUrl.length == playType.length);
   
     // invoke native method
@@ -662,7 +662,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<int?>> stopPlay_batch(List<bool> isNeedClearLastImg) async {
+  Future<List<int?>> stopPlay_batch(List<bool?> isNeedClearLastImg) async {
     assert(true);
   
     // invoke native method
@@ -706,7 +706,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> setSurfaceSize_batch(List<int> width, List<int> height) async {
+  Future<List<void>> setSurfaceSize_batch(List<int?> width, List<int?> height) async {
     assert(width.length == height.length);
   
     // invoke native method
@@ -728,7 +728,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> setRenderMode_batch(List<int> mode) async {
+  Future<List<void>> setRenderMode_batch(List<int?> mode) async {
     assert(true);
   
     // invoke native method
@@ -739,7 +739,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> setRenderRotation_batch(List<int> rotation) async {
+  Future<List<void>> setRenderRotation_batch(List<int?> rotation) async {
     assert(true);
   
     // invoke native method
@@ -750,7 +750,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<bool?>> enableHardwareDecode_batch(List<bool> enable) async {
+  Future<List<bool?>> enableHardwareDecode_batch(List<bool?> enable) async {
     assert(true);
   
     // invoke native method
@@ -761,7 +761,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> setMute_batch(List<bool> mute) async {
+  Future<List<void>> setMute_batch(List<bool?> mute) async {
     assert(true);
   
     // invoke native method
@@ -772,7 +772,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> setVolume_batch(List<int> volume) async {
+  Future<List<void>> setVolume_batch(List<int?> volume) async {
     assert(true);
   
     // invoke native method
@@ -783,7 +783,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> setAudioRoute_batch(List<int> audioRoute) async {
+  Future<List<void>> setAudioRoute_batch(List<int?> audioRoute) async {
     assert(true);
   
     // invoke native method
@@ -794,7 +794,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<int?>> switchStream_batch(List<String> playUrl) async {
+  Future<List<int?>> switchStream_batch(List<String?> playUrl) async {
     assert(true);
   
     // invoke native method
@@ -805,7 +805,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> enableAudioVolumeEvaluation_batch(List<int> intervalMs) async {
+  Future<List<void>> enableAudioVolumeEvaluation_batch(List<int?> intervalMs) async {
     assert(true);
   
     // invoke native method
@@ -816,7 +816,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> callExperimentalAPI_batch(List<String> jsonStr) async {
+  Future<List<void>> callExperimentalAPI_batch(List<String?> jsonStr) async {
     assert(true);
   
     // invoke native method
@@ -827,7 +827,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<int?>> startRecord_batch(List<int> recordType) async {
+  Future<List<int?>> startRecord_batch(List<int?> recordType) async {
     assert(true);
   
     // invoke native method
@@ -849,7 +849,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<bool?>> addVideoRawData_batch(List<Uint8List> yuvBuffer) async {
+  Future<List<bool?>> addVideoRawData_batch(List<Uint8List?> yuvBuffer) async {
     assert(true);
   
     // invoke native method
@@ -860,7 +860,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<int?>> prepareLiveSeek_batch(List<String> domain, List<int> bizid) async {
+  Future<List<int?>> prepareLiveSeek_batch(List<String?> domain, List<int?> bizid) async {
     assert(domain.length == bizid.length);
   
     // invoke native method
@@ -871,7 +871,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   
-  Future<List<void>> seek_batch(List<int> time) async {
+  Future<List<void>> seek_batch(List<int?> time) async {
     assert(true);
   
     // invoke native method
@@ -893,7 +893,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   @deprecated
-  Future<List<void>> setAutoPlay_batch(List<bool> autoPlay) async {
+  Future<List<void>> setAutoPlay_batch(List<bool?> autoPlay) async {
     assert(true);
   
     // invoke native method
@@ -904,7 +904,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
   }
   
   @deprecated
-  Future<List<void>> setRate_batch(List<double> rate) async {
+  Future<List<void>> setRate_batch(List<double?> rate) async {
     assert(true);
   
     // invoke native method

@@ -22,7 +22,7 @@ class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_TXImageSprite> create__android_content_Context(android_content_Context context) async {
+  static Future<com_tencent_rtmp_TXImageSprite> create__android_content_Context(android_content_Context? context) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_TXImageSprite__android_content_Context',
       {"context": context}
@@ -30,7 +30,7 @@ class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXImageSprite>(__result__)!;
   }
   
-  static Future<List<com_tencent_rtmp_TXImageSprite>> create_batch__android_content_Context(List<android_content_Context> context) async {
+  static Future<List<com_tencent_rtmp_TXImageSprite>> create_batch__android_content_Context(List<android_content_Context?> context) async {
     assert(true);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_TXImageSprite__android_content_Context',
@@ -55,7 +55,7 @@ class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setVTTUrlAndImageUrls(String vttUrl, List<String> images) async {
+  Future<void> setVTTUrlAndImageUrls(String? vttUrl, List<String>? images) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXImageSprite@$refId::setVTTUrlAndImageUrls([\'vttUrl\':$vttUrl, \'images\':$images])');
@@ -72,7 +72,7 @@ class com_tencent_rtmp_TXImageSprite extends java_lang_Object  {
   }
   
   
-  Future<android_graphics_Bitmap?> getThumbnail(double time) async {
+  Future<android_graphics_Bitmap?> getThumbnail(double? time) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXImageSprite@$refId::getThumbnail([\'time\':$time])');
@@ -129,7 +129,7 @@ extension com_tencent_rtmp_TXImageSprite_Batch on List<com_tencent_rtmp_TXImageS
 
   //region methods
   
-  Future<List<void>> setVTTUrlAndImageUrls_batch(List<String> vttUrl, List<List<String>> images) async {
+  Future<List<void>> setVTTUrlAndImageUrls_batch(List<String?> vttUrl, List<List<String>?> images) async {
     assert(vttUrl.length == images.length);
   
     // invoke native method
@@ -140,7 +140,7 @@ extension com_tencent_rtmp_TXImageSprite_Batch on List<com_tencent_rtmp_TXImageS
   }
   
   
-  Future<List<android_graphics_Bitmap?>> getThumbnail_batch(List<double> time) async {
+  Future<List<android_graphics_Bitmap?>> getThumbnail_batch(List<double?> time) async {
     assert(true);
   
     // invoke native method

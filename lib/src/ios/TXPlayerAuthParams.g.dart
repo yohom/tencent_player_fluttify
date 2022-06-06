@@ -84,31 +84,31 @@ class TXPlayerAuthParams extends NSObject  {
   //endregion
 
   //region setters
-  Future<void> set_appId(int appId) async {
+  Future<void> set_appId(int? appId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_appId', <String, dynamic>{'__this__': this, "appId": appId});
   }
   
-  Future<void> set_fileId(String fileId) async {
+  Future<void> set_fileId(String? fileId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_fileId', <String, dynamic>{'__this__': this, "fileId": fileId});
   }
   
-  Future<void> set_timeout(String timeout) async {
+  Future<void> set_timeout(String? timeout) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_timeout', <String, dynamic>{'__this__': this, "timeout": timeout});
   }
   
-  Future<void> set_exper(int exper) async {
+  Future<void> set_exper(int? exper) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_exper', <String, dynamic>{'__this__': this, "exper": exper});
   }
   
-  Future<void> set_us(String us) async {
+  Future<void> set_us(String? us) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_us', <String, dynamic>{'__this__': this, "us": us});
   }
   
-  Future<void> set_sign(String sign) async {
+  Future<void> set_sign(String? sign) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_sign', <String, dynamic>{'__this__': this, "sign": sign});
   }
   
-  Future<void> set_https(bool https) async {
+  Future<void> set_https(bool? https) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_https', <String, dynamic>{'__this__': this, "https": https});
   }
   
@@ -169,43 +169,43 @@ extension TXPlayerAuthParams_Batch on List<TXPlayerAuthParams?> {
   //endregion
 
   //region setters
-  Future<void> set_appId_batch(List<int> appId) async {
+  Future<void> set_appId_batch(List<int?> appId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_appId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "appId": appId[__i__]}]);
   
   
   }
   
-  Future<void> set_fileId_batch(List<String> fileId) async {
+  Future<void> set_fileId_batch(List<String?> fileId) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_fileId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "fileId": fileId[__i__]}]);
   
   
   }
   
-  Future<void> set_timeout_batch(List<String> timeout) async {
+  Future<void> set_timeout_batch(List<String?> timeout) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_timeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "timeout": timeout[__i__]}]);
   
   
   }
   
-  Future<void> set_exper_batch(List<int> exper) async {
+  Future<void> set_exper_batch(List<int?> exper) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_exper_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "exper": exper[__i__]}]);
   
   
   }
   
-  Future<void> set_us_batch(List<String> us) async {
+  Future<void> set_us_batch(List<String?> us) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_us_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "us": us[__i__]}]);
   
   
   }
   
-  Future<void> set_sign_batch(List<String> sign) async {
+  Future<void> set_sign_batch(List<String?> sign) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_sign_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "sign": sign[__i__]}]);
   
   
   }
   
-  Future<void> set_https_batch(List<bool> https) async {
+  Future<void> set_https_batch(List<bool?> https) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXPlayerAuthParams::set_https_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "https": https[__i__]}]);
   
   

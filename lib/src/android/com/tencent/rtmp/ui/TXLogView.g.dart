@@ -22,7 +22,7 @@ class com_tencent_rtmp_ui_TXLogView extends android_widget_LinearLayout  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_ui_TXLogView> create__android_content_Context(android_content_Context context) async {
+  static Future<com_tencent_rtmp_ui_TXLogView> create__android_content_Context(android_content_Context? context) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_tencent_rtmp_ui_TXLogView__android_content_Context',
       {"context": context}
@@ -30,7 +30,7 @@ class com_tencent_rtmp_ui_TXLogView extends android_widget_LinearLayout  {
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_TXLogView>(__result__)!;
   }
   
-  static Future<List<com_tencent_rtmp_ui_TXLogView>> create_batch__android_content_Context(List<android_content_Context> context) async {
+  static Future<List<com_tencent_rtmp_ui_TXLogView>> create_batch__android_content_Context(List<android_content_Context?> context) async {
     assert(true);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_tencent_rtmp_ui_TXLogView__android_content_Context',

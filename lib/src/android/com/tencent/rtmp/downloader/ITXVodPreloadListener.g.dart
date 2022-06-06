@@ -18,7 +18,7 @@ mixin com_tencent_rtmp_downloader_ITXVodPreloadListener on java_lang_Object {
 
   static com_tencent_rtmp_downloader_ITXVodPreloadListener subInstance() => _com_tencent_rtmp_downloader_ITXVodPreloadListener_SUB();
 
-  static Future<com_tencent_rtmp_downloader_ITXVodPreloadListener> anonymous__({void Function(int? var1, String? var2)? onComplete, void Function(int? var1, String? var2, int? var3, String? var4)? onError}) async {
+  static Future<com_tencent_rtmp_downloader_ITXVodPreloadListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.downloader.ITXVodPreloadListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_ITXVodPreloadListener>(__result__)!;
@@ -29,23 +29,23 @@ mixin com_tencent_rtmp_downloader_ITXVodPreloadListener on java_lang_Object {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onComplete:':
+              case 'onComplete_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onComplete?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onComplete?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onComplete?.call(args['var1'], args['var2']);
+                __object__.onComplete?.call(args['var1'], args['var2']);
                 break;
-              case 'onError:::':
+              case 'onError___':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onError?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onError?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
                 }
             
                 // handle the native call
-                onError?.call(args['var1'], args['var2'], args['var3'], args['var4']);
+                __object__.onError?.call(args['var1'], args['var2'], args['var3'], args['var4']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -68,9 +68,9 @@ mixin com_tencent_rtmp_downloader_ITXVodPreloadListener on java_lang_Object {
 
   
 
-  Future<void> onComplete(int? var1, String? var2) async {}
+  Future<void> Function(int? var1, String? var2)? onComplete;
   
-  Future<void> onError(int? var1, String? var2, int? var3, String? var4) async {}
+  Future<void> Function(int? var1, String? var2, int? var3, String? var4)? onError;
   
 }
 

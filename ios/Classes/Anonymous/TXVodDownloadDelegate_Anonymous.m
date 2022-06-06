@@ -5,6 +5,7 @@
 #import "TXVodDownloadDelegate_Anonymous.h"
 #import <Flutter/Flutter.h>
 #import "FluttifyMessageCodec.h"
+#import <objc/runtime.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -128,7 +129,7 @@ extern BOOL enableLog;
   NSString* argmsg = msg;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onDownloadError:errorCode:errorMsg" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo, @"code": argcode == nil ? [NSNull null] : argcode, @"msg": argmsg == nil ? [NSNull null] : argmsg}];
+    [channel invokeMethod:@"onDownloadError_errorCode_errorMsg" arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo, @"code": argcode == nil ? [NSNull null] : argcode, @"msg": argmsg == nil ? [NSNull null] : argmsg}];
   });
   
 }
@@ -153,7 +154,7 @@ extern BOOL enableLog;
   NSData* argdata = data;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"hlsKeyVerify:url:data"
+    [channel invokeMethod:@"hlsKeyVerify_url_data"
                 arguments:@{@"mediaInfo": argmediaInfo == nil ? [NSNull null] : argmediaInfo, @"url": argurl == nil ? [NSNull null] : argurl, @"data": argdata == nil ? [NSNull null] : argdata}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
   });

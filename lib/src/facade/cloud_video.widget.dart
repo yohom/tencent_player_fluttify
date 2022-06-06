@@ -33,7 +33,7 @@ class _CloudVideoState extends State<CloudVideo> {
   @override
   Widget build(BuildContext context) {
     if (Platform.isAndroid) {
-      return com_tencent_rtmp_ui_TXCloudVideoView_Android(
+      return com_tencent_rtmp_ui_TXCloudVideoView_AndroidView(
         onDispose: _controller?.dispose,
         gestureRecognizers: widget.gestureRecognizers,
         onViewCreated: (controller) async {
@@ -55,9 +55,7 @@ class _CloudVideoState extends State<CloudVideo> {
         },
       );
     } else {
-      return Center(
-        child: Text('未实现的平台'),
-      );
+      return const Center(child: Text('未实现的平台'));
     }
   }
 }

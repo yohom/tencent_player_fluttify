@@ -55,7 +55,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setAutoAdjustCacheTime(bool bAuto) async {
+  Future<void> setAutoAdjustCacheTime(bool? bAuto) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setAutoAdjustCacheTime([\'bAuto\':$bAuto])');
@@ -72,7 +72,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setCacheTime(double time) async {
+  Future<void> setCacheTime(double? time) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setCacheTime([\'time\':$time])');
@@ -89,7 +89,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setMaxAutoAdjustCacheTime(double time) async {
+  Future<void> setMaxAutoAdjustCacheTime(double? time) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setMaxAutoAdjustCacheTime([\'time\':$time])');
@@ -106,7 +106,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setMinAutoAdjustCacheTime(double time) async {
+  Future<void> setMinAutoAdjustCacheTime(double? time) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setMinAutoAdjustCacheTime([\'time\':$time])');
@@ -123,7 +123,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setVideoBlockThreshold(int threshold) async {
+  Future<void> setVideoBlockThreshold(int? threshold) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setVideoBlockThreshold([\'threshold\':$threshold])');
@@ -140,7 +140,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setConnectRetryCount(int count) async {
+  Future<void> setConnectRetryCount(int? count) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setConnectRetryCount([\'count\':$count])');
@@ -157,7 +157,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setConnectRetryInterval(int interval) async {
+  Future<void> setConnectRetryInterval(int? interval) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setConnectRetryInterval([\'interval\':$interval])');
@@ -174,7 +174,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setEnableMessage(bool enable) async {
+  Future<void> setEnableMessage(bool? enable) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setEnableMessage([\'enable\':$enable])');
@@ -191,7 +191,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> enableAEC(bool enable) async {
+  Future<void> enableAEC(bool? enable) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::enableAEC([\'enable\':$enable])');
@@ -208,7 +208,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setEnableMetaData(bool enable) async {
+  Future<void> setEnableMetaData(bool? enable) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setEnableMetaData([\'enable\':$enable])');
@@ -225,7 +225,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setFlvSessionKey(String flvSessionKey) async {
+  Future<void> setFlvSessionKey(String? flvSessionKey) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setFlvSessionKey([\'flvSessionKey\':$flvSessionKey])');
@@ -242,7 +242,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setEnableNearestIP(bool enable) async {
+  Future<void> setEnableNearestIP(bool? enable) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setEnableNearestIP([\'enable\':$enable])');
@@ -259,7 +259,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setRtmpChannelType(int type) async {
+  Future<void> setRtmpChannelType(int? type) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setRtmpChannelType([\'type\':$type])');
@@ -276,7 +276,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setCacheFolderPath(String folderPath) async {
+  Future<void> setCacheFolderPath(String? folderPath) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setCacheFolderPath([\'folderPath\':$folderPath])');
@@ -293,7 +293,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setMaxCacheItems(int maxCacheItems) async {
+  Future<void> setMaxCacheItems(int? maxCacheItems) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setMaxCacheItems([\'maxCacheItems\':$maxCacheItems])');
@@ -310,7 +310,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
   }
   
   @deprecated
-  Future<void> setHeaders(Map<String,String> headers) async {
+  Future<void> setHeaders(Map<String,String>? headers) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayConfig@$refId::setHeaders([\'headers\':$headers])');
@@ -350,7 +350,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
 
   //region methods
   
-  Future<List<void>> setAutoAdjustCacheTime_batch(List<bool> bAuto) async {
+  Future<List<void>> setAutoAdjustCacheTime_batch(List<bool?> bAuto) async {
     assert(true);
   
     // invoke native method
@@ -361,7 +361,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setCacheTime_batch(List<double> time) async {
+  Future<List<void>> setCacheTime_batch(List<double?> time) async {
     assert(true);
   
     // invoke native method
@@ -372,7 +372,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setMaxAutoAdjustCacheTime_batch(List<double> time) async {
+  Future<List<void>> setMaxAutoAdjustCacheTime_batch(List<double?> time) async {
     assert(true);
   
     // invoke native method
@@ -383,7 +383,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setMinAutoAdjustCacheTime_batch(List<double> time) async {
+  Future<List<void>> setMinAutoAdjustCacheTime_batch(List<double?> time) async {
     assert(true);
   
     // invoke native method
@@ -394,7 +394,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setVideoBlockThreshold_batch(List<int> threshold) async {
+  Future<List<void>> setVideoBlockThreshold_batch(List<int?> threshold) async {
     assert(true);
   
     // invoke native method
@@ -405,7 +405,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setConnectRetryCount_batch(List<int> count) async {
+  Future<List<void>> setConnectRetryCount_batch(List<int?> count) async {
     assert(true);
   
     // invoke native method
@@ -416,7 +416,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setConnectRetryInterval_batch(List<int> interval) async {
+  Future<List<void>> setConnectRetryInterval_batch(List<int?> interval) async {
     assert(true);
   
     // invoke native method
@@ -427,7 +427,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setEnableMessage_batch(List<bool> enable) async {
+  Future<List<void>> setEnableMessage_batch(List<bool?> enable) async {
     assert(true);
   
     // invoke native method
@@ -438,7 +438,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> enableAEC_batch(List<bool> enable) async {
+  Future<List<void>> enableAEC_batch(List<bool?> enable) async {
     assert(true);
   
     // invoke native method
@@ -449,7 +449,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setEnableMetaData_batch(List<bool> enable) async {
+  Future<List<void>> setEnableMetaData_batch(List<bool?> enable) async {
     assert(true);
   
     // invoke native method
@@ -460,7 +460,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   
-  Future<List<void>> setFlvSessionKey_batch(List<String> flvSessionKey) async {
+  Future<List<void>> setFlvSessionKey_batch(List<String?> flvSessionKey) async {
     assert(true);
   
     // invoke native method
@@ -471,7 +471,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   @deprecated
-  Future<List<void>> setEnableNearestIP_batch(List<bool> enable) async {
+  Future<List<void>> setEnableNearestIP_batch(List<bool?> enable) async {
     assert(true);
   
     // invoke native method
@@ -482,7 +482,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   @deprecated
-  Future<List<void>> setRtmpChannelType_batch(List<int> type) async {
+  Future<List<void>> setRtmpChannelType_batch(List<int?> type) async {
     assert(true);
   
     // invoke native method
@@ -493,7 +493,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   @deprecated
-  Future<List<void>> setCacheFolderPath_batch(List<String> folderPath) async {
+  Future<List<void>> setCacheFolderPath_batch(List<String?> folderPath) async {
     assert(true);
   
     // invoke native method
@@ -504,7 +504,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   @deprecated
-  Future<List<void>> setMaxCacheItems_batch(List<int> maxCacheItems) async {
+  Future<List<void>> setMaxCacheItems_batch(List<int?> maxCacheItems) async {
     assert(true);
   
     // invoke native method
@@ -515,7 +515,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
   }
   
   @deprecated
-  Future<List<void>> setHeaders_batch(List<Map<String,String>> headers) async {
+  Future<List<void>> setHeaders_batch(List<Map<String,String>?> headers) async {
     assert(true);
   
     // invoke native method

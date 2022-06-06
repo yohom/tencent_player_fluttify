@@ -18,8 +18,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 typedef TXCloudVideoViewCreatedCallback = void Function(com_tencent_rtmp_ui_TXCloudVideoView controller);
 typedef _OnAndroidViewDispose = Future<void> Function();
 
-class com_tencent_rtmp_ui_TXCloudVideoView_Android extends StatefulWidget {
-  const com_tencent_rtmp_ui_TXCloudVideoView_Android({
+class com_tencent_rtmp_ui_TXCloudVideoView_AndroidView extends StatefulWidget {
+  const com_tencent_rtmp_ui_TXCloudVideoView_AndroidView({
     Key? key,
     this.onViewCreated,
     this.onDispose,
@@ -35,10 +35,10 @@ class com_tencent_rtmp_ui_TXCloudVideoView_Android extends StatefulWidget {
   final bool hybridComposition;
 
   @override
-  _com_tencent_rtmp_ui_TXCloudVideoView_AndroidState createState() => _com_tencent_rtmp_ui_TXCloudVideoView_AndroidState();
+  _com_tencent_rtmp_ui_TXCloudVideoView_AndroidViewState createState() => _com_tencent_rtmp_ui_TXCloudVideoView_AndroidViewState();
 }
 
-class _com_tencent_rtmp_ui_TXCloudVideoView_AndroidState extends State<com_tencent_rtmp_ui_TXCloudVideoView_Android> {
+class _com_tencent_rtmp_ui_TXCloudVideoView_AndroidViewState extends State<com_tencent_rtmp_ui_TXCloudVideoView_AndroidView> {
   com_tencent_rtmp_ui_TXCloudVideoView? _controller;
 
   @override

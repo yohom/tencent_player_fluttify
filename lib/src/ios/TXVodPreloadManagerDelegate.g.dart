@@ -18,7 +18,7 @@ mixin TXVodPreloadManagerDelegate on NSObject {
 
   static TXVodPreloadManagerDelegate subInstance() => _TXVodPreloadManagerDelegate_SUB();
 
-  static Future<TXVodPreloadManagerDelegate> anonymous__({void Function(int? taskID, String? url)? onComplete, void Function(int? taskID, String? url, NSError? error)? onError}) async {
+  static Future<TXVodPreloadManagerDelegate> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPreloadManagerDelegate::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyIOSAs<TXVodPreloadManagerDelegate>(__result__)!;
@@ -29,23 +29,23 @@ mixin TXVodPreloadManagerDelegate on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onComplete:url':
+              case 'onComplete_url':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onComplete?.call([\'taskID\':${args['taskID']}, \'url\':${args['url']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onComplete_url?.call([\'taskID\':${args['taskID']}, \'url\':${args['url']}])');
                 }
             
                 // handle the native call
-                onComplete?.call(args['taskID'], args['url']);
+                __object__.onComplete_url?.call(args['taskID'], args['url']);
                 break;
-              case 'onError:url:error':
+              case 'onError_url_error':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onError?.call([\'taskID\':${args['taskID']}, \'url\':${args['url']}, \'error\':${args['error']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onError_url_error?.call([\'taskID\':${args['taskID']}, \'url\':${args['url']}, \'error\':${args['error']}])');
                 }
             
                 // handle the native call
-                onError?.call(args['taskID'], args['url'], TencentPlayerFluttifyIOSAs<NSError>(args['error']));
+                __object__.onError_url_error?.call(args['taskID'], args['url'], TencentPlayerFluttifyIOSAs<NSError>(args['error']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -68,9 +68,9 @@ mixin TXVodPreloadManagerDelegate on NSObject {
 
   
 
-  Future<void> onComplete_url(int? taskID, String? url) async {}
+  Future<void> Function(int? taskID, String? url)? onComplete_url;
   
-  Future<void> onError_url_error(int? taskID, String? url, NSError? error) async {}
+  Future<void> Function(int? taskID, String? url, NSError? error)? onError_url_error;
   
 }
 

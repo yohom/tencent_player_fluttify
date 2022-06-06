@@ -55,7 +55,7 @@ class com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity ex
 
   //region methods
   
-  Future<void> onCreate(android_os_Bundle savedInstanceState) async {
+  Future<void> onCreate(android_os_Bundle? savedInstanceState) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity@$refId::onCreate([])');
@@ -72,7 +72,7 @@ class com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity ex
   }
   
   
-  Future<void> onActivityResult(int requestCode, int resultCode, android_content_Intent data) async {
+  Future<void> onActivityResult(int? requestCode, int? resultCode, android_content_Intent? data) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity@$refId::onActivityResult([\'requestCode\':$requestCode, \'resultCode\':$resultCode])');
@@ -112,7 +112,7 @@ extension com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivit
 
   //region methods
   
-  Future<List<void>> onCreate_batch(List<android_os_Bundle> savedInstanceState) async {
+  Future<List<void>> onCreate_batch(List<android_os_Bundle?> savedInstanceState) async {
     assert(true);
   
     // invoke native method
@@ -123,7 +123,7 @@ extension com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivit
   }
   
   
-  Future<List<void>> onActivityResult_batch(List<int> requestCode, List<int> resultCode, List<android_content_Intent> data) async {
+  Future<List<void>> onActivityResult_batch(List<int?> requestCode, List<int?> resultCode, List<android_content_Intent?> data) async {
     assert(requestCode.length == resultCode.length && resultCode.length == data.length);
   
     // invoke native method

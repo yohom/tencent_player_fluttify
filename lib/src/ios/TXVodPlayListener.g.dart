@@ -18,7 +18,7 @@ mixin TXVodPlayListener on NSObject {
 
   static TXVodPlayListener subInstance() => _TXVodPlayListener_SUB();
 
-  static Future<TXVodPlayListener> anonymous__({void Function(TXVodPlayer? player, int? EvtID, Map? param)? onPlayEvent, void Function(TXVodPlayer? player, Map? param)? onNetStatus}) async {
+  static Future<TXVodPlayListener> anonymous__() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayListener::createAnonymous__');
   
     final __object__ = TencentPlayerFluttifyIOSAs<TXVodPlayListener>(__result__)!;
@@ -29,23 +29,23 @@ mixin TXVodPlayListener on NSObject {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onPlayEvent:event:withParam':
+              case 'onPlayEvent_event_withParam':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPlayEvent?.call([\'player\':${args['player']}, \'EvtID\':${args['EvtID']}, \'param\':${args['param']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onPlayEvent_event_withParam?.call([\'player\':${args['player']}, \'EvtID\':${args['EvtID']}, \'param\':${args['param']}])');
                 }
             
                 // handle the native call
-                onPlayEvent?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['EvtID'], args['param']);
+                __object__.onPlayEvent_event_withParam?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['EvtID'], args['param']);
                 break;
-              case 'onNetStatus:withParam':
+              case 'onNetStatus_withParam':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNetStatus?.call([\'player\':${args['player']}, \'param\':${args['param']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onNetStatus_withParam?.call([\'player\':${args['player']}, \'param\':${args['param']}])');
                 }
             
                 // handle the native call
-                onNetStatus?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['param']);
+                __object__.onNetStatus_withParam?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['param']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -68,9 +68,9 @@ mixin TXVodPlayListener on NSObject {
 
   
 
-  Future<void> onPlayEvent_event_withParam(TXVodPlayer? player, int? EvtID, Map? param) async {}
+  Future<void> Function(TXVodPlayer? player, int? EvtID, Map? param)? onPlayEvent_event_withParam;
   
-  Future<void> onNetStatus_withParam(TXVodPlayer? player, Map? param) async {}
+  Future<void> Function(TXVodPlayer? player, Map? param)? onNetStatus_withParam;
   
 }
 
