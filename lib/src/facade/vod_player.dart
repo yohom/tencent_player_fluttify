@@ -36,8 +36,6 @@ class VodPlayer {
         final context = await android_app_Application.get();
         instance._androidPlayer = await com_tencent_rtmp_TXVodPlayer
             .create__android_content_Context(context);
-
-        pool.add(context);
         return instance;
       },
       ios: (pool) async {
