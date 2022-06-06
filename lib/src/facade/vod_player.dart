@@ -18,6 +18,30 @@ class VodPlayer {
   com_tencent_rtmp_TXVodPlayer? _androidPlayer;
   TXVodPlayer? _iosPlayer;
 
+  /// 设置播放引擎的cache目录。设置后，离线下载，预下载，播放器等会优先从此目录读取和存储
+  static Future<void> setCacheFolderPath(String path) async {
+    return platform(
+      android: (pool) async {
+        await com_tencent_rtmp_TXPlayerGlobalSetting.setCacheFolderPath(path);
+      },
+      ios: (pool) async {
+        await TXPlayerGlobalSetting.setCacheFolderPath(path);
+      },
+    );
+  }
+
+  /// 设置播放引擎的最大缓存大小。设置后会根据设定值自动清理Cache目录的文件。单位MB。
+  static Future<void> setMaxCacheSize(int size) async {
+    return platform(
+      android: (pool) async {
+        await com_tencent_rtmp_TXPlayerGlobalSetting.setMaxCacheSize(size);
+      },
+      ios: (pool) async {
+        await TXPlayerGlobalSetting.setMaxCacheSize(size);
+      },
+    );
+  }
+
   /// 创建一个播放器
   ///
   /// 直播和点播
@@ -63,7 +87,7 @@ class VodPlayer {
     );
   }
 
-  /// 开始播放
+  /// 播放 HTTP URL 形式地址
   Future<void> startPlay(String playUrl) async {
     final httpsUrl = Uri.parse(playUrl).scheme == 'http'
         ? playUrl.replaceFirst('http', 'https')
@@ -92,7 +116,7 @@ class VodPlayer {
     );
   }
 
-  /// 恢复播放
+  /// 恢复播放，重新获取流数据
   Future<void> resumePlay() async {
     return platform(
       android: (pool) => _androidPlayer!.resume(),
@@ -100,15 +124,39 @@ class VodPlayer {
     );
   }
 
-  /// 是否在播放中
-  Future<bool?> isPlaying() async {
+  /// 是否正在播放
+  Future<bool> isPlaying() async {
     return platform(
-      android: (pool) => _androidPlayer!.isPlaying(),
-      ios: (pool) => _iosPlayer!.isPlaying(),
+      android: (pool) async => await _androidPlayer!.isPlaying() == true,
+      ios: (pool) async => await _iosPlayer!.isPlaying() == true,
     );
   }
 
-  /// 暂停播放
+  /// 是否循环播放
+  Future<bool> isLoop() async {
+    return platform(
+      android: (pool) async => await _androidPlayer!.isLoop() == true,
+      ios: (pool) async => await _iosPlayer!.isPlaying() == true,
+    );
+  }
+
+  /// 视频宽度
+  Future<int> getWidth() async {
+    return await platform(
+      android: (pool) async => await _androidPlayer!.getWidth() ?? 0,
+      ios: (pool) async => await _iosPlayer!.width() ?? 0,
+    );
+  }
+
+  /// 视频高度
+  Future<int> getHeight() async {
+    return await platform(
+      android: (pool) async => await _androidPlayer!.getHeight() ?? 0,
+      ios: (pool) async => await _iosPlayer!.height() ?? 0,
+    );
+  }
+
+  /// 暂停播放，停止获取流数据,保留最后一帧画面
   Future<void> pausePlay() async {
     return platform(
       android: (pool) => _androidPlayer!.pause(),
@@ -124,7 +172,7 @@ class VodPlayer {
     );
   }
 
-  /// 快进
+  /// 跳转到视频流指定时间点，单位秒
   Future<void> seekTo(Duration duration) async {
     final second = duration.inSeconds.toDouble();
     return platform(
@@ -480,6 +528,14 @@ class VodPlayer {
         }
         await _iosPlayer!.setRenderMode(_renderMode);
       },
+    );
+  }
+
+  /// 设置镜像
+  Future<void> setMirror(bool value) async {
+    return platform(
+      android: (pool) async => await _androidPlayer!.setMirror(value),
+      ios: (pool) async => await _iosPlayer!.setMirror(value),
     );
   }
 
