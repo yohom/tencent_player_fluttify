@@ -104,22 +104,73 @@ class PlayProgress {
 class VodPlayConfig {
   final bool? enableRenderProcess;
   final int? preferredResolution;
+
+  /// 设置播放器重连次数.
+  ///
+  /// 当SDK与服务器异常断开连接时,SDK会尝试与服务器重连.通过此函数设置SDK重连次数.
+  /// 最小值为 1, 最大值为 10, 默认值为 3.
   final int? connectRetryCount;
+
+  /// 设置播放器重连间隔.
+  ///
+  /// 当SDK与服务器异常断开连接时,SDK会尝试与服务器重连.通过此函数来设置两次重连间隔时间.
+  /// 单位秒,最小值为 3, 最大值为 30, 默认值为 3.
   final int? connectRetryInterval;
+
+  /// 设置播放器连接超时时间.
+  ///
+  /// SD连接超时时间,单位秒, 默认值为 10.
   final Duration? timeout;
+
+  /// 设置点播缓存目录。点播MP4、HLS有效
   final String? cacheFolderPath;
+
+  /// 设置播放器类型
   final PlayerType? playerType;
+
+  /// 设置自定义http headers
   final Map<String, String>? headers;
+
+  /// 设置是否精确seek，默认true
+  ///
+  /// 开启精确后seek，seek的时间平均多出200ms
   final bool? enableAccurateSeek;
+
+  /// 播放mp4文件时，若设为YES则根据文件中的旋转角度自动旋转。旋转角度可在PLAY_EVT_CHANGE_ROTATION事件中获得。默认YES
   final bool? autoRotate;
+
+  /// 平滑切换多码率HLS，默认false
+  ///
+  /// 设为false时，可提高多码率地址打开速度; 设为true，在IDR对齐时可平滑切换码率
   final bool? smoothSwitchBitrate;
+
+  /// 缓存mp4文件扩展名
   final String? cacheMp4ExtName;
+
+  /// 设置进度回调间隔
+  ///
+  /// 若不设置，SDK默认间隔0.5秒回调一次
   final Duration? progressInterval;
+
+  /// 最大预加载大小，单位 MB
+  ///
+  /// 此设置会影响playableDuration，设置越大，提前缓存的越多
   final int? maxBufferSize;
   final int? maxPreloadSize;
+
+  /// 设置缓存文件个数
+  final int? maxCacheItems;
+
+  /// 首缓需要加载的数据时长，单位ms，默认值为100ms
   final Duration? firstStartPlayBufferTime;
+
+  /// 缓冲时（缓冲数据不够引起的二次缓冲，或者seek引起的拖动缓冲）最少要缓存多长的数据才能结束缓冲，单位ms，默认值为250ms
   final Duration? nextStartPlayBufferTime;
+
+  /// 设置HLS安全加固加解密key
   final String? overlayKey;
+
+  /// 设置HLS安全加固加解密Iv
   final String? overlayIv;
   final Map<String, String>? extInfo;
 
@@ -139,6 +190,7 @@ class VodPlayConfig {
     this.progressInterval,
     this.maxBufferSize,
     this.maxPreloadSize,
+    this.maxCacheItems,
     this.firstStartPlayBufferTime,
     this.nextStartPlayBufferTime,
     this.overlayKey,
@@ -179,6 +231,8 @@ class VodPlayConfig {
       await result.setMaxBufferSize(maxBufferSize!);
     } else if (maxPreloadSize != null) {
       await result.setMaxPreloadSize(maxPreloadSize!);
+    } else if (maxCacheItems != null) {
+      await result.setMaxCacheItems(maxCacheItems!);
     } else if (firstStartPlayBufferTime != null) {
       await result.setFirstStartPlayBufferTime(
           firstStartPlayBufferTime!.inMilliseconds);
@@ -230,6 +284,8 @@ class VodPlayConfig {
       await result.set_maxBufferSize(maxBufferSize!);
     } else if (maxPreloadSize != null) {
       await result.set_maxPreloadSize(maxPreloadSize!);
+    } else if (maxCacheItems != null) {
+      await result.set_maxCacheItems(maxCacheItems!);
     } else if (firstStartPlayBufferTime != null) {
       await result.set_firstStartPlayBufferTime(
           firstStartPlayBufferTime!.inMilliseconds);
