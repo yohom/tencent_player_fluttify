@@ -121,28 +121,6 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.tencent.rtmp.TXVodPlayConfig::get_mEnableRenderProcess", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) __args__.get("__this__");
-            
-               Boolean __result__ = __this__.mEnableRenderProcess;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.tencent.rtmp.TXVodPlayConfig::get_mPreferredResolution", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) __args__.get("__this__");
-            
-               Long __result__ = __this__.mPreferredResolution;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
             put("com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::get_textureId_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
@@ -278,40 +256,6 @@ public class SubHandler0 {
             
                 __methodResult__.success(__resultList__);
             });
-            // getter
-            put("com.tencent.rtmp.TXVodPlayConfig::get_mEnableRenderProcess_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) __args__.get("__this__");
-            
-                    Boolean __result__ = __this__.mEnableRenderProcess;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.tencent.rtmp.TXVodPlayConfig::get_mPreferredResolution_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) __args__.get("__this__");
-            
-                    Long __result__ = __this__.mPreferredResolution;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
             // setter
             put("com.tencent.rtmp.TXLivePlayer.TXLiteAVTexture::set_textureId", (__args__, __methodResult__) -> {
                 // ref arg
@@ -382,24 +326,6 @@ public class SubHandler0 {
                 com.tencent.rtmp.TXBitrateItem __this__ = (com.tencent.rtmp.TXBitrateItem) ((Map<String, Object>) __args__).get("__this__");
             
                 __this__.bitrate = bitrate.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.tencent.rtmp.TXVodPlayConfig::set_mEnableRenderProcess", (__args__, __methodResult__) -> {
-                // ref arg
-                boolean mEnableRenderProcess = (boolean) ((Map<String, Object>) __args__).get("mEnableRenderProcess");
-                com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.mEnableRenderProcess = mEnableRenderProcess;
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.tencent.rtmp.TXVodPlayConfig::set_mPreferredResolution", (__args__, __methodResult__) -> {
-                // ref arg
-                Number mPreferredResolution = (Number) ((Map<String, Object>) __args__).get("mPreferredResolution");
-                com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.mPreferredResolution = mPreferredResolution.longValue();
                 __methodResult__.success("success");
             });
             // setter batch
@@ -522,154 +448,8 @@ public class SubHandler0 {
             
                 __methodResult__.success("success");
             });
-            // setter batch
-            put("com.tencent.rtmp.TXVodPlayConfig::set_mEnableRenderProcess_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    boolean mEnableRenderProcess = (boolean) ((Map<String, Object>) __args__).get("mEnableRenderProcess");
-            
-                    com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.mEnableRenderProcess = mEnableRenderProcess;
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.tencent.rtmp.TXVodPlayConfig::set_mPreferredResolution_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number mPreferredResolution = (Number) ((Map<String, Object>) __args__).get("mPreferredResolution");
-            
-                    com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.mPreferredResolution = mPreferredResolution.longValue();
-                }
-            
-                __methodResult__.success("success");
-            });
             // method
-            put("com.tencent.rtmp.ui.TXDashBoard::setStatusTextSize", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number size = (Number) ((Map<String, Object>) __args__).get("size");
-            
-                // ref
-                com.tencent.rtmp.ui.TXDashBoard __this__ = (com.tencent.rtmp.ui.TXDashBoard) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXDashBoard@" + __this__ + "::setStatusTextSize(" + size + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setStatusTextSize(size.floatValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXDashBoard::setEventTextSize", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number size = (Number) ((Map<String, Object>) __args__).get("size");
-            
-                // ref
-                com.tencent.rtmp.ui.TXDashBoard __this__ = (com.tencent.rtmp.ui.TXDashBoard) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXDashBoard@" + __this__ + "::setEventTextSize(" + size + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setEventTextSize(size.floatValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXDashBoard::setLogMsgLenLimit", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number mLogMsgLenLimit = (Number) ((Map<String, Object>) __args__).get("mLogMsgLenLimit");
-            
-                // ref
-                com.tencent.rtmp.ui.TXDashBoard __this__ = (com.tencent.rtmp.ui.TXDashBoard) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXDashBoard@" + __this__ + "::setLogMsgLenLimit(" + mLogMsgLenLimit + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setLogMsgLenLimit(mLogMsgLenLimit.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXDashBoard::setShowLevel", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number showType = (Number) ((Map<String, Object>) __args__).get("showType");
-            
-                // ref
-                com.tencent.rtmp.ui.TXDashBoard __this__ = (com.tencent.rtmp.ui.TXDashBoard) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXDashBoard@" + __this__ + "::setShowLevel(" + showType + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setShowLevel(showType.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::onResume", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.TXCloudVideoView::removeVideoView", (__args__, __methodResult__) -> {
                 // args
             
             
@@ -678,13 +458,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::onResume(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::removeVideoView(" + "" + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.onResume();
+                    __this__.removeVideoView();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -697,7 +477,7 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::onPause", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.TXCloudVideoView::getSurfaceView", (__args__, __methodResult__) -> {
                 // args
             
             
@@ -706,13 +486,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::onPause(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::getSurfaceView(" + "" + ")");
                 }
             
                 // invoke native method
-                Void __result__ = null;
+                android.view.SurfaceView __result__ = null;
                 try {
-                    __this__.onPause();
+                    __result__ = __this__.getSurfaceView();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -782,7 +562,7 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::removeVideoView", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.TXCloudVideoView::onResume", (__args__, __methodResult__) -> {
                 // args
             
             
@@ -791,13 +571,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::removeVideoView(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::onResume(" + "" + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.removeVideoView();
+                    __this__.onResume();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -810,7 +590,7 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::removeFocusIndicatorView", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.TXCloudVideoView::onPause", (__args__, __methodResult__) -> {
                 // args
             
             
@@ -819,13 +599,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::removeFocusIndicatorView(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::onPause(" + "" + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.removeFocusIndicatorView();
+                    __this__.onPause();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -854,92 +634,6 @@ public class SubHandler0 {
                 Void __result__ = null;
                 try {
                     __this__.onDestroy();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::getSurfaceView", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::getSurfaceView(" + "" + ")");
-                }
-            
-                // invoke native method
-                android.view.SurfaceView __result__ = null;
-                try {
-                    __result__ = __this__.getSurfaceView();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::setRenderMode", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number mode = (Number) ((Map<String, Object>) __args__).get("mode");
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setRenderMode(" + mode + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setRenderMode(mode.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::setRenderRotation", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number rotation = (Number) ((Map<String, Object>) __args__).get("rotation");
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setRenderRotation(" + rotation + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setRenderRotation(rotation.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -981,25 +675,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::onTouchFocus", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.TXCloudVideoView::setUserId", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Number x = (Number) ((Map<String, Object>) __args__).get("x");
-                // ref arg
-                Number y = (Number) ((Map<String, Object>) __args__).get("y");
+                String userId = (String) ((Map<String, Object>) __args__).get("userId");
             
                 // ref
                 com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::onTouchFocus(" + x + y + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setUserId(" + userId + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.onTouchFocus(x.intValue(), y.intValue());
+                    __this__.setUserId(userId);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1012,23 +704,156 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::setMirror", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.TXCloudVideoView::getUserId", (__args__, __methodResult__) -> {
                 // args
-                // ref arg
-                boolean mirror = (boolean) ((Map<String, Object>) __args__).get("mirror");
+            
             
                 // ref
                 com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setMirror(" + mirror + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::getUserId(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getUserId();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.ui.TXCloudVideoView::onTouchEvent", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.view.MotionEvent event = (android.view.MotionEvent) ((Map<String, Object>) __args__).get("event");
+            
+                // ref
+                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::onTouchEvent(" + event + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.onTouchEvent(event);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.ui.TXCloudVideoView::setLogMargin", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number leftMarginInDp = (Number) ((Map<String, Object>) __args__).get("leftMarginInDp");
+                // ref arg
+                Number rightMarginInDp = (Number) ((Map<String, Object>) __args__).get("rightMarginInDp");
+                // ref arg
+                Number topMarginInDp = (Number) ((Map<String, Object>) __args__).get("topMarginInDp");
+                // ref arg
+                Number bottomMarginInDp = (Number) ((Map<String, Object>) __args__).get("bottomMarginInDp");
+            
+                // ref
+                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setLogMargin(" + leftMarginInDp + rightMarginInDp + topMarginInDp + bottomMarginInDp + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setMirror(mirror);
+                    __this__.setLogMargin(leftMarginInDp.floatValue(), rightMarginInDp.floatValue(), topMarginInDp.floatValue(), bottomMarginInDp.floatValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.ui.TXCloudVideoView::setDashBoardMarginInPx", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number left = (Number) ((Map<String, Object>) __args__).get("left");
+                // ref arg
+                Number right = (Number) ((Map<String, Object>) __args__).get("right");
+                // ref arg
+                Number top = (Number) ((Map<String, Object>) __args__).get("top");
+                // ref arg
+                Number bottom = (Number) ((Map<String, Object>) __args__).get("bottom");
+            
+                // ref
+                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setDashBoardMarginInPx(" + left + right + top + bottom + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setDashBoardMarginInPx(left.intValue(), right.intValue(), top.intValue(), bottom.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.ui.TXCloudVideoView::setDashBoardMarginInRatio", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number leftRatio = (Number) ((Map<String, Object>) __args__).get("leftRatio");
+                // ref arg
+                Number rightRatio = (Number) ((Map<String, Object>) __args__).get("rightRatio");
+                // ref arg
+                Number topRatio = (Number) ((Map<String, Object>) __args__).get("topRatio");
+                // ref arg
+                Number bottomRatio = (Number) ((Map<String, Object>) __args__).get("bottomRatio");
+            
+                // ref
+                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setDashBoardMarginInRatio(" + leftRatio + rightRatio + topRatio + bottomRatio + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setDashBoardMarginInRatio(leftRatio.floatValue(), rightRatio.floatValue(), topRatio.floatValue(), bottomRatio.floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1127,27 +952,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::setLogText", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.DashBoard::setStatusTextSize", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                android.os.Bundle status = (android.os.Bundle) ((Map<String, Object>) __args__).get("status");
-                // ref arg
-                android.os.Bundle event = (android.os.Bundle) ((Map<String, Object>) __args__).get("event");
-                // ref arg
-                Number eventId = (Number) ((Map<String, Object>) __args__).get("eventId");
+                Number size = (Number) ((Map<String, Object>) __args__).get("size");
             
                 // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
+                com.tencent.rtmp.ui.DashBoard __this__ = (com.tencent.rtmp.ui.DashBoard) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setLogText(" + status + event + eventId + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.DashBoard@" + __this__ + "::setStatusTextSize(" + size + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setLogText(status, event, eventId.intValue());
+                    __this__.setStatusTextSize(size.floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1160,25 +981,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::updateVideoViewSize", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.DashBoard::setEventTextSize", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Number captureWidth = (Number) ((Map<String, Object>) __args__).get("captureWidth");
-                // ref arg
-                Number captureHeight = (Number) ((Map<String, Object>) __args__).get("captureHeight");
+                Number size = (Number) ((Map<String, Object>) __args__).get("size");
             
                 // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
+                com.tencent.rtmp.ui.DashBoard __this__ = (com.tencent.rtmp.ui.DashBoard) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::updateVideoViewSize(" + captureWidth + captureHeight + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.DashBoard@" + __this__ + "::setEventTextSize(" + size + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.updateVideoViewSize(captureWidth.intValue(), captureHeight.intValue());
+                    __this__.setEventTextSize(size.floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1191,23 +1010,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::appendEventInfo", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.DashBoard::setMessageMaxLength", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                String message = (String) ((Map<String, Object>) __args__).get("message");
+                Number maxLength = (Number) ((Map<String, Object>) __args__).get("maxLength");
             
                 // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
+                com.tencent.rtmp.ui.DashBoard __this__ = (com.tencent.rtmp.ui.DashBoard) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::appendEventInfo(" + message + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.DashBoard@" + __this__ + "::setMessageMaxLength(" + maxLength + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.appendEventInfo(message);
+                    __this__.setMessageMaxLength(maxLength.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1220,241 +1039,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::showVideoDebugLog", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.ui.DashBoard::setShowLevel", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 Number showType = (Number) ((Map<String, Object>) __args__).get("showType");
             
                 // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
+                com.tencent.rtmp.ui.DashBoard __this__ = (com.tencent.rtmp.ui.DashBoard) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::showVideoDebugLog(" + showType + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.DashBoard@" + __this__ + "::setShowLevel(" + showType + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.showVideoDebugLog(showType.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::setLogMargin", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number leftMarginInDp = (Number) ((Map<String, Object>) __args__).get("leftMarginInDp");
-                // ref arg
-                Number rightMarginInDp = (Number) ((Map<String, Object>) __args__).get("rightMarginInDp");
-                // ref arg
-                Number topMarginInDp = (Number) ((Map<String, Object>) __args__).get("topMarginInDp");
-                // ref arg
-                Number bottomMarginInDp = (Number) ((Map<String, Object>) __args__).get("bottomMarginInDp");
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setLogMargin(" + leftMarginInDp + rightMarginInDp + topMarginInDp + bottomMarginInDp + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setLogMargin(leftMarginInDp.floatValue(), rightMarginInDp.floatValue(), topMarginInDp.floatValue(), bottomMarginInDp.floatValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::setLogMarginRatio", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number leftMarginInDp = (Number) ((Map<String, Object>) __args__).get("leftMarginInDp");
-                // ref arg
-                Number rightMarginInDp = (Number) ((Map<String, Object>) __args__).get("rightMarginInDp");
-                // ref arg
-                Number topMarginInDp = (Number) ((Map<String, Object>) __args__).get("topMarginInDp");
-                // ref arg
-                Number bottomMarginInDp = (Number) ((Map<String, Object>) __args__).get("bottomMarginInDp");
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setLogMarginRatio(" + leftMarginInDp + rightMarginInDp + topMarginInDp + bottomMarginInDp + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setLogMarginRatio(leftMarginInDp.floatValue(), rightMarginInDp.floatValue(), topMarginInDp.floatValue(), bottomMarginInDp.floatValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::getUserId", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::getUserId(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getUserId();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::setUserId", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String userId = (String) ((Map<String, Object>) __args__).get("userId");
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::setUserId(" + userId + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setUserId(userId);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::px2dip", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context context = (android.content.Context) ((Map<String, Object>) __args__).get("context");
-                // ref arg
-                Number pxValue = (Number) ((Map<String, Object>) __args__).get("pxValue");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView::px2dip(" + context + pxValue + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = com.tencent.rtmp.ui.TXCloudVideoView.px2dip(context, pxValue.floatValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::stop", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean isNeedClearLastImg = (boolean) ((Map<String, Object>) __args__).get("isNeedClearLastImg");
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::stop(" + isNeedClearLastImg + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.stop(isNeedClearLastImg);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.ui.TXCloudVideoView::onTouch", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.view.View v = (android.view.View) ((Map<String, Object>) __args__).get("v");
-                // ref arg
-                android.view.MotionEvent event = (android.view.MotionEvent) ((Map<String, Object>) __args__).get("event");
-            
-                // ref
-                com.tencent.rtmp.ui.TXCloudVideoView __this__ = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.ui.TXCloudVideoView@" + __this__ + "::onTouch(" + v + event + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.onTouch(v, event);
+                    __this__.setShowLevel(showType.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2397,56 +1998,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity::onCreate", (__args__, __methodResult__) -> {
+            put("com.tencent.rtmp.TXLivePlayer::showDebugView", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                android.os.Bundle savedInstanceState = (android.os.Bundle) ((Map<String, Object>) __args__).get("savedInstanceState");
+                boolean isShow = (boolean) ((Map<String, Object>) __args__).get("isShow");
             
                 // ref
-                com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity __this__ = (com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity) ((Map<String, Object>) __args__).get("__this__");
+                com.tencent.rtmp.TXLivePlayer __this__ = (com.tencent.rtmp.TXLivePlayer) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity@" + __this__ + "::onCreate(" + savedInstanceState + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXLivePlayer@" + __this__ + "::showDebugView(" + isShow + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.onCreate(savedInstanceState);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity::onActivityResult", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number requestCode = (Number) ((Map<String, Object>) __args__).get("requestCode");
-                // ref arg
-                Number resultCode = (Number) ((Map<String, Object>) __args__).get("resultCode");
-                // ref arg
-                android.content.Intent data = (android.content.Intent) ((Map<String, Object>) __args__).get("data");
-            
-                // ref
-                com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity __this__ = (com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.video.TXScreenCapture.TXScreenCaptureAssistantActivity@" + __this__ + "::onActivityResult(" + requestCode + resultCode + data + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onActivityResult(requestCode.intValue(), resultCode.intValue(), data);
+                    __this__.showDebugView(isShow);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2951,37 +2519,6 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number errCode = (Number) ((Map<String, Object>) __args__).get("errCode");
-                // ref arg
-                String errMsg = (String) ((Map<String, Object>) __args__).get("errMsg");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime(" + errCode + errMsg + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    com.tencent.rtmp.TXLiveBase.onUpdateNetworkTime(errCode.intValue(), errMsg);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
             put("com.tencent.rtmp.TXLiveBase::setExtID", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
@@ -3001,6 +2538,37 @@ public class SubHandler0 {
                 Boolean __result__ = null;
                 try {
                     __result__ = com.tencent.rtmp.TXLiveBase.setExtID(extKey, extValue);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number errCode = (Number) ((Map<String, Object>) __args__).get("errCode");
+                // ref arg
+                String errMsg = (String) ((Map<String, Object>) __args__).get("errMsg");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime(" + errCode + errMsg + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    com.tencent.rtmp.TXLiveBase.onUpdateNetworkTime(errCode.intValue(), errMsg);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4043,37 +3611,6 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.TXVodPlayer::onNotifyEvent", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number event = (Number) ((Map<String, Object>) __args__).get("event");
-                // ref arg
-                android.os.Bundle param = (android.os.Bundle) ((Map<String, Object>) __args__).get("param");
-            
-                // ref
-                com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXVodPlayer@" + __this__ + "::onNotifyEvent(" + event + param + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onNotifyEvent(event.intValue(), param);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
             put("com.tencent.rtmp.TXVodPlayer::setToken", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
@@ -4788,6 +4325,90 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
+            put("com.tencent.rtmp.TXPlayerDrmBuilder::getProvisionUrl", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::getProvisionUrl(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getProvisionUrl();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.TXPlayerDrmBuilder::getKeyLicenseUrl", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::getKeyLicenseUrl(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getKeyLicenseUrl();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.TXPlayerDrmBuilder::getPlayUrl", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::getPlayUrl(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getPlayUrl();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
             put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getDataSource", (__args__, __methodResult__) -> {
                 // args
             
@@ -5168,6 +4789,496 @@ public class SubHandler0 {
                 String __result__ = null;
                 try {
                     __result__ = __this__.getPSign();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::setQuality", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number quality = (Number) ((Map<String, Object>) __args__).get("quality");
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::setQuality(" + quality + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setQuality(quality.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::setToken", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String token = (String) ((Map<String, Object>) __args__).get("token");
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::setToken(" + token + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setToken(token);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getAuthBuilder", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getAuthBuilder(" + "" + ")");
+                }
+            
+                // invoke native method
+                com.tencent.rtmp.TXPlayerAuthBuilder __result__ = null;
+                try {
+                    __result__ = __this__.getAuthBuilder();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getQuality", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getQuality(" + "" + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.getQuality();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getTemplateName", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getTemplateName(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getTemplateName();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getToken", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getToken(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getToken();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getAppId", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getAppId(" + "" + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.getAppId();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getUserName", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getUserName(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getUserName();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getOverlayKey", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getOverlayKey(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getOverlayKey();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getOverlayIv", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getOverlayIv(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getOverlayIv();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodPreloadManager::getInstance", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Context context = (android.content.Context) ((Map<String, Object>) __args__).get("context");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodPreloadManager::getInstance(" + context + ")");
+                }
+            
+                // invoke native method
+                com.tencent.rtmp.downloader.TXVodPreloadManager __result__ = null;
+                try {
+                    __result__ = com.tencent.rtmp.downloader.TXVodPreloadManager.getInstance(context);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodPreloadManager::startPreload", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String url = (String) ((Map<String, Object>) __args__).get("url");
+                // ref arg
+                Number preloadSizeMB = (Number) ((Map<String, Object>) __args__).get("preloadSizeMB");
+                // ref arg
+                Number preferredResolution = (Number) ((Map<String, Object>) __args__).get("preferredResolution");
+                // ref arg
+                com.tencent.rtmp.downloader.ITXVodPreloadListener listener = (com.tencent.rtmp.downloader.ITXVodPreloadListener) ((Map<String, Object>) __args__).get("listener");
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodPreloadManager __this__ = (com.tencent.rtmp.downloader.TXVodPreloadManager) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodPreloadManager@" + __this__ + "::startPreload(" + url + preloadSizeMB + preferredResolution + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.startPreload(url, preloadSizeMB.intValue(), preferredResolution.longValue(), listener);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodPreloadManager::stopPreload", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number taskID = (Number) ((Map<String, Object>) __args__).get("taskID");
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodPreloadManager __this__ = (com.tencent.rtmp.downloader.TXVodPreloadManager) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodPreloadManager@" + __this__ + "::stopPreload(" + taskID + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.stopPreload(taskID.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadManager::getInstance", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadManager::getInstance(" + "" + ")");
+                }
+            
+                // invoke native method
+                com.tencent.rtmp.downloader.TXVodDownloadManager __result__ = null;
+                try {
+                    __result__ = com.tencent.rtmp.downloader.TXVodDownloadManager.getInstance();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadManager::setDownloadPath", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String downloadPath = (String) ((Map<String, Object>) __args__).get("downloadPath");
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadManager __this__ = (com.tencent.rtmp.downloader.TXVodDownloadManager) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadManager@" + __this__ + "::setDownloadPath(" + downloadPath + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setDownloadPath(downloadPath);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadManager::setHeaders", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                java.util.Map<String,String> headers = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("headers");
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadManager __this__ = (com.tencent.rtmp.downloader.TXVodDownloadManager) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadManager@" + __this__ + "::setHeaders(" + headers + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setHeaders(headers);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.tencent.rtmp.downloader.TXVodDownloadManager::setListener", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.tencent.rtmp.downloader.ITXVodDownloadListener listener = (com.tencent.rtmp.downloader.ITXVodDownloadListener) ((Map<String, Object>) __args__).get("listener");
+            
+                // ref
+                com.tencent.rtmp.downloader.TXVodDownloadManager __this__ = (com.tencent.rtmp.downloader.TXVodDownloadManager) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadManager@" + __this__ + "::setListener(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setListener(listener);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

@@ -19,32 +19,23 @@ Future<bool> TencentPlayerFluttifyAndroidIs<T>(dynamic __this__) async {
   if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ is T;
   }
-  else if (T == com_tencent_rtmp_TXLog) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXLog', {'__this__': __this__});
-    return result;
-  } else if (T == com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener) {
+  else if (T == com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener', {'__this__': __this__});
-    return result;
-  } else if (T == com_tencent_rtmp_ui_TXDashBoard) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ui_TXDashBoard', {'__this__': __this__});
     return result;
   } else if (T == com_tencent_rtmp_ui_TXCloudVideoView) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ui_TXCloudVideoView', {'__this__': __this__});
     return result;
-  } else if (T == com_tencent_rtmp_ui_TXLogView) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ui_TXLogView', {'__this__': __this__});
+  } else if (T == com_tencent_rtmp_ui_DashBoard) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ui_DashBoard', {'__this__': __this__});
+    return result;
+  } else if (T == com_tencent_rtmp_ui_FocusIndicatorView) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ui_FocusIndicatorView', {'__this__': __this__});
     return result;
   } else if (T == com_tencent_rtmp_TXLivePlayer) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXLivePlayer', {'__this__': __this__});
     return result;
   } else if (T == com_tencent_rtmp_ITXVodPlayListener) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ITXVodPlayListener', {'__this__': __this__});
-    return result;
-  } else if (T == com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity', {'__this__': __this__});
-    return result;
-  } else if (T == com_tencent_rtmp_video_TXScreenCapture) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_video_TXScreenCapture', {'__this__': __this__});
     return result;
   } else if (T == com_tencent_rtmp_TXLiveBase) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXLiveBase', {'__this__': __this__});
@@ -66,6 +57,9 @@ Future<bool> TencentPlayerFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == com_tencent_rtmp_ITXLivePlayListener) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ITXLivePlayListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_tencent_rtmp_TXPlayerDrmBuilder) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXPlayerDrmBuilder', {'__this__': __this__});
     return result;
   } else if (T == com_tencent_rtmp_downloader_ITXVodPreloadListener) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_downloader_ITXVodPreloadListener', {'__this__': __this__});
@@ -94,9 +88,6 @@ Future<bool> TencentPlayerFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_tencent_rtmp_TXBitrateItem) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXBitrateItem', {'__this__': __this__});
     return result;
-  } else if (T == com_tencent_rtmp_ITXLivePushListener) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ITXLivePushListener', {'__this__': __this__});
-    return result;
   } else if (T == com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXLivePlayer_ITXSnapshotListener', {'__this__': __this__});
     return result;
@@ -111,6 +102,9 @@ Future<bool> TencentPlayerFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_tencent_rtmp_TXVodConstants) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXVodConstants', {'__this__': __this__});
     return result;
   } else if (T == com_tencent_rtmp_TXImageSprite) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXImageSprite', {'__this__': __this__});
@@ -135,24 +129,18 @@ T? TencentPlayerFluttifyAndroidAs<T>(dynamic __this__) {
   } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ as T;
   }
-  else if (T == com_tencent_rtmp_TXLog) {
-    return (com_tencent_rtmp_TXLog()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener) {
+  else if (T == com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener) {
     return (com_tencent_rtmp_TXLivePlayer_ITXAudioRawDataListener.subInstance()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_tencent_rtmp_ui_TXDashBoard) {
-    return (com_tencent_rtmp_ui_TXDashBoard()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_ui_TXCloudVideoView) {
     return (com_tencent_rtmp_ui_TXCloudVideoView()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_tencent_rtmp_ui_TXLogView) {
-    return (com_tencent_rtmp_ui_TXLogView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_tencent_rtmp_ui_DashBoard) {
+    return (com_tencent_rtmp_ui_DashBoard()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_tencent_rtmp_ui_FocusIndicatorView) {
+    return (com_tencent_rtmp_ui_FocusIndicatorView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXLivePlayer) {
     return (com_tencent_rtmp_TXLivePlayer()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_ITXVodPlayListener) {
     return (com_tencent_rtmp_ITXVodPlayListener.subInstance()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity) {
-    return (com_tencent_rtmp_video_TXScreenCapture_TXScreenCaptureAssistantActivity()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_tencent_rtmp_video_TXScreenCapture) {
-    return (com_tencent_rtmp_video_TXScreenCapture()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXLiveBase) {
     return (com_tencent_rtmp_TXLiveBase()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXPlayInfoParams) {
@@ -167,6 +155,8 @@ T? TencentPlayerFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_tencent_rtmp_TXLivePlayer_ITXLivePlayVideoRenderListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_ITXLivePlayListener) {
     return (com_tencent_rtmp_ITXLivePlayListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_tencent_rtmp_TXPlayerDrmBuilder) {
+    return (com_tencent_rtmp_TXPlayerDrmBuilder()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_downloader_ITXVodPreloadListener) {
     return (com_tencent_rtmp_downloader_ITXVodPreloadListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_downloader_ITXVodDownloadListener) {
@@ -185,8 +175,6 @@ T? TencentPlayerFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_tencent_rtmp_TXLiveConstants()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXBitrateItem) {
     return (com_tencent_rtmp_TXBitrateItem()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_tencent_rtmp_ITXLivePushListener) {
-    return (com_tencent_rtmp_ITXLivePushListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener) {
     return (com_tencent_rtmp_TXLivePlayer_ITXSnapshotListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXLivePlayConfig) {
@@ -197,6 +185,8 @@ T? TencentPlayerFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_tencent_rtmp_TXVodPlayConfig()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener) {
     return (com_tencent_rtmp_TXLivePlayer_ITXAudioVolumeEvaluationListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_tencent_rtmp_TXVodConstants) {
+    return (com_tencent_rtmp_TXVodConstants()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXImageSprite) {
     return (com_tencent_rtmp_TXImageSprite()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXLivePlayer_ITXVideoRawDataListener) {

@@ -324,14 +324,14 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<void> onUpdateNetworkTime(int? errCode, String? errMsg) async {
+  static Future<bool?> setExtID(String? extKey, String? extValue) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime([\'errCode\':$errCode, \'errMsg\':$errMsg])');
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setExtID([\'extKey\':$extKey, \'extValue\':$extValue])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime', {"errCode": errCode, "errMsg": errMsg});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLiveBase::setExtID', {"extKey": extKey, "extValue": extValue});
   
   
     // handle native call
@@ -341,14 +341,14 @@ class com_tencent_rtmp_TXLiveBase extends java_lang_Object  {
   }
   
   
-  static Future<bool?> setExtID(String? extKey, String? extValue) async {
+  static Future<void> onUpdateNetworkTime(int? errCode, String? errMsg) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::setExtID([\'extKey\':$extKey, \'extValue\':$extValue])');
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime([\'errCode\':$errCode, \'errMsg\':$errMsg])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLiveBase::setExtID', {"extKey": extKey, "extValue": extValue});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime', {"errCode": errCode, "errMsg": errMsg});
   
   
     // handle native call
@@ -568,17 +568,6 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   }
   
   
-  static Future<List<void>> onUpdateNetworkTime_batch(List<int?> errCode, List<String?> errMsg) async {
-    assert(errCode.length == errMsg.length);
-  
-    // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime_batch', [for (int __i__ = 0; __i__ < errCode.length; __i__++) {"errCode": errCode[__i__], "errMsg": errMsg[__i__]}]);
-  
-  
-    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
-  }
-  
-  
   static Future<List<bool?>> setExtID_batch(List<String?> extKey, List<String?> extValue) async {
     assert(extKey.length == extValue.length);
   
@@ -587,6 +576,17 @@ extension com_tencent_rtmp_TXLiveBase_Batch on List<com_tencent_rtmp_TXLiveBase?
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
+  }
+  
+  
+  static Future<List<void>> onUpdateNetworkTime_batch(List<int?> errCode, List<String?> errMsg) async {
+    assert(errCode.length == errMsg.length);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime_batch', [for (int __i__ = 0; __i__ < errCode.length; __i__++) {"errCode": errCode[__i__], "errMsg": errMsg[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

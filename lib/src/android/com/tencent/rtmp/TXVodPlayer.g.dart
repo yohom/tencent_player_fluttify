@@ -19,9 +19,6 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
   final String tag__ = 'tencent_player_fluttify';
 
   static final String TAG = "TXVodPlayer";
-  static final int PLAYER_TYPE_IJK = 1;
-  static final int PLAYER_TYPE_THUMB = 2;
-  static final int INDEX_AUTO = -1;
   //endregion
 
   //region creators
@@ -619,23 +616,6 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
   }
   
   
-  Future<void> onNotifyEvent(int? event, android_os_Bundle? param) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayer@$refId::onNotifyEvent([\'event\':$event])');
-    }
-  
-    // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::onNotifyEvent', {"event": event, "param": param, "__this__": this});
-  
-  
-    // handle native call
-  
-  
-    return __result__;
-  }
-  
-  
   Future<void> setToken(String? token) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -1170,17 +1150,6 @@ extension com_tencent_rtmp_TXVodPlayer_Batch on List<com_tencent_rtmp_TXVodPlaye
   
     // invoke native method
     final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::setStartTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"pos": pos[__i__], "__this__": this[__i__]}]);
-  
-  
-    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
-  }
-  
-  
-  Future<List<void>> onNotifyEvent_batch(List<int?> event, List<android_os_Bundle?> param) async {
-    assert(event.length == param.length);
-  
-    // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::onNotifyEvent_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"event": event[__i__], "param": param[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();

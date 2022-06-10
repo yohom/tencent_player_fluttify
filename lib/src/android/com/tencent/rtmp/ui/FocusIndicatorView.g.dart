@@ -11,9 +11,9 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class com_tencent_rtmp_video_TXScreenCapture extends java_lang_Object  {
+class com_tencent_rtmp_ui_FocusIndicatorView extends android_view_View  {
   //region constants
-  static const String name__ = 'com.tencent.rtmp.video.TXScreenCapture';
+  static const String name__ = 'com.tencent.rtmp.ui.FocusIndicatorView';
 
   @override
   final String tag__ = 'tencent_player_fluttify';
@@ -22,25 +22,25 @@ class com_tencent_rtmp_video_TXScreenCapture extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_tencent_rtmp_video_TXScreenCapture> create__() async {
+  static Future<com_tencent_rtmp_ui_FocusIndicatorView> create__android_content_Context(android_content_Context? context) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
-      'ObjectFactory::createcom_tencent_rtmp_video_TXScreenCapture__',
-    
+      'ObjectFactory::createcom_tencent_rtmp_ui_FocusIndicatorView__android_content_Context',
+      {"context": context}
     );
-    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_video_TXScreenCapture>(__result__)!;
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_FocusIndicatorView>(__result__)!;
   }
   
-  static Future<List<com_tencent_rtmp_video_TXScreenCapture>> create_batch__(int length) async {
+  static Future<List<com_tencent_rtmp_ui_FocusIndicatorView>> create_batch__android_content_Context(List<android_content_Context?> context) async {
     assert(true);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
-      'ObjectFactory::create_batchcom_tencent_rtmp_video_TXScreenCapture__',
-      {'length': length}
+      'ObjectFactory::create_batchcom_tencent_rtmp_ui_FocusIndicatorView__android_content_Context',
+      [for (int __i__ = 0; __i__ < context.length; __i__++) {"context": context[__i__]}]
     );
     return __result_batch__
-        ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_video_TXScreenCapture>(it))
+        ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_ui_FocusIndicatorView>(it))
         .where((element) => element !=null)
-        .cast<com_tencent_rtmp_video_TXScreenCapture>()
-        .toList() ?? <com_tencent_rtmp_video_TXScreenCapture>[];
+        .cast<com_tencent_rtmp_ui_FocusIndicatorView>()
+        .toList() ?? <com_tencent_rtmp_ui_FocusIndicatorView>[];
   }
   
   //endregion
@@ -59,11 +59,11 @@ class com_tencent_rtmp_video_TXScreenCapture extends java_lang_Object  {
 
   @override
   String toString() {
-    return 'com_tencent_rtmp_video_TXScreenCapture{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+    return 'com_tencent_rtmp_ui_FocusIndicatorView{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
   }
 }
 
-extension com_tencent_rtmp_video_TXScreenCapture_Batch on List<com_tencent_rtmp_video_TXScreenCapture?> {
+extension com_tencent_rtmp_ui_FocusIndicatorView_Batch on List<com_tencent_rtmp_ui_FocusIndicatorView?> {
   String? get refId {
     if (isEmpty) return null;
     return first?.refId;
