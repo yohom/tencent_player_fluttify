@@ -54,6 +54,7 @@ public class TencentPlayerFluttifyPlugin implements FlutterPlugin, MethodChannel
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
+        handlerMapList.add(SubHandler3.getSubHandler(messenger));
         handlerMapList.add(SubHandlerCustom.instance.getSubHandler(messenger, registrar.activity()));
 
         channel.setMethodCallHandler(plugin);
@@ -81,6 +82,7 @@ public class TencentPlayerFluttifyPlugin implements FlutterPlugin, MethodChannel
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
+        handlerMapList.add(SubHandler3.getSubHandler(messenger));
 
         channel.setMethodCallHandler(this);
     }
