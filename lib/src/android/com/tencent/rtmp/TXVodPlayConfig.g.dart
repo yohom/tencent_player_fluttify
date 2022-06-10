@@ -46,26 +46,10 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   //endregion
 
   //region getters
-  Future<bool?> get_mEnableRenderProcess() async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod("com.tencent.rtmp.TXVodPlayConfig::get_mEnableRenderProcess", {'__this__': this});
-    return __result__;
-  }
-  
-  Future<int?> get_mPreferredResolution() async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod("com.tencent.rtmp.TXVodPlayConfig::get_mPreferredResolution", {'__this__': this});
-    return __result__;
-  }
   
   //endregion
 
   //region setters
-  Future<void> set_mEnableRenderProcess(bool? mEnableRenderProcess) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mEnableRenderProcess', <String, dynamic>{'__this__': this, "mEnableRenderProcess": mEnableRenderProcess});
-  }
-  
-  Future<void> set_mPreferredResolution(int? mPreferredResolution) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mPreferredResolution', <String, dynamic>{'__this__': this, "mPreferredResolution": mPreferredResolution});
-  }
   
   //endregion
 
@@ -79,6 +63,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   
     // invoke native method
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setConnectRetryCount', {"count": count, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<int?> getConnectRetryCount() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getConnectRetryCount([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getConnectRetryCount', {"__this__": this});
   
   
     // handle native call
@@ -105,6 +106,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<int?> getConnectRetryInterval() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getConnectRetryInterval([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getConnectRetryInterval', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setTimeout(int? timeout) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -113,6 +131,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   
     // invoke native method
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setTimeout', {"timeout": timeout, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<int?> getTimeout() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getTimeout([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getTimeout', {"__this__": this});
   
   
     // handle native call
@@ -130,6 +165,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   
     // invoke native method
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setCacheFolderPath', {"folderPath": folderPath, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<String?> getCacheFolderPath() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getCacheFolderPath([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getCacheFolderPath', {"__this__": this});
   
   
     // handle native call
@@ -156,6 +208,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<int?> getMaxCacheItems() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getMaxCacheItems([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getMaxCacheItems', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setPlayerType(int? playerType) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -164,6 +233,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   
     // invoke native method
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setPlayerType', {"playerType": playerType, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<int?> getPlayerType() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getPlayerType([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getPlayerType', {"__this__": this});
   
   
     // handle native call
@@ -190,6 +276,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<Map<String,String>?> getHeaders() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getHeaders([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getHeaders', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setEnableAccurateSeek(bool? accurateSeek) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -198,6 +301,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   
     // invoke native method
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setEnableAccurateSeek', {"accurateSeek": accurateSeek, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<bool?> isEnableAccurateSeek() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::isEnableAccurateSeek([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::isEnableAccurateSeek', {"__this__": this});
   
   
     // handle native call
@@ -224,6 +344,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<bool?> isAutoRotate() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::isAutoRotate([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::isAutoRotate', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setSmoothSwitchBitrate(bool? smoothSwitchBitrate) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -232,6 +369,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   
     // invoke native method
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setSmoothSwitchBitrate', {"smoothSwitchBitrate": smoothSwitchBitrate, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<bool?> isSmoothSwitchBitrate() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::isSmoothSwitchBitrate([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::isSmoothSwitchBitrate', {"__this__": this});
   
   
     // handle native call
@@ -258,6 +412,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<String?> getCacheMp4ExtName() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getCacheMp4ExtName([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getCacheMp4ExtName', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setProgressInterval(int? intervalMs) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -266,6 +437,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   
     // invoke native method
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setProgressInterval', {"intervalMs": intervalMs, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<int?> getProgressInterval() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getProgressInterval([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getProgressInterval', {"__this__": this});
   
   
     // handle native call
@@ -292,6 +480,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<int?> getMaxBufferSize() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getMaxBufferSize([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getMaxBufferSize', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setMaxPreloadSize(int? maxPreloadSize) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -309,6 +514,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<int?> getMaxPreloadSize() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getMaxPreloadSize([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getMaxPreloadSize', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  @deprecated
   Future<void> setFirstStartPlayBufferTime(int? milliseconds) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -325,7 +547,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
     return __result__;
   }
   
-  
+  @deprecated
   Future<void> setNextStartPlayBufferTime(int? milliseconds) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -360,6 +582,23 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<String?> getOverlayKey() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getOverlayKey([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getOverlayKey', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setOverlayIv(String? overlayIv) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -377,14 +616,65 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setExtInfo(Map<String,Object>? map) async {
+  Future<String?> getOverlayIv() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setExtInfo([\'map\':$map])');
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getOverlayIv([])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setExtInfo', {"map": map, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getOverlayIv', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> setEnableRenderProcess(bool? enableRenderProcess) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setEnableRenderProcess([\'enableRenderProcess\':$enableRenderProcess])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setEnableRenderProcess', {"enableRenderProcess": enableRenderProcess, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<bool?> isEnableRenderProcess() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::isEnableRenderProcess([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::isEnableRenderProcess', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> setPreferredResolution(int? preferredResolution) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setPreferredResolution([\'preferredResolution\':$preferredResolution])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setPreferredResolution', {"preferredResolution": preferredResolution, "__this__": this});
   
   
     // handle native call
@@ -411,14 +701,31 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
-  Future<void> setPreferredResolution(int? preferredResolution) async {
+  Future<void> setExtInfo(Map<String,Object>? map) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setPreferredResolution([\'preferredResolution\':$preferredResolution])');
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setExtInfo([\'map\':$map])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setPreferredResolution', {"preferredResolution": preferredResolution, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setExtInfo', {"map": map, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<Map<String,Object>?> getExtInfoMap() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getExtInfoMap([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getExtInfoMap', {"__this__": this});
   
   
     // handle native call
@@ -442,30 +749,10 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
 
   //region getters
-  Future<List<bool?>> get_mEnableRenderProcess_batch() async {
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod("com.tencent.rtmp.TXVodPlayConfig::get_mEnableRenderProcess_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
-  }
-  
-  Future<List<int?>> get_mPreferredResolution_batch() async {
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod("com.tencent.rtmp.TXVodPlayConfig::get_mPreferredResolution_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
-  }
   
   //endregion
 
   //region setters
-  Future<void> set_mEnableRenderProcess_batch(List<bool?> mEnableRenderProcess) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mEnableRenderProcess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "mEnableRenderProcess": mEnableRenderProcess[__i__]}]);
-  
-  
-  }
-  
-  Future<void> set_mPreferredResolution_batch(List<int?> mPreferredResolution) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::set_mPreferredResolution_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "mPreferredResolution": mPreferredResolution[__i__]}]);
-  
-  
-  }
   
   //endregion
 
@@ -482,6 +769,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
+  Future<List<int?>> getConnectRetryCount_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getConnectRetryCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
+  }
+  
+  
   Future<List<void>> setConnectRetryInterval_batch(List<int?> interval) async {
     assert(true);
   
@@ -490,6 +788,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<int?>> getConnectRetryInterval_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getConnectRetryInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
@@ -503,6 +812,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
+  
+  Future<List<int?>> getTimeout_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getTimeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
+  }
+  
   @deprecated
   Future<List<void>> setCacheFolderPath_batch(List<String?> folderPath) async {
     assert(true);
@@ -512,6 +832,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<String?>> getCacheFolderPath_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getCacheFolderPath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   @deprecated
@@ -526,6 +857,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
+  Future<List<int?>> getMaxCacheItems_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getMaxCacheItems_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
+  }
+  
+  
   Future<List<void>> setPlayerType_batch(List<int?> playerType) async {
     assert(true);
   
@@ -534,6 +876,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<int?>> getPlayerType_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getPlayerType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
@@ -548,6 +901,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
+  Future<List<Map<String,String>?>> getHeaders_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getHeaders_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<Map<String,String>?>().toList();
+  }
+  
+  
   Future<List<void>> setEnableAccurateSeek_batch(List<bool?> accurateSeek) async {
     assert(true);
   
@@ -556,6 +920,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<bool?>> isEnableAccurateSeek_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::isEnableAccurateSeek_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   
@@ -570,6 +945,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
+  Future<List<bool?>> isAutoRotate_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::isAutoRotate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
+  }
+  
+  
   Future<List<void>> setSmoothSwitchBitrate_batch(List<bool?> smoothSwitchBitrate) async {
     assert(true);
   
@@ -578,6 +964,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<bool?>> isSmoothSwitchBitrate_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::isSmoothSwitchBitrate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   
@@ -592,6 +989,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
+  Future<List<String?>> getCacheMp4ExtName_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getCacheMp4ExtName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
+  }
+  
+  
   Future<List<void>> setProgressInterval_batch(List<int?> intervalMs) async {
     assert(true);
   
@@ -600,6 +1008,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<int?>> getProgressInterval_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getProgressInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
@@ -614,6 +1033,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
+  Future<List<int?>> getMaxBufferSize_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getMaxBufferSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
+  }
+  
+  
   Future<List<void>> setMaxPreloadSize_batch(List<int?> maxPreloadSize) async {
     assert(true);
   
@@ -625,6 +1055,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
+  Future<List<int?>> getMaxPreloadSize_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getMaxPreloadSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
+  }
+  
+  @deprecated
   Future<List<void>> setFirstStartPlayBufferTime_batch(List<int?> milliseconds) async {
     assert(true);
   
@@ -635,7 +1076,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  
+  @deprecated
   Future<List<void>> setNextStartPlayBufferTime_batch(List<int?> milliseconds) async {
     assert(true);
   
@@ -658,6 +1099,17 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
+  Future<List<String?>> getOverlayKey_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getOverlayKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
+  }
+  
+  
   Future<List<void>> setOverlayIv_batch(List<String?> overlayIv) async {
     assert(true);
   
@@ -669,11 +1121,44 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setExtInfo_batch(List<Map<String,Object>?> map) async {
+  Future<List<String?>> getOverlayIv_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setExtInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"map": map[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getOverlayIv_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
+  }
+  
+  
+  Future<List<void>> setEnableRenderProcess_batch(List<bool?> enableRenderProcess) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setEnableRenderProcess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"enableRenderProcess": enableRenderProcess[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<bool?>> isEnableRenderProcess_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::isEnableRenderProcess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
+  }
+  
+  
+  Future<List<void>> setPreferredResolution_batch(List<int?> preferredResolution) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setPreferredResolution_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"preferredResolution": preferredResolution[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
@@ -691,14 +1176,25 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   }
   
   
-  Future<List<void>> setPreferredResolution_batch(List<int?> preferredResolution) async {
+  Future<List<void>> setExtInfo_batch(List<Map<String,Object>?> map) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setPreferredResolution_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"preferredResolution": preferredResolution[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setExtInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"map": map[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<Map<String,Object>?>> getExtInfoMap_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getExtInfoMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<Map<String,Object>?>().toList();
   }
   
   //endregion

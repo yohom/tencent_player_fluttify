@@ -571,7 +571,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
     return __result__;
   }
   
-  @deprecated
+  
   Future<void> setAutoPlay(bool? autoPlay) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -588,7 +588,7 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
     return __result__;
   }
   
-  @deprecated
+  
   Future<void> setRate(double? rate) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -597,6 +597,23 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   
     // invoke native method
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer::setRate', {"rate": rate, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> showDebugView(bool? isShow) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXLivePlayer@$refId::showDebugView([\'isShow\':$isShow])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer::showDebugView', {"isShow": isShow, "__this__": this});
   
   
     // handle native call
@@ -892,7 +909,7 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  @deprecated
+  
   Future<List<void>> setAutoPlay_batch(List<bool?> autoPlay) async {
     assert(true);
   
@@ -903,12 +920,23 @@ extension com_tencent_rtmp_TXLivePlayer_Batch on List<com_tencent_rtmp_TXLivePla
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  
   Future<List<void>> setRate_batch(List<double?> rate) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer::setRate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"rate": rate[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<void>> showDebugView_batch(List<bool?> isShow) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXLivePlayer::showDebugView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"isShow": isShow[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();

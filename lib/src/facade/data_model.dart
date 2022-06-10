@@ -101,6 +101,16 @@ class PlayProgress {
   }
 }
 
+enum LogLevel {
+  verbose,
+  debug,
+  info,
+  warn,
+  error,
+  fatal,
+  null_,
+}
+
 class VodPlayConfig {
   final bool? enableRenderProcess;
   final int? preferredResolution;
@@ -266,7 +276,7 @@ class VodPlayConfig {
     } else if (cacheFolderPath != null) {
       await result.set_cacheFolderPath(cacheFolderPath!);
     } else if (playerType != null) {
-      await result.set_playerType(TX_Enum_PlayerType.values[playerType!.index]);
+      await result.set_playerType(playerType!.index);
     } else if (headers != null) {
       await result.set_headers(headers!);
     } else if (enableAccurateSeek != null) {
