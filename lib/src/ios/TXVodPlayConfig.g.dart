@@ -86,9 +86,9 @@ class TXVodPlayConfig extends NSObject  {
     return __result__;
   }
   
-  Future<TX_Enum_PlayerType?> get_playerType() async {
+  Future<int?> get_playerType() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodPlayConfig::get_playerType", {'__this__': this});
-    return (__result__ as int).toTX_Enum_PlayerType();
+    return __result__;
   }
   
   Future<Map?> get_headers() async {
@@ -186,8 +186,8 @@ class TXVodPlayConfig extends NSObject  {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_maxCacheItems', <String, dynamic>{'__this__': this, "maxCacheItems": maxCacheItems});
   }
   
-  Future<void> set_playerType(TX_Enum_PlayerType? playerType) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_playerType', <String, dynamic>{'__this__': this, "playerType": playerType?.toValue()});
+  Future<void> set_playerType(int? playerType) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_playerType', <String, dynamic>{'__this__': this, "playerType": playerType});
   }
   
   Future<void> set_headers(Map? headers) async {
@@ -297,9 +297,9 @@ extension TXVodPlayConfig_Batch on List<TXVodPlayConfig?> {
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<TX_Enum_PlayerType?>> get_playerType_batch() async {
+  Future<List<int?>> get_playerType_batch() async {
     final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodPlayConfig::get_playerType_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as int).toTX_Enum_PlayerType()).cast<TX_Enum_PlayerType?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   Future<List<Map?>> get_headers_batch() async {
@@ -413,8 +413,8 @@ extension TXVodPlayConfig_Batch on List<TXVodPlayConfig?> {
   
   }
   
-  Future<void> set_playerType_batch(List<TX_Enum_PlayerType?> playerType) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_playerType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "playerType": playerType[__i__]?.toValue()}]);
+  Future<void> set_playerType_batch(List<int?> playerType) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_playerType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "playerType": playerType[__i__]}]);
   
   
   }
