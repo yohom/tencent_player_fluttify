@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import, unused_local_variable, dead_code, unnecessary_cast
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import, unused_local_variable, dead_code, unnecessary_cast, constant_identifier_names
 import 'dart:async';
 import 'dart:typed_data';
 
@@ -11,12 +11,24 @@ import 'package:tencent_player_fluttify/src/ios/ios.export.g.dart';
 import 'cloud_video_controller.dart';
 import 'data_model.dart';
 
-/// 点播控制器
 class VodPlayer {
   VodPlayer._();
 
   com_tencent_rtmp_TXVodPlayer? _androidPlayer;
   TXVodPlayer? _iosPlayer;
+
+  /// 日志级别
+  static Future<void> setLogLevel(LogLevel level) async {
+    return platform(
+      android: (pool) async {
+        await com_tencent_rtmp_TXLiveBase.setLogLevel(level.index);
+      },
+      ios: (pool) async {
+        // TODO 暂时忽略调了Live相关, 这里先不实现
+        // await TXLiveBase.setCacheFolderPath(path);
+      },
+    );
+  }
 
   /// 设置播放引擎的cache目录。设置后，离线下载，预下载，播放器等会优先从此目录读取和存储
   static Future<void> setCacheFolderPath(String path) async {

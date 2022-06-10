@@ -101,6 +101,16 @@ class PlayProgress {
   }
 }
 
+enum LogLevel {
+  verbose,
+  debug,
+  info,
+  warn,
+  error,
+  fatal,
+  null_,
+}
+
 class VodPlayConfig {
   final bool? enableRenderProcess;
   final int? preferredResolution;
