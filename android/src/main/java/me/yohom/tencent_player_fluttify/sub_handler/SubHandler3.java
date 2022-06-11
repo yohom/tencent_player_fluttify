@@ -33,8 +33,51 @@ public class SubHandler3 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // factory
-            put("ObjectFactory::create_batchcom_tencent_rtmp_ui_FocusIndicatorView__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.tencent.rtmp.ui.FocusIndicatorView> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::createcom_tencent_rtmp_TXVodPlayConfig__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_tencent_rtmp_TXVodPlayConfig__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.tencent.rtmp.TXVodPlayConfig __obj__ = new com.tencent.rtmp.TXVodPlayConfig();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_tencent_rtmp_TXVodConstants__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_tencent_rtmp_TXVodConstants__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.tencent.rtmp.TXVodConstants __obj__ = new com.tencent.rtmp.TXVodConstants();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_tencent_rtmp_TXImageSprite__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_tencent_rtmp_TXImageSprite__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context context = (android.content.Context) ((Map<String, Object>) __args__).get("context");
+            
+                // create target object
+                com.tencent.rtmp.TXImageSprite __obj__ = new com.tencent.rtmp.TXImageSprite(context);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_tencent_rtmp_ui_TXCloudVideoView__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.tencent.rtmp.ui.TXCloudVideoView> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -59,7 +102,75 @@ public class SubHandler3 {
                     android.content.Context context = (android.content.Context) ((Map<String, Object>) __args__).get("context");
             
                     // create target object
-                    com.tencent.rtmp.ui.FocusIndicatorView __obj__ = new com.tencent.rtmp.ui.FocusIndicatorView(context);
+                    com.tencent.rtmp.ui.TXCloudVideoView __obj__ = new com.tencent.rtmp.ui.TXCloudVideoView(context);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_tencent_rtmp_ui_TXCloudVideoView__android_view_SurfaceView", (__argsBatch__, __methodResult__) -> {
+                List<com.tencent.rtmp.ui.TXCloudVideoView> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.view.SurfaceView surfaceView = (android.view.SurfaceView) ((Map<String, Object>) __args__).get("surfaceView");
+            
+                    // create target object
+                    com.tencent.rtmp.ui.TXCloudVideoView __obj__ = new com.tencent.rtmp.ui.TXCloudVideoView(surfaceView);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_tencent_rtmp_ui_DashBoard__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.tencent.rtmp.ui.DashBoard> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context context = (android.content.Context) ((Map<String, Object>) __args__).get("context");
+            
+                    // create target object
+                    com.tencent.rtmp.ui.DashBoard __obj__ = new com.tencent.rtmp.ui.DashBoard(context);
             
                     __resultList__.add(__obj__);
                 }

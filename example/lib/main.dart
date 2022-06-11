@@ -16,6 +16,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   VodPlayer? _player;
+  double _volume = 1.0;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,25 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: CloudVideo(onCloudVideoCreated: _handleCloudVideoCreated),
+        body: Column(
+          children: [
+            SizedBox(
+              height: 256,
+              child: CloudVideo(onCloudVideoCreated: _handleCloudVideoCreated),
+            ),
+            Expanded(
+              child: Slider(
+                value: _volume,
+                onChanged: (value) {
+                  setState(() {
+                    _volume = value;
+                    _player?.setVolume(value);
+                  });
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -34,10 +53,8 @@ class _MyAppState extends State<MyApp> {
     await _player!.setPlayerView(controller);
     await _player!.startPlay(
         "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni4934e7b/c4d93960-5643-11eb-a16f-5b3e54966275.m3u8");
-    await _player!.setOnEventListener(
-      onEventPlayProgress: (progress) {
-        print("onEventPlayProgress: $progress");
-      }
-    );
+    await _player!.setOnEventListener(onEventPlayProgress: (progress) {
+      print("onEventPlayProgress: $progress");
+    });
   }
 }

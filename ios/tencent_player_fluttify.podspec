@@ -29,7 +29,7 @@ A new flutter plugin project.
   s.vendored_libraries = 'Vendors/*.a'
   # ios system framework
   s.frameworks = [
-        
+        "MobileCoreServices"
   ]
   # ios system library
   s.libraries = [

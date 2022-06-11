@@ -140,6 +140,23 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
   }
   
   
+  Future<int?> startPlayDrm(com_tencent_rtmp_TXPlayerDrmBuilder? playerDrmBuilder) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayer@$refId::startPlayDrm([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::startPlayDrm', {"playerDrmBuilder": playerDrmBuilder, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<int?> stopPlay(bool? isNeedClearLastImg) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -878,6 +895,17 @@ extension com_tencent_rtmp_TXVodPlayer_Batch on List<com_tencent_rtmp_TXVodPlaye
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<int?>> startPlayDrm_batch(List<com_tencent_rtmp_TXPlayerDrmBuilder?> playerDrmBuilder) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::startPlayDrm_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"playerDrmBuilder": playerDrmBuilder[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   

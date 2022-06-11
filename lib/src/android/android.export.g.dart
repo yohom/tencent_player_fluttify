@@ -3,7 +3,6 @@ export 'constants.g.dart';
 export 'platformview/TXCloudVideoView.g.dart';
 export 'com/tencent/rtmp/TXLivePlayer.g.dart';
 export 'com/tencent/rtmp/ui/DashBoard.g.dart';
-export 'com/tencent/rtmp/ui/FocusIndicatorView.g.dart';
 export 'com/tencent/rtmp/ui/TXCloudVideoView.g.dart';
 export 'com/tencent/rtmp/ITXLivePlayListener.g.dart';
 export 'com/tencent/rtmp/TXLiveBaseListener.g.dart';

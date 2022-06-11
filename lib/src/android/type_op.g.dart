@@ -28,9 +28,6 @@ Future<bool> TencentPlayerFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_tencent_rtmp_ui_DashBoard) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ui_DashBoard', {'__this__': __this__});
     return result;
-  } else if (T == com_tencent_rtmp_ui_FocusIndicatorView) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_ui_FocusIndicatorView', {'__this__': __this__});
-    return result;
   } else if (T == com_tencent_rtmp_TXLivePlayer) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfcom_tencent_rtmp_TXLivePlayer', {'__this__': __this__});
     return result;
@@ -135,8 +132,6 @@ T? TencentPlayerFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_tencent_rtmp_ui_TXCloudVideoView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_ui_DashBoard) {
     return (com_tencent_rtmp_ui_DashBoard()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_tencent_rtmp_ui_FocusIndicatorView) {
-    return (com_tencent_rtmp_ui_FocusIndicatorView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_TXLivePlayer) {
     return (com_tencent_rtmp_TXLivePlayer()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_tencent_rtmp_ITXVodPlayListener) {

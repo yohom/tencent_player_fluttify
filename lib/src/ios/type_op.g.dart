@@ -19,13 +19,7 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ is T;
   }
-  else if (T == TXAudioMusicParam) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXAudioMusicParam', {'__this__': __this__});
-    return result;
-  } else if (T == TXAudioEffectManager) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXAudioEffectManager', {'__this__': __this__});
-    return result;
-  } else if (T == TXImageSprite) {
+  else if (T == TXImageSprite) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXImageSprite', {'__this__': __this__});
     return result;
   } else if (T == TXVodDownloadDataSource) {
@@ -55,29 +49,14 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXVodPlayer) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPlayer', {'__this__': __this__});
     return result;
-  } else if (T == TXDeviceManager) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXDeviceManager', {'__this__': __this__});
-    return result;
   } else if (T == TXBitrateItem) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXBitrateItem', {'__this__': __this__});
-    return result;
-  } else if (T == TXAudioCustomProcessDelegate) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXAudioCustomProcessDelegate', {'__this__': __this__});
     return result;
   } else if (T == TXPlayerAuthParams) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerAuthParams', {'__this__': __this__});
     return result;
-  } else if (T == TXBeautyManager) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXBeautyManager', {'__this__': __this__});
-    return result;
-  } else if (T == TXAudioRawDataDelegate) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXAudioRawDataDelegate', {'__this__': __this__});
-    return result;
   } else if (T == TXVideoCustomProcessDelegate) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVideoCustomProcessDelegate', {'__this__': __this__});
-    return result;
-  } else if (T == TXPlayerDrmBuilder) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerDrmBuilder', {'__this__': __this__});
     return result;
   } else if (T == TXRecordResult) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXRecordResult', {'__this__': __this__});
@@ -102,11 +81,7 @@ T? TencentPlayerFluttifyIOSAs<T>(dynamic __this__) {
   } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ as T;
   }
-  else if (T == TXAudioMusicParam) {
-    return (TXAudioMusicParam()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXAudioEffectManager) {
-    return (TXAudioEffectManager()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXImageSprite) {
+  else if (T == TXImageSprite) {
     return (TXImageSprite()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodDownloadDataSource) {
     return (TXVodDownloadDataSource()..refId = (__this__ as Ref).refId) as T;
@@ -126,22 +101,12 @@ T? TencentPlayerFluttifyIOSAs<T>(dynamic __this__) {
     return (TXVodPreloadManager()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPlayer) {
     return (TXVodPlayer()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXDeviceManager) {
-    return (TXDeviceManager()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXBitrateItem) {
     return (TXBitrateItem()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXAudioCustomProcessDelegate) {
-    return (TXAudioCustomProcessDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerAuthParams) {
     return (TXPlayerAuthParams()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXBeautyManager) {
-    return (TXBeautyManager()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXAudioRawDataDelegate) {
-    return (TXAudioRawDataDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVideoCustomProcessDelegate) {
     return (TXVideoCustomProcessDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXPlayerDrmBuilder) {
-    return (TXPlayerDrmBuilder()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXRecordResult) {
     return (TXRecordResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerGlobalSetting) {
