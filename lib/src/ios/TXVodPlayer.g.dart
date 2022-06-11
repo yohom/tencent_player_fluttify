@@ -174,23 +174,6 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<int?> startPlayDrm(TXPlayerDrmBuilder? drmBuilder) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: TXVodPlayer@$refId::startPlayDrm([])');
-    }
-  
-    // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startPlayDrm', {"drmBuilder": drmBuilder, "__this__": this});
-  
-  
-    // handle native call
-  
-  
-    return __result__;
-  }
-  
-  
   Future<int?> startPlayWithParams(TXPlayerAuthParams? params) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -820,17 +803,6 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   
     // invoke native method
     final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startPlay_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"url": url[__i__], "__this__": this[__i__]}]);
-  
-  
-    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
-  }
-  
-  
-  Future<List<int?>> startPlayDrm_batch(List<TXPlayerDrmBuilder?> drmBuilder) async {
-    assert(true);
-  
-    // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startPlayDrm_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"drmBuilder": drmBuilder[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();

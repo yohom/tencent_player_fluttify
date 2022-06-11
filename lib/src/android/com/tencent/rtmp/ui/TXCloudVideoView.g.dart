@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout with android_view_View_OnTouchListener {
+class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout  {
   //region constants
   static const String name__ = 'com.tencent.rtmp.ui.TXCloudVideoView';
 

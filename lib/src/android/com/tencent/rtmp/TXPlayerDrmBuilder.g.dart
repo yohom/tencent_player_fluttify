@@ -76,6 +76,23 @@ class com_tencent_rtmp_TXPlayerDrmBuilder extends java_lang_Object  {
 
   //region methods
   
+  Future<com_tencent_rtmp_TXPlayerDrmBuilder?> setProvisionUrl(String? provisionUrl) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerDrmBuilder@$refId::setProvisionUrl([\'provisionUrl\':$provisionUrl])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setProvisionUrl', {"provisionUrl": provisionUrl, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__);
+  }
+  
+  
   Future<String?> getProvisionUrl() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -93,6 +110,23 @@ class com_tencent_rtmp_TXPlayerDrmBuilder extends java_lang_Object  {
   }
   
   
+  Future<com_tencent_rtmp_TXPlayerDrmBuilder?> setKeyLicenseUrl(String? keyLicenseUrl) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerDrmBuilder@$refId::setKeyLicenseUrl([\'keyLicenseUrl\':$keyLicenseUrl])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setKeyLicenseUrl', {"keyLicenseUrl": keyLicenseUrl, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__);
+  }
+  
+  
   Future<String?> getKeyLicenseUrl() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -107,6 +141,23 @@ class com_tencent_rtmp_TXPlayerDrmBuilder extends java_lang_Object  {
   
   
     return __result__;
+  }
+  
+  
+  Future<com_tencent_rtmp_TXPlayerDrmBuilder?> setPlayUrl(String? playUrl) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerDrmBuilder@$refId::setPlayUrl([\'playUrl\':$playUrl])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setPlayUrl', {"playUrl": playUrl, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__);
   }
   
   
@@ -150,6 +201,17 @@ extension com_tencent_rtmp_TXPlayerDrmBuilder_Batch on List<com_tencent_rtmp_TXP
 
   //region methods
   
+  Future<List<com_tencent_rtmp_TXPlayerDrmBuilder?>> setProvisionUrl_batch(List<String?> provisionUrl) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setProvisionUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"provisionUrl": provisionUrl[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__)).cast<com_tencent_rtmp_TXPlayerDrmBuilder?>().toList();
+  }
+  
+  
   Future<List<String?>> getProvisionUrl_batch() async {
     assert(true);
   
@@ -161,6 +223,17 @@ extension com_tencent_rtmp_TXPlayerDrmBuilder_Batch on List<com_tencent_rtmp_TXP
   }
   
   
+  Future<List<com_tencent_rtmp_TXPlayerDrmBuilder?>> setKeyLicenseUrl_batch(List<String?> keyLicenseUrl) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setKeyLicenseUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"keyLicenseUrl": keyLicenseUrl[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__)).cast<com_tencent_rtmp_TXPlayerDrmBuilder?>().toList();
+  }
+  
+  
   Future<List<String?>> getKeyLicenseUrl_batch() async {
     assert(true);
   
@@ -169,6 +242,17 @@ extension com_tencent_rtmp_TXPlayerDrmBuilder_Batch on List<com_tencent_rtmp_TXP
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
+  }
+  
+  
+  Future<List<com_tencent_rtmp_TXPlayerDrmBuilder?>> setPlayUrl_batch(List<String?> playUrl) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setPlayUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"playUrl": playUrl[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__)).cast<com_tencent_rtmp_TXPlayerDrmBuilder?>().toList();
   }
   
   

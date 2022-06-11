@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object  {
+class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object with java_io_Serializable {
   //region constants
   static const String name__ = 'com.tencent.rtmp.TXLivePlayConfig';
 
