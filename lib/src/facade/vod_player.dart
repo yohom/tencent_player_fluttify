@@ -208,7 +208,11 @@ class VodPlayer {
     final target = (volume * 100).toInt();
     return platform(
       android: (pool) => _androidPlayer!.setAudioPlayoutVolume(target),
-      ios: (pool) => _iosPlayer!.setAudioPlayoutVolume(target),
+      ios: (pool) async {
+        // 试了官方的插件音量设置也是没用, 先使用系统音量代替吧
+        VolumeController().setVolume(volume, showSystemUI: false);
+        // return _iosPlayer!.setAudioPlayoutVolume(target);
+      },
     );
   }
 

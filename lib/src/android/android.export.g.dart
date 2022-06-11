@@ -31,4 +31,5 @@ export 'com/tencent/rtmp/TXImageSprite.g.dart';
 export 'com/tencent/rtmp/TXVodPlayer.g.dart';
 export 'com/tencent/rtmp/TXPlayInfoParams.g.dart';
 export 'com/tencent/rtmp/TXPlayerDrmBuilder.g.dart';
+export 'package:volume_controller/volume_controller.dart';
 export '../facade/shared.g.dart';

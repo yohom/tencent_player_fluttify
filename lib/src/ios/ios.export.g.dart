@@ -48,4 +48,5 @@ export 'TX_Enum_VideoResolution.g.dart';
 export 'TXVodPreloadManagerDelegate.g.dart';
 export 'TXRecordType.g.dart';
 export 'TXVodDownloadMediaInfo.g.dart';
+export 'package:volume_controller/volume_controller.dart';
 export '../facade/shared.g.dart';
