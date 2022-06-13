@@ -1,63 +1,7 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:tencent_player_fluttify/src/android/android.export.g.dart';
 import 'package:tencent_player_fluttify/src/ios/ios.export.g.dart';
-
-/// 画质
-enum Quality {
-  /// 标清 360*640
-  STANDARD,
-
-  /// 高清 540*960
-  HIGH,
-
-  /// 超清 720*1280
-  SUPER_HIGH,
-
-  /// 连麦:主 进入连麦状态后, 大主播使用
-  LINKMIC_MAIN,
-
-  /// 连麦:副 进入连麦状态后, 副主播使用
-  LINKMIC_SUB,
-}
-
-/// 美颜风格
-enum BeautyFilter {
-  /// 光滑风格，算法更加注重皮肤的光滑程度，适合秀场直播类场景下使用
-  SMOOTH,
-
-  /// 自然风格，算法更加注重保留皮肤细节，适合对真实性要求更高的主播
-  NATURE,
-
-  /// 朦胧风格，算法会更加侧重画面去噪，使整体画面风格偏柔和
-  HAZY,
-}
-
-/// 混响效果
-enum ReverbType {
-  REVERB_TYPE_0,
-  REVERB_TYPE_1,
-  REVERB_TYPE_2,
-  REVERB_TYPE_3,
-  REVERB_TYPE_4,
-  REVERB_TYPE_5,
-  REVERB_TYPE_6,
-  REVERB_TYPE_7
-}
-
-/// 混响效果
-enum VoiceChangerType {
-  VOICECHANGER_TYPE_0,
-  VOICECHANGER_TYPE_1,
-  VOICECHANGER_TYPE_2,
-  VOICECHANGER_TYPE_3,
-  VOICECHANGER_TYPE_4,
-  VOICECHANGER_TYPE_5,
-  VOICECHANGER_TYPE_6,
-  VOICECHANGER_TYPE_7,
-  VOICECHANGER_TYPE_8,
-  VOICECHANGER_TYPE_9,
-  VOICECHANGER_TYPE_10,
-  VOICECHANGER_TYPE_11
-}
 
 /// 播放类型
 enum PlayType {
@@ -322,4 +266,83 @@ class VodPlayConfig {
 enum PlayerType {
   PLAYER_AVPLAYER /* 0 */,
   PLAYER_THUMB_PLAYER /* 1 */
+}
+
+/// 视频分辨率
+enum VideoResolution {
+  TYPE_360_640 /* 0 */,
+  TYPE_540_960 /* 1 */,
+  TYPE_720_1280 /* 2 */,
+  TYPE_1080_1920 /* 30 */,
+  TYPE_640_360 /* 3 */,
+  TYPE_960_540 /* 4 */,
+  TYPE_1280_720 /* 5 */,
+  TYPE_1920_1080 /* 31 */,
+  TYPE_320_480 /* 6 */,
+  TYPE_180_320 /* 7 */,
+  TYPE_270_480 /* 8 */,
+  TYPE_320_180 /* 9 */,
+  TYPE_480_270 /* 10 */,
+  TYPE_240_320 /* 11 */,
+  TYPE_360_480 /* 12 */,
+  TYPE_480_640 /* 13 */,
+  TYPE_320_240 /* 14 */,
+  TYPE_480_360 /* 15 */,
+  TYPE_640_480 /* 16 */,
+  TYPE_480_480 /* 17 */,
+  TYPE_270_270 /* 18 */,
+  TYPE_160_160 /* 19 */
+}
+
+extension VideoResolutionX on VideoResolution {
+  int toValue() {
+    switch (this) {
+      case VideoResolution.TYPE_360_640:
+        return 0;
+      case VideoResolution.TYPE_540_960:
+        return 1;
+      case VideoResolution.TYPE_720_1280:
+        return 2;
+      case VideoResolution.TYPE_1080_1920:
+        return 30;
+      case VideoResolution.TYPE_640_360:
+        return 3;
+      case VideoResolution.TYPE_960_540:
+        return 4;
+      case VideoResolution.TYPE_1280_720:
+        return 5;
+      case VideoResolution.TYPE_1920_1080:
+        return 31;
+      case VideoResolution.TYPE_320_480:
+        return 6;
+      case VideoResolution.TYPE_180_320:
+        return 7;
+      case VideoResolution.TYPE_270_480:
+        return 8;
+      case VideoResolution.TYPE_320_180:
+        return 9;
+      case VideoResolution.TYPE_480_270:
+        return 10;
+      case VideoResolution.TYPE_240_320:
+        return 11;
+      case VideoResolution.TYPE_360_480:
+        return 12;
+      case VideoResolution.TYPE_480_640:
+        return 13;
+      case VideoResolution.TYPE_320_240:
+        return 14;
+      case VideoResolution.TYPE_480_360:
+        return 15;
+      case VideoResolution.TYPE_640_480:
+        return 16;
+      case VideoResolution.TYPE_480_480:
+        return 17;
+      case VideoResolution.TYPE_270_270:
+        return 18;
+      case VideoResolution.TYPE_160_160:
+        return 19;
+      default:
+        return 0;
+    }
+  }
 }
