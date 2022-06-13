@@ -18,7 +18,6 @@ export 'TX_Enum_Type_LogLevel.g.dart';
 export 'TXLiteAVWarning.g.dart';
 export 'TXLiveRecordListener.g.dart';
 export 'TX_Enum_Type_HomeOrientation.g.dart';
-export 'TXLiveAudioSessionDelegate.g.dart';
 export 'constants.g.dart';
 export 'TXLivePlayConfig.g.dart';
 export 'TXVodPlayConfig.g.dart';

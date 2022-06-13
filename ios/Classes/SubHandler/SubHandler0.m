@@ -12,7 +12,6 @@
 #import "TXVodPreloadManagerDelegate_Anonymous.h"
 #import "TXLivePlayListener_Anonymous.h"
 #import "TXVideoCustomProcessDelegate_Anonymous.h"
-#import "TXLiveAudioSessionDelegate_Anonymous.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -418,27 +417,6 @@ extern BOOL enableLog;
         
             // invoke native method
             [TXLiveBase setAppVersion: verNum];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"TXLiveBase::setAudioSessionDelegate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            if (enableLog) {
-                NSLog(@"fluttify-objc: TXLiveBase::setAudioSessionDelegate(%@)", args);
-            }
-        
-            // args
-            // ref arg
-            id<TXLiveAudioSessionDelegate> delegate = (id<TXLiveAudioSessionDelegate>) (args[@"delegate"] == [NSNull null] ? nil : args[@"delegate"]);
-        
-            // ref
-        
-        
-            // invoke native method
-            [TXLiveBase setAudioSessionDelegate: delegate];
         
             // result
             // 无返回值
@@ -5625,6 +5603,28 @@ extern BOOL enableLog;
         
             // 返回值: Value
             NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadManager::get_headers": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadManager::get_headers");
+            }
+        
+            // ref object
+            TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSDictionary* result = ref.headers;
+        
+            // 返回值: jsonable
+            id __result__ = result;
         
             methodResult(__result__);
         },

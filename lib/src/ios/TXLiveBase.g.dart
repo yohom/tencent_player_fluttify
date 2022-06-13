@@ -126,23 +126,6 @@ class TXLiveBase extends NSObject  {
   }
   
   
-  static Future<void> setAudioSessionDelegate(TXLiveAudioSessionDelegate? delegate) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: TXLiveBase::setAudioSessionDelegate([])');
-    }
-  
-    // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXLiveBase::setAudioSessionDelegate', {"delegate": delegate});
-  
-  
-    // handle native call
-  
-  
-    return __result__;
-  }
-  
-  
   static Future<String?> getSDKVersionStr() async {
     // print log
     if (fluttifyLogEnabled) {
