@@ -74,6 +74,10 @@ class TXVodPlayer extends NSObject  {
   //endregion
 
   //region setters
+  Future<void> set_delegate(TXLivePlayListener? delegate) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_delegate', <String, dynamic>{'__this__': this, "delegate": delegate});
+  }
+  
   Future<void> set_vodDelegate(TXVodPlayListener? vodDelegate) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::set_vodDelegate', <String, dynamic>{'__this__': this, "vodDelegate": vodDelegate});
   }

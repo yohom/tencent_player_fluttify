@@ -24,8 +24,7 @@ class VodPlayer {
         await com_tencent_rtmp_TXLiveBase.setLogLevel(level.index);
       },
       ios: (pool) async {
-        // TODO 暂时忽略调了Live相关, 这里先不实现
-        // await TXLiveBase.setCacheFolderPath(path);
+        await TXLiveBase.setLogLevel(TX_Enum_Type_LogLevel.values[level.index]);
       },
     );
   }

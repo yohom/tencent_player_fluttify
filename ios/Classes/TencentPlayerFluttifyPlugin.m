@@ -6,6 +6,7 @@
 #import <objc/runtime.h>
 #import "SubHandler/SubHandler0.h"
 #import "SubHandler/SubHandler1.h"
+#import "SubHandler/SubHandler2.h"
 #import "SubHandler/Custom/SubHandlerCustom.h"
 #import "FluttifyMessageCodec.h"
 #import <TXLiteAVSDK_Player/TXLiteAVSDK.h>
@@ -30,6 +31,7 @@ extern BOOL enableLog;
 
     [_handlerMap addEntriesFromDictionary: [self getSubHandler0]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler1]];
+    [_handlerMap addEntriesFromDictionary: [self getSubHandler2]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandlerCustom]];
   }
 
