@@ -12,7 +12,6 @@
 #import "TXVodPreloadManagerDelegate_Anonymous.h"
 #import "TXLivePlayListener_Anonymous.h"
 #import "TXVideoCustomProcessDelegate_Anonymous.h"
-#import "TXLiveAudioSessionDelegate_Anonymous.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -25,27 +24,6 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler2 {
     __weak __typeof(self)weakSelf = self;
     return @{
-        @"TXLivePlayConfig::set_rtmpChannelType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_rtmpChannelType");
-            }
-        
-            // args
-            // jsonable arg
-            int rtmpChannelType = [args[@"rtmpChannelType"] intValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.rtmpChannelType = rtmpChannelType;
-            methodResult(@"success");
-        },
-        
         @"TXLivePlayConfig::set_cacheFolderPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -3192,10 +3170,6 @@ extern BOOL enableLog;
         },
         @"TXVideoCustomProcessDelegate::createAnonymous__": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             id<TXVideoCustomProcessDelegate> __result__ = [[TXVideoCustomProcessDelegate_Anonymous alloc] initWithFlutterPluginRegistrar:registrar];
-            methodResult(__result__);
-        },
-        @"TXLiveAudioSessionDelegate::createAnonymous__": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            id<TXLiveAudioSessionDelegate> __result__ = [[TXLiveAudioSessionDelegate_Anonymous alloc] initWithFlutterPluginRegistrar:registrar];
             methodResult(__result__);
         },
     };

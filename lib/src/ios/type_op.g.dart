@@ -79,9 +79,6 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXRecordResult) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXRecordResult', {'__this__': __this__});
     return result;
-  } else if (T == TXLiveAudioSessionDelegate) {
-    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLiveAudioSessionDelegate', {'__this__': __this__});
-    return result;
   } else if (T == TXPlayerGlobalSetting) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerGlobalSetting', {'__this__': __this__});
     return result;
@@ -142,8 +139,6 @@ T? TencentPlayerFluttifyIOSAs<T>(dynamic __this__) {
     return (TXVideoCustomProcessDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXRecordResult) {
     return (TXRecordResult()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == TXLiveAudioSessionDelegate) {
-    return (TXLiveAudioSessionDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerGlobalSetting) {
     return (TXPlayerGlobalSetting()..refId = (__this__ as Ref).refId) as T;
   }
