@@ -53,6 +53,9 @@ class VodPlayer {
     );
   }
 
+  /// 当前音量
+  double _volume = 1;
+
   /// 创建一个播放器
   ///
   /// 直播和点播
@@ -204,12 +207,27 @@ class VodPlayer {
   ///
   /// 范围[0-1]
   Future<void> setVolume(double volume) async {
+    _volume = volume;
+
     final target = (volume * 100).toInt();
     return platform(
       android: (pool) => _androidPlayer!.setAudioPlayoutVolume(target),
       ios: (pool) async {
         // 试了官方的插件音量设置也是没用, 先使用系统音量代替吧
         VolumeController().setVolume(volume, showSystemUI: false);
+        // return _iosPlayer!.setAudioPlayoutVolume(target);
+      },
+    );
+  }
+
+  /// 获取音量
+  ///
+  /// 范围[0-1]
+  Future<double> getVolume() async {
+    return platform(
+      android: (pool) async => _volume,
+      ios: (pool) async {
+        return VolumeController().getVolume();
         // return _iosPlayer!.setAudioPlayoutVolume(target);
       },
     );
