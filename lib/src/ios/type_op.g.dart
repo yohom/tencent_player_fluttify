@@ -34,8 +34,17 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXVodDownloadManager) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodDownloadManager', {'__this__': __this__});
     return result;
+  } else if (T == TXLiveBaseDelegate) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLiveBaseDelegate', {'__this__': __this__});
+    return result;
+  } else if (T == TXLiveBase) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLiveBase', {'__this__': __this__});
+    return result;
   } else if (T == TXVodPlayConfig) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPlayConfig', {'__this__': __this__});
+    return result;
+  } else if (T == TXLiveRecordListener) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLiveRecordListener', {'__this__': __this__});
     return result;
   } else if (T == TXVodPlayListener) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPlayListener', {'__this__': __this__});
@@ -46,6 +55,9 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXVodPreloadManager) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPreloadManager', {'__this__': __this__});
     return result;
+  } else if (T == TXLivePlayConfig) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLivePlayConfig', {'__this__': __this__});
+    return result;
   } else if (T == TXVodPlayer) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVodPlayer', {'__this__': __this__});
     return result;
@@ -55,11 +67,20 @@ Future<bool> TencentPlayerFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == TXPlayerAuthParams) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerAuthParams', {'__this__': __this__});
     return result;
+  } else if (T == TXLivePlayListener) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLivePlayListener', {'__this__': __this__});
+    return result;
+  } else if (T == TXLivePlayer) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLivePlayer', {'__this__': __this__});
+    return result;
   } else if (T == TXVideoCustomProcessDelegate) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXVideoCustomProcessDelegate', {'__this__': __this__});
     return result;
   } else if (T == TXRecordResult) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXRecordResult', {'__this__': __this__});
+    return result;
+  } else if (T == TXLiveAudioSessionDelegate) {
+    final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXLiveAudioSessionDelegate', {'__this__': __this__});
     return result;
   } else if (T == TXPlayerGlobalSetting) {
     final result = await kTencentPlayerFluttifyChannel.invokeMethod('RefClass::isKindOfTXPlayerGlobalSetting', {'__this__': __this__});
@@ -91,24 +112,38 @@ T? TencentPlayerFluttifyIOSAs<T>(dynamic __this__) {
     return (TXVodDownloadDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodDownloadManager) {
     return (TXVodDownloadManager()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXLiveBaseDelegate) {
+    return (TXLiveBaseDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXLiveBase) {
+    return (TXLiveBase()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPlayConfig) {
     return (TXVodPlayConfig()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXLiveRecordListener) {
+    return (TXLiveRecordListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPlayListener) {
     return (TXVodPlayListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPreloadManagerDelegate) {
     return (TXVodPreloadManagerDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPreloadManager) {
     return (TXVodPreloadManager()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXLivePlayConfig) {
+    return (TXLivePlayConfig()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVodPlayer) {
     return (TXVodPlayer()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXBitrateItem) {
     return (TXBitrateItem()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerAuthParams) {
     return (TXPlayerAuthParams()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXLivePlayListener) {
+    return (TXLivePlayListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXLivePlayer) {
+    return (TXLivePlayer()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXVideoCustomProcessDelegate) {
     return (TXVideoCustomProcessDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXRecordResult) {
     return (TXRecordResult()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == TXLiveAudioSessionDelegate) {
+    return (TXLiveAudioSessionDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == TXPlayerGlobalSetting) {
     return (TXPlayerGlobalSetting()..refId = (__this__ as Ref).refId) as T;
   }
