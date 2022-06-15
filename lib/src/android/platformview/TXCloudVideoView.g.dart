@@ -48,41 +48,41 @@ class _com_tencent_rtmp_ui_TXCloudVideoView_AndroidViewState extends State<com_t
     };
 
     // hybrid composition version.
-    // if (widget.hybridComposition) {
-    //   return PlatformViewLink(
-    //     viewType: 'me.yohom/com.tencent.rtmp.ui.TXCloudVideoView',
-    //     surfaceFactory: (
-    //       BuildContext context,
-    //       PlatformViewController controller,
-    //     ) {
-    //       return AndroidViewSurface(
-    //         controller: controller,
-    //         gestureRecognizers: gestureRecognizers,
-    //         hitTestBehavior: PlatformViewHitTestBehavior.opaque,
-    //       );
-    //     },
-    //     onCreatePlatformView: (PlatformViewCreationParams params) {
-    //       return PlatformViewsService.initSurfaceAndroidView(
-    //         id: params.id,
-    //         viewType: 'me.yohom/com.tencent.rtmp.ui.TXCloudVideoView',
-    //         layoutDirection: TextDirection.ltr,
-    //         creationParams: widget.params,
-    //         creationParamsCodec: kTencentPlayerFluttifyMessageCodec,
-    //       )
-    //         ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
-    //         ..addOnPlatformViewCreatedListener((id) => _onViewCreated(id))
-    //         ..create();
-    //     },
-    //   );
-    // } else {
-    return AndroidView(
-      viewType: 'me.yohom/com.tencent.rtmp.ui.TXCloudVideoView',
-      gestureRecognizers: gestureRecognizers,
-      onPlatformViewCreated: _onViewCreated,
-      creationParamsCodec: kTencentPlayerFluttifyMessageCodec,
-      creationParams: widget.params,
-    );
-    // }
+    if (widget.hybridComposition) {
+      return PlatformViewLink(
+        viewType: 'me.yohom/com.tencent.rtmp.ui.TXCloudVideoView',
+        surfaceFactory: (
+          BuildContext context,
+          PlatformViewController controller,
+        ) {
+          return AndroidViewSurface(
+            controller: controller as AndroidViewController,
+            gestureRecognizers: gestureRecognizers,
+            hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+          );
+        },
+        onCreatePlatformView: (PlatformViewCreationParams params) {
+          return PlatformViewsService.initSurfaceAndroidView(
+            id: params.id,
+            viewType: 'me.yohom/com.tencent.rtmp.ui.TXCloudVideoView',
+            layoutDirection: TextDirection.ltr,
+            creationParams: widget.params,
+            creationParamsCodec: kTencentPlayerFluttifyMessageCodec,
+          )
+            ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
+            ..addOnPlatformViewCreatedListener((id) => _onViewCreated(id))
+            ..create();
+        },
+      );
+    } else {
+      return AndroidView(
+        viewType: 'me.yohom/com.tencent.rtmp.ui.TXCloudVideoView',
+        gestureRecognizers: gestureRecognizers,
+        onPlatformViewCreated: _onViewCreated,
+        creationParamsCodec: kTencentPlayerFluttifyMessageCodec,
+        creationParams: widget.params,
+      );
+    }
   }
 
   void _onViewCreated(int id) async {
