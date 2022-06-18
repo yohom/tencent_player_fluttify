@@ -126,10 +126,16 @@ class VodPlayer {
   Future<void> setConfig(VodPlayConfig config) async {
     return platform(
       android: (pool) async {
-        await _androidPlayer!.setConfig(await config.toAndroidModel());
+        final target = await config.toAndroidModel();
+        await _androidPlayer!.setConfig(target);
+
+        pool.add(target);
       },
       ios: (pool) async {
-        await _iosPlayer!.set_config(await config.toIOSModel());
+        final target = await config.toIOSModel();
+        await _iosPlayer!.set_config(target);
+
+        pool.add(target);
       },
     );
   }
@@ -587,10 +593,14 @@ class VodPlayer {
   Future<void> dispose() async {
     return platform(
       android: (pool) async {
+        await _androidPlayer!.setVodListener(null);
         await _androidPlayer!.stopPlay(true);
+        await _androidPlayer!
+            .setPlayerView__com_tencent_rtmp_ui_TXCloudVideoView(null);
         await _androidPlayer!.release__();
       },
       ios: (pool) async {
+        await _iosPlayer!.set_vodDelegate(null);
         await _iosPlayer!.stopPlay();
         await _iosPlayer!.removeVideoWidget();
         await _iosPlayer!.release__();
