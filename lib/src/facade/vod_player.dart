@@ -17,8 +17,12 @@ class VodPlayer {
   com_tencent_rtmp_TXVodPlayer? _androidPlayer;
   TXVodPlayer? _iosPlayer;
 
+  static LogLevel _level = LogLevel.debug;
+
   /// 日志级别
   static Future<void> setLogLevel(LogLevel level) async {
+    _level = level;
+    await enableFluttifyLog(VodPlayer._level.index <= LogLevel.debug.index);
     return platform(
       android: (pool) async {
         await com_tencent_rtmp_TXLiveBase.setLogLevel(level.index);
@@ -52,6 +56,9 @@ class VodPlayer {
       },
     );
   }
+
+  /// 当前音量
+  double _volume = 1;
 
   /// 创建一个播放器
   ///
@@ -119,10 +126,16 @@ class VodPlayer {
   Future<void> setConfig(VodPlayConfig config) async {
     return platform(
       android: (pool) async {
-        await _androidPlayer!.setConfig(await config.toAndroidModel());
+        final target = await config.toAndroidModel();
+        await _androidPlayer!.setConfig(target);
+
+        pool.add(target);
       },
       ios: (pool) async {
-        await _iosPlayer!.set_config(await config.toIOSModel());
+        final target = await config.toIOSModel();
+        await _iosPlayer!.set_config(target);
+
+        pool.add(target);
       },
     );
   }
@@ -204,12 +217,27 @@ class VodPlayer {
   ///
   /// 范围[0-1]
   Future<void> setVolume(double volume) async {
+    _volume = volume;
+
     final target = (volume * 100).toInt();
     return platform(
       android: (pool) => _androidPlayer!.setAudioPlayoutVolume(target),
       ios: (pool) async {
         // 试了官方的插件音量设置也是没用, 先使用系统音量代替吧
         VolumeController().setVolume(volume, showSystemUI: false);
+        // return _iosPlayer!.setAudioPlayoutVolume(target);
+      },
+    );
+  }
+
+  /// 获取音量
+  ///
+  /// 范围[0-1]
+  Future<double> getVolume() async {
+    return platform(
+      android: (pool) async => _volume,
+      ios: (pool) async {
+        return VolumeController().getVolume();
         // return _iosPlayer!.setAudioPlayoutVolume(target);
       },
     );
@@ -320,7 +348,9 @@ class VodPlayer {
         final listener =
             await com_tencent_rtmp_ITXVodPlayListener.anonymous__();
         listener.onPlayEvent = (player, code, data) async {
-          debugPrint('事件: $code, 参数: $data');
+          if (VodPlayer._level.index <= LogLevel.debug.index) {
+            debugPrint('事件: $code, 参数: $data');
+          }
           // 当前视频帧解码失败
           if (code == 2101 && onWarningVideoDecodeFail != null) {
             onWarningVideoDecodeFail();
@@ -405,7 +435,9 @@ class VodPlayer {
           else if (code == 2013 && onEventPlayPrepared != null) {
             onEventPlayPrepared();
           } else {
-            debugPrint('未处理的事件: $code, $data');
+            if (VodPlayer._level.index <= LogLevel.debug.index) {
+              debugPrint('未处理的事件: $code, $data');
+            }
           }
 
           // 释放参数
@@ -416,7 +448,9 @@ class VodPlayer {
       ios: (pool) async {
         final delegate = await TXVodPlayListener.anonymous__();
         delegate.onPlayEvent_event_withParam = (player, EvtID, param) async {
-          debugPrint('事件: $EvtID, 参数: $param');
+          if (VodPlayer._level.index <= LogLevel.debug.index) {
+            debugPrint('事件: $EvtID, 参数: $param');
+          }
           // 当前视频帧解码失败
           if (EvtID == 2101 && onWarningVideoDecodeFail != null) {
             onWarningVideoDecodeFail();
@@ -503,7 +537,9 @@ class VodPlayer {
           else if (EvtID == 2013 && onEventPlayPrepared != null) {
             onEventPlayPrepared();
           } else {
-            debugPrint('未处理的事件: $EvtID, $param');
+            if (VodPlayer._level.index <= LogLevel.debug.index) {
+              debugPrint('未处理的事件: $EvtID, $param');
+            }
           }
         };
 
@@ -557,10 +593,14 @@ class VodPlayer {
   Future<void> dispose() async {
     return platform(
       android: (pool) async {
+        await _androidPlayer!.setVodListener(null);
         await _androidPlayer!.stopPlay(true);
+        await _androidPlayer!
+            .setPlayerView__com_tencent_rtmp_ui_TXCloudVideoView(null);
         await _androidPlayer!.release__();
       },
       ios: (pool) async {
+        await _iosPlayer!.set_vodDelegate(null);
         await _iosPlayer!.stopPlay();
         await _iosPlayer!.removeVideoWidget();
         await _iosPlayer!.release__();
