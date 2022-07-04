@@ -63,12 +63,34 @@ class VodDownloader {
     );
   }
 
+  /// 删除已下载的文件
+  Future<void> deleteDownload(String url) {
+    return platform(
+      android: (pool) async {
+        final info = await _androidManager!.getDownloadMediaInfo__String(url);
+        await _androidManager?.deleteDownloadMediaInfo(info!);
+
+        pool.add(info);
+      },
+      ios: (pool) async {
+        // 获取信息的入参
+        final infoIn = await TXVodDownloadMediaInfo.create__();
+        await infoIn.set_url(url);
+        await _iosManager?.deleteDownloadMediaInfo(infoIn);
+
+        pool.add(infoIn);
+      },
+    );
+  }
+
   /// 停止下载
   Future<void> stopDownload(String url) {
     return platform(
       android: (pool) async {
         final info = await _androidManager!.getDownloadMediaInfo__String(url);
         await _androidManager?.stopDownload(info);
+
+        pool.add(info);
       },
       ios: (pool) async {
         // 获取信息的入参
@@ -76,6 +98,8 @@ class VodDownloader {
         await infoIn.set_url(url);
         final infoOut = await _iosManager?.getDownloadMediaInfo(infoIn);
         await _iosManager?.stopDownload(infoOut);
+
+        pool.add(infoIn);
       },
     );
   }
