@@ -51,6 +51,18 @@ class VodDownloader {
     );
   }
 
+  /// 设置头
+  Future<void> setHeaders(Map<String, String> headers) {
+    return platform(
+      android: (pool) async {
+        await _androidManager?.setHeaders(headers);
+      },
+      ios: (pool) async {
+        await _iosManager?.set_headers(headers);
+      },
+    );
+  }
+
   /// 停止下载
   Future<void> stopDownload(String url) {
     return platform(
