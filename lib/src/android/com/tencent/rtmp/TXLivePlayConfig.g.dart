@@ -530,7 +530,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object with java_io_Se
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setEnableNearestIP(bool? enable) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -547,7 +547,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object with java_io_Se
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setRtmpChannelType(int? type) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -564,7 +564,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object with java_io_Se
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setCacheFolderPath(String? folderPath) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -581,7 +581,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object with java_io_Se
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setMaxCacheItems(int? maxCacheItems) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -598,7 +598,7 @@ class com_tencent_rtmp_TXLivePlayConfig extends java_lang_Object with java_io_Se
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setHeaders(Map<String,String>? headers) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -946,7 +946,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setEnableNearestIP_batch(List<bool?> enable) async {
     assert(true);
   
@@ -957,7 +957,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setRtmpChannelType_batch(List<int?> type) async {
     assert(true);
   
@@ -968,7 +968,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setCacheFolderPath_batch(List<String?> folderPath) async {
     assert(true);
   
@@ -979,7 +979,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setMaxCacheItems_batch(List<int?> maxCacheItems) async {
     assert(true);
   
@@ -990,7 +990,7 @@ extension com_tencent_rtmp_TXLivePlayConfig_Batch on List<com_tencent_rtmp_TXLiv
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setHeaders_batch(List<Map<String,String>?> headers) async {
     assert(true);
   

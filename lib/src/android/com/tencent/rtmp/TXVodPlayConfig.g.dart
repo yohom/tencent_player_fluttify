@@ -156,7 +156,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setCacheFolderPath(String? folderPath) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -190,7 +190,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setMaxCacheItems(int? maxCacheItems) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -530,7 +530,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setFirstStartPlayBufferTime(int? milliseconds) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -547,7 +547,7 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setNextStartPlayBufferTime(int? milliseconds) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -823,7 +823,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setCacheFolderPath_batch(List<String?> folderPath) async {
     assert(true);
   
@@ -845,7 +845,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
     return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setMaxCacheItems_batch(List<int?> maxCacheItems) async {
     assert(true);
   
@@ -1065,7 +1065,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setFirstStartPlayBufferTime_batch(List<int?> milliseconds) async {
     assert(true);
   
@@ -1076,7 +1076,7 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<void>> setNextStartPlayBufferTime_batch(List<int?> milliseconds) async {
     assert(true);
   

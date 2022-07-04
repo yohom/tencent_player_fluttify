@@ -18,14 +18,14 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   @override
   final String tag__ = 'tencent_player_fluttify';
 
-  static final int DOWNLOAD_SUCCESS = 0;
-  static final int DOWNLOAD_AUTH_FAILED = -5001;
-  static final int DOWNLOAD_NO_FILE = -5003;
-  static final int DOWNLOAD_FORMAT_ERROR = -5004;
-  static final int DOWNLOAD_DISCONNECT = -5005;
-  static final int DOWNLOAD_HLS_KEY_ERROR = -5006;
-  static final int DOWNLOAD_PATH_ERROR = -5007;
-  static final int DOWNLOAD_403FORBIDDEN = -5008;
+  static const int DOWNLOAD_SUCCESS = 0;
+  static const int DOWNLOAD_AUTH_FAILED = -5001;
+  static const int DOWNLOAD_NO_FILE = -5003;
+  static const int DOWNLOAD_FORMAT_ERROR = -5004;
+  static const int DOWNLOAD_DISCONNECT = -5005;
+  static const int DOWNLOAD_HLS_KEY_ERROR = -5006;
+  static const int DOWNLOAD_PATH_ERROR = -5007;
+  static const int DOWNLOAD_403FORBIDDEN = -5008;
   //endregion
 
   //region creators
@@ -129,7 +129,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?> startDownloadUrl__String(String? url) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -197,7 +197,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<bool?> deleteDownloadFile(String? playPath) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -338,7 +338,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<com_tencent_rtmp_downloader_TXVodDownloadMediaInfo?>> startDownloadUrl__String_batch(List<String?> url) async {
     assert(true);
   
@@ -382,7 +382,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<bool?>> deleteDownloadFile_batch(List<String?> playPath) async {
     assert(true);
   

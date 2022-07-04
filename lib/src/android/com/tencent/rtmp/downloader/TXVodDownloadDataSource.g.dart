@@ -18,14 +18,14 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
   @override
   final String tag__ = 'tencent_player_fluttify';
 
-  static final int QUALITY_OD = 0;
-  static final int QUALITY_FLU = 1;
-  static final int QUALITY_SD = 2;
-  static final int QUALITY_HD = 3;
-  static final int QUALITY_FHD = 4;
-  static final int QUALITY_2K = 5;
-  static final int QUALITY_4K = 6;
-  static final int QUALITY_UNK = 1000;
+  static const int QUALITY_OD = 0;
+  static const int QUALITY_FLU = 1;
+  static const int QUALITY_SD = 2;
+  static const int QUALITY_HD = 3;
+  static const int QUALITY_FHD = 4;
+  static const int QUALITY_2K = 5;
+  static const int QUALITY_4K = 6;
+  static const int QUALITY_UNK = 1000;
   //endregion
 
   //region creators
@@ -171,7 +171,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<com_tencent_rtmp_TXPlayerAuthBuilder?> getAuthBuilder() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -205,7 +205,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadDataSource extends java_lang_Obje
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<String?> getTemplateName() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -374,7 +374,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadDataSource_Batch on List<com_
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<com_tencent_rtmp_TXPlayerAuthBuilder?>> getAuthBuilder_batch() async {
     assert(true);
   
@@ -396,7 +396,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadDataSource_Batch on List<com_
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<String?>> getTemplateName_batch() async {
     assert(true);
   
