@@ -36,7 +36,7 @@ class VodDownloader {
   }
 
   /// 开始下载
-  Future<DownloadInfo> startDownloadUrl(String url) {
+  Future<DownloadInfo> startDownload(String url) {
     const username = 'default';
     return platform(
       android: (pool) async {
@@ -47,6 +47,23 @@ class VodDownloader {
       ios: (pool) async {
         final info = await _iosManager?.startDownload_url(username, url);
         return DownloadInfo.fromIOS(info!);
+      },
+    );
+  }
+
+  /// 停止下载
+  Future<void> stopDownload(String url) {
+    return platform(
+      android: (pool) async {
+        final info = await _androidManager!.getDownloadMediaInfo__String(url);
+        await _androidManager?.stopDownload(info);
+      },
+      ios: (pool) async {
+        // 获取信息的入参
+        final infoIn = await TXVodDownloadMediaInfo.create__();
+        await infoIn.set_url(url);
+        final infoOut = await _iosManager?.getDownloadMediaInfo(infoIn);
+        await _iosManager?.stopDownload(infoOut);
       },
     );
   }
