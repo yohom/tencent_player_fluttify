@@ -4,9 +4,9 @@ import 'package:tencent_player_fluttify/src/ios/ios.export.g.dart';
 
 import 'download_info.dart';
 
-typedef DownloadInfoCallback = void Function(DownloadInfo info);
+typedef DownloadInfoCallback = void Function(DownloadMediaInfo info);
 typedef DownloadErrorCallback = void Function(
-  DownloadInfo info,
+  DownloadMediaInfo info,
   int code,
   String message,
 );
@@ -36,17 +36,17 @@ class VodDownloader {
   }
 
   /// 开始下载
-  Future<DownloadInfo> startDownload(String url) {
+  Future<DownloadMediaInfo> startDownload(String url) {
     const username = 'default';
     return platform(
       android: (pool) async {
         final info = await _androidManager?.startDownloadUrl__String__String(
             url, username);
-        return DownloadInfo.fromAndroid(info!);
+        return DownloadMediaInfo.fromAndroid(info!);
       },
       ios: (pool) async {
         final info = await _iosManager?.startDownload_url(username, url);
-        return DownloadInfo.fromIOS(info!);
+        return DownloadMediaInfo.fromIOS(info!);
       },
     );
   }
@@ -84,15 +84,15 @@ class VodDownloader {
   }
 
   /// 获取下载列表
-  Future<List<DownloadInfo>> getDownloadList() {
+  Future<List<DownloadMediaInfo>> getDownloadList() {
     return platform(
       android: (pool) async {
         final info = await _androidManager!.getDownloadMediaInfoList() ?? [];
-        return DownloadInfo.fromAndroidList(info);
+        return DownloadMediaInfo.fromAndroidList(info);
       },
       ios: (pool) async {
         final info = await _iosManager!.getDownloadMediaInfoList() ?? [];
-        return DownloadInfo.fromIOSList(info);
+        return DownloadMediaInfo.fromIOSList(info);
       },
     );
   }
@@ -133,20 +133,21 @@ class VodDownloader {
                 .anonymous__();
         listener
           ..onDownloadStart = (info) async {
-            onDownloadStart?.call(await DownloadInfo.fromAndroid(info!));
+            onDownloadStart?.call(await DownloadMediaInfo.fromAndroid(info!));
           }
           ..onDownloadProgress = (info) async {
-            onDownloadProgress?.call(await DownloadInfo.fromAndroid(info!));
+            onDownloadProgress
+                ?.call(await DownloadMediaInfo.fromAndroid(info!));
           }
           ..onDownloadStop = (info) async {
-            onDownloadStop?.call(await DownloadInfo.fromAndroid(info!));
+            onDownloadStop?.call(await DownloadMediaInfo.fromAndroid(info!));
           }
           ..onDownloadFinish = (info) async {
-            onDownloadFinish?.call(await DownloadInfo.fromAndroid(info!));
+            onDownloadFinish?.call(await DownloadMediaInfo.fromAndroid(info!));
           }
           ..onDownloadError = (info, code, desc) async {
             onDownloadError?.call(
-                await DownloadInfo.fromAndroid(info!), code!, desc!);
+                await DownloadMediaInfo.fromAndroid(info!), code!, desc!);
           };
         await _androidManager?.setListener(listener);
       },
@@ -154,20 +155,20 @@ class VodDownloader {
         final delegate = await TXVodDownloadDelegate.anonymous__();
         delegate
           ..onDownloadStart = (info) async {
-            onDownloadStart?.call(await DownloadInfo.fromIOS(info!));
+            onDownloadStart?.call(await DownloadMediaInfo.fromIOS(info!));
           }
           ..onDownloadProgress = (info) async {
-            onDownloadProgress?.call(await DownloadInfo.fromIOS(info!));
+            onDownloadProgress?.call(await DownloadMediaInfo.fromIOS(info!));
           }
           ..onDownloadStop = (info) async {
-            onDownloadStop?.call(await DownloadInfo.fromIOS(info!));
+            onDownloadStop?.call(await DownloadMediaInfo.fromIOS(info!));
           }
           ..onDownloadFinish = (info) async {
-            onDownloadFinish?.call(await DownloadInfo.fromIOS(info!));
+            onDownloadFinish?.call(await DownloadMediaInfo.fromIOS(info!));
           }
           ..onDownloadError_errorCode_errorMsg = (info, code, desc) async {
             onDownloadError?.call(
-                await DownloadInfo.fromIOS(info!), code!.toValue(), desc!);
+                await DownloadMediaInfo.fromIOS(info!), code!.toValue(), desc!);
           };
         ;
         await _iosManager?.set_delegate(delegate);
