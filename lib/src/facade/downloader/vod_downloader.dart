@@ -83,6 +83,20 @@ class VodDownloader {
     );
   }
 
+  /// 获取下载列表
+  Future<List<DownloadInfo>> getDownloadList() {
+    return platform(
+      android: (pool) async {
+        final info = await _androidManager!.getDownloadMediaInfoList() ?? [];
+        return DownloadInfo.fromAndroidList(info);
+      },
+      ios: (pool) async {
+        final info = await _iosManager!.getDownloadMediaInfoList() ?? [];
+        return DownloadInfo.fromIOSList(info);
+      },
+    );
+  }
+
   /// 停止下载
   Future<void> stopDownload(String url) {
     return platform(
