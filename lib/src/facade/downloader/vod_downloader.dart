@@ -170,7 +170,6 @@ class VodDownloader {
             onDownloadError?.call(
                 await DownloadMediaInfo.fromIOS(info!), code!.toValue(), desc!);
           };
-        ;
         await _iosManager?.set_delegate(delegate);
       },
     );
