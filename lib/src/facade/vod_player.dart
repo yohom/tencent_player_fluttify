@@ -57,9 +57,6 @@ class VodPlayer {
     );
   }
 
-  /// 当前音量
-  double _volume = 1;
-
   /// 创建一个播放器
   ///
   /// 直播和点播
@@ -90,6 +87,13 @@ class VodPlayer {
     );
   }
 
+  /// 当前音量
+  double _volume = 1;
+
+  /// 当前播放地址
+  String? _playUrl;
+  String? get playUrl => _playUrl;
+
   /// 设置播放界面
   Future<void> setPlayerView(CloudVideoController playerView) async {
     return platform(
@@ -107,16 +111,16 @@ class VodPlayer {
 
   /// 播放 HTTP URL 形式地址
   Future<void> startPlay(String playUrl) async {
-    final httpsUrl = Uri.parse(playUrl).scheme == 'http'
+    _playUrl = Uri.parse(playUrl).scheme == 'http'
         ? playUrl.replaceFirst('http', 'https')
         : playUrl;
     return platform(
       android: (pool) async {
-        final result = await _androidPlayer!.startPlay__String(httpsUrl);
+        final result = await _androidPlayer!.startPlay__String(_playUrl!);
         debugPrint('result: $result');
       },
       ios: (pool) async {
-        final result = await _iosPlayer!.startPlay(httpsUrl);
+        final result = await _iosPlayer!.startPlay(_playUrl!);
         debugPrint('result: $result');
       },
     );
