@@ -18,14 +18,14 @@ class com_tencent_rtmp_TXLivePlayer extends java_lang_Object  {
   @override
   final String tag__ = 'tencent_player_fluttify';
 
-  static final String TAG = "TXLivePlayer";
-  static final int PLAY_TYPE_LIVE_RTMP = 0;
-  static final int PLAY_TYPE_LIVE_FLV = 1;
-  static final int PLAY_TYPE_VOD_FLV = 2;
-  static final int PLAY_TYPE_VOD_HLS = 3;
-  static final int PLAY_TYPE_VOD_MP4 = 4;
-  static final int PLAY_TYPE_LIVE_RTMP_ACC = 5;
-  static final int PLAY_TYPE_LOCAL_VIDEO = 6;
+  static const String TAG = "TXLivePlayer";
+  static const int PLAY_TYPE_LIVE_RTMP = 0;
+  static const int PLAY_TYPE_LIVE_FLV = 1;
+  static const int PLAY_TYPE_VOD_FLV = 2;
+  static const int PLAY_TYPE_VOD_HLS = 3;
+  static const int PLAY_TYPE_VOD_MP4 = 4;
+  static const int PLAY_TYPE_LIVE_RTMP_ACC = 5;
+  static const int PLAY_TYPE_LOCAL_VIDEO = 6;
   //endregion
 
   //region creators

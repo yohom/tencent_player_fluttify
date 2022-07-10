@@ -46,8 +46,11 @@ class CloudVideoController with WidgetsBindingObserver {
   }
 
   Future<void> dispose() async {
-    await _androidController?.onPause();
-    await _androidController?.onDestroy();
+    if (Platform.isAndroid) {
+      await _androidController?.onPause();
+      await _androidController?.onDestroy();
+      await _androidController?.removeVideoView();
+    }
     WidgetsBinding.instance.removeObserver(this);
   }
 }

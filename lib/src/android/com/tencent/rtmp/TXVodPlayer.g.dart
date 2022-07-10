@@ -18,7 +18,7 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
   @override
   final String tag__ = 'tencent_player_fluttify';
 
-  static final String TAG = "TXVodPlayer";
+  static const String TAG = "TXVodPlayer";
   //endregion
 
   //region creators
@@ -105,7 +105,7 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<int?> startPlay__com_tencent_rtmp_TXPlayerAuthBuilder(com_tencent_rtmp_TXPlayerAuthBuilder? authBuilder) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -360,7 +360,7 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
     return __result__;
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<void> setPlayListener(com_tencent_rtmp_ITXLivePlayListener? listener) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -875,7 +875,7 @@ extension com_tencent_rtmp_TXVodPlayer_Batch on List<com_tencent_rtmp_TXVodPlaye
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  @deprecated
+  @Deprecated('过时')
   Future<List<int?>> startPlay__com_tencent_rtmp_TXPlayerAuthBuilder_batch(List<com_tencent_rtmp_TXPlayerAuthBuilder?> authBuilder) async {
     assert(true);
   

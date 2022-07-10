@@ -18,11 +18,11 @@ class com_tencent_rtmp_downloader_TXVodDownloadMediaInfo extends java_lang_Objec
   @override
   final String tag__ = 'tencent_player_fluttify';
 
-  static final int STATE_INIT = 0;
-  static final int STATE_START = 1;
-  static final int STATE_STOP = 2;
-  static final int STATE_ERROR = 3;
-  static final int STATE_FINISH = 4;
+  static const int STATE_INIT = 0;
+  static const int STATE_START = 1;
+  static const int STATE_STOP = 2;
+  static const int STATE_ERROR = 3;
+  static const int STATE_FINISH = 4;
   //endregion
 
   //region creators
