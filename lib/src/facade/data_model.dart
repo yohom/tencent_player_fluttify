@@ -48,6 +48,18 @@ class PlayProgress {
     return playProgress.inMilliseconds / totalDuration.inMilliseconds;
   }
 
+  PlayProgress copyWith({
+    Duration? playProgress,
+    Duration? bufferProgress,
+    Duration? totalDuration,
+  }) {
+    return PlayProgress(
+      bufferProgress: playProgress ?? this.playProgress,
+      playProgress: bufferProgress ?? this.bufferProgress,
+      totalDuration: totalDuration ?? this.totalDuration,
+    );
+  }
+
   @override
   String toString() {
     return 'PlayProgress{playProgress: $playProgress, bufferProgress: $bufferProgress, totalDuration: $totalDuration}';
