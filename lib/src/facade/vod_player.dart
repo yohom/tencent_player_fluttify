@@ -184,6 +184,17 @@ class VodPlayer {
     );
   }
 
+  /// 获取宽高比
+  Future<double> getAspectRatio() async {
+    final width = await getWidth();
+    final height = await getHeight();
+    try {
+      return width / height;
+    } catch (e) {
+      return 1;
+    }
+  }
+
   /// 暂停播放，停止获取流数据,保留最后一帧画面
   Future<void> pausePlay() async {
     return platform(
