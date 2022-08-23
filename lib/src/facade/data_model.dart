@@ -29,15 +29,20 @@ enum RenderMode {
 
 /// 播放进度
 class PlayProgress {
-  final Duration playProgress;
-  final Duration bufferProgress;
-  final Duration totalDuration;
-
   PlayProgress({
     required this.playProgress,
     required this.bufferProgress,
     required this.totalDuration,
   });
+
+  PlayProgress.zero()
+      : playProgress = Duration.zero,
+        bufferProgress = Duration.zero,
+        totalDuration = Duration.zero;
+
+  final Duration playProgress;
+  final Duration bufferProgress;
+  final Duration totalDuration;
 
   @override
   String toString() {
