@@ -44,6 +44,10 @@ class PlayProgress {
   final Duration bufferProgress;
   final Duration totalDuration;
 
+  double get playPosition {
+    return playProgress.inMilliseconds / totalDuration.inMilliseconds;
+  }
+
   @override
   String toString() {
     return 'PlayProgress{playProgress: $playProgress, bufferProgress: $bufferProgress, totalDuration: $totalDuration}';
