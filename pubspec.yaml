@@ -1,6 +1,6 @@
 name: tencent_player_fluttify
 description: An `Tencent Player` Core Component, Powered By `Fluttify`, A Compiler Generating Dart Bindings For Native SDK.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/fluttify-project
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   
-  volume_controller: ^2.0.3
+  volume_controller: ^2.0.4
   foundation_fluttify: ^0.13.0
 
 dev_dependencies:
