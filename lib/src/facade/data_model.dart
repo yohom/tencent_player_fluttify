@@ -45,7 +45,8 @@ class PlayProgress {
   final Duration totalDuration;
 
   double get playPosition {
-    return playProgress.inMilliseconds / totalDuration.inMilliseconds;
+    return (playProgress.inMilliseconds / totalDuration.inMilliseconds)
+        .clamp(0, 1);
   }
 
   PlayProgress copyWith({
