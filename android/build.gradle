@@ -63,5 +63,5 @@ dependencies {
     // flutter plugin dependency
     
     // sdk dependency
-    api 'com.tencent.liteav:LiteAVSDK_Player:10.1.0.11100'
+    api 'com.tencent.liteav:LiteAVSDK_Player:10.8.0.13065'
 }

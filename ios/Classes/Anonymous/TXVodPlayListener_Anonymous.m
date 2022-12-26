@@ -73,5 +73,105 @@ extern BOOL enableLog;
   
 }
 
+- (void)onPlayer : (TXVodPlayer*)player pictureInPictureStateDidChange: (TX_VOD_PLAYER_PIP_STATE)pipState withParam: (NSDictionary*)param
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodPlayListener::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"TXVodPlayListener::onPlayer_pictureInPictureStateDidChange_withParam");
+  }
+
+  // convert to jsonable arg
+  // ref callback arg
+  TXVodPlayer* argplayer = player;
+  // enum callback arg
+  NSNumber* argpipState = @((NSInteger) pipState);
+  // ref callback arg
+  NSDictionary* argparam = param;
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"onPlayer_pictureInPictureStateDidChange_withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"pipState": argpipState == nil ? [NSNull null] : argpipState, @"param": argparam == nil ? [NSNull null] : argparam}];
+  });
+  
+}
+
+- (void)onPlayer : (TXVodPlayer*)player pictureInPictureErrorDidOccur: (TX_VOD_PLAYER_PIP_ERROR_TYPE)errorType withParam: (NSDictionary*)param
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodPlayListener::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"TXVodPlayListener::onPlayer_pictureInPictureErrorDidOccur_withParam");
+  }
+
+  // convert to jsonable arg
+  // ref callback arg
+  TXVodPlayer* argplayer = player;
+  // enum callback arg
+  NSNumber* argerrorType = @((NSInteger) errorType);
+  // ref callback arg
+  NSDictionary* argparam = param;
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"onPlayer_pictureInPictureErrorDidOccur_withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"errorType": argerrorType == nil ? [NSNull null] : argerrorType, @"param": argparam == nil ? [NSNull null] : argparam}];
+  });
+  
+}
+
+- (void)onPlayer : (TXVodPlayer*)player airPlayStateDidChange: (TX_VOD_PLAYER_AIRPLAY_STATE)airPlayState withParam: (NSDictionary*)param
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodPlayListener::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"TXVodPlayListener::onPlayer_airPlayStateDidChange_withParam");
+  }
+
+  // convert to jsonable arg
+  // ref callback arg
+  TXVodPlayer* argplayer = player;
+  // enum callback arg
+  NSNumber* argairPlayState = @((NSInteger) airPlayState);
+  // ref callback arg
+  NSDictionary* argparam = param;
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"onPlayer_airPlayStateDidChange_withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"airPlayState": argairPlayState == nil ? [NSNull null] : argairPlayState, @"param": argparam == nil ? [NSNull null] : argparam}];
+  });
+  
+}
+
+- (void)onPlayer : (TXVodPlayer*)player airPlayErrorDidOccur: (TX_VOD_PLAYER_AIRPLAY_ERROR_TYPE)errorType withParam: (NSDictionary*)param
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"TXVodPlayListener::Callback@%@:%@", NSStringFromClass([self class]), @(self.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"TXVodPlayListener::onPlayer_airPlayErrorDidOccur_withParam");
+  }
+
+  // convert to jsonable arg
+  // ref callback arg
+  TXVodPlayer* argplayer = player;
+  // enum callback arg
+  NSNumber* argerrorType = @((NSInteger) errorType);
+  // ref callback arg
+  NSDictionary* argparam = param;
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"onPlayer_airPlayErrorDidOccur_withParam" arguments:@{@"player": argplayer == nil ? [NSNull null] : argplayer, @"errorType": argerrorType == nil ? [NSNull null] : argerrorType, @"param": argparam == nil ? [NSNull null] : argparam}];
+  });
+  
+}
+
 
 @end

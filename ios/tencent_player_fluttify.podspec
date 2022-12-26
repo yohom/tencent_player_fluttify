@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   
   # sdk dependency
-  s.dependency 'TXLiteAVSDK_Player', '10.1.11100'
+  s.dependency 'TXLiteAVSDK_Player', '10.8.12025'
 
   s.static_framework = true
   s.ios.deployment_target = '11.0'

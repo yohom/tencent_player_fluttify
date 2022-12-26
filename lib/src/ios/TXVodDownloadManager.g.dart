@@ -51,6 +51,11 @@ class TXVodDownloadManager extends NSObject  {
     return __result__;
   }
   
+  Future<bool?> get_supportPrivateEncryptMode() async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodDownloadManager::get_supportPrivateEncryptMode", {'__this__': this});
+    return __result__;
+  }
+  
   //endregion
 
   //region setters
@@ -60,6 +65,10 @@ class TXVodDownloadManager extends NSObject  {
   
   Future<void> set_headers(Map? headers) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_headers', <String, dynamic>{'__this__': this, "headers": headers});
+  }
+  
+  Future<void> set_supportPrivateEncryptMode(bool? supportPrivateEncryptMode) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_supportPrivateEncryptMode', <String, dynamic>{'__this__': this, "supportPrivateEncryptMode": supportPrivateEncryptMode});
   }
   
   //endregion
@@ -289,11 +298,22 @@ extension TXVodDownloadManager_Batch on List<TXVodDownloadManager?> {
     return (resultBatch as List).map((__result__) => __result__).cast<Map?>().toList();
   }
   
+  Future<List<bool?>> get_supportPrivateEncryptMode_batch() async {
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodDownloadManager::get_supportPrivateEncryptMode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
+  }
+  
   //endregion
 
   //region setters
   Future<void> set_headers_batch(List<Map?> headers) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_headers_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "headers": headers[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_supportPrivateEncryptMode_batch(List<bool?> supportPrivateEncryptMode) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadManager::set_supportPrivateEncryptMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "supportPrivateEncryptMode": supportPrivateEncryptMode[__i__]}]);
   
   
   }
