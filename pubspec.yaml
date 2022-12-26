@@ -11,8 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   
-  volume_controller: ^2.0.4
-  foundation_fluttify: ^0.13.0
+  volume_controller: ^2.0.6
+  foundation_fluttify: ^0.13.0+1
 
 dev_dependencies:
   flutter_test:
