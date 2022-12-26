@@ -116,11 +116,11 @@ class VodPlayer {
         : playUrl;
     return platform(
       android: (pool) async {
-        final result = await _androidPlayer!.startPlay__String(_playUrl!);
+        final result = await _androidPlayer!.startVodPlay__String(_playUrl!);
         debugPrint('result: $result');
       },
       ios: (pool) async {
-        final result = await _iosPlayer!.startPlay(_playUrl!);
+        final result = await _iosPlayer!.startVodPlay(_playUrl!);
         debugPrint('result: $result');
       },
     );

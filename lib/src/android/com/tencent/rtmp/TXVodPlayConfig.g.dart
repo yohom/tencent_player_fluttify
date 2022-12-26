@@ -701,6 +701,40 @@ class com_tencent_rtmp_TXVodPlayConfig extends java_lang_Object  {
   }
   
   
+  Future<void> setMediaType(int? mediaType) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::setMediaType([\'mediaType\':$mediaType])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setMediaType', {"mediaType": mediaType, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<int?> getMediaType() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayConfig@$refId::getMediaType([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getMediaType', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setExtInfo(Map<String,Object>? map) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -1170,6 +1204,28 @@ extension com_tencent_rtmp_TXVodPlayConfig_Batch on List<com_tencent_rtmp_TXVodP
   
     // invoke native method
     final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getPreferredResolution_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
+  }
+  
+  
+  Future<List<void>> setMediaType_batch(List<int?> mediaType) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::setMediaType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"mediaType": mediaType[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<int?>> getMediaType_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayConfig::getMediaType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
