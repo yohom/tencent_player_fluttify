@@ -68,18 +68,25 @@ class VodDownloader {
   Future<void> deleteDownload(String url) {
     return platform(
       android: (pool) async {
-        final info = await _androidManager!.getDownloadMediaInfo__String(url);
-        await _androidManager?.deleteDownloadMediaInfo(info!);
+        final list = await _androidManager!.getDownloadMediaInfoList();
+        final target = [
+          for (final item in list!)
+            if (url == await item.getUrl()) item
+        ].first;
 
-        pool.add(info);
+        await _androidManager?.deleteDownloadMediaInfo(target);
+
+        pool.add(target);
       },
       ios: (pool) async {
-        // 获取信息的入参
-        final infoIn = await TXVodDownloadMediaInfo.create__();
-        await infoIn.set_url(url);
-        await _iosManager?.deleteDownloadMediaInfo(infoIn);
+        final list = await _iosManager!.getDownloadMediaInfoList();
+        final target = [
+          for (final item in list!)
+            if (url == await item.get_url()) item
+        ].first;
+        await _iosManager?.deleteDownloadMediaInfo(target);
 
-        pool.add(infoIn);
+        pool.add(target);
       },
     );
   }

@@ -124,6 +124,6 @@ class DownloadMediaInfo {
 
   @override
   String toString() {
-    return 'DownloadInfo{progress: $progress, url: $url}';
+    return 'DownloadMediaInfo{progress: $progress, url: $url, duration: $duration, playableDuration: $playableDuration, size: $size, downloadSize: $downloadSize, playPath: $playPath, taskId: $taskId, userName: $userName, state: $state, speed: $speed, isFinished: $isFinished}';
   }
 }
