@@ -15,6 +15,7 @@ class DownloadMediaInfo {
   late String userName;
   late DownloadState state;
   late int speed;
+  late bool isFinished;
 
   static Future<DownloadMediaInfo> fromAndroid(
       com_tencent_rtmp_downloader_TXVodDownloadMediaInfo model) async {
@@ -31,6 +32,7 @@ class DownloadMediaInfo {
     result.userName = await model.getUserName() ?? '';
     result.state = DownloadState.values[await model.getDownloadState() ?? 0];
     result.speed = await model.getSpeed() ?? 0;
+    result.isFinished = await model.isDownloadFinished() ?? false;
     return result;
   }
 
@@ -47,6 +49,7 @@ class DownloadMediaInfo {
     final userNameBatch = await model.getUserName_batch();
     final stateBatch = await model.getDownloadState_batch();
     final speedBatch = await model.getSpeed_batch();
+    final isFinishedBatch = await model.isDownloadFinished_batch();
 
     return [
       for (int i = 0; i < model.length; i++)
@@ -63,6 +66,7 @@ class DownloadMediaInfo {
           ..userName = userNameBatch[i] ?? ''
           ..state = DownloadState.values[stateBatch[i] ?? 0]
           ..speed = speedBatch[i] ?? 0
+          ..isFinished = isFinishedBatch[i] ?? false
     ];
   }
 
@@ -81,6 +85,7 @@ class DownloadMediaInfo {
     result.state =
         DownloadState.values[(await model.get_downloadState())?.index ?? 0];
     result.speed = await model.get_speed() ?? 0;
+    result.isFinished = await model.isDownloadFinished() ?? false;
     return result;
   }
 
@@ -97,6 +102,7 @@ class DownloadMediaInfo {
     final userNameBatch = await model.get_userName_batch();
     final stateBatch = (await model.get_downloadState_batch());
     final speedBatch = await model.get_speed_batch();
+    final isFinishedBatch = await model.isDownloadFinished_batch();
     return [
       for (int i = 0; i < model.length; i++)
         DownloadMediaInfo()
@@ -112,6 +118,7 @@ class DownloadMediaInfo {
           ..userName = userNameBatch[i] ?? ''
           ..state = DownloadState.values[stateBatch[i]?.index ?? 0]
           ..speed = speedBatch[i] ?? 0
+          ..isFinished = isFinishedBatch[i] ?? false
     ];
   }
 
