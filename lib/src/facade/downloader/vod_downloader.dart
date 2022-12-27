@@ -36,12 +36,13 @@ class VodDownloader {
   }
 
   /// 开始下载
-  Future<DownloadMediaInfo> startDownload(String url) {
-    const username = 'default';
+  Future<DownloadMediaInfo> startDownload(String url, {String? username}) {
     return platform(
       android: (pool) async {
         final info = await _androidManager?.startDownloadUrl__String__String(
-            url, username);
+          url,
+          username,
+        );
         return DownloadMediaInfo.fromAndroid(info!);
       },
       ios: (pool) async {
