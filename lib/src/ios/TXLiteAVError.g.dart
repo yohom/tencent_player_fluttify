@@ -10,7 +10,7 @@ enum TXLiteAVError {
   ERR_REFUSED /* -3 */,
   ERR_NOT_SUPPORTED /* -4 */,
   ERR_INVALID_LICENSE /* -5 */,
-  ERR_REQUEST_SERVER_TIMEOUT /* -6 */,
+  ERR_REQUEST_TIMEOUT /* -6 */,
   ERR_SERVER_PROCESS_FAILED /* -7 */,
   ERR_DISCONNECTED /* -8 */,
   ERR_CAMERA_START_FAIL /* -1301 */,
@@ -38,7 +38,6 @@ enum TXLiteAVError {
   ERR_AUDIO_PLUGIN_START_FAIL /* -1330 */,
   ERR_AUDIO_PLUGIN_INSTALL_NOT_AUTHORIZED /* -1331 */,
   ERR_AUDIO_PLUGIN_INSTALL_FAILED /* -1332 */,
-  ERR_AUDIO_PLUGIN_INSTALLED_BUT_NEED_RESTART /* -1333 */,
   ERR_AUDIO_ENCODE_FAIL /* -1304 */,
   ERR_UNSUPPORTED_SAMPLERATE /* -1306 */,
   ERR_TRTC_ENTER_ROOM_FAILED /* -3301 */,
@@ -54,8 +53,8 @@ enum TXLiteAVError {
   ERR_TRTC_SERVICE_SUSPENDED /* -100013 */,
   ERR_TRTC_USER_SIG_CHECK_FAILED /* -100018 */,
   ERR_TRTC_PUSH_THIRD_PARTY_CLOUD_TIMEOUT /* -3321 */,
-  ERR_TRTC_MIX_TRANSCODING_TIMEOUT /* -3322 */,
   ERR_TRTC_PUSH_THIRD_PARTY_CLOUD_FAILED /* -3323 */,
+  ERR_TRTC_MIX_TRANSCODING_TIMEOUT /* -3322 */,
   ERR_TRTC_MIX_TRANSCODING_FAILED /* -3324 */,
   ERR_TRTC_START_PUBLISHING_TIMEOUT /* -3333 */,
   ERR_TRTC_START_PUBLISHING_FAILED /* -3334 */,
@@ -76,7 +75,7 @@ extension TXLiteAVErrorToX on TXLiteAVError {
       case TXLiteAVError.ERR_REFUSED: return -3;
       case TXLiteAVError.ERR_NOT_SUPPORTED: return -4;
       case TXLiteAVError.ERR_INVALID_LICENSE: return -5;
-      case TXLiteAVError.ERR_REQUEST_SERVER_TIMEOUT: return -6;
+      case TXLiteAVError.ERR_REQUEST_TIMEOUT: return -6;
       case TXLiteAVError.ERR_SERVER_PROCESS_FAILED: return -7;
       case TXLiteAVError.ERR_DISCONNECTED: return -8;
       case TXLiteAVError.ERR_CAMERA_START_FAIL: return -1301;
@@ -104,7 +103,6 @@ extension TXLiteAVErrorToX on TXLiteAVError {
       case TXLiteAVError.ERR_AUDIO_PLUGIN_START_FAIL: return -1330;
       case TXLiteAVError.ERR_AUDIO_PLUGIN_INSTALL_NOT_AUTHORIZED: return -1331;
       case TXLiteAVError.ERR_AUDIO_PLUGIN_INSTALL_FAILED: return -1332;
-      case TXLiteAVError.ERR_AUDIO_PLUGIN_INSTALLED_BUT_NEED_RESTART: return -1333;
       case TXLiteAVError.ERR_AUDIO_ENCODE_FAIL: return -1304;
       case TXLiteAVError.ERR_UNSUPPORTED_SAMPLERATE: return -1306;
       case TXLiteAVError.ERR_TRTC_ENTER_ROOM_FAILED: return -3301;
@@ -120,8 +118,8 @@ extension TXLiteAVErrorToX on TXLiteAVError {
       case TXLiteAVError.ERR_TRTC_SERVICE_SUSPENDED: return -100013;
       case TXLiteAVError.ERR_TRTC_USER_SIG_CHECK_FAILED: return -100018;
       case TXLiteAVError.ERR_TRTC_PUSH_THIRD_PARTY_CLOUD_TIMEOUT: return -3321;
-      case TXLiteAVError.ERR_TRTC_MIX_TRANSCODING_TIMEOUT: return -3322;
       case TXLiteAVError.ERR_TRTC_PUSH_THIRD_PARTY_CLOUD_FAILED: return -3323;
+      case TXLiteAVError.ERR_TRTC_MIX_TRANSCODING_TIMEOUT: return -3322;
       case TXLiteAVError.ERR_TRTC_MIX_TRANSCODING_FAILED: return -3324;
       case TXLiteAVError.ERR_TRTC_START_PUBLISHING_TIMEOUT: return -3333;
       case TXLiteAVError.ERR_TRTC_START_PUBLISHING_FAILED: return -3334;
@@ -145,7 +143,7 @@ extension TXLiteAVErrorFromX on int {
       case -3: return TXLiteAVError.ERR_REFUSED;
       case -4: return TXLiteAVError.ERR_NOT_SUPPORTED;
       case -5: return TXLiteAVError.ERR_INVALID_LICENSE;
-      case -6: return TXLiteAVError.ERR_REQUEST_SERVER_TIMEOUT;
+      case -6: return TXLiteAVError.ERR_REQUEST_TIMEOUT;
       case -7: return TXLiteAVError.ERR_SERVER_PROCESS_FAILED;
       case -8: return TXLiteAVError.ERR_DISCONNECTED;
       case -1301: return TXLiteAVError.ERR_CAMERA_START_FAIL;
@@ -173,7 +171,6 @@ extension TXLiteAVErrorFromX on int {
       case -1330: return TXLiteAVError.ERR_AUDIO_PLUGIN_START_FAIL;
       case -1331: return TXLiteAVError.ERR_AUDIO_PLUGIN_INSTALL_NOT_AUTHORIZED;
       case -1332: return TXLiteAVError.ERR_AUDIO_PLUGIN_INSTALL_FAILED;
-      case -1333: return TXLiteAVError.ERR_AUDIO_PLUGIN_INSTALLED_BUT_NEED_RESTART;
       case -1304: return TXLiteAVError.ERR_AUDIO_ENCODE_FAIL;
       case -1306: return TXLiteAVError.ERR_UNSUPPORTED_SAMPLERATE;
       case -3301: return TXLiteAVError.ERR_TRTC_ENTER_ROOM_FAILED;
@@ -189,8 +186,8 @@ extension TXLiteAVErrorFromX on int {
       case -100013: return TXLiteAVError.ERR_TRTC_SERVICE_SUSPENDED;
       case -100018: return TXLiteAVError.ERR_TRTC_USER_SIG_CHECK_FAILED;
       case -3321: return TXLiteAVError.ERR_TRTC_PUSH_THIRD_PARTY_CLOUD_TIMEOUT;
-      case -3322: return TXLiteAVError.ERR_TRTC_MIX_TRANSCODING_TIMEOUT;
       case -3323: return TXLiteAVError.ERR_TRTC_PUSH_THIRD_PARTY_CLOUD_FAILED;
+      case -3322: return TXLiteAVError.ERR_TRTC_MIX_TRANSCODING_TIMEOUT;
       case -3324: return TXLiteAVError.ERR_TRTC_MIX_TRANSCODING_FAILED;
       case -3333: return TXLiteAVError.ERR_TRTC_START_PUBLISHING_TIMEOUT;
       case -3334: return TXLiteAVError.ERR_TRTC_START_PUBLISHING_FAILED;

@@ -30,10 +30,10 @@ class com_tencent_rtmp_TXPlayerDrmBuilder extends java_lang_Object  {
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__)!;
   }
   
-  static Future<com_tencent_rtmp_TXPlayerDrmBuilder> create__String__String(String? licenseUrl, String? playUrl) async {
+  static Future<com_tencent_rtmp_TXPlayerDrmBuilder> create__String__String__String(String? provisionUrl, String? licenseUrl, String? playUrl) async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
-      'ObjectFactory::createcom_tencent_rtmp_TXPlayerDrmBuilder__String__String',
-      {"licenseUrl": licenseUrl, "playUrl": playUrl}
+      'ObjectFactory::createcom_tencent_rtmp_TXPlayerDrmBuilder__String__String__String',
+      {"provisionUrl": provisionUrl, "licenseUrl": licenseUrl, "playUrl": playUrl}
     );
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__)!;
   }
@@ -51,11 +51,11 @@ class com_tencent_rtmp_TXPlayerDrmBuilder extends java_lang_Object  {
         .toList() ?? <com_tencent_rtmp_TXPlayerDrmBuilder>[];
   }
   
-  static Future<List<com_tencent_rtmp_TXPlayerDrmBuilder>> create_batch__String__String(List<String?> licenseUrl, List<String?> playUrl) async {
-    assert(licenseUrl.length == playUrl.length);
+  static Future<List<com_tencent_rtmp_TXPlayerDrmBuilder>> create_batch__String__String__String(List<String?> provisionUrl, List<String?> licenseUrl, List<String?> playUrl) async {
+    assert(provisionUrl.length == licenseUrl.length && licenseUrl.length == playUrl.length);
     final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
-      'ObjectFactory::create_batchcom_tencent_rtmp_TXPlayerDrmBuilder__String__String',
-      [for (int __i__ = 0; __i__ < licenseUrl.length; __i__++) {"licenseUrl": licenseUrl[__i__], "playUrl": playUrl[__i__]}]
+      'ObjectFactory::create_batchcom_tencent_rtmp_TXPlayerDrmBuilder__String__String__String',
+      [for (int __i__ = 0; __i__ < provisionUrl.length; __i__++) {"provisionUrl": provisionUrl[__i__], "licenseUrl": licenseUrl[__i__], "playUrl": playUrl[__i__]}]
     );
     return __result_batch__
         ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(it))
@@ -76,14 +76,14 @@ class com_tencent_rtmp_TXPlayerDrmBuilder extends java_lang_Object  {
 
   //region methods
   
-  Future<com_tencent_rtmp_TXPlayerDrmBuilder?> setDeviceCertificateUrl(String? deviceCertificateUrl) async {
+  Future<com_tencent_rtmp_TXPlayerDrmBuilder?> setProvisionUrl(String? provisionUrl) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerDrmBuilder@$refId::setDeviceCertificateUrl([\'deviceCertificateUrl\':$deviceCertificateUrl])');
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerDrmBuilder@$refId::setProvisionUrl([\'provisionUrl\':$provisionUrl])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setDeviceCertificateUrl', {"deviceCertificateUrl": deviceCertificateUrl, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setProvisionUrl', {"provisionUrl": provisionUrl, "__this__": this});
   
   
     // handle native call
@@ -93,14 +93,14 @@ class com_tencent_rtmp_TXPlayerDrmBuilder extends java_lang_Object  {
   }
   
   
-  Future<String?> getDeviceCertificateUrl() async {
+  Future<String?> getProvisionUrl() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerDrmBuilder@$refId::getDeviceCertificateUrl([])');
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXPlayerDrmBuilder@$refId::getProvisionUrl([])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::getDeviceCertificateUrl', {"__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::getProvisionUrl', {"__this__": this});
   
   
     // handle native call
@@ -201,22 +201,22 @@ extension com_tencent_rtmp_TXPlayerDrmBuilder_Batch on List<com_tencent_rtmp_TXP
 
   //region methods
   
-  Future<List<com_tencent_rtmp_TXPlayerDrmBuilder?>> setDeviceCertificateUrl_batch(List<String?> deviceCertificateUrl) async {
+  Future<List<com_tencent_rtmp_TXPlayerDrmBuilder?>> setProvisionUrl_batch(List<String?> provisionUrl) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setDeviceCertificateUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"deviceCertificateUrl": deviceCertificateUrl[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::setProvisionUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"provisionUrl": provisionUrl[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXPlayerDrmBuilder>(__result__)).cast<com_tencent_rtmp_TXPlayerDrmBuilder?>().toList();
   }
   
   
-  Future<List<String?>> getDeviceCertificateUrl_batch() async {
+  Future<List<String?>> getProvisionUrl_batch() async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::getDeviceCertificateUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXPlayerDrmBuilder::getProvisionUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();

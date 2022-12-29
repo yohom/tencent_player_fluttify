@@ -86,16 +86,6 @@ class TXVodDownloadDataSource extends NSObject  {
     return __result__;
   }
   
-  Future<String?> get_overlayKey() async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodDownloadDataSource::get_overlayKey", {'__this__': this});
-    return __result__;
-  }
-  
-  Future<String?> get_overlayIv() async {
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodDownloadDataSource::get_overlayIv", {'__this__': this});
-    return __result__;
-  }
-  
   //endregion
 
   //region setters
@@ -129,14 +119,6 @@ class TXVodDownloadDataSource extends NSObject  {
   
   Future<void> set_userName(String? userName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_userName', <String, dynamic>{'__this__': this, "userName": userName});
-  }
-  
-  Future<void> set_overlayKey(String? overlayKey) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_overlayKey', <String, dynamic>{'__this__': this, "overlayKey": overlayKey});
-  }
-  
-  Future<void> set_overlayIv(String? overlayIv) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_overlayIv', <String, dynamic>{'__this__': this, "overlayIv": overlayIv});
   }
   
   //endregion
@@ -198,16 +180,6 @@ extension TXVodDownloadDataSource_Batch on List<TXVodDownloadDataSource?> {
     return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>> get_overlayKey_batch() async {
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodDownloadDataSource::get_overlayKey_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
-  }
-  
-  Future<List<String?>> get_overlayIv_batch() async {
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodDownloadDataSource::get_overlayIv_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
-  }
-  
   //endregion
 
   //region setters
@@ -255,18 +227,6 @@ extension TXVodDownloadDataSource_Batch on List<TXVodDownloadDataSource?> {
   
   Future<void> set_userName_batch(List<String?> userName) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_userName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "userName": userName[__i__]}]);
-  
-  
-  }
-  
-  Future<void> set_overlayKey_batch(List<String?> overlayKey) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_overlayKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "overlayKey": overlayKey[__i__]}]);
-  
-  
-  }
-  
-  Future<void> set_overlayIv_batch(List<String?> overlayIv) async {
-    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodDownloadDataSource::set_overlayIv_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "overlayIv": overlayIv[__i__]}]);
   
   
   }

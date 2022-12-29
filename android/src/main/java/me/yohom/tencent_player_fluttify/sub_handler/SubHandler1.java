@@ -33,1030 +33,6 @@ public class SubHandler1 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("com.tencent.rtmp.TXPlayerAuthBuilder::setHttps", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean https = (boolean) ((Map<String, Object>) __args__).get("https");
-            
-                // ref
-                com.tencent.rtmp.TXPlayerAuthBuilder __this__ = (com.tencent.rtmp.TXPlayerAuthBuilder) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerAuthBuilder@" + __this__ + "::setHttps(" + https + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setHttps(https);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.TXPlayerDrmBuilder::setDeviceCertificateUrl", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String deviceCertificateUrl = (String) ((Map<String, Object>) __args__).get("deviceCertificateUrl");
-            
-                // ref
-                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::setDeviceCertificateUrl(" + deviceCertificateUrl + ")");
-                }
-            
-                // invoke native method
-                com.tencent.rtmp.TXPlayerDrmBuilder __result__ = null;
-                try {
-                    __result__ = __this__.setDeviceCertificateUrl(deviceCertificateUrl);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.TXPlayerDrmBuilder::getDeviceCertificateUrl", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::getDeviceCertificateUrl(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getDeviceCertificateUrl();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.TXPlayerDrmBuilder::setKeyLicenseUrl", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String keyLicenseUrl = (String) ((Map<String, Object>) __args__).get("keyLicenseUrl");
-            
-                // ref
-                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::setKeyLicenseUrl(" + keyLicenseUrl + ")");
-                }
-            
-                // invoke native method
-                com.tencent.rtmp.TXPlayerDrmBuilder __result__ = null;
-                try {
-                    __result__ = __this__.setKeyLicenseUrl(keyLicenseUrl);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.TXPlayerDrmBuilder::getKeyLicenseUrl", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::getKeyLicenseUrl(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getKeyLicenseUrl();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.TXPlayerDrmBuilder::setPlayUrl", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String playUrl = (String) ((Map<String, Object>) __args__).get("playUrl");
-            
-                // ref
-                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::setPlayUrl(" + playUrl + ")");
-                }
-            
-                // invoke native method
-                com.tencent.rtmp.TXPlayerDrmBuilder __result__ = null;
-                try {
-                    __result__ = __this__.setPlayUrl(playUrl);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.TXPlayerDrmBuilder::getPlayUrl", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.TXPlayerDrmBuilder __this__ = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXPlayerDrmBuilder@" + __this__ + "::getPlayUrl(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getPlayUrl();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getDataSource", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getDataSource(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __result__ = null;
-                try {
-                    __result__ = __this__.getDataSource();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getDuration", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getDuration(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getDuration();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getPlayableDuration", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getPlayableDuration(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getPlayableDuration();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getSize", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getSize(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getSize();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getDownloadSize", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getDownloadSize(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getDownloadSize();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getProgress", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getProgress(" + "" + ")");
-                }
-            
-                // invoke native method
-                Float __result__ = null;
-                try {
-                    __result__ = __this__.getProgress();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getPlayPath", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getPlayPath(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getPlayPath();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getTaskId", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getTaskId(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getTaskId();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getUrl", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getUrl(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getUrl();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getUserName", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getUserName(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getUserName();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getDownloadState", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getDownloadState(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getDownloadState();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::isDownloadFinished", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::isDownloadFinished(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.isDownloadFinished();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getSpeed", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::getSpeed(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getSpeed();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::setSpeed", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number speed = (Number) ((Map<String, Object>) __args__).get("speed");
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadMediaInfo __this__ = (com.tencent.rtmp.downloader.TXVodDownloadMediaInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@" + __this__ + "::setSpeed(" + speed + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setSpeed(speed.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getFileId", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getFileId(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getFileId();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getPSign", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getPSign(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getPSign();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::setQuality", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number quality = (Number) ((Map<String, Object>) __args__).get("quality");
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::setQuality(" + quality + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setQuality(quality.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::setToken", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String token = (String) ((Map<String, Object>) __args__).get("token");
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::setToken(" + token + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setToken(token);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getAuthBuilder", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getAuthBuilder(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.tencent.rtmp.TXPlayerAuthBuilder __result__ = null;
-                try {
-                    __result__ = __this__.getAuthBuilder();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getQuality", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getQuality(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getQuality();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getTemplateName", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getTemplateName(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getTemplateName();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getToken", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getToken(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getToken();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getAppId", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getAppId(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getAppId();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getUserName", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getUserName(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getUserName();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getOverlayKey", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getOverlayKey(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getOverlayKey();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodDownloadDataSource::getOverlayIv", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodDownloadDataSource __this__ = (com.tencent.rtmp.downloader.TXVodDownloadDataSource) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodDownloadDataSource@" + __this__ + "::getOverlayIv(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getOverlayIv();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodPreloadManager::getInstance", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context context = (android.content.Context) ((Map<String, Object>) __args__).get("context");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodPreloadManager::getInstance(" + context + ")");
-                }
-            
-                // invoke native method
-                com.tencent.rtmp.downloader.TXVodPreloadManager __result__ = null;
-                try {
-                    __result__ = com.tencent.rtmp.downloader.TXVodPreloadManager.getInstance(context);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodPreloadManager::startPreload", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String url = (String) ((Map<String, Object>) __args__).get("url");
-                // ref arg
-                Number preloadSizeMB = (Number) ((Map<String, Object>) __args__).get("preloadSizeMB");
-                // ref arg
-                Number preferredResolution = (Number) ((Map<String, Object>) __args__).get("preferredResolution");
-                // ref arg
-                com.tencent.rtmp.downloader.ITXVodPreloadListener listener = (com.tencent.rtmp.downloader.ITXVodPreloadListener) ((Map<String, Object>) __args__).get("listener");
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodPreloadManager __this__ = (com.tencent.rtmp.downloader.TXVodPreloadManager) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodPreloadManager@" + __this__ + "::startPreload(" + url + preloadSizeMB + preferredResolution + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.startPreload(url, preloadSizeMB.intValue(), preferredResolution.longValue(), listener);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.downloader.TXVodPreloadManager::stopPreload", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number taskID = (Number) ((Map<String, Object>) __args__).get("taskID");
-            
-                // ref
-                com.tencent.rtmp.downloader.TXVodPreloadManager __this__ = (com.tencent.rtmp.downloader.TXVodPreloadManager) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.downloader.TXVodPreloadManager@" + __this__ + "::stopPreload(" + taskID + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.stopPreload(taskID.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
             put("com.tencent.rtmp.downloader.TXVodDownloadManager::getInstance", (__args__, __methodResult__) -> {
                 // args
             
@@ -3700,63 +2676,6 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.tencent.rtmp.TXVodPlayConfig::setMediaType", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number mediaType = (Number) ((Map<String, Object>) __args__).get("mediaType");
-            
-                // ref
-                com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXVodPlayConfig@" + __this__ + "::setMediaType(" + mediaType + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setMediaType(mediaType.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.tencent.rtmp.TXVodPlayConfig::getMediaType", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.tencent.rtmp.TXVodPlayConfig __this__ = (com.tencent.rtmp.TXVodPlayConfig) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.tencent.rtmp.TXVodPlayConfig@" + __this__ + "::getMediaType(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getMediaType();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
             put("com.tencent.rtmp.TXVodPlayConfig::setExtInfo", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
@@ -4584,38 +3503,6 @@ public class SubHandler1 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.tencent.rtmp.ui.TXSubtitleView::show_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.graphics.Bitmap subtitleBitmap = (android.graphics.Bitmap) ((Map<String, Object>) __args__).get("subtitleBitmap");
-            
-                    // ref
-                    com.tencent.rtmp.ui.TXSubtitleView __this__ = (com.tencent.rtmp.ui.TXSubtitleView) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.show(subtitleBitmap);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
             put("com.tencent.rtmp.TXLivePlayer::setConfig_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
@@ -4680,7 +3567,7 @@ public class SubHandler1 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.tencent.rtmp.TXLivePlayer::startLivePlay_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.tencent.rtmp.TXLivePlayer::startPlay_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -4698,7 +3585,7 @@ public class SubHandler1 {
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.startLivePlay(playUrl, playType.intValue());
+                        __result__ = __this__.startPlay(playUrl, playType.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5977,6 +4864,1243 @@ public class SubHandler1 {
                     Integer __result__ = null;
                     try {
                         __result__ = com.tencent.rtmp.TXLiveBase.updateNetworkTime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXLiveBase::getNetworkTimestamp_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = com.tencent.rtmp.TXLiveBase.getNetworkTimestamp();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXLiveBase::setExtID_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String extKey = (String) ((Map<String, Object>) __args__).get("extKey");
+                    // ref arg
+                    String extValue = (String) ((Map<String, Object>) __args__).get("extValue");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.tencent.rtmp.TXLiveBase.setExtID(extKey, extValue);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXLiveBase::onUpdateNetworkTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number errCode = (Number) ((Map<String, Object>) __args__).get("errCode");
+                    // ref arg
+                    String errMsg = (String) ((Map<String, Object>) __args__).get("errMsg");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.tencent.rtmp.TXLiveBase.onUpdateNetworkTime(errCode.intValue(), errMsg);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXPlayInfoParams::getAppId_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXPlayInfoParams __this__ = (com.tencent.rtmp.TXPlayInfoParams) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getAppId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXPlayInfoParams::getFileId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXPlayInfoParams __this__ = (com.tencent.rtmp.TXPlayInfoParams) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getFileId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXPlayInfoParams::getPSign_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXPlayInfoParams __this__ = (com.tencent.rtmp.TXPlayInfoParams) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getPSign();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setConfig_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.tencent.rtmp.TXVodPlayConfig config = (com.tencent.rtmp.TXVodPlayConfig) ((Map<String, Object>) __args__).get("config");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setConfig(config);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setPlayerView__com_tencent_rtmp_ui_TXCloudVideoView_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.tencent.rtmp.ui.TXCloudVideoView glRootView = (com.tencent.rtmp.ui.TXCloudVideoView) ((Map<String, Object>) __args__).get("glRootView");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setPlayerView(glRootView);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::startPlay__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String playUrl = (String) ((Map<String, Object>) __args__).get("playUrl");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.startPlay(playUrl);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::startPlay__com_tencent_rtmp_TXPlayerAuthBuilder_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.tencent.rtmp.TXPlayerAuthBuilder authBuilder = (com.tencent.rtmp.TXPlayerAuthBuilder) ((Map<String, Object>) __args__).get("authBuilder");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.startPlay(authBuilder);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::startPlay__com_tencent_rtmp_TXPlayInfoParams_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.tencent.rtmp.TXPlayInfoParams playInfoParams = (com.tencent.rtmp.TXPlayInfoParams) ((Map<String, Object>) __args__).get("playInfoParams");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.startPlay(playInfoParams);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::startPlayDrm_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.tencent.rtmp.TXPlayerDrmBuilder playerDrmBuilder = (com.tencent.rtmp.TXPlayerDrmBuilder) ((Map<String, Object>) __args__).get("playerDrmBuilder");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.startPlayDrm(playerDrmBuilder);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::stopPlay_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean isNeedClearLastImg = (boolean) ((Map<String, Object>) __args__).get("isNeedClearLastImg");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.stopPlay(isNeedClearLastImg);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::isPlaying_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isPlaying();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::pause_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.pause();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::resume_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.resume();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::seek__int_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number time = (Number) ((Map<String, Object>) __args__).get("time");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.seek(time.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::seek__double_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number time = (Number) ((Map<String, Object>) __args__).get("time");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.seek(time.floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::getCurrentPlaybackTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getCurrentPlaybackTime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::getBufferDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getBufferDuration();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::getDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getDuration();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::getPlayableDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getPlayableDuration();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::getWidth_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getWidth();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::getHeight_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getHeight();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setRenderMode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number mode = (Number) ((Map<String, Object>) __args__).get("mode");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRenderMode(mode.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setRenderRotation_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number rotation = (Number) ((Map<String, Object>) __args__).get("rotation");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRenderRotation(rotation.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::enableHardwareDecode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean enable = (boolean) ((Map<String, Object>) __args__).get("enable");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.enableHardwareDecode(enable);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setMute_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean mute = (boolean) ((Map<String, Object>) __args__).get("mute");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setMute(mute);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setAudioPlayoutVolume_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number volume = (Number) ((Map<String, Object>) __args__).get("volume");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAudioPlayoutVolume(volume.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setRequestAudioFocus_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean requestFocus = (boolean) ((Map<String, Object>) __args__).get("requestFocus");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.setRequestAudioFocus(requestFocus);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setAutoPlay_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean autoPlay = (boolean) ((Map<String, Object>) __args__).get("autoPlay");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAutoPlay(autoPlay);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setRate_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number rate = (Number) ((Map<String, Object>) __args__).get("rate");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRate(rate.floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::getBitrateIndex_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getBitrateIndex();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setBitrateIndex_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number index = (Number) ((Map<String, Object>) __args__).get("index");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setBitrateIndex(index.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::getSupportedBitrates_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.ArrayList<com.tencent.rtmp.TXBitrateItem>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.ArrayList<com.tencent.rtmp.TXBitrateItem> __result__ = null;
+                    try {
+                        __result__ = __this__.getSupportedBitrates();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setMirror_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean mirror = (boolean) ((Map<String, Object>) __args__).get("mirror");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setMirror(mirror);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setStartTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number pos = (Number) ((Map<String, Object>) __args__).get("pos");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setStartTime(pos.floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setToken_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String token = (String) ((Map<String, Object>) __args__).get("token");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setToken(token);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.tencent.rtmp.TXVodPlayer::setLoop_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean loop = (boolean) ((Map<String, Object>) __args__).get("loop");
+            
+                    // ref
+                    com.tencent.rtmp.TXVodPlayer __this__ = (com.tencent.rtmp.TXVodPlayer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setLoop(loop);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
