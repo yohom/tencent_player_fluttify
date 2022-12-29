@@ -20,15 +20,17 @@ class VodDownloader {
   TXVodDownloadManager? _iosManager;
 
   /// 初始化
-  Future<void> init() async {
+  Future<void> init(String downloadPath) async {
     return platform(
       android: (pool) async {
         _androidManager ??=
             await com_tencent_rtmp_downloader_TXVodDownloadManager
                 .getInstance();
+        await _androidManager!.setDownloadPath(downloadPath);
       },
       ios: (pool) async {
         _iosManager ??= await TXVodDownloadManager.shareInstance();
+        await _iosManager!.setDownloadPath(downloadPath);
       },
     );
   }
