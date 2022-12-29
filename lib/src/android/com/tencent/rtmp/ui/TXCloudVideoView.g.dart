@@ -263,6 +263,23 @@ class com_tencent_rtmp_ui_TXCloudVideoView extends android_widget_FrameLayout  {
   }
   
   
+  Future<void> showFocusView(int? x, int? y, int? width, int? height) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.ui.TXCloudVideoView@$refId::showFocusView([\'x\':$x, \'y\':$y, \'width\':$width, \'height\':$height])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showFocusView', {"x": x, "y": y, "width": width, "height": height, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setLogMargin(double? leftMarginInDp, double? rightMarginInDp, double? topMarginInDp, double? bottomMarginInDp) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -506,6 +523,17 @@ extension com_tencent_rtmp_ui_TXCloudVideoView_Batch on List<com_tencent_rtmp_ui
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
+  }
+  
+  
+  Future<List<void>> showFocusView_batch(List<int?> x, List<int?> y, List<int?> width, List<int?> height) async {
+    assert(x.length == y.length && y.length == width.length && width.length == height.length);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.ui.TXCloudVideoView::showFocusView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"x": x[__i__], "y": y[__i__], "width": width[__i__], "height": height[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   

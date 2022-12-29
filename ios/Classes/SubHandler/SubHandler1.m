@@ -24,6 +24,182 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler1 {
     __weak __typeof(self)weakSelf = self;
     return @{
+        @"TXVodDownloadMediaInfo::get_downloadSize": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_downloadSize");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.downloadSize;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_segments": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_segments");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.segments;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_downloadSegments": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_downloadSegments");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.downloadSegments;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_progress": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_progress");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            float result = ref.progress;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_playPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_playPath");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.playPath;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_speed": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_speed");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            int result = ref.speed;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadMediaInfo::get_downloadState": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadMediaInfo::get_downloadState");
+            }
+        
+            // ref object
+            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            TXVodDownloadMediaInfoState result = ref.downloadState;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadManager::get_headers": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadManager::get_headers");
+            }
+        
+            // ref object
+            TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSDictionary* result = ref.headers;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
         @"TXVodPlayConfig::get_connectRetryCount": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -457,6 +633,28 @@ extern BOOL enableLog;
         
             // invoke native method
             long result = ref.preferredResolution;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodPlayConfig::get_mediaType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::get_mediaType");
+            }
+        
+            // ref object
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            TX_Enum_MediaType result = ref.mediaType;
         
             // 返回值: Value
             NSObject* __result__ = @(result);
@@ -1544,6 +1742,56 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         
+        @"TXVodDownloadDataSource::get_overlayKey_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.overlayKey;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodDownloadDataSource::get_overlayIv_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.overlayIv;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
         @"TXVodDownloadMediaInfo::get_dataSource_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
@@ -2384,6 +2632,31 @@ extern BOOL enableLog;
                 }
         
                 long result = ref.preferredResolution;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"TXVodPlayConfig::get_mediaType_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                TX_Enum_MediaType result = ref.mediaType;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
@@ -3562,6 +3835,48 @@ extern BOOL enableLog;
             methodResult(@"success");
         },
         
+        @"TXVodDownloadDataSource::set_overlayKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadDataSource::set_overlayKey");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* overlayKey = (NSString*) args[@"overlayKey"];
+        
+            // ref
+            TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.overlayKey = overlayKey;
+            methodResult(@"success");
+        },
+        
+        @"TXVodDownloadDataSource::set_overlayIv": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadDataSource::set_overlayIv");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* overlayIv = (NSString*) args[@"overlayIv"];
+        
+            // ref
+            TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.overlayIv = overlayIv;
+            methodResult(@"success");
+        },
+        
         @"TXVodDownloadMediaInfo::set_dataSource": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -4315,300 +4630,6 @@ extern BOOL enableLog;
             }
         
             ref.preferredResolution = preferredResolution;
-            methodResult(@"success");
-        },
-        
-        @"TXVodPlayConfig::set_extInfoMap": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodPlayConfig::set_extInfoMap");
-            }
-        
-            // args
-            // jsonable arg
-            NSDictionary* extInfoMap = (NSDictionary*) args[@"extInfoMap"];
-        
-            // ref
-            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.extInfoMap = extInfoMap;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_cacheTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_cacheTime");
-            }
-        
-            // args
-            // jsonable arg
-            float cacheTime = [args[@"cacheTime"] floatValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.cacheTime = cacheTime;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_bAutoAdjustCacheTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_bAutoAdjustCacheTime");
-            }
-        
-            // args
-            // jsonable arg
-            BOOL bAutoAdjustCacheTime = [args[@"bAutoAdjustCacheTime"] boolValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.bAutoAdjustCacheTime = bAutoAdjustCacheTime;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_maxAutoAdjustCacheTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_maxAutoAdjustCacheTime");
-            }
-        
-            // args
-            // jsonable arg
-            float maxAutoAdjustCacheTime = [args[@"maxAutoAdjustCacheTime"] floatValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.maxAutoAdjustCacheTime = maxAutoAdjustCacheTime;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_minAutoAdjustCacheTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_minAutoAdjustCacheTime");
-            }
-        
-            // args
-            // jsonable arg
-            float minAutoAdjustCacheTime = [args[@"minAutoAdjustCacheTime"] floatValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.minAutoAdjustCacheTime = minAutoAdjustCacheTime;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_videoBlockThreshold": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_videoBlockThreshold");
-            }
-        
-            // args
-            // jsonable arg
-            int videoBlockThreshold = [args[@"videoBlockThreshold"] intValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.videoBlockThreshold = videoBlockThreshold;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_connectRetryCount": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_connectRetryCount");
-            }
-        
-            // args
-            // jsonable arg
-            int connectRetryCount = [args[@"connectRetryCount"] intValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.connectRetryCount = connectRetryCount;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_connectRetryInterval": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_connectRetryInterval");
-            }
-        
-            // args
-            // jsonable arg
-            int connectRetryInterval = [args[@"connectRetryInterval"] intValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.connectRetryInterval = connectRetryInterval;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_enableAEC": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_enableAEC");
-            }
-        
-            // args
-            // jsonable arg
-            BOOL enableAEC = [args[@"enableAEC"] boolValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.enableAEC = enableAEC;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_enableMessage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_enableMessage");
-            }
-        
-            // args
-            // jsonable arg
-            BOOL enableMessage = [args[@"enableMessage"] boolValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.enableMessage = enableMessage;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_enableMetaData": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_enableMetaData");
-            }
-        
-            // args
-            // jsonable arg
-            BOOL enableMetaData = [args[@"enableMetaData"] boolValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.enableMetaData = enableMetaData;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_flvSessionKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_flvSessionKey");
-            }
-        
-            // args
-            // jsonable arg
-            NSString* flvSessionKey = (NSString*) args[@"flvSessionKey"];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.flvSessionKey = flvSessionKey;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_enableNearestIP": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_enableNearestIP");
-            }
-        
-            // args
-            // jsonable arg
-            BOOL enableNearestIP = [args[@"enableNearestIP"] boolValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.enableNearestIP = enableNearestIP;
-            methodResult(@"success");
-        },
-        
-        @"TXLivePlayConfig::set_rtmpChannelType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXLivePlayConfig::set_rtmpChannelType");
-            }
-        
-            // args
-            // jsonable arg
-            int rtmpChannelType = [args[@"rtmpChannelType"] intValue];
-        
-            // ref
-            TXLivePlayConfig* ref = (TXLivePlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.rtmpChannelType = rtmpChannelType;
             methodResult(@"success");
         },
         

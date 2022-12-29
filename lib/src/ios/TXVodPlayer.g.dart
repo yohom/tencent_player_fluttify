@@ -676,6 +676,57 @@ class TXVodPlayer extends NSObject  {
   }
   
   
+  static Future<bool?> isSupportPictureInPicture() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: TXVodPlayer::isSupportPictureInPicture([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::isSupportPictureInPicture', );
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> enterPictureInPicture() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: TXVodPlayer@$refId::enterPictureInPicture([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::enterPictureInPicture', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> exitPictureInPicture() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: TXVodPlayer@$refId::exitPictureInPicture([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::exitPictureInPicture', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<void> setExtentOptionInfo(Map<String,String>? extInfo) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -1107,6 +1158,39 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
+  }
+  
+  
+  static Future<List<bool?>> isSupportPictureInPicture_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::isSupportPictureInPicture_batch', );
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
+  }
+  
+  
+  Future<List<void>> enterPictureInPicture_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::enterPictureInPicture_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<void>> exitPictureInPicture_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::exitPictureInPicture_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   

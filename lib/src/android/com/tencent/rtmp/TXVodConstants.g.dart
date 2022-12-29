@@ -46,6 +46,7 @@ class com_tencent_rtmp_TXVodConstants extends java_lang_Object  {
   static const int VOD_PLAY_EVT_FIRST_VIDEO_PACKET = 2017;
   static const int VOD_PLAY_EVT_DNS_RESOLVED = 2018;
   static const int VOD_PLAY_EVT_SEEK_COMPLETE = 2019;
+  static const int VOD_PLAY_EVT_SELECT_TRACK_COMPLETE = 2020;
   static const String EVT_UTC_TIME = "EVT_UTC_TIME";
   static const String EVT_BLOCK_DURATION = "EVT_BLOCK_DURATION";
   static const String EVT_TIME = "EVT_TIME";
@@ -68,6 +69,14 @@ class com_tencent_rtmp_TXVodConstants extends java_lang_Object  {
   static const String EVT_REPORT_TOKEN = "EVT_REPORT_TOKEN";
   static const String EVT_STREAM_TYPE = "EVT_STREAM_TYPE";
   static const String EVT_PLAYABLE_DURATION = "EVT_PLAYABLE_DURATION";
+  static const String EVT_IMAGESPRIT_WEBVTTURL = "EVT_IMAGESPRIT_WEBVTTURL";
+  static const String EVT_IMAGESPRIT_IMAGEURL_LIST = "EVT_IMAGESPRIT_IMAGEURL_LIST";
+  static const String EVT_DRM_TYPE = "EVT_DRM_TYPE";
+  static const String EVT_CODEC_TYPE = "EVT_CODEC_TYPE";
+  static const String EVT_KEY_FRAME_CONTENT_LIST = "EVT_KEY_FRAME_CONTENT_LIST";
+  static const String EVT_KEY_FRAME_TIME_LIST = "EVT_KEY_FRAME_TIME_LIST";
+  static const String EVT_KEY_SELECT_TRACK_INDEX = "EVT_KEY_SELECT_TRACK_INDEX";
+  static const String EVT_KEY_SELECT_TRACK_ERROR_CODE = "EVT_KEY_SELECT_TRACK_ERROR_CODE";
   static const String NET_STATUS_CPU_USAGE = "CPU_USAGE";
   static const String NET_STATUS_VIDEO_WIDTH = "VIDEO_WIDTH";
   static const String NET_STATUS_VIDEO_HEIGHT = "VIDEO_HEIGHT";
@@ -83,6 +92,12 @@ class com_tencent_rtmp_TXVodConstants extends java_lang_Object  {
   static const String NET_STATUS_SERVER_IP = "SERVER_IP";
   static const String NET_STATUS_VIDEO_DPS = "VIDEO_DPS";
   static const String NET_STATUS_QUALITY_LEVEL = "NET_QUALITY_LEVEL";
+  static const int MEDIA_TYPE_AUTO = 0;
+  static const int MEDIA_TYPE_HLS_VOD = 1;
+  static const int MEDIA_TYPE_HLS_LIVE = 2;
+  static const int INDEX_AUTO = -1;
+  static const String VOD_PLAY_MIMETYPE_TEXT_SRT = "text/x-subrip";
+  static const String VOD_PLAY_MIMETYPE_TEXT_VTT = "text/vtt";
   //endregion
 
   //region creators
