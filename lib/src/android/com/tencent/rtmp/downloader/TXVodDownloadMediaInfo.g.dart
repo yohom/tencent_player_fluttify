@@ -262,40 +262,6 @@ class com_tencent_rtmp_downloader_TXVodDownloadMediaInfo extends java_lang_Objec
     return __result__;
   }
   
-  
-  Future<int?> getSpeed() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@$refId::getSpeed([])');
-    }
-  
-    // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getSpeed', {"__this__": this});
-  
-  
-    // handle native call
-  
-  
-    return __result__;
-  }
-  
-  
-  Future<void> setSpeed(int? speed) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.tencent.rtmp.downloader.TXVodDownloadMediaInfo@$refId::setSpeed([\'speed\':$speed])');
-    }
-  
-    // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::setSpeed', {"speed": speed, "__this__": this});
-  
-  
-    // handle native call
-  
-  
-    return __result__;
-  }
-  
   //endregion
 
   @override
@@ -449,28 +415,6 @@ extension com_tencent_rtmp_downloader_TXVodDownloadMediaInfo_Batch on List<com_t
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
-  }
-  
-  
-  Future<List<int?>> getSpeed_batch() async {
-    assert(true);
-  
-    // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::getSpeed_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
-  
-  
-    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
-  }
-  
-  
-  Future<List<void>> setSpeed_batch(List<int?> speed) async {
-    assert(true);
-  
-    // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.downloader.TXVodDownloadMediaInfo::setSpeed_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"speed": speed[__i__], "__this__": this[__i__]}]);
-  
-  
-    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

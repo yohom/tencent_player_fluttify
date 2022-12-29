@@ -29,6 +29,26 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
   //endregion
 
   //region creators
+  static Future<com_tencent_rtmp_downloader_TXVodDownloadManager> create__() async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_tencent_rtmp_downloader_TXVodDownloadManager__',
+    
+    );
+    return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadManager>(__result__)!;
+  }
+  
+  static Future<List<com_tencent_rtmp_downloader_TXVodDownloadManager>> create_batch__(int length) async {
+    assert(true);
+    final __result_batch__ = await  kTencentPlayerFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_tencent_rtmp_downloader_TXVodDownloadManager__',
+      {'length': length}
+    );
+    return __result_batch__
+        ?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadManager>(it))
+        .where((element) => element !=null)
+        .cast<com_tencent_rtmp_downloader_TXVodDownloadManager>()
+        .toList() ?? <com_tencent_rtmp_downloader_TXVodDownloadManager>[];
+  }
   
   //endregion
 
@@ -58,7 +78,7 @@ class com_tencent_rtmp_downloader_TXVodDownloadManager extends java_lang_Object 
     return TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadManager>(__result__);
   }
   
-  @Deprecated('过时')
+  
   Future<void> setDownloadPath(String? downloadPath) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -296,7 +316,7 @@ extension com_tencent_rtmp_downloader_TXVodDownloadManager_Batch on List<com_ten
     return (resultBatch as List).map((__result__) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_downloader_TXVodDownloadManager>(__result__)).cast<com_tencent_rtmp_downloader_TXVodDownloadManager?>().toList();
   }
   
-  @Deprecated('过时')
+  
   Future<List<void>> setDownloadPath_batch(List<String?> downloadPath) async {
     assert(true);
   

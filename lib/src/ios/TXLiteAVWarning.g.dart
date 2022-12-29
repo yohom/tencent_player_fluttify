@@ -25,7 +25,6 @@ enum TXLiteAVWarning {
   WARNING_SPEAKER_DEVICE_ABNORMAL /* 1205 */,
   WARNING_AUDIO_FRAME_DECODE_FAIL /* 2102 */,
   WARNING_AUDIO_RECORDING_WRITE_FAIL /* 7001 */,
-  WARNING_MICROPHONE_HOWLING_DETECTED /* 7002 */,
   WARNING_IGNORE_UPSTREAM_FOR_AUDIENCE /* 6001 */
 }
 
@@ -53,7 +52,6 @@ extension TXLiteAVWarningToX on TXLiteAVWarning {
       case TXLiteAVWarning.WARNING_SPEAKER_DEVICE_ABNORMAL: return 1205;
       case TXLiteAVWarning.WARNING_AUDIO_FRAME_DECODE_FAIL: return 2102;
       case TXLiteAVWarning.WARNING_AUDIO_RECORDING_WRITE_FAIL: return 7001;
-      case TXLiteAVWarning.WARNING_MICROPHONE_HOWLING_DETECTED: return 7002;
       case TXLiteAVWarning.WARNING_IGNORE_UPSTREAM_FOR_AUDIENCE: return 6001;
       default: return 0;
     }
@@ -84,7 +82,6 @@ extension TXLiteAVWarningFromX on int {
       case 1205: return TXLiteAVWarning.WARNING_SPEAKER_DEVICE_ABNORMAL;
       case 2102: return TXLiteAVWarning.WARNING_AUDIO_FRAME_DECODE_FAIL;
       case 7001: return TXLiteAVWarning.WARNING_AUDIO_RECORDING_WRITE_FAIL;
-      case 7002: return TXLiteAVWarning.WARNING_MICROPHONE_HOWLING_DETECTED;
       case 6001: return TXLiteAVWarning.WARNING_IGNORE_UPSTREAM_FOR_AUDIENCE;
       default: return TXLiteAVWarning.values[this + 1103];
     }

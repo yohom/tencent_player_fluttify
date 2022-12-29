@@ -20,28 +20,27 @@ class VodDownloader {
   TXVodDownloadManager? _iosManager;
 
   /// 初始化
-  Future<void> init(String downloadPath) async {
+  Future<void> init() async {
     return platform(
       android: (pool) async {
         _androidManager ??=
             await com_tencent_rtmp_downloader_TXVodDownloadManager
                 .getInstance();
-        await _androidManager!.setDownloadPath(downloadPath);
       },
       ios: (pool) async {
         _iosManager ??= await TXVodDownloadManager.shareInstance();
-        await _iosManager!.setDownloadPath(downloadPath);
       },
     );
   }
 
   /// 开始下载
-  Future<DownloadMediaInfo> startDownload(String url) {
-    const username = 'default';
+  Future<DownloadMediaInfo> startDownload(String url, {String? username}) {
     return platform(
       android: (pool) async {
         final info = await _androidManager?.startDownloadUrl__String__String(
-            url, username);
+          url,
+          username,
+        );
         return DownloadMediaInfo.fromAndroid(info!);
       },
       ios: (pool) async {
@@ -67,18 +66,25 @@ class VodDownloader {
   Future<void> deleteDownload(String url) {
     return platform(
       android: (pool) async {
-        final info = await _androidManager!.getDownloadMediaInfo__String(url);
-        await _androidManager?.deleteDownloadMediaInfo(info!);
+        final list = await _androidManager!.getDownloadMediaInfoList();
+        final target = [
+          for (final item in list!)
+            if (url == await item.getUrl()) item
+        ].first;
 
-        pool.add(info);
+        await _androidManager?.deleteDownloadMediaInfo(target);
+
+        pool.add(target);
       },
       ios: (pool) async {
-        // 获取信息的入参
-        final infoIn = await TXVodDownloadMediaInfo.create__();
-        await infoIn.set_url(url);
-        await _iosManager?.deleteDownloadMediaInfo(infoIn);
+        final list = await _iosManager!.getDownloadMediaInfoList();
+        final target = [
+          for (final item in list!)
+            if (url == await item.get_url()) item
+        ].first;
+        await _iosManager?.deleteDownloadMediaInfo(target);
 
-        pool.add(infoIn);
+        pool.add(target);
       },
     );
   }

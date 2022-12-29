@@ -14,7 +14,7 @@ class DownloadMediaInfo {
   late int taskId;
   late String userName;
   late DownloadState state;
-  late int speed;
+  // late int speed;
   late bool isFinished;
 
   static Future<DownloadMediaInfo> fromAndroid(
@@ -31,7 +31,7 @@ class DownloadMediaInfo {
     result.taskId = await model.getTaskId() ?? 0;
     result.userName = await model.getUserName() ?? '';
     result.state = DownloadState.values[await model.getDownloadState() ?? 0];
-    result.speed = await model.getSpeed() ?? 0;
+    // result.speed = await model.getSpeed() ?? 0;
     result.isFinished = await model.isDownloadFinished() ?? false;
     return result;
   }
@@ -48,7 +48,7 @@ class DownloadMediaInfo {
     final taskIdBatch = await model.getTaskId_batch();
     final userNameBatch = await model.getUserName_batch();
     final stateBatch = await model.getDownloadState_batch();
-    final speedBatch = await model.getSpeed_batch();
+    // final speedBatch = await model.getSpeed_batch();
     final isFinishedBatch = await model.isDownloadFinished_batch();
 
     return [
@@ -65,7 +65,7 @@ class DownloadMediaInfo {
           ..taskId = taskIdBatch[i] ?? 0
           ..userName = userNameBatch[i] ?? ''
           ..state = DownloadState.values[stateBatch[i] ?? 0]
-          ..speed = speedBatch[i] ?? 0
+          // ..speed = speedBatch[i] ?? 0
           ..isFinished = isFinishedBatch[i] ?? false
     ];
   }
@@ -84,7 +84,7 @@ class DownloadMediaInfo {
     result.userName = await model.get_userName() ?? '';
     result.state =
         DownloadState.values[(await model.get_downloadState())?.index ?? 0];
-    result.speed = await model.get_speed() ?? 0;
+    // result.speed = await model.get_speed() ?? 0;
     result.isFinished = await model.isDownloadFinished() ?? false;
     return result;
   }
@@ -101,7 +101,7 @@ class DownloadMediaInfo {
     final taskIdBatch = await model.get_downloadSegments_batch();
     final userNameBatch = await model.get_userName_batch();
     final stateBatch = (await model.get_downloadState_batch());
-    final speedBatch = await model.get_speed_batch();
+    // final speedBatch = await model.get_speed_batch();
     final isFinishedBatch = await model.isDownloadFinished_batch();
     return [
       for (int i = 0; i < model.length; i++)
@@ -117,13 +117,13 @@ class DownloadMediaInfo {
           ..taskId = taskIdBatch[i] ?? 0
           ..userName = userNameBatch[i] ?? ''
           ..state = DownloadState.values[stateBatch[i]?.index ?? 0]
-          ..speed = speedBatch[i] ?? 0
+          // ..speed = speedBatch[i] ?? 0
           ..isFinished = isFinishedBatch[i] ?? false
     ];
   }
 
   @override
   String toString() {
-    return 'DownloadInfo{progress: $progress, url: $url}';
+    return 'DownloadMediaInfo{progress: $progress, url: $url, duration: $duration, playableDuration: $playableDuration, size: $size, downloadSize: $downloadSize, playPath: $playPath, taskId: $taskId, userName: $userName, state: $state, isFinished: $isFinished}';
   }
 }
