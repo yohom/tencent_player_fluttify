@@ -120,7 +120,7 @@ class VodPlayer {
         debugPrint('result: $result, playUrl: $_playUrl');
       },
       ios: (pool) async {
-        final result = await _iosPlayer!.startPlay(_playUrl!);
+        final result = await _iosPlayer!.startVodPlay(_playUrl!);
         debugPrint('result: $result, playUrl: $_playUrl');
       },
     );

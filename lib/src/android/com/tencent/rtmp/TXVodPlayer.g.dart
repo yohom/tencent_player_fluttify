@@ -89,6 +89,108 @@ class com_tencent_rtmp_TXVodPlayer extends java_lang_Object  {
   }
   
   
+  Future<void> setSubtitleView(com_tencent_rtmp_ui_TXSubtitleView? subtitleView) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayer@$refId::setSubtitleView([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::setSubtitleView', {"subtitleView": subtitleView, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> addSubtitleSource(String? url, String? name, String? mimeType) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayer@$refId::addSubtitleSource([\'url\':$url, \'name\':$name, \'mimeType\':$mimeType])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::addSubtitleSource', {"url": url, "name": name, "mimeType": mimeType, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> selectTrack(int? trackIndex) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayer@$refId::selectTrack([\'trackIndex\':$trackIndex])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::selectTrack', {"trackIndex": trackIndex, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> deselectTrack(int? trackIndex) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayer@$refId::deselectTrack([\'trackIndex\':$trackIndex])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::deselectTrack', {"trackIndex": trackIndex, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<List<com_tencent_rtmp_TXTrackInfo>?> getSubtitleTrackInfo() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayer@$refId::getSubtitleTrackInfo([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::getSubtitleTrackInfo', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return (__result__ as List?)?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXTrackInfo>(it)).where((e) => e != null).cast<com_tencent_rtmp_TXTrackInfo>().toList();
+  }
+  
+  
+  Future<List<com_tencent_rtmp_TXTrackInfo>?> getAudioTrackInfo() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.tencent.rtmp.TXVodPlayer@$refId::getAudioTrackInfo([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::getAudioTrackInfo', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return (__result__ as List?)?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXTrackInfo>(it)).where((e) => e != null).cast<com_tencent_rtmp_TXTrackInfo>().toList();
+  }
+  
+  
   Future<int?> startPlay__String(String? playUrl) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -862,6 +964,72 @@ extension com_tencent_rtmp_TXVodPlayer_Batch on List<com_tencent_rtmp_TXVodPlaye
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<void>> setSubtitleView_batch(List<com_tencent_rtmp_ui_TXSubtitleView?> subtitleView) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::setSubtitleView_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"subtitleView": subtitleView[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<void>> addSubtitleSource_batch(List<String?> url, List<String?> name, List<String?> mimeType) async {
+    assert(url.length == name.length && name.length == mimeType.length);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::addSubtitleSource_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"url": url[__i__], "name": name[__i__], "mimeType": mimeType[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<void>> selectTrack_batch(List<int?> trackIndex) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::selectTrack_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"trackIndex": trackIndex[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<void>> deselectTrack_batch(List<int?> trackIndex) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::deselectTrack_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"trackIndex": trackIndex[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<List<com_tencent_rtmp_TXTrackInfo>?>> getSubtitleTrackInfo_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::getSubtitleTrackInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXTrackInfo>(it)).where((e) => e != null).cast<com_tencent_rtmp_TXTrackInfo>().toList()).cast<List<com_tencent_rtmp_TXTrackInfo>?>().toList();
+  }
+  
+  
+  Future<List<List<com_tencent_rtmp_TXTrackInfo>?>> getAudioTrackInfo_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('com.tencent.rtmp.TXVodPlayer::getAudioTrackInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => TencentPlayerFluttifyAndroidAs<com_tencent_rtmp_TXTrackInfo>(it)).where((e) => e != null).cast<com_tencent_rtmp_TXTrackInfo>().toList()).cast<List<com_tencent_rtmp_TXTrackInfo>?>().toList();
   }
   
   

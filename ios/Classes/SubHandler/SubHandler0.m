@@ -773,9 +773,9 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"TXVodPlayer::startPlay": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"TXVodPlayer::startVodPlay": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXVodPlayer::startPlay(%@)", args);
+                NSLog(@"fluttify-objc: TXVodPlayer::startVodPlay(%@)", args);
             }
         
             // args
@@ -790,7 +790,7 @@ extern BOOL enableLog;
             }
         
             // invoke native method
-            int result = [ref startPlay: url];
+            int result = [ref startVodPlay: url];
         
             // result
             // 返回值: Value
@@ -798,9 +798,9 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"TXVodPlayer::startPlayWithParams": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"TXVodPlayer::startVodPlayWithParams": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXVodPlayer::startPlayWithParams(%@)", args);
+                NSLog(@"fluttify-objc: TXVodPlayer::startVodPlayWithParams(%@)", args);
             }
         
             // args
@@ -815,7 +815,7 @@ extern BOOL enableLog;
             }
         
             // invoke native method
-            int result = [ref startPlayWithParams: params];
+            int result = [ref startVodPlayWithParams: params];
         
             // result
             // 返回值: Value
@@ -1496,6 +1496,74 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
+        @"TXVodPlayer::isSupportPictureInPicture": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: TXVodPlayer::isSupportPictureInPicture(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+        
+        
+            // invoke native method
+            BOOL result = [TXVodPlayer isSupportPictureInPicture];
+        
+            // result
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        @"TXVodPlayer::enterPictureInPicture": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: TXVodPlayer::enterPictureInPicture(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+            TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref enterPictureInPicture ];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"TXVodPlayer::exitPictureInPicture": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: TXVodPlayer::exitPictureInPicture(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+            TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref exitPictureInPicture ];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
         @"TXVodPlayer::setExtentOptionInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
                 NSLog(@"fluttify-objc: TXVodPlayer::setExtentOptionInfo(%@)", args);
@@ -1584,9 +1652,9 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"TXLivePlayer::startPlay_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"TXLivePlayer::startLivePlay_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::startPlay_type(%@)", args);
+                NSLog(@"fluttify-objc: TXLivePlayer::startLivePlay_type(%@)", args);
             }
         
             // args
@@ -1603,7 +1671,7 @@ extern BOOL enableLog;
             }
         
             // invoke native method
-            int result = [ref startPlay: url type: playType];
+            int result = [ref startLivePlay: url type: playType];
         
             // result
             // 返回值: Value
@@ -3264,9 +3332,9 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"TXVodPlayer::startPlay_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+        @"TXVodPlayer::startVodPlay_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXVodPlayer::startPlay(%@)", argsBatch);
+                NSLog(@"fluttify-objc: TXVodPlayer::startVodPlay(%@)", argsBatch);
             }
         
             NSMutableArray* resultList = [NSMutableArray array];
@@ -3287,7 +3355,7 @@ extern BOOL enableLog;
                 }
         
                 // invoke native method
-                int result = [ref startPlay: url];
+                int result = [ref startVodPlay: url];
         
                 // result
                 // 返回值: Value
@@ -3298,9 +3366,9 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"TXVodPlayer::startPlayWithParams_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+        @"TXVodPlayer::startVodPlayWithParams_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXVodPlayer::startPlayWithParams(%@)", argsBatch);
+                NSLog(@"fluttify-objc: TXVodPlayer::startVodPlayWithParams(%@)", argsBatch);
             }
         
             NSMutableArray* resultList = [NSMutableArray array];
@@ -3321,7 +3389,7 @@ extern BOOL enableLog;
                 }
         
                 // invoke native method
-                int result = [ref startPlayWithParams: params];
+                int result = [ref startVodPlayWithParams: params];
         
                 // result
                 // 返回值: Value
@@ -4195,6 +4263,100 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
+        @"TXVodPlayer::isSupportPictureInPicture_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: TXVodPlayer::isSupportPictureInPicture(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                BOOL result = [TXVodPlayer isSupportPictureInPicture];
+        
+                // result
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"TXVodPlayer::enterPictureInPicture_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: TXVodPlayer::enterPictureInPicture(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref enterPictureInPicture ];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"TXVodPlayer::exitPictureInPicture_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: TXVodPlayer::exitPictureInPicture(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                TXVodPlayer* ref = (TXVodPlayer*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref exitPictureInPicture ];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
         @"TXVodPlayer::setExtentOptionInfo_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
                 NSLog(@"fluttify-objc: TXVodPlayer::setExtentOptionInfo(%@)", argsBatch);
@@ -4310,9 +4472,9 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"TXLivePlayer::startPlay_type_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+        @"TXLivePlayer::startLivePlay_type_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::startPlay_type(%@)", argsBatch);
+                NSLog(@"fluttify-objc: TXLivePlayer::startLivePlay_type(%@)", argsBatch);
             }
         
             NSMutableArray* resultList = [NSMutableArray array];
@@ -4335,7 +4497,7 @@ extern BOOL enableLog;
                 }
         
                 // invoke native method
-                int result = [ref startPlay: url type: playType];
+                int result = [ref startLivePlay: url type: playType];
         
                 // result
                 // 返回值: Value
@@ -5321,6 +5483,50 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         
+        @"TXVodDownloadDataSource::get_overlayKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadDataSource::get_overlayKey");
+            }
+        
+            // ref object
+            TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.overlayKey;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"TXVodDownloadDataSource::get_overlayIv": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodDownloadDataSource::get_overlayIv");
+            }
+        
+            // ref object
+            TXVodDownloadDataSource* ref = (TXVodDownloadDataSource*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.overlayIv;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
         @"TXVodDownloadMediaInfo::get_dataSource": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -5449,182 +5655,6 @@ extern BOOL enableLog;
         
             // 返回值: Value
             NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"TXVodDownloadMediaInfo::get_downloadSize": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadMediaInfo::get_downloadSize");
-            }
-        
-            // ref object
-            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = ref.downloadSize;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"TXVodDownloadMediaInfo::get_segments": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadMediaInfo::get_segments");
-            }
-        
-            // ref object
-            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = ref.segments;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"TXVodDownloadMediaInfo::get_downloadSegments": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadMediaInfo::get_downloadSegments");
-            }
-        
-            // ref object
-            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = ref.downloadSegments;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"TXVodDownloadMediaInfo::get_progress": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadMediaInfo::get_progress");
-            }
-        
-            // ref object
-            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            float result = ref.progress;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"TXVodDownloadMediaInfo::get_playPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadMediaInfo::get_playPath");
-            }
-        
-            // ref object
-            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.playPath;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"TXVodDownloadMediaInfo::get_speed": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadMediaInfo::get_speed");
-            }
-        
-            // ref object
-            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            int result = ref.speed;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"TXVodDownloadMediaInfo::get_downloadState": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadMediaInfo::get_downloadState");
-            }
-        
-            // ref object
-            TXVodDownloadMediaInfo* ref = (TXVodDownloadMediaInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            TXVodDownloadMediaInfoState result = ref.downloadState;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"TXVodDownloadManager::get_headers": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadManager::get_headers");
-            }
-        
-            // ref object
-            TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSDictionary* result = ref.headers;
-        
-            // 返回值: jsonable
-            id __result__ = result;
         
             methodResult(__result__);
         },

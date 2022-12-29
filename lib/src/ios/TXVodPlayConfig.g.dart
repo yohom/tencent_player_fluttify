@@ -146,6 +146,11 @@ class TXVodPlayConfig extends NSObject  {
     return __result__;
   }
   
+  Future<TX_Enum_MediaType?> get_mediaType() async {
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodPlayConfig::get_mediaType", {'__this__': this});
+    return (__result__ as int).toTX_Enum_MediaType();
+  }
+  
   Future<Map?> get_extInfoMap() async {
     final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodPlayConfig::get_extInfoMap", {'__this__': this});
     return __result__;
@@ -232,6 +237,10 @@ class TXVodPlayConfig extends NSObject  {
   
   Future<void> set_preferredResolution(int? preferredResolution) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_preferredResolution', <String, dynamic>{'__this__': this, "preferredResolution": preferredResolution});
+  }
+  
+  Future<void> set_mediaType(TX_Enum_MediaType? mediaType) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_mediaType', <String, dynamic>{'__this__': this, "mediaType": mediaType?.toValue()});
   }
   
   Future<void> set_extInfoMap(Map? extInfoMap) async {
@@ -355,6 +364,11 @@ extension TXVodPlayConfig_Batch on List<TXVodPlayConfig?> {
   Future<List<int?>> get_preferredResolution_batch() async {
     final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodPlayConfig::get_preferredResolution_batch", [for (final __item__ in this) {'__this__': __item__}]);
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
+  }
+  
+  Future<List<TX_Enum_MediaType?>> get_mediaType_batch() async {
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod("TXVodPlayConfig::get_mediaType_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).map((__result__) => (__result__ as int).toTX_Enum_MediaType()).cast<TX_Enum_MediaType?>().toList();
   }
   
   Future<List<Map?>> get_extInfoMap_batch() async {
@@ -481,6 +495,12 @@ extension TXVodPlayConfig_Batch on List<TXVodPlayConfig?> {
   
   Future<void> set_preferredResolution_batch(List<int?> preferredResolution) async {
     await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_preferredResolution_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "preferredResolution": preferredResolution[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_mediaType_batch(List<TX_Enum_MediaType?> mediaType) async {
+    await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayConfig::set_mediaType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "mediaType": mediaType[__i__]?.toValue()}]);
   
   
   }

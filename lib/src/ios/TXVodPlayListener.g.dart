@@ -47,6 +47,42 @@ mixin TXVodPlayListener on NSObject {
                 // handle the native call
                 __object__.onNetStatus_withParam?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), args['param']);
                 break;
+              case 'onPlayer_pictureInPictureStateDidChange_withParam':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onPlayer_pictureInPictureStateDidChange_withParam?.call([\'player\':${args['player']}, \'pipState\':${args['pipState']}, \'param\':${args['param']}])');
+                }
+            
+                // handle the native call
+                __object__.onPlayer_pictureInPictureStateDidChange_withParam?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), (args['pipState'] as int).toTX_VOD_PLAYER_PIP_STATE(), args['param']);
+                break;
+              case 'onPlayer_pictureInPictureErrorDidOccur_withParam':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onPlayer_pictureInPictureErrorDidOccur_withParam?.call([\'player\':${args['player']}, \'errorType\':${args['errorType']}, \'param\':${args['param']}])');
+                }
+            
+                // handle the native call
+                __object__.onPlayer_pictureInPictureErrorDidOccur_withParam?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), (args['errorType'] as int).toTX_VOD_PLAYER_PIP_ERROR_TYPE(), args['param']);
+                break;
+              case 'onPlayer_airPlayStateDidChange_withParam':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onPlayer_airPlayStateDidChange_withParam?.call([\'player\':${args['player']}, \'airPlayState\':${args['airPlayState']}, \'param\':${args['param']}])');
+                }
+            
+                // handle the native call
+                __object__.onPlayer_airPlayStateDidChange_withParam?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), (args['airPlayState'] as int).toTX_VOD_PLAYER_AIRPLAY_STATE(), args['param']);
+                break;
+              case 'onPlayer_airPlayErrorDidOccur_withParam':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onPlayer_airPlayErrorDidOccur_withParam?.call([\'player\':${args['player']}, \'errorType\':${args['errorType']}, \'param\':${args['param']}])');
+                }
+            
+                // handle the native call
+                __object__.onPlayer_airPlayErrorDidOccur_withParam?.call(TencentPlayerFluttifyIOSAs<TXVodPlayer>(args['player']), (args['errorType'] as int).toTX_VOD_PLAYER_AIRPLAY_ERROR_TYPE(), args['param']);
+                break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
@@ -71,6 +107,14 @@ mixin TXVodPlayListener on NSObject {
   Future<void> Function(TXVodPlayer? player, int? EvtID, Map? param)? onPlayEvent_event_withParam;
   
   Future<void> Function(TXVodPlayer? player, Map? param)? onNetStatus_withParam;
+  
+  Future<void> Function(TXVodPlayer? player, TX_VOD_PLAYER_PIP_STATE? pipState, Map? param)? onPlayer_pictureInPictureStateDidChange_withParam;
+  
+  Future<void> Function(TXVodPlayer? player, TX_VOD_PLAYER_PIP_ERROR_TYPE? errorType, Map? param)? onPlayer_pictureInPictureErrorDidOccur_withParam;
+  
+  Future<void> Function(TXVodPlayer? player, TX_VOD_PLAYER_AIRPLAY_STATE? airPlayState, Map? param)? onPlayer_airPlayStateDidChange_withParam;
+  
+  Future<void> Function(TXVodPlayer? player, TX_VOD_PLAYER_AIRPLAY_ERROR_TYPE? errorType, Map? param)? onPlayer_airPlayErrorDidOccur_withParam;
   
 }
 
