@@ -200,28 +200,6 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         
-        @"TXVodDownloadManager::get_supportPrivateEncryptMode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadManager::get_supportPrivateEncryptMode");
-            }
-        
-            // ref object
-            TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = ref.supportPrivateEncryptMode;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
         @"TXVodPlayConfig::get_connectRetryCount": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -2157,31 +2135,6 @@ extern BOOL enableLog;
         
                 // 返回值: jsonable
                 id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"TXVodDownloadManager::get_supportPrivateEncryptMode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                BOOL result = ref.supportPrivateEncryptMode;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
         
                 [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
@@ -4239,27 +4192,6 @@ extern BOOL enableLog;
             methodResult(@"success");
         },
         
-        @"TXVodDownloadManager::set_supportPrivateEncryptMode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodDownloadManager::set_supportPrivateEncryptMode");
-            }
-        
-            // args
-            // jsonable arg
-            BOOL supportPrivateEncryptMode = [args[@"supportPrivateEncryptMode"] boolValue];
-        
-            // ref
-            TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.supportPrivateEncryptMode = supportPrivateEncryptMode;
-            methodResult(@"success");
-        },
-        
         @"TXLiveBase::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -4635,6 +4567,69 @@ extern BOOL enableLog;
             }
         
             ref.overlayKey = overlayKey;
+            methodResult(@"success");
+        },
+        
+        @"TXVodPlayConfig::set_overlayIv": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::set_overlayIv");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* overlayIv = (NSString*) args[@"overlayIv"];
+        
+            // ref
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.overlayIv = overlayIv;
+            methodResult(@"success");
+        },
+        
+        @"TXVodPlayConfig::set_enableRenderProcess": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::set_enableRenderProcess");
+            }
+        
+            // args
+            // jsonable arg
+            BOOL enableRenderProcess = [args[@"enableRenderProcess"] boolValue];
+        
+            // ref
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.enableRenderProcess = enableRenderProcess;
+            methodResult(@"success");
+        },
+        
+        @"TXVodPlayConfig::set_preferredResolution": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"TXVodPlayConfig::set_preferredResolution");
+            }
+        
+            // args
+            // jsonable arg
+            long preferredResolution = [args[@"preferredResolution"] longValue];
+        
+            // ref
+            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.preferredResolution = preferredResolution;
             methodResult(@"success");
         },
         

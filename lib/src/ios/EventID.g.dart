@@ -89,8 +89,7 @@ enum EventID {
   PLAY_WARNING_SEVER_CONN_FAIL /* 3002 */,
   PLAY_WARNING_SHAKE_FAIL /* 3003 */,
   PLAY_WARNING_SERVER_DISCONNECT /* 3004 */,
-  PLAY_WARNING_READ_WRITE_FAIL /* 3005 */,
-  VOD_PLAY_EVT_LOOP_ONCE_COMPLETE /* 6001 */
+  PLAY_WARNING_READ_WRITE_FAIL /* 3005 */
 }
 
 extension EventIDToX on EventID {
@@ -182,7 +181,6 @@ extension EventIDToX on EventID {
       case EventID.PLAY_WARNING_SHAKE_FAIL: return 3003;
       case EventID.PLAY_WARNING_SERVER_DISCONNECT: return 3004;
       case EventID.PLAY_WARNING_READ_WRITE_FAIL: return 3005;
-      case EventID.VOD_PLAY_EVT_LOOP_ONCE_COMPLETE: return 6001;
       default: return 0;
     }
   }
@@ -277,7 +275,6 @@ extension EventIDFromX on int {
       case 3003: return EventID.PLAY_WARNING_SHAKE_FAIL;
       case 3004: return EventID.PLAY_WARNING_SERVER_DISCONNECT;
       case 3005: return EventID.PLAY_WARNING_READ_WRITE_FAIL;
-      case 6001: return EventID.VOD_PLAY_EVT_LOOP_ONCE_COMPLETE;
       default: return EventID.values[this + -5];
     }
   }

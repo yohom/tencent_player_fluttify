@@ -126,14 +126,14 @@ class TXLivePlayer extends NSObject  {
   }
   
   
-  Future<int?> startLivePlay_type(String? url, TX_Enum_PlayType? playType) async {
+  Future<int?> startPlay_type(String? url, TX_Enum_PlayType? playType) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: TXLivePlayer@$refId::startLivePlay([\'url\':$url])');
+      debugPrint('fluttify-dart: TXLivePlayer@$refId::startPlay([\'url\':$url])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXLivePlayer::startLivePlay_type', {"url": url, "playType": playType?.toValue(), "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXLivePlayer::startPlay_type', {"url": url, "playType": playType?.toValue(), "__this__": this});
   
   
     // handle native call
@@ -637,11 +637,11 @@ extension TXLivePlayer_Batch on List<TXLivePlayer?> {
   }
   
   
-  Future<List<int?>> startLivePlay_type_batch(List<String?> url, List<TX_Enum_PlayType?> playType) async {
+  Future<List<int?>> startPlay_type_batch(List<String?> url, List<TX_Enum_PlayType?> playType) async {
     assert(url.length == playType.length);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXLivePlayer::startLivePlay_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"url": url[__i__], "playType": playType[__i__]?.toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXLivePlayer::startPlay_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"url": url[__i__], "playType": playType[__i__]?.toValue(), "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();

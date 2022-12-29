@@ -773,9 +773,9 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"TXVodPlayer::startVodPlay": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"TXVodPlayer::startPlay": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXVodPlayer::startVodPlay(%@)", args);
+                NSLog(@"fluttify-objc: TXVodPlayer::startPlay(%@)", args);
             }
         
             // args
@@ -790,7 +790,7 @@ extern BOOL enableLog;
             }
         
             // invoke native method
-            int result = [ref startVodPlay: url];
+            int result = [ref startPlay: url];
         
             // result
             // 返回值: Value
@@ -798,9 +798,9 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"TXVodPlayer::startVodPlayWithParams": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"TXVodPlayer::startPlayWithParams": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXVodPlayer::startVodPlayWithParams(%@)", args);
+                NSLog(@"fluttify-objc: TXVodPlayer::startPlayWithParams(%@)", args);
             }
         
             // args
@@ -815,7 +815,7 @@ extern BOOL enableLog;
             }
         
             // invoke native method
-            int result = [ref startVodPlayWithParams: params];
+            int result = [ref startPlayWithParams: params];
         
             // result
             // 返回值: Value
@@ -1652,9 +1652,9 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"TXLivePlayer::startLivePlay_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"TXLivePlayer::startPlay_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::startLivePlay_type(%@)", args);
+                NSLog(@"fluttify-objc: TXLivePlayer::startPlay_type(%@)", args);
             }
         
             // args
@@ -1671,7 +1671,7 @@ extern BOOL enableLog;
             }
         
             // invoke native method
-            int result = [ref startLivePlay: url type: playType];
+            int result = [ref startPlay: url type: playType];
         
             // result
             // 返回值: Value
@@ -3332,9 +3332,9 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"TXVodPlayer::startVodPlay_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+        @"TXVodPlayer::startPlay_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXVodPlayer::startVodPlay(%@)", argsBatch);
+                NSLog(@"fluttify-objc: TXVodPlayer::startPlay(%@)", argsBatch);
             }
         
             NSMutableArray* resultList = [NSMutableArray array];
@@ -3355,7 +3355,7 @@ extern BOOL enableLog;
                 }
         
                 // invoke native method
-                int result = [ref startVodPlay: url];
+                int result = [ref startPlay: url];
         
                 // result
                 // 返回值: Value
@@ -3366,9 +3366,9 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"TXVodPlayer::startVodPlayWithParams_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+        @"TXVodPlayer::startPlayWithParams_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXVodPlayer::startVodPlayWithParams(%@)", argsBatch);
+                NSLog(@"fluttify-objc: TXVodPlayer::startPlayWithParams(%@)", argsBatch);
             }
         
             NSMutableArray* resultList = [NSMutableArray array];
@@ -3389,7 +3389,7 @@ extern BOOL enableLog;
                 }
         
                 // invoke native method
-                int result = [ref startVodPlayWithParams: params];
+                int result = [ref startPlayWithParams: params];
         
                 // result
                 // 返回值: Value
@@ -4472,9 +4472,9 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"TXLivePlayer::startLivePlay_type_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+        @"TXLivePlayer::startPlay_type_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: TXLivePlayer::startLivePlay_type(%@)", argsBatch);
+                NSLog(@"fluttify-objc: TXLivePlayer::startPlay_type(%@)", argsBatch);
             }
         
             NSMutableArray* resultList = [NSMutableArray array];
@@ -4497,7 +4497,7 @@ extern BOOL enableLog;
                 }
         
                 // invoke native method
-                int result = [ref startLivePlay: url type: playType];
+                int result = [ref startPlay: url type: playType];
         
                 // result
                 // 返回值: Value

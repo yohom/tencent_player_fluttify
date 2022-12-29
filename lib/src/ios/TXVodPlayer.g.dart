@@ -161,14 +161,14 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<int?> startVodPlay(String? url) async {
+  Future<int?> startPlay(String? url) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: TXVodPlayer@$refId::startVodPlay([\'url\':$url])');
+      debugPrint('fluttify-dart: TXVodPlayer@$refId::startPlay([\'url\':$url])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startVodPlay', {"url": url, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startPlay', {"url": url, "__this__": this});
   
   
     // handle native call
@@ -178,14 +178,14 @@ class TXVodPlayer extends NSObject  {
   }
   
   
-  Future<int?> startVodPlayWithParams(TXPlayerAuthParams? params) async {
+  Future<int?> startPlayWithParams(TXPlayerAuthParams? params) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: TXVodPlayer@$refId::startVodPlayWithParams([])');
+      debugPrint('fluttify-dart: TXVodPlayer@$refId::startPlayWithParams([])');
     }
   
     // invoke native method
-    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startVodPlayWithParams', {"params": params, "__this__": this});
+    final __result__ = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startPlayWithParams', {"params": params, "__this__": this});
   
   
     // handle native call
@@ -853,22 +853,22 @@ extension TXVodPlayer_Batch on List<TXVodPlayer?> {
   }
   
   
-  Future<List<int?>> startVodPlay_batch(List<String?> url) async {
+  Future<List<int?>> startPlay_batch(List<String?> url) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startVodPlay_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"url": url[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startPlay_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"url": url[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<int?>> startVodPlayWithParams_batch(List<TXPlayerAuthParams?> params) async {
+  Future<List<int?>> startPlayWithParams_batch(List<TXPlayerAuthParams?> params) async {
     assert(true);
   
     // invoke native method
-    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startVodPlayWithParams_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"params": params[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kTencentPlayerFluttifyChannel.invokeMethod('TXVodPlayer::startPlayWithParams_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"params": params[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();

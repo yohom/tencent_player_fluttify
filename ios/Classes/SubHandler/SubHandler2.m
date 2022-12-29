@@ -24,69 +24,6 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler2 {
     __weak __typeof(self)weakSelf = self;
     return @{
-        @"TXVodPlayConfig::set_overlayIv": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodPlayConfig::set_overlayIv");
-            }
-        
-            // args
-            // jsonable arg
-            NSString* overlayIv = (NSString*) args[@"overlayIv"];
-        
-            // ref
-            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.overlayIv = overlayIv;
-            methodResult(@"success");
-        },
-        
-        @"TXVodPlayConfig::set_enableRenderProcess": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodPlayConfig::set_enableRenderProcess");
-            }
-        
-            // args
-            // jsonable arg
-            BOOL enableRenderProcess = [args[@"enableRenderProcess"] boolValue];
-        
-            // ref
-            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.enableRenderProcess = enableRenderProcess;
-            methodResult(@"success");
-        },
-        
-        @"TXVodPlayConfig::set_preferredResolution": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"TXVodPlayConfig::set_preferredResolution");
-            }
-        
-            // args
-            // jsonable arg
-            long preferredResolution = [args[@"preferredResolution"] longValue];
-        
-            // ref
-            TXVodPlayConfig* ref = (TXVodPlayConfig*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.preferredResolution = preferredResolution;
-            methodResult(@"success");
-        },
-        
         @"TXVodPlayConfig::set_mediaType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -1596,28 +1533,6 @@ extern BOOL enableLog;
                 }
         
                 ref.headers = headers;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"TXVodDownloadManager::set_supportPrivateEncryptMode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL supportPrivateEncryptMode = [args[@"supportPrivateEncryptMode"] boolValue];
-        
-                // ref
-                TXVodDownloadManager* ref = (TXVodDownloadManager*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.supportPrivateEncryptMode = supportPrivateEncryptMode;;
                 methodResult(@"success");
             }
         
