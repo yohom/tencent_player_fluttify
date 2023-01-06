@@ -111,9 +111,8 @@ class VodPlayer {
 
   /// 播放 HTTP URL 形式地址
   Future<void> startPlay(String playUrl) async {
-    _playUrl = Uri.parse(playUrl).scheme == 'http'
-        ? playUrl.replaceFirst('http', 'https')
-        : playUrl;
+    _playUrl = playUrl;
+    debugPrint('开始播放地址: $_playUrl');
     return platform(
       android: (pool) async {
         final result = await _androidPlayer!.startPlay__String(_playUrl!);
